@@ -91,7 +91,7 @@ const frameworkGlossaries: Record<string, FrameworkGlossaryTooltip> = {
       },
       {
         label: "Controls",
-        tags: ["Stun", "Hold", "Incapacitate", "Sleep", "Root", "Confuse"],
+        tags: ["Stun", "Paralyze", "Incapacitate", "Sleep", "Root", "Confuse"],
       },
     ],
   },
@@ -187,4 +187,3 @@ export function getFrameworkGlossaryTooltipAttribute(
 
   return glossary ? JSON.stringify(glossary) : undefined;
 }
-

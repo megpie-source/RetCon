@@ -40,6 +40,7 @@ export type TooltipContent =
     };
 
 export type TooltipState = {
+  advantageHighlightIds: number[];
   advantageHighlightQueries: string[];
   advantageHighlightTagColumns: TagSearchColumn[];
   content: TooltipContent;

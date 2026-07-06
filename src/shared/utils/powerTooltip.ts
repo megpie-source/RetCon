@@ -64,6 +64,22 @@ function formatSeconds(value: number | string | null | undefined) {
   return `${normalizedValue} sec`;
 }
 
+function formatPowerCost(value: number | string | null | undefined) {
+  if (value === null || value === undefined || value === "") {
+    return null;
+  }
+
+  const normalizedValue = String(value).trim().replace(/,/g, ".");
+
+  if (!/\d/.test(normalizedValue)) {
+    return null;
+  }
+
+  return /%\s*HP\b/i.test(normalizedValue)
+    ? `Cost ${normalizedValue}`
+    : `Cost ${normalizedValue} Energy`;
+}
+
 function formatTier(value: number | null | undefined) {
   if (value === null || value === undefined) {
     return null;
@@ -250,6 +266,7 @@ export function getPowerTooltipData(
   const activationTime = formatSeconds(power.activation_time);
   const maxDuration = formatSeconds(power.max_duration);
   const tickRate = formatSeconds(power.tick_rate);
+  const cost = formatPowerCost(power.cost);
   const cooldown = formatSeconds(power.cooldown);
   const maxDurationLabel = isChargeActivationType(power.activation_type)
     ? "Charge time"
@@ -258,6 +275,7 @@ export function getPowerTooltipData(
     activationTime ? `Activation ${activationTime}` : null,
     maxDuration ? `${maxDurationLabel} ${maxDuration}` : null,
     tickRate ? `Tick every ${tickRate}` : null,
+    cost,
     cooldown ? `Cooldown ${cooldown}` : null,
   ].filter((value): value is string => Boolean(value));
   const rangeTags = (power.range_tags ?? [])

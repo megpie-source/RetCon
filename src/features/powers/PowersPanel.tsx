@@ -39,10 +39,23 @@ import {
   powerMatchesCooldown,
 } from "@/utils/powerCooldown";
 import {
+  formatPowerControlDurationLabel,
+  getControlTypesFromSearch,
+  getPowerControlDurationSteps,
+  powerMatchesControlDuration,
+} from "@/utils/powerControlDuration";
+import {
   formatPowerRangeFilterLabel,
   getPowerRangeFilterSteps,
   powerMatchesExactRange,
 } from "@/utils/powerRange";
+import {
+  getPowerNumericRangeBounds,
+  getPowerNumericValue,
+  powerMatchesNumericRange,
+  type PowerNumericRange,
+  type PowerNumericValueField,
+} from "@/utils/powerNumericValues";
 import {
   getPowerRoleAdvantageHighlightQueries,
   getPowerRoleOptions,
@@ -104,6 +117,14 @@ const maxPowerGridColumns = 3;
 const keptTogetherFrameworkGroupIds = new Set(["martial-arts"]);
 const powerVariantsUnlockTooltip =
   "Power Variant Devices have lower values and go on cooldown for 90 sec if you don't own the parent power. Ultimate Power Variants can't be used without the parent power.";
+const damageValueFilterTooltip =
+  "These values are intended to compare powers with similar activation types. They exclude synergies, conditional bonuses, and secondary effects. They are not a DPS calculation and should be used as a rough reference.\n\nClick / Charged: maximum base damage\nMaintains / DoTs: damage per tick\nCombos: highest base damage dealt by a single combo step";
+const healingValueFilterTooltip =
+  "These values are intended to compare healing powers with similar activation types. They exclude synergies, conditional bonuses, and secondary effects. They are not an HPS calculation and should be used as a rough reference.\n\nClick / Charged: maximum base healing\nMaintains / HoTs: healing per tick\nCombos: highest base healing provided by a single combo step";
+const controlDurationFilterTooltip =
+  "Matches any control duration present on the power. Powers with multiple control effects may match multiple values.";
+const costFilterTooltip =
+  "Filters powers by their listed Energy cost. Single and charged powers use the highest listed cost. Maintains use the per-tick cost: Y in X+Y. Select None for powers with no listed Energy cost. Costs paid with HP are excluded.";
 const travelFrameworkOrder = [
   "Flight",
   "Superspeed",
@@ -127,6 +148,221 @@ const scalingStatFilterOptions = [
   "REC",
   "END",
 ];
+
+type NumericRangeFilterProps = {
+  field: PowerNumericValueField;
+  label: string;
+  minimum: number;
+  maximum: number;
+  maximumIsOpenEnded?: boolean;
+  noneOnly?: boolean;
+  onNoneOnlyChange?: (noneOnly: boolean) => void;
+  range: PowerNumericRange | null;
+  scale?: "cost" | "linear" | "logarithmic";
+  step?: number;
+  tooltip?: string;
+  unit?: string;
+  onChange: (range: PowerNumericRange | null) => void;
+};
+
+function NumericRangeFilter({
+  field,
+  label,
+  minimum,
+  maximum,
+  maximumIsOpenEnded = false,
+  noneOnly = false,
+  onNoneOnlyChange,
+  range,
+  scale = "linear",
+  step = 1,
+  tooltip,
+  unit = "",
+  onChange,
+}: NumericRangeFilterProps) {
+  const minimumValue = range?.[0] ?? minimum;
+  const maximumValue = range?.[1] ?? maximum;
+  const logarithmicSteps = 1000;
+  const useLogarithmicScale =
+    scale === "logarithmic" && minimum > 0 && maximum > minimum;
+  const costScaleBreakpoint = 10;
+  const costLowRangeSteps = 50;
+  const useCostScale =
+    scale === "cost" &&
+    minimum < costScaleBreakpoint &&
+    maximum > costScaleBreakpoint;
+  const useMappedScale = useLogarithmicScale || useCostScale;
+  const linearSpan = Math.max(maximum - minimum, step);
+  const logarithmicSpan = Math.log(maximum / minimum);
+  const costLogarithmicSpan = Math.log(maximum / costScaleBreakpoint);
+
+  function valueToSliderPosition(value: number) {
+    if (!useLogarithmicScale) {
+      if (!useCostScale) {
+        return value;
+      }
+
+      if (value <= costScaleBreakpoint) {
+        return (
+          ((value - minimum) / (costScaleBreakpoint - minimum)) *
+          costLowRangeSteps
+        );
+      }
+
+      return (
+        costLowRangeSteps +
+        (Math.log(value / costScaleBreakpoint) / costLogarithmicSpan) *
+          (logarithmicSteps - costLowRangeSteps)
+      );
+    }
+
+    return (Math.log(value / minimum) / logarithmicSpan) * logarithmicSteps;
+  }
+
+  function sliderPositionToValue(position: number) {
+    if (!useLogarithmicScale) {
+      if (!useCostScale) {
+        return position;
+      }
+
+      const rawValue =
+        position <= costLowRangeSteps
+          ? minimum +
+            (position / costLowRangeSteps) *
+              (costScaleBreakpoint - minimum)
+          : costScaleBreakpoint *
+            Math.exp(
+              ((position - costLowRangeSteps) /
+                (logarithmicSteps - costLowRangeSteps)) *
+                costLogarithmicSpan,
+            );
+
+      return Math.min(
+        maximum,
+        Math.max(minimum, Math.round(rawValue / step) * step),
+      );
+    }
+
+    const rawValue =
+      minimum * Math.exp((position / logarithmicSteps) * logarithmicSpan);
+
+    return Math.min(
+      maximum,
+      Math.max(minimum, Math.round(rawValue / step) * step),
+    );
+  }
+
+  const sliderMinimum = useMappedScale ? 0 : minimum;
+  const sliderMaximum = useMappedScale ? logarithmicSteps : maximum;
+  const sliderStep = useMappedScale ? 1 : step;
+  const minimumSliderPosition = valueToSliderPosition(minimumValue);
+  const maximumSliderPosition = valueToSliderPosition(maximumValue);
+  const minimumPosition = useMappedScale
+    ? (minimumSliderPosition / logarithmicSteps) * 100
+    : ((minimumValue - minimum) / linearSpan) * 100;
+  const maximumPosition = useMappedScale
+    ? (maximumSliderPosition / logarithmicSteps) * 100
+    : ((maximumValue - minimum) / linearSpan) * 100;
+  const displayedValue = noneOnly
+    ? "None"
+    : range
+      ? `${minimumValue}-${maximumValue}${
+          maximumIsOpenEnded && maximumValue >= maximum ? "+" : ""
+        }${unit}`
+      : `Any ${label}`;
+
+  function updateRange(nextMinimum: number, nextMaximum: number) {
+    if (nextMinimum <= minimum && nextMaximum >= maximum) {
+      onChange(null);
+      return;
+    }
+
+    onChange([nextMinimum, nextMaximum]);
+  }
+
+  return (
+    <div
+      className={`search-filter-panel__field search-filter-panel__field--numeric-range search-filter-panel__field--${field}`}
+    >
+      <span className="search-filter-panel__label">{label}</span>
+      <div
+        className={
+          onNoneOnlyChange
+            ? "search-filter-range search-filter-range--double search-filter-range--with-none"
+            : "search-filter-range search-filter-range--double"
+        }
+      >
+        <span
+          className="search-filter-range__value"
+          data-text-tooltip={tooltip}
+        >
+          {displayedValue}
+        </span>
+        <div
+          className="search-filter-double-range"
+          style={
+            {
+              "--range-minimum": `${minimumPosition}%`,
+              "--range-maximum": `${maximumPosition}%`,
+            } as CSSProperties
+          }
+        >
+          <span className="search-filter-double-range__track" />
+          <input
+            aria-label={`${label} minimum`}
+            aria-valuetext={`${minimumValue}${unit}`}
+            disabled={noneOnly}
+            max={sliderMaximum}
+            min={sliderMinimum}
+            step={sliderStep}
+            type="range"
+            value={minimumSliderPosition}
+            onChange={(event) =>
+              updateRange(
+                Math.min(
+                  sliderPositionToValue(Number(event.target.value)),
+                  maximumValue,
+                ),
+                maximumValue,
+              )
+            }
+          />
+          <input
+            aria-label={`${label} maximum`}
+            aria-valuetext={`${maximumValue}${
+              maximumIsOpenEnded && maximumValue >= maximum ? "+" : ""
+            }${unit}`}
+            disabled={noneOnly}
+            max={sliderMaximum}
+            min={sliderMinimum}
+            step={sliderStep}
+            type="range"
+            value={maximumSliderPosition}
+            onChange={(event) =>
+              updateRange(
+                minimumValue,
+                Math.max(
+                  sliderPositionToValue(Number(event.target.value)),
+                  minimumValue,
+                ),
+              )
+            }
+          />
+        </div>
+        {onNoneOnlyChange ? (
+          <label className="search-filter-panel__checkbox search-filter-range__none">
+            <input
+              checked={noneOnly}
+              type="checkbox"
+              onChange={(event) => onNoneOnlyChange(event.target.checked)}
+            />
+            <span>None</span>
+          </label>
+        ) : null}
+      </div>
+    </div>
+  );
+}
 
 function getPowerPanelTooltipId(powerId: number) {
   return `powers-panel:${powerId}`;
@@ -416,6 +652,7 @@ export function PowersPanel({
 }: PowersPanelProps) {
   const [search, setSearch] = useState("");
   const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false);
+  const [isAdvancedFilterOpen, setIsAdvancedFilterOpen] = useState(false);
   const [isScalingStatMenuOpen, setIsScalingStatMenuOpen] = useState(false);
   const [isDamageTypeMenuOpen, setIsDamageTypeMenuOpen] = useState(false);
   const [selectedPowerRoleFilter, setSelectedPowerRoleFilter] = useState("");
@@ -426,6 +663,16 @@ export function PowersPanel({
   >([]);
   const [selectedRangeStepIndex, setSelectedRangeStepIndex] = useState(0);
   const [selectedCooldownStepIndex, setSelectedCooldownStepIndex] = useState(0);
+  const [selectedCostRange, setSelectedCostRange] =
+    useState<PowerNumericRange | null>(null);
+  const [showPowersWithoutCostOnly, setShowPowersWithoutCostOnly] =
+    useState(false);
+  const [selectedDamageValueRange, setSelectedDamageValueRange] =
+    useState<PowerNumericRange | null>(null);
+  const [selectedHealingValueRange, setSelectedHealingValueRange] =
+    useState<PowerNumericRange | null>(null);
+  const [selectedControlDurationStepIndex, setSelectedControlDurationStepIndex] =
+    useState(0);
   const [selectedTargetingFilter, setSelectedTargetingFilter] = useState<
     PowerTargetingFilter | ""
   >("");
@@ -447,6 +694,8 @@ export function PowersPanel({
   const [powerGridColumns, setPowerGridColumns] = useState(maxPowerGridColumns);
   const powersPanelRef = useRef<HTMLElement | null>(null);
   const frameworkStripRef = useRef<HTMLDivElement | null>(null);
+  const damageTypeMenuRef = useRef<HTMLDivElement | null>(null);
+  const scalingStatMenuRef = useRef<HTMLDivElement | null>(null);
   const parsedSearchClauses = useMemo(
     () => parsePowerSearchClauses(search),
     [search],
@@ -454,6 +703,10 @@ export function PowersPanel({
   const parsedSearch = useMemo(
     () => mergeParsedPowerSearches(parsedSearchClauses),
     [parsedSearchClauses],
+  );
+  const selectedControlTypes = useMemo(
+    () => getControlTypesFromSearch(search),
+    [search],
   );
   const forceAdvancedPowerTooltip = searchInAdvantages;
   const getHighlightQueries = (query: string) => {
@@ -529,6 +782,42 @@ export function PowersPanel({
     };
   }, [advantagesById, damageModsByFramework, powers, powersById]);
 
+  useEffect(() => {
+    if (!isDamageTypeMenuOpen && !isScalingStatMenuOpen) {
+      return;
+    }
+
+    function closeFilterMenusOnOutsideClick(event: PointerEvent) {
+      const target = event.target;
+
+      if (!(target instanceof Node)) {
+        return;
+      }
+
+      if (
+        isDamageTypeMenuOpen &&
+        !damageTypeMenuRef.current?.contains(target)
+      ) {
+        setIsDamageTypeMenuOpen(false);
+      }
+
+      if (
+        isScalingStatMenuOpen &&
+        !scalingStatMenuRef.current?.contains(target)
+      ) {
+        setIsScalingStatMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", closeFilterMenusOnOutsideClick);
+
+    return () =>
+      document.removeEventListener(
+        "pointerdown",
+        closeFilterMenusOnOutsideClick,
+      );
+  }, [isDamageTypeMenuOpen, isScalingStatMenuOpen]);
+
   const powerRoleFilterOptions = useMemo(
     () => getPowerRoleOptions(powers, advantagesById),
     [advantagesById, powers],
@@ -552,14 +841,51 @@ export function PowersPanel({
     () => getPowerCooldownFilterSteps(powers),
     [powers],
   );
+  const numericValueRecords = useMemo(
+    () => [...powers, ...advantages],
+    [advantages, powers],
+  );
+  const powerControlDurationSteps = useMemo(
+    () => getPowerControlDurationSteps(numericValueRecords),
+    [numericValueRecords],
+  );
+  const damageValueBounds = useMemo(
+    () => getPowerNumericRangeBounds(numericValueRecords, "damage_values"),
+    [numericValueRecords],
+  );
+  const costBounds = useMemo(
+    () => getPowerNumericRangeBounds(powers, "cost"),
+    [powers],
+  );
+  const healingValueBounds = useMemo(
+    () => getPowerNumericRangeBounds(numericValueRecords, "healing_values"),
+    [numericValueRecords],
+  );
+  const damageValueMaximum = Math.min(damageValueBounds[1], 2000);
+  const healingValueMaximum = Math.min(healingValueBounds[1], 1000);
   const clampedRangeStepIndex =
     selectedRangeStepIndex < powerRangeSteps.length ? selectedRangeStepIndex : 0;
   const clampedCooldownStepIndex =
     selectedCooldownStepIndex < powerCooldownSteps.length
       ? selectedCooldownStepIndex
       : 0;
+  const clampedControlDurationStepIndex =
+    selectedControlDurationStepIndex < powerControlDurationSteps.length
+      ? selectedControlDurationStepIndex
+      : 0;
   const selectedMinimumRange = powerRangeSteps[clampedRangeStepIndex] ?? null;
   const selectedCooldown = powerCooldownSteps[clampedCooldownStepIndex] ?? null;
+  const selectedControlDuration =
+    powerControlDurationSteps[clampedControlDurationStepIndex] ?? null;
+  const hasActiveAdvancedFilters =
+    selectedCooldown !== null ||
+    showPowersWithoutCostOnly ||
+    selectedCostRange !== null ||
+    selectedDamageValueRange !== null ||
+    selectedHealingValueRange !== null ||
+    selectedControlDuration !== null;
+  const advancedFiltersExpanded =
+    isAdvancedFilterOpen || hasActiveAdvancedFilters;
 
   const hasActivePowerSearchOrFilter =
     hasParsedPowerSearch(parsedSearch) ||
@@ -568,6 +894,11 @@ export function PowersPanel({
     selectedDamageTypes.length > 0 ||
     selectedMinimumRange !== null ||
     selectedCooldown !== null ||
+    showPowersWithoutCostOnly ||
+    selectedCostRange !== null ||
+    selectedDamageValueRange !== null ||
+    selectedHealingValueRange !== null ||
+    selectedControlDuration !== null ||
     Boolean(selectedTargetingFilter) ||
     Boolean(selectedActivationTypeFilter) ||
     showAcquiredPowersOnly;
@@ -829,6 +1160,66 @@ export function PowersPanel({
       return true;
     }
 
+    function advantageMatches(
+      power: Power,
+      predicate: (advantage: Advantage) => boolean,
+    ) {
+      return power.advantages.some((advantageId) => {
+        const advantage = advantagesById.get(advantageId);
+
+        return advantage ? predicate(advantage) : false;
+      });
+    }
+
+    function matchesNumericValueSources(
+      power: Power,
+      field: "damage_values" | "healing_values",
+      range: PowerNumericRange,
+      openEndedMaximum?: number,
+    ) {
+      return (
+        (searchInPowers &&
+          powerMatchesNumericRange(
+            power,
+            field,
+            range,
+            openEndedMaximum,
+          )) ||
+        (searchInAdvantages &&
+          advantageMatches(power, (advantage) =>
+            powerMatchesNumericRange(
+              advantage,
+              field,
+              range,
+              openEndedMaximum,
+            ),
+          ))
+      );
+    }
+
+    function matchesControlDurationSources(power: Power) {
+      if (selectedControlDuration === null) {
+        return true;
+      }
+
+      return (
+        (searchInPowers &&
+          powerMatchesControlDuration(
+            power,
+            selectedControlDuration,
+            selectedControlTypes,
+          )) ||
+        (searchInAdvantages &&
+          advantageMatches(power, (advantage) =>
+            powerMatchesControlDuration(
+              advantage,
+              selectedControlDuration,
+              selectedControlTypes,
+            ),
+          ))
+      );
+    }
+
     return powers.filter((power) => {
       if (showAcquiredPowersOnly && !selectedPowerIds.has(power.power_id)) {
         return false;
@@ -907,6 +1298,52 @@ export function PowersPanel({
         return false;
       }
 
+      if (
+        selectedDamageValueRange !== null &&
+        !matchesNumericValueSources(
+          power,
+          "damage_values",
+          selectedDamageValueRange,
+          damageValueMaximum,
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        showPowersWithoutCostOnly &&
+        getPowerNumericValue(power, "cost") !== null
+      ) {
+        return false;
+      }
+
+      if (
+        !showPowersWithoutCostOnly &&
+        selectedCostRange !== null &&
+        !powerMatchesNumericRange(power, "cost", selectedCostRange)
+      ) {
+        return false;
+      }
+
+      if (
+        selectedHealingValueRange !== null &&
+        !matchesNumericValueSources(
+          power,
+          "healing_values",
+          selectedHealingValueRange,
+          healingValueMaximum,
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        selectedControlDuration !== null &&
+        !matchesControlDurationSources(power)
+      ) {
+        return false;
+      }
+
       if (!powerMatchesTargetingFilter(power, selectedTargetingFilter)) {
         return false;
       }
@@ -940,6 +1377,14 @@ export function PowersPanel({
     selectedTagSearchColumns,
     selectedMinimumRange,
     selectedCooldown,
+    showPowersWithoutCostOnly,
+    selectedCostRange,
+    selectedDamageValueRange,
+    selectedHealingValueRange,
+    selectedControlDuration,
+    selectedControlTypes,
+    damageValueMaximum,
+    healingValueMaximum,
     selectedTargetingFilter,
     selectedActivationTypeFilter,
     selectedPowerRoleFilter,
@@ -1265,13 +1710,13 @@ export function PowersPanel({
   function selectedScalingStatsLabel() {
     return selectedScalingStats.length > 0
       ? selectedScalingStats.join(";")
-      : "Any stats";
+      : "Any Superstat";
   }
 
   function selectedDamageTypesLabel() {
     return selectedDamageTypes.length > 0
       ? selectedDamageTypes.join(";")
-      : "Any damage";
+      : "Any Damage type";
   }
 
   function selectedRangeLabel() {
@@ -1282,6 +1727,43 @@ export function PowersPanel({
     return formatPowerCooldownFilterLabel(selectedCooldown);
   }
 
+  function getValueFilterAdvantageHighlightIds(power: Power) {
+    if (!searchInAdvantages) {
+      return [];
+    }
+
+    return power.advantages.filter((advantageId) => {
+      const advantage = advantagesById.get(advantageId);
+
+      if (!advantage) {
+        return false;
+      }
+
+      return (
+        (selectedDamageValueRange !== null &&
+          powerMatchesNumericRange(
+            advantage,
+            "damage_values",
+            selectedDamageValueRange,
+            damageValueMaximum,
+          )) ||
+        (selectedHealingValueRange !== null &&
+          powerMatchesNumericRange(
+            advantage,
+            "healing_values",
+            selectedHealingValueRange,
+            healingValueMaximum,
+          )) ||
+        (selectedControlDuration !== null &&
+          powerMatchesControlDuration(
+            advantage,
+            selectedControlDuration,
+            selectedControlTypes,
+          ))
+      );
+    });
+  }
+
   function resetAdvancedFilters() {
     setSelectedPowerRoleFilter("");
     setSelectedScalingStats([]);
@@ -1289,6 +1771,11 @@ export function PowersPanel({
     setSelectedTagSearchColumns([]);
     setSelectedRangeStepIndex(0);
     setSelectedCooldownStepIndex(0);
+    setShowPowersWithoutCostOnly(false);
+    setSelectedCostRange(null);
+    setSelectedDamageValueRange(null);
+    setSelectedHealingValueRange(null);
+    setSelectedControlDurationStepIndex(0);
     setSelectedTargetingFilter("");
     setSelectedActivationTypeFilter("");
     setIsScalingStatMenuOpen(false);
@@ -1603,6 +2090,18 @@ export function PowersPanel({
               />
               <span>Acquired</span>
             </label>
+            <label className="search-filter-panel__checkbox search-filter-panel__checkbox--tag-column search-filter-panel__advanced-toggle">
+              <input
+                checked={advancedFiltersExpanded}
+                type="checkbox"
+                onChange={(event) =>
+                  setIsAdvancedFilterOpen(
+                    hasActiveAdvancedFilters ? true : event.target.checked,
+                  )
+                }
+              />
+              <span>Show Advanced options</span>
+            </label>
           </div>
 
           <label className="search-filter-panel__field search-filter-panel__field--type">
@@ -1676,25 +2175,98 @@ export function PowersPanel({
             </div>
           </label>
 
-          <label className="search-filter-panel__field search-filter-panel__field--cooldown">
-            <span className="search-filter-panel__label">Cooldown</span>
-            <div className="search-filter-range">
-              <span className="search-filter-range__value">
-                {selectedCooldownLabel()}
-              </span>
-              <input
-                max={powerCooldownSteps.length - 1}
-                min={0}
-                type="range"
-                value={clampedCooldownStepIndex}
-                onChange={(event) =>
-                  setSelectedCooldownStepIndex(Number(event.target.value))
-                }
+          {advancedFiltersExpanded ? (
+            <div className="search-filter-panel__advanced">
+              <label className="search-filter-panel__field search-filter-panel__field--cooldown">
+                <span className="search-filter-panel__label">Cooldown</span>
+                <div className="search-filter-range">
+                  <span className="search-filter-range__value">
+                    {selectedCooldownLabel()}
+                  </span>
+                  <input
+                    max={powerCooldownSteps.length - 1}
+                    min={0}
+                    type="range"
+                    value={clampedCooldownStepIndex}
+                    onChange={(event) =>
+                      setSelectedCooldownStepIndex(Number(event.target.value))
+                    }
+                  />
+                </div>
+              </label>
+
+              <label className="search-filter-panel__field search-filter-panel__field--control-duration">
+                <span className="search-filter-panel__label">CC duration</span>
+                <div className="search-filter-range search-filter-range--wide">
+                  <span
+                    className="search-filter-range__value"
+                    data-text-tooltip={controlDurationFilterTooltip}
+                  >
+                    {formatPowerControlDurationLabel(selectedControlDuration)}
+                  </span>
+                  <input
+                    max={powerControlDurationSteps.length - 1}
+                    min={0}
+                    type="range"
+                    value={clampedControlDurationStepIndex}
+                    onChange={(event) =>
+                      setSelectedControlDurationStepIndex(
+                        Number(event.target.value),
+                      )
+                    }
+                  />
+                </div>
+              </label>
+
+              <NumericRangeFilter
+                field="damage_values"
+                label="Damage"
+                minimum={damageValueBounds[0]}
+                maximum={damageValueMaximum}
+                maximumIsOpenEnded={damageValueBounds[1] > damageValueMaximum}
+                range={selectedDamageValueRange}
+                scale="logarithmic"
+                tooltip={damageValueFilterTooltip}
+                onChange={setSelectedDamageValueRange}
+              />
+
+              <NumericRangeFilter
+                field="healing_values"
+                label="Heal"
+                minimum={healingValueBounds[0]}
+                maximum={healingValueMaximum}
+                maximumIsOpenEnded={healingValueBounds[1] > healingValueMaximum}
+                range={selectedHealingValueRange}
+                scale="logarithmic"
+                tooltip={healingValueFilterTooltip}
+                onChange={setSelectedHealingValueRange}
+              />
+
+              <NumericRangeFilter
+                field="cost"
+                label="Cost"
+                minimum={costBounds[0]}
+                maximum={costBounds[1]}
+                noneOnly={showPowersWithoutCostOnly}
+                range={selectedCostRange}
+                scale="cost"
+                tooltip={costFilterTooltip}
+                onNoneOnlyChange={(noneOnly) => {
+                  setShowPowersWithoutCostOnly(noneOnly);
+
+                  if (noneOnly) {
+                    setSelectedCostRange(null);
+                  }
+                }}
+                onChange={setSelectedCostRange}
               />
             </div>
-          </label>
+          ) : null}
 
-          <div className="search-filter-panel__field search-filter-panel__field--damage">
+          <div
+            className="search-filter-panel__field search-filter-panel__field--damage"
+            ref={damageTypeMenuRef}
+          >
             <span className="search-filter-panel__label">Damage type</span>
             <div className="search-filter-dropdown">
               <button
@@ -1732,7 +2304,10 @@ export function PowersPanel({
             </div>
           </div>
 
-          <div className="search-filter-panel__field search-filter-panel__field--stats">
+          <div
+            className="search-filter-panel__field search-filter-panel__field--stats"
+            ref={scalingStatMenuRef}
+          >
             <span className="search-filter-panel__label">Scaling stats</span>
             <div className="search-filter-dropdown">
               <button
@@ -1807,6 +2382,8 @@ export function PowersPanel({
                   {section.powers.map((power) => {
                     const canAdd = canAddPower(power);
                     const selected = selectedPowerIds.has(power.power_id);
+                    const highlightedAdvantageIds =
+                      getValueFilterAdvantageHighlightIds(power);
 
                     return (
                       <button
@@ -1845,6 +2422,11 @@ export function PowersPanel({
                           data-power-tooltip-advantage-queries={
                             advantageHighlightQueries.length > 0
                               ? JSON.stringify(advantageHighlightQueries)
+                              : undefined
+                          }
+                          data-power-tooltip-advantage-ids={
+                            highlightedAdvantageIds.length > 0
+                              ? JSON.stringify(highlightedAdvantageIds)
                               : undefined
                           }
                           data-power-tooltip-advantage-tag-columns={

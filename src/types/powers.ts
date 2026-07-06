@@ -12,6 +12,10 @@ export type Power = {
   max_duration?: number | string | null;
   tick_rate?: number | string | null;
   cooldown?: number | string | null;
+  cost?: number | string | null;
+  damage_values?: number | string | null;
+  healing_values?: number | string | null;
+  control_values?: number | string | null;
   damage_type?: string[] | string | null;
   damage_types?: string[] | string | null;
   source?: string[] | string | null;

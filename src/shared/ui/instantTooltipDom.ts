@@ -11,6 +11,7 @@ export const instantTooltipAttributeFilter = [
   "data-power-tooltip",
   "data-power-tooltip-lazy",
   "data-power-tooltip-advantage-queries",
+  "data-power-tooltip-advantage-ids",
   "data-power-tooltip-advantage-tag-columns",
   "data-power-tooltip-advanced",
   "data-advantage-tooltip",
@@ -99,6 +100,24 @@ export function getAdvantageHighlightQueries(element: HTMLElement) {
 
     return Array.isArray(queries)
       ? queries.filter((query): query is string => typeof query === "string")
+      : [];
+  } catch {
+    return [];
+  }
+}
+
+export function getAdvantageHighlightIds(element: HTMLElement) {
+  const rawIds = element.dataset.powerTooltipAdvantageIds;
+
+  if (!rawIds) {
+    return [];
+  }
+
+  try {
+    const ids = JSON.parse(rawIds);
+
+    return Array.isArray(ids)
+      ? ids.filter((id): id is number => typeof id === "number")
       : [];
   } catch {
     return [];

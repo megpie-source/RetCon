@@ -47,8 +47,8 @@ const powerTypeRoleRules: Array<[string, string[]]> = [
 const powerTypeRoleMap = new Map(powerTypeRoleRules);
 const crowdControlTags = new Set([
   "confuse",
-  "hold",
   "incapacitate",
+  "paralyze",
   "root",
   "sleep",
   "stun",

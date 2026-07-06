@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { InstantTooltipContent } from "@/shared/ui/InstantTooltipContent";
 import {
+  getAdvantageHighlightIds,
   getAdvantageHighlightTagColumns,
   getAdvantageHighlightQueries,
   getTooltipContent,
@@ -140,6 +141,7 @@ export function InstantTooltip() {
       element.removeAttribute("title");
 
       setTooltip({
+        advantageHighlightIds: getAdvantageHighlightIds(element),
         advantageHighlightTagColumns: getAdvantageHighlightTagColumns(element),
         advantageHighlightQueries: getAdvantageHighlightQueries(element),
         content,
@@ -163,6 +165,7 @@ export function InstantTooltip() {
           currentTooltip
             ? {
                 ...currentTooltip,
+                advantageHighlightIds: getAdvantageHighlightIds(element),
                 advantageHighlightTagColumns:
                   getAdvantageHighlightTagColumns(element),
                 advantageHighlightQueries:
@@ -418,6 +421,7 @@ export function InstantTooltip() {
       }}
     >
       <InstantTooltipContent
+        advantageHighlightIds={tooltip.advantageHighlightIds}
         advantageHighlightTagColumns={tooltip.advantageHighlightTagColumns}
         advantageHighlightQueries={tooltip.advantageHighlightQueries}
         content={tooltip.content}

@@ -61,7 +61,7 @@ const camsIconOptions = [
   {
     iconName: "CAMS_Green",
     label: "Green CAMS",
-    tooltip: "Increases your maximum Health Points 100/300/600/1200/2000 HP",
+    tooltip: "Increases your maximum Health Points by 100/300/600/1200/2000 HP",
   },
   {
     iconName: "CAMS_blue",

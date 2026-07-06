@@ -135,6 +135,7 @@ function TextTooltip({ text }: { text: string }) {
 }
 
 type InstantTooltipContentProps = {
+  advantageHighlightIds: number[];
   advantageHighlightQueries: string[];
   advantageHighlightTagColumns: TagSearchColumn[];
   content: TooltipContent;
@@ -142,6 +143,7 @@ type InstantTooltipContentProps = {
 };
 
 export function InstantTooltipContent({
+  advantageHighlightIds,
   advantageHighlightQueries,
   advantageHighlightTagColumns,
   content,
@@ -150,6 +152,7 @@ export function InstantTooltipContent({
   if (content.kind === "power") {
     return (
       <PowerTooltip
+        advantageHighlightIds={advantageHighlightIds}
         advantageHighlightTagColumns={advantageHighlightTagColumns}
         advantageHighlightQueries={advantageHighlightQueries}
         showAdvantages={showAdvancedPowerTooltip}

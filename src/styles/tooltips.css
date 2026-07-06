@@ -229,6 +229,35 @@
   color: #d6e0d8;
 }
 
+.power-tooltip__tag-legend {
+  margin-top: 2px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(150, 174, 224, 0.14);
+  gap: 4px;
+}
+
+.power-tooltip__tag-legend span {
+  padding: 1px 4px;
+  font-size: 10px;
+}
+
+.power-tooltip__tag-legend .tooltip-tag--apply {
+  color: #7f96b6;
+}
+
+.power-tooltip__tag-legend .tooltip-tag--refresh {
+  color: #9383aa;
+}
+
+.power-tooltip__tag-legend .tooltip-tag--synergy {
+  color: #789d83;
+}
+
+.power-tooltip__tag-legend + .power-tooltip__hint {
+  padding-top: 4px;
+  border-top: 0;
+}
+
 .power-tooltip__effects {
   display: grid;
   gap: 4px;

@@ -3,6 +3,7 @@ import { TooltipTags } from "@/shared/ui/TooltipTags";
 import type { TagSearchColumn } from "@/utils/powerTags";
 
 type PowerTooltipProps = {
+  advantageHighlightIds?: number[];
   advantageHighlightQueries?: string[];
   advantageHighlightTagColumns?: TagSearchColumn[];
   tooltip: PowerTooltipData;
@@ -10,6 +11,7 @@ type PowerTooltipProps = {
 };
 
 export function PowerTooltip({
+  advantageHighlightIds = [],
   advantageHighlightQueries = [],
   advantageHighlightTagColumns = [],
   tooltip,
@@ -41,6 +43,7 @@ export function PowerTooltip({
   const normalizedAdvantageHighlightQueries = advantageHighlightQueries
     .map((query) => query.trim().toLowerCase())
     .filter(Boolean);
+  const advantageHighlightIdSet = new Set(advantageHighlightIds);
   const hasTagColumnScope = advantageHighlightTagColumns.length > 0;
   const getScopedAdvantageTags = (advantage: (typeof advantages)[number]) => {
     return advantageHighlightTagColumns.flatMap((column) => {
@@ -56,6 +59,10 @@ export function PowerTooltip({
     });
   };
   const isAdvantageHighlighted = (advantage: (typeof advantages)[number]) => {
+    if (advantageHighlightIdSet.has(advantage.id)) {
+      return true;
+    }
+
     if (normalizedAdvantageHighlightQueries.length === 0) {
       return false;
     }
@@ -147,6 +154,15 @@ export function PowerTooltip({
             <span>{sources.join("; ")}</span>
           </div>
         ) : null}
+
+        <TooltipTags
+          className="power-tooltip__tags power-tooltip__tag-legend"
+          tags={[
+            { categories: ["apply"], label: "Apply" },
+            { categories: ["refresh"], label: "Refresh" },
+            { categories: ["synergy"], label: "Synergy" },
+          ]}
+        />
 
         {!showAdvantages && advantages.length > 0 ? (
           <div className="power-tooltip__hint">
