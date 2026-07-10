@@ -1957,6 +1957,35 @@ h3 {
   min-width: 0;
 }
 
+.search-filter-panel__sort {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  margin-left: auto;
+  color: #c8d1e4;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.search-filter-panel__sort select {
+  width: 118px;
+  min-width: 0;
+  height: 22px;
+  padding: 0 3px;
+  border: 1px solid #343943;
+  border-radius: 2px;
+  color: #d9e2f4;
+  background:
+    linear-gradient(180deg, rgba(31, 34, 42, 0.96), rgba(13, 15, 20, 0.96)),
+    #11141b;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
 .search-filter-panel__label {
   position: absolute;
   width: 1px;
@@ -1984,8 +2013,11 @@ h3 {
 
 .search-filter-panel__actions {
   display: flex;
-  grid-column: 3 / 4;
+  grid-column: 1 / -1;
+  align-items: center;
   justify-content: flex-end;
+  gap: 8px;
+  min-width: 0;
 }
 
 .search-filter-reset-button {
@@ -2038,12 +2070,20 @@ h3 {
 .search-filter-panel__field--range,
 .search-filter-panel__field--cooldown,
 .search-filter-panel__field--control-duration,
+.search-filter-panel__field--total-duration,
 .search-filter-panel__field--numeric-range {
   grid-column: 1 / -1;
 }
 
 .search-filter-panel__advanced-toggle {
-  margin-left: auto;
+  grid-column: 3 / 4;
+  justify-self: end;
+  margin-left: 0;
+}
+
+.search-filter-panel__advanced-toggle--active {
+  color: #f0c766;
+  font-weight: 700;
 }
 
 .search-filter-panel__advanced {
@@ -2158,6 +2198,7 @@ h3 {
 .search-filter-panel__field--range,
 .search-filter-panel__field--cooldown,
 .search-filter-panel__field--control-duration,
+.search-filter-panel__field--total-duration,
 .search-filter-panel__field--numeric-range {
   grid-column: 1 / -1;
 }
@@ -2177,14 +2218,6 @@ h3 {
 .search-filter-range--wide {
   grid-template-columns: 112px minmax(0, 1fr);
   gap: 6px;
-}
-
-.search-filter-range--with-none {
-  grid-template-columns: 112px minmax(0, 1fr) max-content;
-}
-
-.search-filter-range__none {
-  height: 24px;
 }
 
 .search-filter-range input {
@@ -2291,6 +2324,8 @@ h3 {
   font-size: 13px;
   font-weight: 700;
   line-height: 1;
+  cursor: default;
+  user-select: none;
   white-space: nowrap;
 }
 

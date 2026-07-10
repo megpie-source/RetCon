@@ -35,11 +35,13 @@ import {
 } from "@/utils/powerDamageTypes";
 import {
   formatPowerCooldownFilterLabel,
+  getCooldownNumbers,
   getPowerCooldownFilterSteps,
   powerMatchesCooldown,
 } from "@/utils/powerCooldown";
 import {
   formatPowerControlDurationLabel,
+  getPowerControlDurations,
   getControlTypesFromSearch,
   getPowerControlDurationSteps,
   powerMatchesControlDuration,
@@ -47,11 +49,15 @@ import {
 import {
   formatPowerRangeFilterLabel,
   getPowerRangeFilterSteps,
+  getPowerRangeFeet,
   powerMatchesExactRange,
 } from "@/utils/powerRange";
 import {
+  formatPowerNumericFilterLabel,
+  getPowerNumericFilterSteps,
   getPowerNumericRangeBounds,
   getPowerNumericValue,
+  powerMatchesNumericValue,
   powerMatchesNumericRange,
   type PowerNumericRange,
   type PowerNumericValueField,
@@ -123,8 +129,10 @@ const healingValueFilterTooltip =
   "These values are intended to compare healing powers with similar activation types. They exclude synergies, conditional bonuses, and secondary effects. They are not an HPS calculation and should be used as a rough reference.\n\nClick / Charged: maximum base healing\nMaintains / HoTs: healing per tick\nCombos: highest base healing provided by a single combo step";
 const controlDurationFilterTooltip =
   "Matches any control duration present on the power. Powers with multiple control effects may match multiple values.";
+const totalDurationFilterTooltip =
+  "Filters powers by activation time plus maximum duration. For charged powers, this uses the maximum charge time. This is mostly useful to compare powers with similar behavior.";
 const costFilterTooltip =
-  "Filters powers by their listed Energy cost. Single and charged powers use the highest listed cost. Maintains use the per-tick cost: Y in X+Y. Select None for powers with no listed Energy cost. Costs paid with HP are excluded.";
+  "Filters powers by their listed Energy cost. Single and charged powers use the highest listed cost. Maintains use the per-tick cost: Y in X+Y. Costs paid with HP are excluded.";
 const travelFrameworkOrder = [
   "Flight",
   "Superspeed",
@@ -149,14 +157,37 @@ const scalingStatFilterOptions = [
   "END",
 ];
 
+type PowerSortOption =
+  | ""
+  | "activation_time"
+  | "cc_duration"
+  | "cooldown"
+  | "cost"
+  | "damage_values"
+  | "healing_values"
+  | "max_duration"
+  | "range"
+  | "total_duration";
+
+const powerSortOptions: { label: string; value: PowerSortOption }[] = [
+  { label: "None", value: "" },
+  { label: "Damage", value: "damage_values" },
+  { label: "Healing", value: "healing_values" },
+  { label: "CC duration", value: "cc_duration" },
+  { label: "Cost", value: "cost" },
+  { label: "Cooldown", value: "cooldown" },
+  { label: "Range", value: "range" },
+  { label: "Activation Time", value: "activation_time" },
+  { label: "Max Duration", value: "max_duration" },
+  { label: "Total duration", value: "total_duration" },
+];
+
 type NumericRangeFilterProps = {
   field: PowerNumericValueField;
   label: string;
   minimum: number;
   maximum: number;
   maximumIsOpenEnded?: boolean;
-  noneOnly?: boolean;
-  onNoneOnlyChange?: (noneOnly: boolean) => void;
   range: PowerNumericRange | null;
   scale?: "cost" | "linear" | "logarithmic";
   step?: number;
@@ -171,8 +202,6 @@ function NumericRangeFilter({
   minimum,
   maximum,
   maximumIsOpenEnded = false,
-  noneOnly = false,
-  onNoneOnlyChange,
   range,
   scale = "linear",
   step = 1,
@@ -263,13 +292,11 @@ function NumericRangeFilter({
   const maximumPosition = useMappedScale
     ? (maximumSliderPosition / logarithmicSteps) * 100
     : ((maximumValue - minimum) / linearSpan) * 100;
-  const displayedValue = noneOnly
-    ? "None"
-    : range
-      ? `${minimumValue}-${maximumValue}${
-          maximumIsOpenEnded && maximumValue >= maximum ? "+" : ""
-        }${unit}`
-      : `Any ${label}`;
+  const displayedValue = range
+    ? `${minimumValue}-${maximumValue}${
+        maximumIsOpenEnded && maximumValue >= maximum ? "+" : ""
+      }${unit}`
+    : `Any ${label}`;
 
   function updateRange(nextMinimum: number, nextMaximum: number) {
     if (nextMinimum <= minimum && nextMaximum >= maximum) {
@@ -285,13 +312,7 @@ function NumericRangeFilter({
       className={`search-filter-panel__field search-filter-panel__field--numeric-range search-filter-panel__field--${field}`}
     >
       <span className="search-filter-panel__label">{label}</span>
-      <div
-        className={
-          onNoneOnlyChange
-            ? "search-filter-range search-filter-range--double search-filter-range--with-none"
-            : "search-filter-range search-filter-range--double"
-        }
-      >
+      <div className="search-filter-range search-filter-range--double">
         <span
           className="search-filter-range__value"
           data-text-tooltip={tooltip}
@@ -311,7 +332,6 @@ function NumericRangeFilter({
           <input
             aria-label={`${label} minimum`}
             aria-valuetext={`${minimumValue}${unit}`}
-            disabled={noneOnly}
             max={sliderMaximum}
             min={sliderMinimum}
             step={sliderStep}
@@ -332,7 +352,6 @@ function NumericRangeFilter({
             aria-valuetext={`${maximumValue}${
               maximumIsOpenEnded && maximumValue >= maximum ? "+" : ""
             }${unit}`}
-            disabled={noneOnly}
             max={sliderMaximum}
             min={sliderMinimum}
             step={sliderStep}
@@ -349,16 +368,6 @@ function NumericRangeFilter({
             }
           />
         </div>
-        {onNoneOnlyChange ? (
-          <label className="search-filter-panel__checkbox search-filter-range__none">
-            <input
-              checked={noneOnly}
-              type="checkbox"
-              onChange={(event) => onNoneOnlyChange(event.target.checked)}
-            />
-            <span>None</span>
-          </label>
-        ) : null}
       </div>
     </div>
   );
@@ -422,6 +431,61 @@ function travelFrameworkSortIndex(frameworkId: string | null) {
   const index = travelFrameworkOrder.indexOf(frameworkId ?? "");
 
   return index >= 0 ? index : Number.MAX_SAFE_INTEGER;
+}
+
+function getPowerSortValue(power: Power, sortOption: PowerSortOption) {
+  if (sortOption === "") {
+    return null;
+  }
+
+  if (sortOption === "cc_duration") {
+    const durations = getPowerControlDurations(power);
+
+    return durations.length > 0 ? Math.max(...durations) : null;
+  }
+
+  if (sortOption === "cooldown") {
+    const cooldowns = getCooldownNumbers(power.cooldown);
+
+    return cooldowns.length > 0 ? Math.max(...cooldowns) : null;
+  }
+
+  if (sortOption === "range") {
+    return getPowerRangeFeet(power);
+  }
+
+  return getPowerNumericValue(power, sortOption);
+}
+
+function sortPowersWithinSection(
+  powers: Power[],
+  sortOption: PowerSortOption,
+  fallbackCompare: (a: Power, b: Power) => number,
+) {
+  const sortedPowers = [...powers];
+
+  if (!sortOption) {
+    return sortedPowers.sort(fallbackCompare);
+  }
+
+  return sortedPowers.sort((a, b) => {
+    const valueA = getPowerSortValue(a, sortOption);
+    const valueB = getPowerSortValue(b, sortOption);
+
+    if (valueA === null && valueB === null) {
+      return fallbackCompare(a, b);
+    }
+
+    if (valueA === null) {
+      return 1;
+    }
+
+    if (valueB === null) {
+      return -1;
+    }
+
+    return valueB - valueA || fallbackCompare(a, b);
+  });
 }
 
 function normalizeSearchText(value: string | null | undefined) {
@@ -656,6 +720,7 @@ export function PowersPanel({
   const [isScalingStatMenuOpen, setIsScalingStatMenuOpen] = useState(false);
   const [isDamageTypeMenuOpen, setIsDamageTypeMenuOpen] = useState(false);
   const [selectedPowerRoleFilter, setSelectedPowerRoleFilter] = useState("");
+  const [selectedPowerSort, setSelectedPowerSort] = useState<PowerSortOption>("");
   const [selectedScalingStats, setSelectedScalingStats] = useState<string[]>([]);
   const [selectedDamageTypes, setSelectedDamageTypes] = useState<string[]>([]);
   const [selectedTagSearchColumns, setSelectedTagSearchColumns] = useState<
@@ -665,12 +730,12 @@ export function PowersPanel({
   const [selectedCooldownStepIndex, setSelectedCooldownStepIndex] = useState(0);
   const [selectedCostRange, setSelectedCostRange] =
     useState<PowerNumericRange | null>(null);
-  const [showPowersWithoutCostOnly, setShowPowersWithoutCostOnly] =
-    useState(false);
   const [selectedDamageValueRange, setSelectedDamageValueRange] =
     useState<PowerNumericRange | null>(null);
   const [selectedHealingValueRange, setSelectedHealingValueRange] =
     useState<PowerNumericRange | null>(null);
+  const [selectedTotalDurationStepIndex, setSelectedTotalDurationStepIndex] =
+    useState(0);
   const [selectedControlDurationStepIndex, setSelectedControlDurationStepIndex] =
     useState(0);
   const [selectedTargetingFilter, setSelectedTargetingFilter] = useState<
@@ -861,6 +926,10 @@ export function PowersPanel({
     () => getPowerNumericRangeBounds(numericValueRecords, "healing_values"),
     [numericValueRecords],
   );
+  const totalDurationSteps = useMemo(
+    () => getPowerNumericFilterSteps(powers, "total_duration", 0.01),
+    [powers],
+  );
   const damageValueMaximum = Math.min(damageValueBounds[1], 2000);
   const healingValueMaximum = Math.min(healingValueBounds[1], 1000);
   const clampedRangeStepIndex =
@@ -873,19 +942,27 @@ export function PowersPanel({
     selectedControlDurationStepIndex < powerControlDurationSteps.length
       ? selectedControlDurationStepIndex
       : 0;
+  const clampedTotalDurationStepIndex =
+    selectedTotalDurationStepIndex < totalDurationSteps.length
+      ? selectedTotalDurationStepIndex
+      : 0;
   const selectedMinimumRange = powerRangeSteps[clampedRangeStepIndex] ?? null;
   const selectedCooldown = powerCooldownSteps[clampedCooldownStepIndex] ?? null;
   const selectedControlDuration =
     powerControlDurationSteps[clampedControlDurationStepIndex] ?? null;
+  const selectedTotalDuration =
+    totalDurationSteps[clampedTotalDurationStepIndex] ?? null;
   const hasActiveAdvancedFilters =
+    selectedMinimumRange !== null ||
     selectedCooldown !== null ||
-    showPowersWithoutCostOnly ||
     selectedCostRange !== null ||
     selectedDamageValueRange !== null ||
     selectedHealingValueRange !== null ||
+    selectedTotalDuration !== null ||
     selectedControlDuration !== null;
-  const advancedFiltersExpanded =
-    isAdvancedFilterOpen || hasActiveAdvancedFilters;
+  const advancedFiltersExpanded = isAdvancedFilterOpen;
+  const hasHiddenActiveAdvancedFilters =
+    hasActiveAdvancedFilters && !advancedFiltersExpanded;
 
   const hasActivePowerSearchOrFilter =
     hasParsedPowerSearch(parsedSearch) ||
@@ -894,10 +971,10 @@ export function PowersPanel({
     selectedDamageTypes.length > 0 ||
     selectedMinimumRange !== null ||
     selectedCooldown !== null ||
-    showPowersWithoutCostOnly ||
     selectedCostRange !== null ||
     selectedDamageValueRange !== null ||
     selectedHealingValueRange !== null ||
+    selectedTotalDuration !== null ||
     selectedControlDuration !== null ||
     Boolean(selectedTargetingFilter) ||
     Boolean(selectedActivationTypeFilter) ||
@@ -1311,14 +1388,6 @@ export function PowersPanel({
       }
 
       if (
-        showPowersWithoutCostOnly &&
-        getPowerNumericValue(power, "cost") !== null
-      ) {
-        return false;
-      }
-
-      if (
-        !showPowersWithoutCostOnly &&
         selectedCostRange !== null &&
         !powerMatchesNumericRange(power, "cost", selectedCostRange)
       ) {
@@ -1332,6 +1401,18 @@ export function PowersPanel({
           "healing_values",
           selectedHealingValueRange,
           healingValueMaximum,
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        selectedTotalDuration !== null &&
+        !powerMatchesNumericValue(
+          power,
+          "total_duration",
+          selectedTotalDuration,
+          0.0051,
         )
       ) {
         return false;
@@ -1377,10 +1458,10 @@ export function PowersPanel({
     selectedTagSearchColumns,
     selectedMinimumRange,
     selectedCooldown,
-    showPowersWithoutCostOnly,
     selectedCostRange,
     selectedDamageValueRange,
     selectedHealingValueRange,
+    selectedTotalDuration,
     selectedControlDuration,
     selectedControlTypes,
     damageValueMaximum,
@@ -1397,12 +1478,24 @@ export function PowersPanel({
   ]);
 
   const powerSections = useMemo(() => {
+    const nameCompare = (a: Power, b: Power) => a.name.localeCompare(b.name);
+    const variantCompare = (a: Power, b: Power) => {
+      const variantTypeDifference =
+        Number(isUltimatePower(a)) - Number(isUltimatePower(b));
+
+      return variantTypeDifference || nameCompare(a, b);
+    };
+    const sortSectionPowers = (
+      sectionPowers: Power[],
+      fallbackCompare = nameCompare,
+    ) => sortPowersWithinSection(sectionPowers, selectedPowerSort, fallbackCompare);
+
     if (restrictedPowerIds !== null) {
       return [
         {
           key: "restricted-powers",
           label: restrictedPowerSectionLabel ?? "Restricted powers",
-          powers: [...visiblePowers].sort((a, b) => a.name.localeCompare(b.name)),
+          powers: sortSectionPowers(visiblePowers),
         },
       ];
     }
@@ -1423,9 +1516,9 @@ export function PowersPanel({
       return uniqueFrameworkIds.map((frameworkId) => ({
         key: `travel-${frameworkId ?? "unknown"}`,
         label: travelFrameworkLabel(frameworkId),
-        powers: visiblePowers
-          .filter((power) => power.framework_id === frameworkId)
-          .sort((a, b) => a.name.localeCompare(b.name)),
+        powers: sortSectionPowers(
+          visiblePowers.filter((power) => power.framework_id === frameworkId),
+        ),
       }));
     }
 
@@ -1445,14 +1538,10 @@ export function PowersPanel({
       return uniqueFrameworkIds.map((frameworkId) => ({
         key: `power-variant-${frameworkId ?? "unknown"}`,
         label: formatFrameworkName(frameworkId) || "Unknown",
-        powers: visiblePowers
-          .filter((power) => power.framework_id === frameworkId)
-          .sort((a, b) => {
-            const variantTypeDifference =
-              Number(isUltimatePower(a)) - Number(isUltimatePower(b));
-
-            return variantTypeDifference || a.name.localeCompare(b.name);
-          }),
+        powers: sortSectionPowers(
+          visiblePowers.filter((power) => power.framework_id === frameworkId),
+          variantCompare,
+        ),
       }));
     }
 
@@ -1466,9 +1555,9 @@ export function PowersPanel({
       return uniqueFrameworkIds.map((frameworkId) => ({
         key: `device-${frameworkId ?? "unknown"}`,
         label: formatFrameworkName(frameworkId) || "Unknown",
-        powers: visiblePowers
-          .filter((power) => power.framework_id === frameworkId)
-          .sort((a, b) => a.name.localeCompare(b.name)),
+        powers: sortSectionPowers(
+          visiblePowers.filter((power) => power.framework_id === frameworkId),
+        ),
       }));
     }
 
@@ -1476,19 +1565,17 @@ export function PowersPanel({
       .map((tier) => ({
         key: tierKey(tier),
         label: tierLabel(tier),
-        powers: visiblePowers.filter(
-          (power) => isCombatPower(power) && power.tier === tier,
+        powers: sortSectionPowers(
+          visiblePowers.filter(
+            (power) => isCombatPower(power) && power.tier === tier,
+          ),
         ),
       }))
       .filter((section) => section.powers.length > 0);
-    const variantPowers = visiblePowers
-      .filter((power) => isPowerVariantDevice(power))
-      .sort((a, b) => {
-        const variantTypeDifference =
-          Number(isUltimatePower(a)) - Number(isUltimatePower(b));
-
-        return variantTypeDifference || a.name.localeCompare(b.name);
-      });
+    const variantPowers = sortSectionPowers(
+      visiblePowers.filter((power) => isPowerVariantDevice(power)),
+      variantCompare,
+    );
 
     if (variantPowers.length === 0) {
       return tierSections;
@@ -1508,6 +1595,7 @@ export function PowersPanel({
     isTravelMode,
     restrictedPowerIds,
     restrictedPowerSectionLabel,
+    selectedPowerSort,
     visiblePowers,
   ]);
 
@@ -1727,6 +1815,15 @@ export function PowersPanel({
     return formatPowerCooldownFilterLabel(selectedCooldown);
   }
 
+  function selectedTotalDurationLabel() {
+    return formatPowerNumericFilterLabel(
+      selectedTotalDuration,
+      "Any Cycle time",
+      " sec",
+      2,
+    );
+  }
+
   function getValueFilterAdvantageHighlightIds(power: Power) {
     if (!searchInAdvantages) {
       return [];
@@ -1766,15 +1863,16 @@ export function PowersPanel({
 
   function resetAdvancedFilters() {
     setSelectedPowerRoleFilter("");
+    setSelectedPowerSort("");
     setSelectedScalingStats([]);
     setSelectedDamageTypes([]);
     setSelectedTagSearchColumns([]);
     setSelectedRangeStepIndex(0);
     setSelectedCooldownStepIndex(0);
-    setShowPowersWithoutCostOnly(false);
     setSelectedCostRange(null);
     setSelectedDamageValueRange(null);
     setSelectedHealingValueRange(null);
+    setSelectedTotalDurationStepIndex(0);
     setSelectedControlDurationStepIndex(0);
     setSelectedTargetingFilter("");
     setSelectedActivationTypeFilter("");
@@ -2090,17 +2188,23 @@ export function PowersPanel({
               />
               <span>Acquired</span>
             </label>
-            <label className="search-filter-panel__checkbox search-filter-panel__checkbox--tag-column search-filter-panel__advanced-toggle">
-              <input
-                checked={advancedFiltersExpanded}
-                type="checkbox"
+            <label
+              className="search-filter-panel__sort"
+              data-text-tooltip="Sorting by descending order among same tier"
+            >
+              <span>Sort by</span>
+              <select
+                value={selectedPowerSort}
                 onChange={(event) =>
-                  setIsAdvancedFilterOpen(
-                    hasActiveAdvancedFilters ? true : event.target.checked,
-                  )
+                  setSelectedPowerSort(event.target.value as PowerSortOption)
                 }
-              />
-              <span>Show Advanced options</span>
+              >
+                {powerSortOptions.map((option) => (
+                  <option key={option.value || "none"} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
             </label>
           </div>
 
@@ -2156,112 +2260,6 @@ export function PowersPanel({
               ))}
             </select>
           </label>
-
-          <label className="search-filter-panel__field search-filter-panel__field--range">
-            <span className="search-filter-panel__label">Range</span>
-            <div className="search-filter-range">
-              <span className="search-filter-range__value">
-                {selectedRangeLabel()}
-              </span>
-              <input
-                max={powerRangeSteps.length - 1}
-                min={0}
-                type="range"
-                value={clampedRangeStepIndex}
-                onChange={(event) =>
-                  setSelectedRangeStepIndex(Number(event.target.value))
-                }
-              />
-            </div>
-          </label>
-
-          {advancedFiltersExpanded ? (
-            <div className="search-filter-panel__advanced">
-              <label className="search-filter-panel__field search-filter-panel__field--cooldown">
-                <span className="search-filter-panel__label">Cooldown</span>
-                <div className="search-filter-range">
-                  <span className="search-filter-range__value">
-                    {selectedCooldownLabel()}
-                  </span>
-                  <input
-                    max={powerCooldownSteps.length - 1}
-                    min={0}
-                    type="range"
-                    value={clampedCooldownStepIndex}
-                    onChange={(event) =>
-                      setSelectedCooldownStepIndex(Number(event.target.value))
-                    }
-                  />
-                </div>
-              </label>
-
-              <label className="search-filter-panel__field search-filter-panel__field--control-duration">
-                <span className="search-filter-panel__label">CC duration</span>
-                <div className="search-filter-range search-filter-range--wide">
-                  <span
-                    className="search-filter-range__value"
-                    data-text-tooltip={controlDurationFilterTooltip}
-                  >
-                    {formatPowerControlDurationLabel(selectedControlDuration)}
-                  </span>
-                  <input
-                    max={powerControlDurationSteps.length - 1}
-                    min={0}
-                    type="range"
-                    value={clampedControlDurationStepIndex}
-                    onChange={(event) =>
-                      setSelectedControlDurationStepIndex(
-                        Number(event.target.value),
-                      )
-                    }
-                  />
-                </div>
-              </label>
-
-              <NumericRangeFilter
-                field="damage_values"
-                label="Damage"
-                minimum={damageValueBounds[0]}
-                maximum={damageValueMaximum}
-                maximumIsOpenEnded={damageValueBounds[1] > damageValueMaximum}
-                range={selectedDamageValueRange}
-                scale="logarithmic"
-                tooltip={damageValueFilterTooltip}
-                onChange={setSelectedDamageValueRange}
-              />
-
-              <NumericRangeFilter
-                field="healing_values"
-                label="Heal"
-                minimum={healingValueBounds[0]}
-                maximum={healingValueMaximum}
-                maximumIsOpenEnded={healingValueBounds[1] > healingValueMaximum}
-                range={selectedHealingValueRange}
-                scale="logarithmic"
-                tooltip={healingValueFilterTooltip}
-                onChange={setSelectedHealingValueRange}
-              />
-
-              <NumericRangeFilter
-                field="cost"
-                label="Cost"
-                minimum={costBounds[0]}
-                maximum={costBounds[1]}
-                noneOnly={showPowersWithoutCostOnly}
-                range={selectedCostRange}
-                scale="cost"
-                tooltip={costFilterTooltip}
-                onNoneOnlyChange={(noneOnly) => {
-                  setShowPowersWithoutCostOnly(noneOnly);
-
-                  if (noneOnly) {
-                    setSelectedCostRange(null);
-                  }
-                }}
-                onChange={setSelectedCostRange}
-              />
-            </div>
-          ) : null}
 
           <div
             className="search-filter-panel__field search-filter-panel__field--damage"
@@ -2341,6 +2339,146 @@ export function PowersPanel({
               ) : null}
             </div>
           </div>
+
+          <label
+            className={`search-filter-panel__checkbox search-filter-panel__advanced-toggle${
+              hasHiddenActiveAdvancedFilters
+                ? " search-filter-panel__advanced-toggle--active"
+                : ""
+            }`}
+          >
+            <span>Show Advanced options</span>
+            <input
+              checked={advancedFiltersExpanded}
+              type="checkbox"
+              onChange={(event) =>
+                setIsAdvancedFilterOpen(event.target.checked)
+              }
+            />
+          </label>
+
+          {advancedFiltersExpanded ? (
+            <div className="search-filter-panel__advanced">
+              <label className="search-filter-panel__field search-filter-panel__field--range">
+                <span className="search-filter-panel__label">Range</span>
+                <div className="search-filter-range">
+                  <span className="search-filter-range__value">
+                    {selectedRangeLabel()}
+                  </span>
+                  <input
+                    max={powerRangeSteps.length - 1}
+                    min={0}
+                    type="range"
+                    value={clampedRangeStepIndex}
+                    onChange={(event) =>
+                      setSelectedRangeStepIndex(Number(event.target.value))
+                    }
+                  />
+                </div>
+              </label>
+
+              <label className="search-filter-panel__field search-filter-panel__field--cooldown">
+                <span className="search-filter-panel__label">Cooldown</span>
+                <div className="search-filter-range">
+                  <span className="search-filter-range__value">
+                    {selectedCooldownLabel()}
+                  </span>
+                  <input
+                    max={powerCooldownSteps.length - 1}
+                    min={0}
+                    type="range"
+                    value={clampedCooldownStepIndex}
+                    onChange={(event) =>
+                      setSelectedCooldownStepIndex(Number(event.target.value))
+                    }
+                  />
+                </div>
+              </label>
+
+              <label className="search-filter-panel__field search-filter-panel__field--control-duration">
+                <span className="search-filter-panel__label">CC duration</span>
+                <div className="search-filter-range search-filter-range--wide">
+                  <span
+                    className="search-filter-range__value"
+                    data-text-tooltip={controlDurationFilterTooltip}
+                  >
+                    {formatPowerControlDurationLabel(selectedControlDuration)}
+                  </span>
+                  <input
+                    max={powerControlDurationSteps.length - 1}
+                    min={0}
+                    type="range"
+                    value={clampedControlDurationStepIndex}
+                    onChange={(event) =>
+                      setSelectedControlDurationStepIndex(
+                        Number(event.target.value),
+                      )
+                    }
+                  />
+                </div>
+              </label>
+
+              <label className="search-filter-panel__field search-filter-panel__field--total-duration">
+                <span className="search-filter-panel__label">
+                  Total duration
+                </span>
+                <div className="search-filter-range search-filter-range--wide">
+                  <span
+                    className="search-filter-range__value"
+                    data-text-tooltip={totalDurationFilterTooltip}
+                  >
+                    {selectedTotalDurationLabel()}
+                  </span>
+                  <input
+                    max={totalDurationSteps.length - 1}
+                    min={0}
+                    type="range"
+                    value={clampedTotalDurationStepIndex}
+                    onChange={(event) =>
+                      setSelectedTotalDurationStepIndex(
+                        Number(event.target.value),
+                      )
+                    }
+                  />
+                </div>
+              </label>
+
+              <NumericRangeFilter
+                field="damage_values"
+                label="Damage"
+                minimum={damageValueBounds[0]}
+                maximum={damageValueMaximum}
+                maximumIsOpenEnded={damageValueBounds[1] > damageValueMaximum}
+                range={selectedDamageValueRange}
+                scale="logarithmic"
+                tooltip={damageValueFilterTooltip}
+                onChange={setSelectedDamageValueRange}
+              />
+
+              <NumericRangeFilter
+                field="healing_values"
+                label="Heal"
+                minimum={healingValueBounds[0]}
+                maximum={healingValueMaximum}
+                maximumIsOpenEnded={healingValueBounds[1] > healingValueMaximum}
+                range={selectedHealingValueRange}
+                scale="logarithmic"
+                tooltip={healingValueFilterTooltip}
+                onChange={setSelectedHealingValueRange}
+              />
+
+              <NumericRangeFilter
+                field="cost"
+                label="Cost"
+                minimum={costBounds[0]}
+                maximum={costBounds[1]}
+                range={selectedCostRange}
+                scale="cost"
+                tooltip={costFilterTooltip}
+                onChange={setSelectedCostRange}
+              />
+            </div>
+          ) : null}
 
           <div className="search-filter-panel__actions">
             <button

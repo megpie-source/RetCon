@@ -7,6 +7,7 @@ import type {
 } from "@/shared/ui/instantTooltipTypes";
 import type { TagSearchColumn } from "@/utils/powerTags";
 import type { FrameworkGlossaryTooltip } from "@/utils/frameworkGlossary";
+import { splitTooltipTextLines } from "@/shared/utils/tooltipText";
 
 function StatTooltip({ data }: { data: StatTooltipData }) {
   return (
@@ -60,6 +61,8 @@ function FrameworkTooltip({ data }: { data: FrameworkGlossaryTooltip }) {
 }
 
 function AdvantageTooltip({ data }: { data: AdvantageTooltipData }) {
+  const tooltipLines = splitTooltipTextLines(data.tooltip);
+
   return (
     <div className="advantage-tooltip">
       <div className="power-tooltip-advantages__header">
@@ -69,7 +72,13 @@ function AdvantageTooltip({ data }: { data: AdvantageTooltipData }) {
 
       {data.tags.length > 0 ? <TooltipTags tags={data.tags} /> : null}
 
-      {data.tooltip ? <p>{data.tooltip}</p> : null}
+      {tooltipLines.length > 0 ? (
+        <div className="advantage-tooltip__text">
+          {tooltipLines.map((line, index) => (
+            <span key={`${line}-${index}`}>{line}</span>
+          ))}
+        </div>
+      ) : null}
       {data.lockedReason ? (
         <p className="advantage-tooltip__warning">{data.lockedReason}</p>
       ) : null}

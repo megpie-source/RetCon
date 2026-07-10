@@ -138,7 +138,7 @@
     "advantage_id": 10,
     "name": "20/20 Fission",
     "points_cost": 2,
-    "tooltip": "Maintaining for at least half of its duration applies Burn Through.",
+    "tooltip": "Maintaining for at least half of its duration applies Burn Through. Burn Through reduces resistance to your Crushing Damage and Particle Damage by 15% for 15 sec.",
     "apply_tag": [
       "Burn Through"
     ],
@@ -208,7 +208,7 @@
     "advantage_id": 15,
     "name": "Admonish",
     "points_cost": 2,
-    "tooltip": "When fully charged, Stuns foes within 10ft of the primary target (the primary target is not Stunned) for 2sec. This effect is active for both healing and damage forms.",
+    "tooltip": "When fully charged, Stuns foes within 10ft of the primary target (the primary target is not Stunned) for 2 sec. This effect is active for both healing and damage forms.",
     "apply_tag": [
       "Stun"
     ],
@@ -255,7 +255,7 @@
     "advantage_id": 18,
     "name": "Aftershock",
     "points_cost": 2,
-    "tooltip": "Applies Superconductor to your target.",
+    "tooltip": "Applies Superconductor to your target. Superconductor reduces resistance to Electrical Damage by 18% for 15 sec.",
     "apply_tag": [
       "Superconductor"
     ],
@@ -391,7 +391,7 @@
     "advantage_id": 26,
     "name": "Armor Piercing",
     "points_cost": 2,
-    "tooltip": "Applies Armor Piercing to your primary target and has 20% chance to apply Armor Piercing to secondary targets.",
+    "tooltip": "Applies Armor Piercing to your primary target and has 20% chance to apply Armor Piercing to secondary targets. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec.",
     "apply_tag": [
       "Armor Piercing"
     ],
@@ -442,8 +442,10 @@
     "advantage_id": 29,
     "name": "Aversion",
     "points_cost": 2,
-    "tooltip": "Grants you Dodge and Avoidance rating for 12 sec.",
-    "apply_tag": [],
+    "tooltip": "Scoring a critical hit with this power grants you Aversion for 12 sec. + Aversion increases your dodge and avoidance, scaling with your Intelligence.",
+    "apply_tag": [
+      "Aversion"
+    ],
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
@@ -493,7 +495,7 @@
     "advantage_id": 32,
     "name": "Bad Footing",
     "points_cost": 2,
-    "tooltip": "Applies Disorient.",
+    "tooltip": "Applies Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -510,7 +512,7 @@
     "advantage_id": 33,
     "name": "Bad Luck",
     "points_cost": 2,
-    "tooltip": "25-100% chance to apply Jinxed.",
+    "tooltip": "25-100% chance to apply Jinxed. Jinxed causes -10% all damage strength and -35% Run Speed for 8 sec to affected targets. When Jinxed expires targets are Knocked down.",
     "apply_tag": [
       "Jinxed"
     ],
@@ -650,7 +652,7 @@
     "advantage_id": 41,
     "name": "Bewilder",
     "points_cost": 2,
-    "tooltip": "Applies Disorient on high ranking foes.",
+    "tooltip": "Applies Disorient on high ranking foes. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -769,18 +771,19 @@
     "advantage_id": 48,
     "name": "Blinding Light",
     "points_cost": 2,
-    "tooltip": "Fully charging applies Illumination to you and nearby allies. It also applies Illuminated to the target.",
+    "tooltip": "Fully charging applies Illumination to you and nearby allies. It also applies Illuminated to the target. + Illumination increases the direct healing the target receives by 3% for 20 sec. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
       "Illumination",
-      "Illuminated",
-      "Passive Heal"
+      "Illuminated"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Passive Heal"
+    ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "105",
     "control_values": null,
     "is_disabled": false
   },
@@ -823,10 +826,11 @@
     "points_cost": 2,
     "tooltip": "The final combo hit refreshes Demolish on the target by 12 sec and also applies Blindside to you. For each stack of Enrage on you, Blindside increases the base damage of your Brick damage by 1.9% and reduces all others by 3.8%.",
     "apply_tag": [
-      "Demolish",
       "Blindside"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Demolish"
+    ],
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
@@ -924,7 +928,7 @@
     "advantage_id": 57,
     "name": "Blunt Force",
     "points_cost": 2,
-    "tooltip": "Applies Disorient for 12 sec to the target.",
+    "tooltip": "Applies Disorient to the target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -1013,7 +1017,7 @@
     "advantage_id": 62,
     "name": "Break Formation",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Disorient for 12 sec. Chance is guaranteed when fully maintained.",
+    "tooltip": "15% chance on each hit to apply Disorient. Chance is guaranteed when fully maintained. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -1081,7 +1085,7 @@
     "advantage_id": 67,
     "name": "Brute Force",
     "points_cost": 2,
-    "tooltip": "Applies Demolish. Deals Crushing Damage instead of slashing.",
+    "tooltip": "Applies Demolish. Demolish reduces resistance to Crushing Damage by 18% for 15 sec. Deals Crushing Damage instead of slashing.",
     "apply_tag": [
       "Demolish"
     ],
@@ -1152,15 +1156,16 @@
     "advantage_id": 71,
     "name": "Burn Up",
     "points_cost": 3,
-    "tooltip": "Fully charging this power deal 202 additional Fire Damage for each of your Chill effects on affected targets, consuming the Chill effects in the process. Also shatters any nearby Ice Structures, dealing additional Cold Damage to foes near them.",
-    "apply_tag": [],
+    "tooltip": "Fully charging this power deals 202 additional Fire Damage for each of your Chill effects on affected targets, consuming the Chill effects in the process. Also shatters any of your Ice Structures, dealing 126-547 Cold Damage, based on the rank and type of the Structure, to up to 5 foes within 15ft.",
+    "apply_tag": [
+      "Shatter"
+    ],
     "refresh_tag": [],
     "synergy_tag": [
       "Chill",
       "Ice Structures"
     ],
     "filter_tag": [
-      "Shatter",
       "Rupture"
     ],
     "damage_type": [
@@ -1212,13 +1217,15 @@
     "advantage_id": 74,
     "name": "Burning Rain",
     "points_cost": 2,
-    "tooltip": "Summons a Pyre Patch when fully maintained.",
+    "tooltip": "When fully maintained, creates a Pyre Patch on the target. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -1280,7 +1287,7 @@
     "advantage_id": 78,
     "name": "Can't Stop Me",
     "points_cost": 2,
-    "tooltip": "Taking damage applies a stack of Charged Up. Charged Up increases your Running Speed by 15%, your Jump Height by 2%, and your Flying Speed by 2%. This effect stacks up to 5 times and lasts 10 sec.",
+    "tooltip": "Taking damage applies a stack of Charged Up. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -1398,7 +1405,7 @@
     "advantage_id": 86,
     "name": "Charged Up",
     "points_cost": 2,
-    "tooltip": "If the target is affected by Negative Ions, consumes Negative Ions to apply a stack of Charged Up, also refreshing existing stacks. Charged Up increases your Running Speed by 15%, your Jump Height by 2%, and your Flying Speed by 2%. This effect stacks up to 5 times and lasts 10 sec.",
+    "tooltip": "If the target is affected by Negative Ions, consumes Negative Ions to apply a stack of Charged Up, also refreshing existing stacks. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -1417,7 +1424,7 @@
     "advantage_id": 87,
     "name": "Chemical Burn",
     "points_cost": 2,
-    "tooltip": "Applies No Quarter to your primary target.",
+    "tooltip": "Applies No Quarter to your primary target. No Quarter reduces resistance to your Crushing Damage and Fire Damage by 15% for 15 sec.",
     "apply_tag": [
       "No Quarter"
     ],
@@ -1468,7 +1475,7 @@
     "advantage_id": 90,
     "name": "Chilled Air",
     "points_cost": 2,
-    "tooltip": "10% chance every 1 sec to apply Chill.",
+    "tooltip": "10% chance every 1 sec to apply Chill. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Chill"
     ],
@@ -1485,7 +1492,7 @@
     "advantage_id": 91,
     "name": "Chilling Out",
     "points_cost": 2,
-    "tooltip": "Applies Restoration to you, healing you for +258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional +645 Health Points and Restoration now heals for +387 Health Points every 2 sec over 6 sec.",
+    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional 645 Health Points and Restoration now heals for 387 Health Points every 2 sec over 6 sec.",
     "apply_tag": [
       "Restoration"
     ],
@@ -1519,7 +1526,7 @@
     "advantage_id": 93,
     "name": "Chilling Touch",
     "points_cost": 2,
-    "tooltip": "Applies Chill on foes that you consume Clinging Flames.",
+    "tooltip": "Applies Chill on foes that you consume Clinging Flames. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Chill"
     ],
@@ -1575,7 +1582,7 @@
     "advantage_id": 96,
     "name": "Cleaving Strikes",
     "points_cost": 2,
-    "tooltip": "Finishing the combo applies Shredded to your primary target.",
+    "tooltip": "Finishing the combo applies Shredded to your primary target. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -1664,7 +1671,7 @@
     "advantage_id": 101,
     "name": "Cold Front",
     "points_cost": 1,
-    "tooltip": "10-50% chance to apply Chill, based on charge time.",
+    "tooltip": "10-50% chance to apply Chill, based on charge time.  Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Chill"
     ],
@@ -1905,7 +1912,7 @@
     "advantage_id": 116,
     "name": "Consume Will",
     "points_cost": 2,
-    "tooltip": "Causes the entites summoned to apply Stress to their targets, debuffing their resistance to Ego Damage.",
+    "tooltip": "Causes the entites summoned to apply Stress to their targets. Stress reduces Ego resistance by 8% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stress"
     ],
@@ -1990,7 +1997,7 @@
     "advantage_id": 121,
     "name": "Corrupting Force",
     "points_cost": 2,
-    "tooltip": "On a full charge, applies Debilitating Poison to the target. Debilitating Poison deals Toxic Damage over time and reduces the target's damage by 10%.",
+    "tooltip": "On a full charge, applies Debilitating Poison to the target. Debilitating Poison reduces resistance to Toxic Damage by 18% for 15 sec.",
     "apply_tag": [
       "Debilitating Poison"
     ],
@@ -2007,7 +2014,7 @@
     "advantage_id": 122,
     "name": "Covet",
     "points_cost": 2,
-    "tooltip": "Applies Restoration to you, healing you for +258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional +645 Health Points and Restoration now heals for +387 Health Points every 2 sec over 6 sec.",
+    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional 645 Health Points and Restoration now heals for 387 Health Points every 2 sec over 6 sec.",
     "apply_tag": [
       "Restoration"
     ],
@@ -2047,9 +2054,7 @@
     "synergy_tag": [
       "Chill"
     ],
-    "filter_tag": [
-      "Shatter"
-    ],
+    "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -2060,7 +2065,7 @@
     "advantage_id": 125,
     "name": "Cry Havoc",
     "points_cost": 2,
-    "tooltip": "Applies Fear to targets.",
+    "tooltip": "Applies Fear to targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -2092,7 +2097,7 @@
     "advantage_id": 127,
     "name": "Cursed",
     "points_cost": 2,
-    "tooltip": "Applies Hexed to your primary target, reducing their resistance to Magic Damage by 18% for 12 sec. Hexed is a type of Curse.",
+    "tooltip": "Applies Hexed to your primary target. Hexed reduces resistance to Magic Damage by 18% for 15 sec.",
     "apply_tag": [
       "Hexed"
     ],
@@ -2109,7 +2114,7 @@
     "advantage_id": 128,
     "name": "Cut to Shreds",
     "points_cost": 2,
-    "tooltip": "10% chance on each hit to apply Shredded. 100% chance if fully maintained.",
+    "tooltip": "10% chance on each hit to apply Shredded. 100% chance if fully maintained. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -2126,7 +2131,7 @@
     "advantage_id": 129,
     "name": "Cuts and Scrapes",
     "points_cost": 2,
-    "tooltip": "Applies Armor Piercing to your primary target.",
+    "tooltip": "Applies Armor Piercing to your primary target. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec.",
     "apply_tag": [
       "Armor Piercing"
     ],
@@ -2160,7 +2165,7 @@
     "advantage_id": 131,
     "name": "Dark Presence",
     "points_cost": 2,
-    "tooltip": "10% chance every 1 sec to apply Fear.",
+    "tooltip": "10% chance every 1 sec to apply Fear. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -2243,14 +2248,15 @@
     "advantage_id": 136,
     "name": "Daybreaker",
     "points_cost": 2,
-    "tooltip": "Fully charging creates a Pyre Patch at your location. The Pyre Patch persists on the ground for 10 sec. It deals 61 Fire Damage every 1 sec and has a 10% chance to apply Clinging Flames to enemies standing in it. + You can only have one Pyre Patch active at a time. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
+    "tooltip": "Fully charging creates a Pyre Patch at your location. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
-      "Pyre Patch",
-      "Clinging Flames"
+      "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -2280,7 +2286,7 @@
     "advantage_id": 138,
     "name": "Deadly Dissonance",
     "points_cost": 2,
-    "tooltip": "Applies Deafening to your primary target when partially charged, or to all targets when fully charged.",
+    "tooltip": "Applies Deafening to your primary target when partially charged, or to all targets when fully charged. Deafening reduces resistance to Sonic Damage by 18% for 15 sec.",
     "apply_tag": [
       "Deafening"
     ],
@@ -2314,7 +2320,7 @@
     "advantage_id": 140,
     "name": "Deafening",
     "points_cost": 2,
-    "tooltip": "Fully maintaining applies Deafening to targets.",
+    "tooltip": "Fully maintaining applies Deafening to targets. Deafening reduces resistance to Sonic Damage by 18% for 15 sec.",
     "apply_tag": [
       "Deafening"
     ],
@@ -2332,9 +2338,7 @@
     "name": "Deafening Dissolution",
     "points_cost": 2,
     "tooltip": "Reduces single target damage by 20%, but increases the damage against multiple targets by 80%.",
-    "apply_tag": [
-      "Deafening"
-    ],
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
@@ -2397,7 +2401,7 @@
     "advantage_id": 145,
     "name": "Decay",
     "points_cost": 2,
-    "tooltip": "Finishing the combo applies Debilitating Poison to the target. Debilitating Poison deals Toxic Damage over time and reduces the target's damage by 10%.",
+    "tooltip": "Finishing the combo applies Debilitating Poison to the target. Debilitating Poison reduces resistance to Toxic Damage by 18% for 15 sec.",
     "apply_tag": [
       "Debilitating Poison"
     ],
@@ -2414,7 +2418,7 @@
     "advantage_id": 146,
     "name": "Defensive Stance",
     "points_cost": 2,
-    "tooltip": "If using the Defiance passive, each hit refreshes your Defiant stacks. Otherwise, finishing the combo applies Aegis to you, increasing your Resistance to all damage by +15% for 15 sec.",
+    "tooltip": "If using the Defiance passive, each hit refreshes your Defiant stacks. Otherwise, finishing the combo applies Aegis to you. Aegis increases your Resistance to all damage by +15% for 15 sec.",
     "apply_tag": [
       "Aegis"
     ],
@@ -2433,7 +2437,7 @@
     "advantage_id": 147,
     "name": "Delayed Attack",
     "points_cost": 2,
-    "tooltip": "Applies Jinxed to your target.",
+    "tooltip": "Applies Jinxed to your target. Jinxed causes -10% all damage strength and -35% Run Speed for 8 sec to affected targets. When Jinxed expires targets are Knocked down.",
     "apply_tag": [
       "Jinxed"
     ],
@@ -2465,13 +2469,14 @@
     "advantage_id": 149,
     "name": "Demolishing Blast",
     "points_cost": 2,
-    "tooltip": "Applies Demolish to your target if they are Disoriented.",
+    "tooltip": "Applies Demolish to your target if they are Disoriented. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
-      "Disorient",
       "Demolish"
     ],
     "refresh_tag": [],
-    "synergy_tag": [],
+    "synergy_tag": [
+      "Disorient"
+    ],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -2483,7 +2488,7 @@
     "advantage_id": 150,
     "name": "Demolishing Strikes",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Demolish to the primary target.",
+    "tooltip": "When fully charged, applies Demolish to the primary target. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -2500,7 +2505,7 @@
     "advantage_id": 151,
     "name": "Demolition",
     "points_cost": 2,
-    "tooltip": "The final combo hit applies Demolish to your primary target.",
+    "tooltip": "The final combo hit applies Demolish to your primary target. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -2536,7 +2541,7 @@
     "advantage_id": 153,
     "name": "Despondency",
     "points_cost": 2,
-    "tooltip": "Applies Despondency to your target, lowering their Dodge Chance. Each shot has 20% chance to apply Fear.",
+    "tooltip": "Applies Despondency to your target, reducing their chance to Dodge attacks by 15% for 10 sec. + Each shot has 20% chance to apply Fear. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Despondency",
       "Fear"
@@ -2571,7 +2576,7 @@
     "advantage_id": 155,
     "name": "Devoid",
     "points_cost": 2,
-    "tooltip": "Fully charging applies Devoid. If your target is affected by Ebon Rift or Dimensional Collapse applies this effect around your target.",
+    "tooltip": "Fully charging applies Devoid. If your target is affected by Ebon Rift or Dimensional Collapse applies this effect around your target. Devoid reduces resistance to Dimensional Damage by 18% for 15 sec.",
     "apply_tag": [
       "Devoid"
     ],
@@ -2620,7 +2625,7 @@
     "advantage_id": 158,
     "name": "Didn't See That Coming",
     "points_cost": 2,
-    "tooltip": "Applies Demolish to your target if they are Disoriented.",
+    "tooltip": "Applies Demolish to your target if they are Disoriented. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -2639,7 +2644,7 @@
     "advantage_id": 159,
     "name": "Dilemma",
     "points_cost": 2,
-    "tooltip": "Applies Jinxed to targets.",
+    "tooltip": "Applies Jinxed to targets. Jinxed causes -10% all damage strength and -35% Run Speed for 8 sec to affected targets. When Jinxed expires targets are Knocked down.",
     "apply_tag": [
       "Jinxed"
     ],
@@ -2673,7 +2678,7 @@
     "advantage_id": 161,
     "name": "Disintegration Ray",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Disintegrate.",
+    "tooltip": "When fully charged, applies Disintegrate. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec.",
     "apply_tag": [
       "Disintegrate"
     ],
@@ -2727,7 +2732,7 @@
     "advantage_id": 164,
     "name": "Dizzying Impact",
     "points_cost": 2,
-    "tooltip": "Applies Disorient to the target(s).",
+    "tooltip": "Applies Disorient to the target(s). Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -2777,7 +2782,7 @@
     "advantage_id": 167,
     "name": "Download",
     "points_cost": 2,
-    "tooltip": "Applies Download to you, reducing the cost of Technology powers for 12 sec.",
+    "tooltip": "Applies Download to you. Download reduces the cost of your Technology powers by 20% and increases the effectiveness of your energy gain powers by 2.5% for 12 sec.",
     "apply_tag": [
       "Download"
     ],
@@ -2826,7 +2831,7 @@
     "advantage_id": 170,
     "name": "Dragon Rush",
     "points_cost": 3,
-    "tooltip": "When fully charged, applies Dragon Rush to you for 1 sec per stack of Focus you have.",
+    "tooltip": "When fully charged, applies Dragon Rush to you for 1 sec per stack of Focus you have. Dragon Rush reduces your Melee energy cost by 15% and grants you 11 energy per second.",
     "apply_tag": [
       "Dragon Rush"
     ],
@@ -2879,8 +2884,10 @@
     "advantage_id": 173,
     "name": "Drunken Master",
     "points_cost": 2,
-    "tooltip": "When you score a critical hit, you gain Aversion for 12 sec. Aversion increases your Dodge and Avoidance ratings. These bonuses scale with your Dexterity.",
-    "apply_tag": [],
+    "tooltip": "Scoring a critical hit with this power grants you Aversion for 12 sec. + Aversion increases your dodge and avoidance, scaling with your Dexterity.\n",
+    "apply_tag": [
+      "Aversion"
+    ],
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
@@ -3030,7 +3037,7 @@
     "advantage_id": 182,
     "name": "Emerging Nightmares",
     "points_cost": 2,
-    "tooltip": "Applies Fear to your target and other foes within 10ft.",
+    "tooltip": "Applies Fear to your target and other foes within 10ft. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -3128,7 +3135,7 @@
     "advantage_id": 188,
     "name": "Engulfing Flames",
     "points_cost": 2,
-    "tooltip": "Applies Engulfing Flames to your target if they are affected by Clinging Flames, reducing their resistance to your Fire Damage. Removes all of your Clinging Flames on foes.",
+    "tooltip": "Applies Engulfing Flames to your target if they are affected by Clinging Flames. Engulfing Flames reduces resistance to Fire Damage by 8% for 15 sec. Stacks up to 3 times. Removes all of your Clinging Flames on foes.",
     "apply_tag": [
       "Engulfing Flames"
     ],
@@ -3147,7 +3154,7 @@
     "advantage_id": 189,
     "name": "Enhanced Form",
     "points_cost": 2,
-    "tooltip": "Grants you Aegis, increasing your Resistance to all damage by +15% for 15 sec.",
+    "tooltip": "Grants you Aegis. Aegis increases your Resistance to all damage by +15% for 15 sec.",
     "apply_tag": [
       "Aegis"
     ],
@@ -3181,7 +3188,7 @@
     "advantage_id": 191,
     "name": "Envelop in Shadows",
     "points_cost": 2,
-    "tooltip": "On full charge, applies Devoid to affected targets. Devoid reduces Dimensional Damage resistance.",
+    "tooltip": "On full charge, applies Devoid to affected targets. Devoid reduces resistance to Dimensional Damage by 18% for 15 sec.",
     "apply_tag": [
       "Devoid"
     ],
@@ -3268,7 +3275,6 @@
     "points_cost": 2,
     "tooltip": "When applying Stagger, it deals double damage and Knocks your foe down.",
     "apply_tag": [
-      "Stagger",
       "Knock Down"
     ],
     "refresh_tag": [],
@@ -3471,7 +3477,7 @@
     "advantage_id": 208,
     "name": "Falling Hammer",
     "points_cost": 2,
-    "tooltip": "Fully charging applies Demolish to your primary target.",
+    "tooltip": "Fully charging applies Demolish to your primary target. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -3488,7 +3494,7 @@
     "advantage_id": 209,
     "name": "Faltering Strikes",
     "points_cost": 2,
-    "tooltip": "All attacks now have a chance to Stagger your foe. Stagger reduces damage resistance by 2 and movement speed by 25 for 12 sec, stacking up to 3 times.",
+    "tooltip": "All attacks now have a chance to Stagger your foe.  Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stagger"
     ],
@@ -3573,7 +3579,7 @@
     "advantage_id": 214,
     "name": "Fear Machine",
     "points_cost": 2,
-    "tooltip": "15% chance every tick chance to apply Fear.",
+    "tooltip": "15% chance every tick to apply Fear. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -3590,7 +3596,7 @@
     "advantage_id": 215,
     "name": "Fear Sense",
     "points_cost": 2,
-    "tooltip": "Each hit has a 25% chance to apply Furious. 100% chance on last hit.",
+    "tooltip": "Each hit has a 25% chance to apply Furious. 100% chance on last hit. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -3937,7 +3943,7 @@
     "advantage_id": 236,
     "name": "Floating Lotus Blossom",
     "points_cost": 2,
-    "tooltip": "After finishing the combo, for 10 sec, your next attacks apply Quick Maneuvering to you. Quick Maneuvering increases your Dodge chance by 5%, lasts for 12 sec and stacks up to 10 times. All stacks are lost on a successful dodge.",
+    "tooltip": "After finishing the combo, for 10 sec, your melee attacks apply Quick Maneuvering to you. Quick Maneuvering increases your Dodge chance by 5%, lasts for 12 sec and stacks up to 10 times. All stacks are lost on a successful dodge.",
     "apply_tag": [
       "Quick Maneuvering"
     ],
@@ -4050,7 +4056,7 @@
     "advantage_id": 243,
     "name": "Force Collapse",
     "points_cost": 2,
-    "tooltip": "Fully charging applies Devoid to targets.",
+    "tooltip": "Fully charging applies Devoid to targets. Devoid reduces resistance to Dimensional Damage by 18% for 15 sec.",
     "apply_tag": [
       "Devoid"
     ],
@@ -4082,7 +4088,7 @@
     "advantage_id": 245,
     "name": "Frail Armor",
     "points_cost": 2,
-    "tooltip": "Applies Frail Armor.",
+    "tooltip": "Applies Frail Armor. Frail Armor reduces resistance to Piercing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Frail Armor"
     ],
@@ -4197,7 +4203,7 @@
     "advantage_id": 252,
     "name": "Frost Bite",
     "points_cost": 2,
-    "tooltip": "100% chance to add Chill.",
+    "tooltip": "100% chance to add Chill. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Chill"
     ],
@@ -4265,7 +4271,7 @@
     "advantage_id": 256,
     "name": "Furious Rush",
     "points_cost": 2,
-    "tooltip": "Refreshes and applies 1 stack of Furious.",
+    "tooltip": "Refreshes and applies 1 stack of Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -4284,7 +4290,7 @@
     "advantage_id": 257,
     "name": "Furor Venenum",
     "points_cost": 2,
-    "tooltip": "20% chance to Infect your target, Stunning them for 2 sec. Chance is guaranteed if the target is Bleeding or Poisoned, and refreshes and applies 1 stack of Furious to you.",
+    "tooltip": "20% chance to Infect your target, Stunning them for 2 sec. Chance is guaranteed if the target is Bleeding or Poisoned, and refreshes and applies 1 stack of Furious to you. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Infect",
       "Stun",
@@ -4306,7 +4312,7 @@
     "advantage_id": 258,
     "name": "Garroting Grip",
     "points_cost": 2,
-    "tooltip": "Applies Fear.",
+    "tooltip": "Applies Fear. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -4340,7 +4346,7 @@
     "points_cost": 2,
     "tooltip": "Pulls additional targets toward you.",
     "apply_tag": [
-      "Reversel Repel"
+      "Reverse Repel"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -4370,7 +4376,7 @@
     "advantage_id": 262,
     "name": "Ghost Fire",
     "points_cost": 2,
-    "tooltip": "Applies Clinging Flames and Fear to your primary target. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
+    "tooltip": "Applies Clinging Flames and Fear to your primary target. + Fear reduces target's damage by 10% for 12 sec. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Clinging Flames",
       "Fear"
@@ -4439,7 +4445,7 @@
     "advantage_id": 266,
     "name": "Glimpse of the Abyss",
     "points_cost": 2,
-    "tooltip": "Applies Fear. After initial hit, 20% chance every 1 sec to reapply Fear, for the duration on the power.",
+    "tooltip": "Applies Fear. After initial hit, 20% chance every 1 sec to reapply Fear, for the duration on the power. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -4556,7 +4562,7 @@
     "advantage_id": 273,
     "name": "Guide",
     "points_cost": 2,
-    "tooltip": "Applies Illumination to you and nearby allies as well as Illuminated to your targets.",
+    "tooltip": "Applies Illumination to you and nearby allies as well as Illuminated to your targets. + Illumination increases the direct healing the target receives by 3% for 20 sec. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
       "Illumination",
       "Illuminated",
@@ -4567,7 +4573,7 @@
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "105",
     "control_values": null,
     "is_disabled": false
   },
@@ -4592,7 +4598,7 @@
     "advantage_id": 275,
     "name": "Gut Strike",
     "points_cost": 2,
-    "tooltip": "Applies Despondency to your target, lowering their Dodge Chance.",
+    "tooltip": "Applies Despondency to your target, reducing their chance to Dodge attacks by 15% for 10 sec.",
     "apply_tag": [
       "Despondency"
     ],
@@ -4609,7 +4615,7 @@
     "advantage_id": 276,
     "name": "Hailstorm",
     "points_cost": 2,
-    "tooltip": "Deals 164 Cold Damage back to attacking foes, and has 20% chance to apply Chill. This effect cannot be dodge and can occur once every 0.5 sec.",
+    "tooltip": "Deals 164 Cold Damage back to attacking foes. This effect cannot be dodged and can occur once every 0.5 sec. + 20% chance to apply Chill. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Chill"
     ],
@@ -4626,7 +4632,7 @@
     "advantage_id": 277,
     "name": "Hard Fall",
     "points_cost": 2,
-    "tooltip": "Applies Disorient.",
+    "tooltip": "Applies Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -4641,7 +4647,7 @@
     "advantage_id": 278,
     "name": "Hard Frost",
     "points_cost": 2,
-    "tooltip": "Applies Hard Frost to Chilled targets.",
+    "tooltip": "Applies Hard Frost to Chilled targets. Hard Frost reduces resistance to Cold Damage by 18% for 15 sec.",
     "apply_tag": [
       "Hard Frost"
     ],
@@ -4677,7 +4683,7 @@
     "advantage_id": 280,
     "name": "Head Shot",
     "points_cost": 2,
-    "tooltip": "Disorient your target if you lunge more than 20ft.",
+    "tooltip": "Disorient your target if you lunge more than 20ft. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -4694,7 +4700,7 @@
     "advantage_id": 281,
     "name": "Head Trauma",
     "points_cost": 2,
-    "tooltip": "Applies Bewildered to your primary target. If your target charges up powers while affected by Bewildered, they will be stunned for 2sec and Bewildered expires. + Bewildered can be applied once every 20 sec.",
+    "tooltip": "Applies Bewildered to your primary target. If your target charges up powers while affected by Bewildered, they will be Stunned for 2 sec and Bewildered expires. + Bewildered can be applied once every 20 sec.",
     "apply_tag": [
       "Stun"
     ],
@@ -4743,13 +4749,15 @@
     "advantage_id": 284,
     "name": "Hellfire",
     "points_cost": 2,
-    "tooltip": "Maintaining at least halfway create a Pyre Patch at the target location.",
+    "tooltip": "Maintaining at least halfway create a Pyre Patch at the target location. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -4831,7 +4839,7 @@
     "advantage_id": 289,
     "name": "I Pay It Gladly",
     "points_cost": 2,
-    "tooltip": "If you kill a target, you gain 3 stacks of Furious.",
+    "tooltip": "If you kill a target, you gain 3 stacks of Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -4878,7 +4886,7 @@
     "advantage_id": 292,
     "name": "Illuminate",
     "points_cost": 2,
-    "tooltip": "Applies Illumination to you and nearby allies as well as Illuminated to your targets.",
+    "tooltip": "Applies Illumination to you and nearby allies as well as Illuminated to your targets. + Illumination increases the direct healing the target receives by 3% for 20 sec. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
       "Illumination",
       "Illuminated",
@@ -4889,7 +4897,7 @@
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "105",
     "control_values": null,
     "is_disabled": false
   },
@@ -4897,7 +4905,7 @@
     "advantage_id": 293,
     "name": "Illumination",
     "points_cost": 2,
-    "tooltip": "Once it expires, applies Illuminated to affected targets, causing allies who attack them to heal.",
+    "tooltip": "Once it expires, applies Illuminated to affected targets, causing allies who attack them to heal. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
       "Illuminated",
       "Passive Heal"
@@ -4907,7 +4915,7 @@
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "105",
     "control_values": null,
     "is_disabled": false
   },
@@ -5164,7 +5172,7 @@
     "advantage_id": 309,
     "name": "Inner Peace",
     "points_cost": 2,
-    "tooltip": "Applies Restoration to you, healing you for +258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional +645 Health Points and Restoration now heals for +387 Health Points every 2 sec over 6 sec.",
+    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional 645 Health Points and Restoration now heals for 387 Health Points every 2 sec over 6 sec.",
     "apply_tag": [
       "Restoration"
     ],
@@ -5200,7 +5208,7 @@
     "advantage_id": 311,
     "name": "Instill Doubt",
     "points_cost": 2,
-    "tooltip": "25% chance on each hit to apply Dependency to targets. Dependency causes the affected target to heal you or one of your nearby allies for +52 Health Points over 20 sec. + Dependency can only heal up to 1 nearby ally. + Can stack up to 3 times.",
+    "tooltip": "25% chance on each hit to apply Dependency to targets. Dependency heals an ally near the foe for 52 Health Points every 0.5 sec for 20 sec. Stacks up to 3 times. ",
     "apply_tag": [
       "Dependency"
     ],
@@ -5236,7 +5244,7 @@
     "advantage_id": 313,
     "name": "Intimidate",
     "points_cost": 2,
-    "tooltip": "Applies Fear to the target.",
+    "tooltip": "Applies Fear to the target. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -5374,7 +5382,7 @@
     "advantage_id": 321,
     "name": "Is It Not Just Mayhem?",
     "points_cost": 2,
-    "tooltip": "Applies Fear to the target.",
+    "tooltip": "Applies Fear to the target. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -5408,7 +5416,7 @@
     "advantage_id": 323,
     "name": "It's Raining Fire!",
     "points_cost": 1,
-    "tooltip": "10% chance per tick to apply Fear to targets.",
+    "tooltip": "10% chance per tick to apply Fear to targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -5425,7 +5433,7 @@
     "advantage_id": 324,
     "name": "It's That Time",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Disorient, instead of just the initial attack.",
+    "tooltip": "15% chance on each hit to apply Disorient, instead of just the initial attack. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -5442,9 +5450,8 @@
     "advantage_id": 325,
     "name": "Jinx",
     "points_cost": 2,
-    "tooltip": "Applies Jinxed to your target, causing them to move slower and deal less damage. After a short amount of time, targets affected by Jinxed are Knocked down.",
+    "tooltip": "Applies Jinxed to your target. Jinxed causes -10% all damage strength and -35% Run Speed for 8 sec to affected targets. When Jinxed expires targets are Knocked down.",
     "apply_tag": [
-      "Knock Down",
       "Jinxed"
     ],
     "refresh_tag": [],
@@ -5460,7 +5467,7 @@
     "advantage_id": 326,
     "name": "Judgement",
     "points_cost": 2,
-    "tooltip": "Consume all Illumination and Illuminated within 100ft. Allies previously affected by Illumination are healed for 1548 Health Points. Targets previously affected by Illiminated receive 521 Dimentional Damage.",
+    "tooltip": "Consume all Illumination and Illuminated within 100ft. Allies previously affected by Illumination are healed for 1548 Health Points. Targets previously affected by Illuminated receive 521 Dimensional Damage.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [
@@ -5483,7 +5490,7 @@
     "advantage_id": 327,
     "name": "Just Blow It Up",
     "points_cost": 3,
-    "tooltip": "Applies Overpower instead of Knock Down and Stun.",
+    "tooltip": "Applies Overpower instead of Knock Down and Stun. Overpower reduces resistance to all damage by 20% for 15 sec. ",
     "apply_tag": [
       "Overpower"
     ],
@@ -5547,7 +5554,7 @@
     "advantage_id": 331,
     "name": "Lashing Dragon Tail",
     "points_cost": 2,
-    "tooltip": "On a full charge, applies Nimble Movement to you.",
+    "tooltip": "On a full charge, applies Nimble Movement to you. + Nimble movement grants you +50% avoidance for 12 sec.",
     "apply_tag": [
       "Nimble Movement"
     ],
@@ -5647,7 +5654,7 @@
     "advantage_id": 337,
     "name": "Light Everlasting",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Light Everlasting to nearby allies.",
+    "tooltip": "When fully charged, applies Light Everlasting to nearby allies.  Light Everlasting heals the target for 56 Health Points every 1 sec over 10 sec.",
     "apply_tag": [
       "Light Everlasting"
     ],
@@ -5658,7 +5665,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "56",
     "control_values": null,
     "is_disabled": false
   },
@@ -5672,9 +5679,7 @@
       "Disintegrate"
     ],
     "synergy_tag": [],
-    "filter_tag": [
-      "Passive Heal"
-    ],
+    "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -5685,7 +5690,7 @@
     "advantage_id": 339,
     "name": "Light Up The Sky",
     "points_cost": 2,
-    "tooltip": "On a full maintain, applies Illuminated to foes.",
+    "tooltip": "On a full maintain, applies Illuminated to foes. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
       "Illuminated"
     ],
@@ -5696,7 +5701,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "105",
     "control_values": null,
     "is_disabled": false
   },
@@ -5742,7 +5747,7 @@
     "advantage_id": 342,
     "name": "Lightning Rod",
     "points_cost": 2,
-    "tooltip": "Foes affected by Negative Ions are Knocked To you. Also grants you Aegis, increasing your Resistance to all damage by +15% for 15 sec.",
+    "tooltip": "Foes affected by Negative Ions are Knocked To you. Also grants you Aegis. Aegis increases your Resistance to all damage by +15% for 15 sec.",
     "apply_tag": [
       "Knock To",
       "Aegis"
@@ -5779,7 +5784,7 @@
     "advantage_id": 344,
     "name": "Listen to Reason",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Fear. Refreshes all stacks of Furious.",
+    "tooltip": "15% chance on each hit to apply Fear. Refreshes all stacks of Furious. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -6032,7 +6037,7 @@
     "advantage_id": 359,
     "name": "Maybe I'm Just Better",
     "points_cost": 2,
-    "tooltip": "10% chance on each hit to apply Furious.",
+    "tooltip": "10% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -6100,7 +6105,7 @@
     "advantage_id": 363,
     "name": "Mental Acuity",
     "points_cost": 2,
-    "tooltip": "Doubles the damage per Ego Leech consumed. Increases by 50% the damage from Ego Annihilation effect.",
+    "tooltip": "Doubles the damage per Ego Leech consumed. Increases the damage from Ego Annihilation effect by 50%.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [
@@ -6117,7 +6122,7 @@
     "advantage_id": 364,
     "name": "Mental Artillery",
     "points_cost": 2,
-    "tooltip": "20% chance on each hit to apply Stress.",
+    "tooltip": "20% chance on each hit to apply Stress.  Stress reduces resistance to Ego Damage by 8% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stress"
     ],
@@ -6269,7 +6274,7 @@
     "advantage_id": 373,
     "name": "Mind the Uniform",
     "points_cost": 2,
-    "tooltip": "Applies Fear to affected targets.",
+    "tooltip": "Applies Fear to affected targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -6382,7 +6387,7 @@
     "advantage_id": 380,
     "name": "Mystical",
     "points_cost": 2,
-    "tooltip": "Applies Mystified to you. Mystified lasts 15 sec and reduces the cost of your Sorcery, Celestial, Darkness, and Infernal powers by 3%, stacking up to 3 times.",
+    "tooltip": "Applies Mystified to you. Mystified reduces the cost of your Sorcery, Celestial, Darkness and Infernal powers by 3% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Mystified"
     ],
@@ -6450,7 +6455,7 @@
     "advantage_id": 385,
     "name": "Night Hunt",
     "points_cost": 2,
-    "tooltip": "Applies Sudden Strike.",
+    "tooltip": "Applies Sudden Strike for up to 10 sec, increasing the Critical Severity of your next critical hit by 10%. Expires once you get a critical hit.",
     "apply_tag": [
       "Sudden Strike"
     ],
@@ -6499,13 +6504,15 @@
     "advantage_id": 388,
     "name": "Nightmare",
     "points_cost": 2,
-    "tooltip": "Fully charging creates a Pyre Patch at your location.",
+    "tooltip": "Fully charging creates a Pyre Patch at your location. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -6570,7 +6577,7 @@
     "advantage_id": 392,
     "name": "No Quarter",
     "points_cost": 2,
-    "tooltip": "Applies No Quarter to Disoriented targets.",
+    "tooltip": "Applies No Quarter to Disoriented targets. No Quarter reduces resistance to your Crushing Damage and Fire Damage by 15% for 15 sec.",
     "apply_tag": [
       "No Quarter"
     ],
@@ -6606,7 +6613,7 @@
     "advantage_id": 394,
     "name": "Noxious Fumes",
     "points_cost": 2,
-    "tooltip": "10% chance every 1 sec to Stun target standing in the Gas Cloud for 2 sec. 25% chance of the target is Disoriented.",
+    "tooltip": "10% chance every 1 sec to Stun target standing in the Gas Cloud for 2 sec. 25% chance of the target is Disoriented. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Stun"
     ],
@@ -6625,7 +6632,7 @@
     "advantage_id": 395,
     "name": "Nuclear Fallout",
     "points_cost": 2,
-    "tooltip": "Applies Disintegrate to targets.",
+    "tooltip": "Applies Disintegrate to targets. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec.",
     "apply_tag": [
       "Disintegrate"
     ],
@@ -6713,7 +6720,7 @@
     "advantage_id": 400,
     "name": "Open Wound",
     "points_cost": 2,
-    "tooltip": "Applies Open Wound to your primary target. Open Wound has a 25% chance to apply a stack of Bleed to the target every 2 sec for 10 sec. Chance is doubled on the last tick. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
+    "tooltip": "Applies Open Wound to your primary target. For the next 10 sec every 2 sec there is 25% chance for your primary target to be affected by Bleed. When this effect expires, has an additional 50% chance to apply Bleed. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
       "Bleed",
       "Open Wound"
@@ -6731,7 +6738,7 @@
     "advantage_id": 401,
     "name": "Out of My Way!",
     "points_cost": 2,
-    "tooltip": "For a short time after lunging, you deal Slashing Damage and Knock Back targets around you while moving. If a target is immune to Knock effects, chance to apply Disorient reducing their damage and movement speed.",
+    "tooltip": "For a short time after lunging, you deal Slashing Damage and Knock Back targets around you while moving. If a target is immune to Knock effects, chance to apply Disorient reducing their damage and movement speed. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Knock Back",
       "Disorient"
@@ -6804,13 +6811,14 @@
     "advantage_id": 405,
     "name": "Overwhelming Force",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Armor Piercing to your primary target as well as any Disoriented secondary targets.",
+    "tooltip": "When fully charged, applies Armor Piercing to your primary target as well as any Disoriented secondary targets. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec.",
     "apply_tag": [
-      "Disorient",
       "Armor Piercing"
     ],
     "refresh_tag": [],
-    "synergy_tag": [],
+    "synergy_tag": [
+      "Disorient"
+    ],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -6871,7 +6879,7 @@
     "advantage_id": 409,
     "name": "Panic and Run",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Stagger to targets.",
+    "tooltip": "15% chance on each hit to apply Stagger to targets. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stagger"
     ],
@@ -6908,7 +6916,7 @@
     "advantage_id": 411,
     "name": "Paranormal Paranoia",
     "points_cost": 2,
-    "tooltip": "30-100% chance to apply Fear.",
+    "tooltip": "30-100% chance to apply Fear. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -6925,7 +6933,7 @@
     "advantage_id": 412,
     "name": "Particle Acceleration",
     "points_cost": 2,
-    "tooltip": "Finishing combo applies Disintegrate.",
+    "tooltip": "Finishing combo applies Disintegrate. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec.",
     "apply_tag": [
       "Disintegrate"
     ],
@@ -6993,7 +7001,7 @@
     "advantage_id": 416,
     "name": "Peerless Predation",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Furious.",
+    "tooltip": "15% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -7010,7 +7018,7 @@
     "advantage_id": 417,
     "name": "Penetrating Strikes",
     "points_cost": 2,
-    "tooltip": "Applies Shredded to the primary target on last hit.",
+    "tooltip": "Applies Shredded to the primary target on last hit. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -7027,7 +7035,7 @@
     "advantage_id": 418,
     "name": "Perfect Storm",
     "points_cost": 3,
-    "tooltip": "Deals additional 22 Electrical Damage and has 15% chance on each hit to apply Chill and Negative Ions.",
+    "tooltip": "Deals additional 22 Electrical Damage and has 15% chance on each hit to apply Chill and Negative Ions. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Negative Ions",
       "Chill",
@@ -7130,7 +7138,7 @@
     "advantage_id": 424,
     "name": "Plague Bearer",
     "points_cost": 2,
-    "tooltip": "Applies Noxious Poison to your target and nearby foes.",
+    "tooltip": "Applies Noxious Poison to your target and nearby foes. Noxious Poison deals 55 Toxic Damage every 1 sec over 16 sec.",
     "apply_tag": [
       "Noxious Poison"
     ],
@@ -7147,7 +7155,7 @@
     "advantage_id": 425,
     "name": "Plagued by Nightmares",
     "points_cost": 2,
-    "tooltip": "Applies Fear to your targets when they wake up.",
+    "tooltip": "Applies Fear to your targets when they wake up. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -7410,7 +7418,7 @@
     "advantage_id": 440,
     "name": "Pummel",
     "points_cost": 2,
-    "tooltip": "Applies Demolish on last hit.",
+    "tooltip": "Applies Demolish on last hit. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -7481,10 +7489,11 @@
     "points_cost": 2,
     "tooltip": "20% chance to apply Deadly Poison on tap. Refreshes your Poisons. When charged at least half way, spreads any of your poison to up to 5 foe within 20ft. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
-      "Deadly Poison",
+      "Deadly Poison"
+    ],
+    "refresh_tag": [
       "Poisons"
     ],
-    "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
@@ -7512,8 +7521,9 @@
     "advantage_id": 446,
     "name": "Radiate",
     "points_cost": 2,
-    "tooltip": "Applies Radiate to the target. Radiate has a 25% chance to apply a stack of Plasma Burn to the target every 2 sec for 10 sec. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times.",
+    "tooltip": "Applies Radiate to the target. Radiate has 25% chance to apply a stack of Plasma Burn to the target every 2 sec for 10 sec. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
+      "Radiate",
       "Plasma Burn"
     ],
     "refresh_tag": [],
@@ -7552,7 +7562,7 @@
     "advantage_id": 448,
     "name": "Rage of the Beast",
     "points_cost": 2,
-    "tooltip": "If you are Held or Rooted when activated, applies Break Free damage as well as 5 stacks of Charged Up to you. Each stack of Charged Up increases your Running Speed by 15%, your Jump Height by 2%, and your Flying Speed by 2%. This effect stacks up to 5 times and lasts 10 sec.",
+    "tooltip": "If you are Held or Rooted when activated, applies Break Free damage as well as 5 stacks of Charged Up to you. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -7572,7 +7582,7 @@
     "advantage_id": 449,
     "name": "Rampant",
     "points_cost": 2,
-    "tooltip": "Applies a stack of Reckless to you if you aren't yet affected by it, or refreshes existing stacks.",
+    "tooltip": "Applies a stack of Reckless to you if you aren't yet affected by it, or refreshes existing stacks. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times. ",
     "apply_tag": [
       "Reckless"
     ],
@@ -7591,7 +7601,7 @@
     "advantage_id": 450,
     "name": "Rattle",
     "points_cost": 2,
-    "tooltip": "20% chance on each hit to apply Disorient.",
+    "tooltip": "20% chance on each hit to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -7672,7 +7682,7 @@
     "advantage_id": 455,
     "name": "Recharge",
     "points_cost": 2,
-    "tooltip": "Applies Restoration to you, healing you for +258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional +645 Health Points and Restoration now heals for +387 Health Points every 2 sec over 6 sec.",
+    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional 645 Health Points and Restoration now heals for 387 Health Points every 2 sec over 6 sec.",
     "apply_tag": [
       "Restoration"
     ],
@@ -7691,7 +7701,7 @@
     "advantage_id": 456,
     "name": "Reciprocating Gizmo",
     "points_cost": 2,
-    "tooltip": "Applies 3 stacks of Charged Up, increasing your running speed by 15%, your jump height by 3 and your flying speed by 3 for 12 sec. Stacks up to 5 times.",
+    "tooltip": "Applies 3 stacks of Charged Up to you. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -7708,7 +7718,7 @@
     "advantage_id": 457,
     "name": "Reckless Endangerment",
     "points_cost": 2,
-    "tooltip": "Fully charging applies and refreshes Reckless on you.",
+    "tooltip": "Fully charging applies and refreshes Reckless on you. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times. ",
     "apply_tag": [
       "Reckless"
     ],
@@ -7780,7 +7790,7 @@
     "advantage_id": 461,
     "name": "Red Hot Fury",
     "points_cost": 2,
-    "tooltip": "Applies 3 stacks of Furious to you.",
+    "tooltip": "Applies 3 stacks of Furious to you. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -7963,7 +7973,7 @@
     "advantage_id": 472,
     "name": "Rending Blades",
     "points_cost": 2,
-    "tooltip": "Refreshes Shredded. When fully charged, applies Shredded to your target.",
+    "tooltip": "Refreshes Shredded. When fully charged, applies Shredded to your target. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -7982,7 +7992,7 @@
     "advantage_id": 473,
     "name": "Repulsing Waves",
     "points_cost": 2,
-    "tooltip": "Repels foes away from you instead of pulling them towards you. 20% chance on each hit to apply Stagger.",
+    "tooltip": "Repels foes away from you instead of pulling them towards you. 20% chance on each hit to apply Stagger. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Repel",
       "Stagger"
@@ -8274,7 +8284,7 @@
     "advantage_id": 490,
     "name": "Rune of Terror",
     "points_cost": 2,
-    "tooltip": "Applies Fear to targets.",
+    "tooltip": "Applies Fear to targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -8291,7 +8301,7 @@
     "advantage_id": 491,
     "name": "Rupture",
     "points_cost": 2,
-    "tooltip": "If fully charged and your primary target is Staggered, applies a stack of Stagger to all targets hit.",
+    "tooltip": "If fully charged and your primary target is Staggered, applies a stack of Stagger to all targets hit. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stagger"
     ],
@@ -8395,7 +8405,9 @@
     "apply_tag": [
       "Bleed"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Bleed"
+    ],
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
@@ -8408,13 +8420,15 @@
     "advantage_id": 498,
     "name": "Scorched Earth",
     "points_cost": 2,
-    "tooltip": "Creates a Pyre Patch at the target's location.",
+    "tooltip": "Creates a Pyre Patch at the target's location. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8425,13 +8439,15 @@
     "advantage_id": 499,
     "name": "Scorched Ground",
     "points_cost": 2,
-    "tooltip": "Creates a Pyre Patch at the target's location.",
+    "tooltip": "Creates a Pyre Patch at the target's location. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8459,7 +8475,7 @@
     "advantage_id": 501,
     "name": "Seeing Stars",
     "points_cost": 2,
-    "tooltip": "Fully charging applies Despondency, lowering their Dodge Chance.",
+    "tooltip": "Fully charging applies Despondency, reducing their chance to Dodge attacks by 15% for 10 sec.",
     "apply_tag": [
       "Despondency"
     ],
@@ -8491,7 +8507,7 @@
     "advantage_id": 503,
     "name": "Serrated Blade",
     "points_cost": 2,
-    "tooltip": "Finishing the combo applies Shredded to your primary target.",
+    "tooltip": "Finishing the combo applies Shredded to your primary target. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -8542,12 +8558,13 @@
     "advantage_id": 506,
     "name": "Setup",
     "points_cost": 2,
-    "tooltip": "When fully charged, refreshes Demolish. Also applies Blindside to you. For each stack of Enrage on you, Blindside increases the base damage of your Brick damage by 1.9% but reduces all others by 3.8%.",
+    "tooltip": "When fully charged, refreshes Demolish and also applies Blindside to you. For each stack of Enrage on you, Blindside increases the base damage of your Brick damage by 1.9% and reduces all others by 3.8%.",
     "apply_tag": [
-      "Demolish",
       "Blindside"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Demolish"
+    ],
     "synergy_tag": [
       "Enrage"
     ],
@@ -8562,7 +8579,7 @@
     "advantage_id": 507,
     "name": "Sever",
     "points_cost": 2,
-    "tooltip": "Finishing the combo applies Shredded to your primary target.",
+    "tooltip": "Finishing the combo applies Shredded to your primary target. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -8596,7 +8613,7 @@
     "advantage_id": 509,
     "name": "Shard Burst",
     "points_cost": 2,
-    "tooltip": "Increases the Crushing AoE damage dealt by 50% and staggers all targets on a full charge instead of just the selected target.",
+    "tooltip": "Increases the Crushing AoE damage dealt by 50% and Staggers all targets on a full charge instead of just the selected target. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stagger"
     ],
@@ -8613,7 +8630,7 @@
     "advantage_id": 510,
     "name": "Sharp Edges",
     "points_cost": 2,
-    "tooltip": "If your target is Snared, applies Shredded to your target.",
+    "tooltip": "If your target is Snared, applies Shredded to your target. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -8718,7 +8735,7 @@
     "advantage_id": 516,
     "name": "Shred To Pieces",
     "points_cost": 2,
-    "tooltip": "If your primary target is affected by your Shredded, completing the combo will refresh the effect and apply Shredded to nearby foes.",
+    "tooltip": "If your primary target is affected by your Shredded, completing the combo will refresh the effect and apply Shredded to nearby foes. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -8788,7 +8805,7 @@
     "advantage_id": 520,
     "name": "Sinkhole",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Stagger up to 5 targets within 15ft of your primary target. If secondary targets are affected by 3 stacks of Stagger already, they are Rooted for 16 sec.",
+    "tooltip": "When fully charged, applies Stagger up to 5 targets within 15ft of your primary target. If secondary targets are affected by 3 stacks of Stagger already, they are Rooted for 16 sec. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stagger",
       "Root"
@@ -8878,7 +8895,7 @@
     "advantage_id": 525,
     "name": "Slicer",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Shredded.",
+    "tooltip": "When fully charged, applies Shredded. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Shredded"
     ],
@@ -8945,7 +8962,7 @@
     "advantage_id": 529,
     "name": "Sonic Suppression Enhancer",
     "points_cost": 2,
-    "tooltip": "Double the chance to apply Disorient.",
+    "tooltip": "Double the chance to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -8979,7 +8996,7 @@
     "advantage_id": 531,
     "name": "Soul Capturing Blade",
     "points_cost": 2,
-    "tooltip": "56-100% chance (based on charge time) to apply Dependency. If your target is affected by Shredded, adds 12 sec to your Dependency stacks. Dependency causes the affected target to heal you or one of your nearby allies for +52 Health Points over 20 sec. + Dependency can only heal up to 1 nearby ally. + Can stack up to 3 times.",
+    "tooltip": "56-100% chance (based on charge time) to apply Dependency. If your target is affected by Shredded, adds 12 sec to your Dependency stacks. Dependency heals an ally near the foe for 52 Health Points every 0.5 sec for 20 sec. Stacks up to 3 times.  ",
     "apply_tag": [
       "Dependency"
     ],
@@ -8992,7 +9009,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "52",
     "control_values": null,
     "is_disabled": false
   },
@@ -9000,7 +9017,7 @@
     "advantage_id": 532,
     "name": "Soul Drain",
     "points_cost": 2,
-    "tooltip": "Applies and refreshes Dependency on affected foes after the vortex expires. Dependency causes the affected target to heal you or one of your nearby allies for +52 Health Points over 20 sec. + Dependency can only heal up to 1 nearby ally. + Can stack up to 3 times.",
+    "tooltip": "Applies and refreshes Dependency on affected foes after the vortex expires. Dependency heals an ally near the foe for 52 Health Points every 0.5 sec for 20 sec. Stacks up to 3 times. ",
     "apply_tag": [
       "Dependency"
     ],
@@ -9013,7 +9030,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "52",
     "control_values": null,
     "is_disabled": false
   },
@@ -9112,11 +9129,12 @@
     "points_cost": 2,
     "tooltip": "25% chance to Knock Up targets affected by Fear, instead of Knocking them Down.",
     "apply_tag": [
-      "Knock Up",
-      "Fear"
+      "Knock Up"
     ],
     "refresh_tag": [],
-    "synergy_tag": [],
+    "synergy_tag": [
+      "Fear"
+    ],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -9128,7 +9146,7 @@
     "advantage_id": 539,
     "name": "Split the Arrow",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Armor Piercing.",
+    "tooltip": "When fully charged, applies Armor Piercing. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec.",
     "apply_tag": [
       "Armor Piercing"
     ],
@@ -9195,7 +9213,7 @@
     "advantage_id": 543,
     "name": "Stiff Breeze",
     "points_cost": 2,
-    "tooltip": "Extends the chance to Disorient and Repel to every attack, instead of just the first.",
+    "tooltip": "Extends the chance to Disorient and Repel to every attack, instead of just the first. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Repel",
       "Disorient"
@@ -9213,7 +9231,7 @@
     "advantage_id": 544,
     "name": "Stim Pack",
     "points_cost": 2,
-    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. + If your health is below 20%, heals your for 645 Health Points, and Restoration now heals you for 387 Health Points every 2 sec for 6 sec.",
+    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional 645 Health Points and Restoration now heals for 387 Health Points every 2 sec over 6 sec.",
     "apply_tag": [
       "Restoration"
     ],
@@ -9298,7 +9316,7 @@
     "advantage_id": 549,
     "name": "Stressed Out",
     "points_cost": 2,
-    "tooltip": "Adds a chance (based on combo hit) to apply Stressed. The chance to apply Stressed is doubled if you are affected by Ego Infusion.",
+    "tooltip": "Adds a chance (based on combo hit) to apply Stressed. The chance to apply Stressed is doubled if you are affected by Ego Infusion. Stress reduces resistance to Ego Damage by 8% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stress"
     ],
@@ -9438,7 +9456,7 @@
     "advantage_id": 557,
     "name": "Sudden Strike",
     "points_cost": 2,
-    "tooltip": "Applies Sudden Strike.",
+    "tooltip": "Applies Sudden Strike for up to 10 sec, increasing the Critical Severity of your next critical hit by 10%. Expires once you get a critical hit.",
     "apply_tag": [
       "Sudden Strike"
     ],
@@ -9489,7 +9507,7 @@
     "advantage_id": 560,
     "name": "Superconductor",
     "points_cost": 2,
-    "tooltip": "Applies Superconductor to targets affected by Negative Ions.",
+    "tooltip": "Applies Superconductor to targets affected by Negative Ions. Superconductor reduces resistance to Electrical Damage by 18% for 15 sec.",
     "apply_tag": [
       "Superconductor"
     ],
@@ -9508,7 +9526,7 @@
     "advantage_id": 561,
     "name": "Supercooled",
     "points_cost": 2,
-    "tooltip": "100% chance to apply Chill to foes attacking you.",
+    "tooltip": "100% chance to apply Chill to foes attacking you. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
       "Chill"
     ],
@@ -9542,7 +9560,7 @@
     "advantage_id": 563,
     "name": "Surge of Strength",
     "points_cost": 2,
-    "tooltip": "Last hit grants you Aegis, increasing your Resistance to all damage by +15% for 15 sec. Refreshes stacks of Defiant if you have the Defiance passive active.",
+    "tooltip": "Last hit grants you Aegis. Aegis increases your Resistance to all damage by +15% for 15 sec. Refreshes stacks of Defiant if you have the Defiance passive active.",
     "apply_tag": [
       "Aegis"
     ],
@@ -9614,7 +9632,7 @@
     "advantage_id": 567,
     "name": "Take a Beating",
     "points_cost": 2,
-    "tooltip": "Has a scaling chance on each hit to apply Disorient with.",
+    "tooltip": "Has a scaling chance on each hit to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -9631,7 +9649,7 @@
     "advantage_id": 568,
     "name": "Taking Names",
     "points_cost": 2,
-    "tooltip": "Refreshes existing stacks of Furious on you or applies 1 stack if not affected by Furious.",
+    "tooltip": "Refreshes existing stacks of Furious on you or applies 1 stack if not affected by Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -9682,7 +9700,7 @@
     "advantage_id": 571,
     "name": "Terrifying Visage",
     "points_cost": 2,
-    "tooltip": "50% chance every 1 sec to apply Fear to targets. 10% chance every 1 sec to apply Psychotic Break. Psychotic Break causes the target to be Stunned for 1.7 sec and add a stack of Bleed. This effect can occur one every 5sec. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
+    "tooltip": "50% chance every 1 sec to apply Fear to targets. Fear reduces target's damage by 10% for 12 sec. + 10% chance every 1 sec to apply Psychotic Break. Psychotic Break causes the target to be Stunned for 1.7 sec and add a stack of Bleed. This effect can occur once every 5 sec. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
       "Fear",
       "Stun",
@@ -9797,7 +9815,7 @@
     "advantage_id": 578,
     "name": "Thrill of the Hunt",
     "points_cost": 2,
-    "tooltip": "For 10 sec after Lunging, dealing direct damage applies a stack of Charged Up to you. Charged Up increases your Running Speed by 15%, your Jump Height by 2%, and your Flying Speed by 2%. This effect stacks up to 5 times and lasts 10 sec.",
+    "tooltip": "For 10 sec after Lunging, dealing direct damage applies a stack of Charged Up to you. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -9832,7 +9850,7 @@
     "advantage_id": 580,
     "name": "Thundering Roar",
     "points_cost": 2,
-    "tooltip": "21-50% chance (based on charge time) to apply Disorient.",
+    "tooltip": "21-50% chance (based on charge time) to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -9898,7 +9916,7 @@
     "advantage_id": 584,
     "name": "Toppling Winds",
     "points_cost": 2,
-    "tooltip": "45-100% chance (based on charge time) to stagger your target.",
+    "tooltip": "45-100% chance (based on charge time) to Stagger your target. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Stagger"
     ],
@@ -9915,7 +9933,7 @@
     "advantage_id": 585,
     "name": "Toxicity",
     "points_cost": 2,
-    "tooltip": "Applies Debilitating Poison.",
+    "tooltip": "Applies Debilitating Poison. Debilitating Poison reduces Toxic resistance by 18%.",
     "apply_tag": [
       "Debilitating Poison"
     ],
@@ -10102,7 +10120,7 @@
     "advantage_id": 596,
     "name": "U-238 Rounds",
     "points_cost": 2,
-    "tooltip": "Maintaining for at least half of its duration applies Burn Through.",
+    "tooltip": "Maintaining for at least half of its duration applies Burn Through. Burn Through reduces resistance to your Crushing Damage and Particle Damage by 15% for 15 sec.",
     "apply_tag": [
       "Burn Through"
     ],
@@ -10268,7 +10286,7 @@
     "advantage_id": 606,
     "name": "Unstable Accelerant",
     "points_cost": 2,
-    "tooltip": "Applies Unstable Accelerant to your targets for 12 sec. Unstable Accelerant reduces resistance to your Burning effects by 50%. Clinging Flames, Leaping Flames, Fire Snake, and Pyre Patches are considered Burning effects.",
+    "tooltip": "Applies Unstable Accelerant to affected targets for 12 sec. + Unstable Accelerant reduces resistance to your Burning effects by 50%. Clinging Flames, Leaping Flames, Fire Snake, and Pyre Patches are considered Burning effects.",
     "apply_tag": [
       "Unstable Accelerant"
     ],
@@ -10285,7 +10303,7 @@
     "advantage_id": 607,
     "name": "Unstable Footing",
     "points_cost": 2,
-    "tooltip": "15% chance to Knock Down and Stagger your targets.",
+    "tooltip": "15% chance to Knock Down and Stagger your targets. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Knock Down",
       "Stagger"
@@ -10303,7 +10321,7 @@
     "advantage_id": 608,
     "name": "Until Morale Improves",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to Disorient the primary target.",
+    "tooltip": "15% chance on each hit to Disorient the primary target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -10337,7 +10355,7 @@
     "advantage_id": 610,
     "name": "USB Arrow",
     "points_cost": 1,
-    "tooltip": "Applies Download to you, reducing the cost of Technology powers for 12 sec.",
+    "tooltip": "Applies Download to you. Download reduces the cost of your Technology powers by 20% and increases the effectiveness of your energy gain powers by 2.5% for 12 sec.",
     "apply_tag": [
       "Download"
     ],
@@ -10388,7 +10406,7 @@
     "advantage_id": 613,
     "name": "Vengeful Shadows",
     "points_cost": 2,
-    "tooltip": "Deals 1415 Dimensional Damage to targets within 10ft of the Rift, and Knock them Back. Targets immune to Knock effect instead takes 106 Dimensional Damave every 0.5 sec.",
+    "tooltip": "Deals 1415 Dimensional Damage to targets within 10ft of the Rift, and Knock them Back. Targets immune to Knock effect instead take 106 Dimensional Damage every 0.5 sec.",
     "apply_tag": [
       "Knock Back"
     ],
@@ -10409,7 +10427,7 @@
     "advantage_id": 614,
     "name": "Versatility",
     "points_cost": 2,
-    "tooltip": "While this travel power is active, receiving damage gives you a stack of Charged Up.",
+    "tooltip": "While this travel power is active, receiving damage gives you a stack of Charged Up. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -10441,8 +10459,9 @@
     "advantage_id": 616,
     "name": "Viral",
     "points_cost": 2,
-    "tooltip": "Applies Viral to the target for 10 sec. Every 2 sec, Viral has a 25% chance to apply Deadly Poison. Chance is doubled on the last tick. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
+    "tooltip": "Applies Viral to the target. Viral has 25% chance to apply Deadly Poison every 2 sec for 10 sec. Chance is doubled on the last tick. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
+      "Viral",
       "Deadly Poison"
     ],
     "refresh_tag": [],
@@ -10564,7 +10583,7 @@
     "advantage_id": 623,
     "name": "Vortex Technique",
     "points_cost": 2,
-    "tooltip": "Foes are Knocked To you instead of Knocked Back. If fully maintained, also applies or refreshes Furious.",
+    "tooltip": "Foes are Knocked To you instead of Knocked Back. If fully maintained, also applies or refreshes Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Knock To",
       "Furious"
@@ -10584,7 +10603,7 @@
     "advantage_id": 624,
     "name": "Wall of Blades",
     "points_cost": 2,
-    "tooltip": "After maintaining for 1 sec, grants you Aegis, increasing your Resistance to all damage by +15% for 15 sec.",
+    "tooltip": "After maintaining for 1 sec, grants you Aegis. Aegis increases your Resistance to all damage by +15% for 15 sec.",
     "apply_tag": [
       "Aegis"
     ],
@@ -10741,7 +10760,7 @@
     "advantage_id": 633,
     "name": "Wild Slashes",
     "points_cost": 2,
-    "tooltip": "25% chance on each hit to apply Furious. 100% chance on the last hit.",
+    "tooltip": "25% chance on each hit to apply Furious. 100% chance on the last hit. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -10809,7 +10828,7 @@
     "advantage_id": 637,
     "name": "Work Up",
     "points_cost": 2,
-    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. + If your health is below 20%, heals your for 645 Health Points, and Restoration now heals you for 387 Health Points every 2 sec for 6 sec.",
+    "tooltip": "Applies Restoration to you, healing you for 258 Health Points every 2 sec for 6 sec. If your health is below 20%, heals you for an additional 645 Health Points and Restoration now heals for 387 Health Points every 2 sec over 6 sec.",
     "apply_tag": [
       "Restoration"
     ],
@@ -10828,7 +10847,7 @@
     "advantage_id": 638,
     "name": "Wrecking Ball",
     "points_cost": 2,
-    "tooltip": "When fully maintained, applies Demolish to your targets.",
+    "tooltip": "When fully maintained, applies Demolish to your targets. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -10894,7 +10913,7 @@
     "advantage_id": 642,
     "name": "Gravitational Polarity",
     "points_cost": 2,
-    "tooltip": "On full charge, summon an Energy Field for 10 sec. Standing in the Energy Field grants Energy to up to 5 allies within 15ft while depleting Energy from foes. Count as a Rune. You cannot have more than one rune out at a time.",
+    "tooltip": "On full charge, summon an Energy Field for 10 sec. Standing in the Static Field grants you and up to 10 nearby players 6.7 Energy every 1 sec, while depleting Energy from foes. Count as a Rune. You cannot have more than one rune out at a time.",
     "apply_tag": [
       "Rune",
       "Static Field"
@@ -11005,7 +11024,7 @@
     "advantage_id": 648,
     "name": "Demolishing Blast",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Demolish.",
+    "tooltip": "When fully charged, applies Demolish. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -11143,9 +11162,7 @@
     "name": "Focus Point",
     "points_cost": 2,
     "tooltip": "Becomes a single target ranged power, reducing its cost and increasing its damages.",
-    "apply_tag": [
-      "Focus"
-    ],
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
@@ -11223,7 +11240,7 @@
     "advantage_id": 661,
     "name": "Download",
     "points_cost": 1,
-    "tooltip": "Applies Download to you, reducing the cost of Technology powers for 12 sec.",
+    "tooltip": "Applies Download to you. Download reduces the cost of your Technology powers by 20% and increases the effectiveness of your energy gain powers by 2.5% for 12 sec. ",
     "apply_tag": [
       "Download"
     ],
@@ -11361,13 +11378,15 @@
     "advantage_id": 669,
     "name": "Aftershock",
     "points_cost": 2,
-    "tooltip": "Fully charging creates a Pyre Patch.",
+    "tooltip": "Fully charging creates a Pyre Patch. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
       "Pyre Patch"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Clinging Flames"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -11412,7 +11431,7 @@
     "advantage_id": 672,
     "name": "Demolishing Strikes",
     "points_cost": 2,
-    "tooltip": "When this combo is completed, it applies Demolish to the target instead of Lithe.",
+    "tooltip": "When this combo is completed, it applies Demolish to the target instead of Lithe. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -11429,7 +11448,7 @@
     "advantage_id": 673,
     "name": "Demolishing Strikes",
     "points_cost": 2,
-    "tooltip": "When fully maintained, applies Demolish to your primary target.",
+    "tooltip": "When fully maintained, applies Demolish to your primary target. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
       "Demolish"
     ],
@@ -11446,7 +11465,7 @@
     "advantage_id": 674,
     "name": "Devoid",
     "points_cost": 2,
-    "tooltip": "On a full charge, applies Devoid to the target.",
+    "tooltip": "On a full charge, applies Devoid to the target. Devoid reduces resistance to Dimensional Damage by 18% for 15 sec.",
     "apply_tag": [
       "Devoid"
     ],
@@ -11463,7 +11482,7 @@
     "advantage_id": 675,
     "name": "Disintegration Ray",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Disintegrate.",
+    "tooltip": "When fully charged, applies Disintegrate. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec.",
     "apply_tag": [
       "Disintegrate"
     ],
@@ -11480,7 +11499,7 @@
     "advantage_id": 676,
     "name": "Dizzying Impact",
     "points_cost": 2,
-    "tooltip": "30-100% chance (based on charged time) to apply Disorient to target(s)",
+    "tooltip": "30-100% chance (based on charged time) to apply Disorient to target(s). Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -11497,7 +11516,7 @@
     "advantage_id": 677,
     "name": "Dizzying Impact",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Disorient to targets.",
+    "tooltip": "When fully charged, applies Disorient to targets. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
       "Disorient"
     ],
@@ -11514,7 +11533,7 @@
     "advantage_id": 678,
     "name": "Engulfing Flames",
     "points_cost": 2,
-    "tooltip": "Applies Engulfing Flames to your target, reducing their resistance to your Fire Damage.",
+    "tooltip": "Applies Engulfing Flames to your target. Engulfing Flames reduces resistance to Fire Damage by 8% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Engulfing Flames"
     ],
@@ -11531,7 +11550,7 @@
     "advantage_id": 679,
     "name": "Engulfing Flames",
     "points_cost": 2,
-    "tooltip": "50% chance to apply Engulfing Flame to your primary target. 25% on secondary target. Chances are doubled if your targets are affected by Clinging Flames.",
+    "tooltip": "50% chance to apply Engulfing Flame to your primary target. 25% on secondary target. Chances are doubled if your targets are affected by Clinging Flames. Engulfing Flames reduces resistance to Fire Damage by 8% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Engulfing Flames"
     ],
@@ -11604,8 +11623,7 @@
     "tooltip": "Refreshes Armor Piercing.",
     "apply_tag": [],
     "refresh_tag": [
-      "Armor Piercing",
-      "Frail Armor"
+      "Armor Piercing"
     ],
     "synergy_tag": [],
     "filter_tag": [],
@@ -11653,7 +11671,7 @@
     "advantage_id": 686,
     "name": "Illuminate",
     "points_cost": 2,
-    "tooltip": "Applies Illuminated to the target.",
+    "tooltip": "Applies Illuminated to the target. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
       "Illuminated"
     ],
@@ -11664,7 +11682,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "105",
     "control_values": null,
     "is_disabled": false
   },
@@ -11672,7 +11690,7 @@
     "advantage_id": 687,
     "name": "Light Everlasting",
     "points_cost": 2,
-    "tooltip": "Applies Light Everlasting to allies near the primary target.",
+    "tooltip": "Applies Light Everlasting to allies near the primary target. Light Everlasting heals the target for 56 Health Points every 1 sec over 10 sec.",
     "apply_tag": [
       "Light Everlasting"
     ],
@@ -11683,7 +11701,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "56",
     "control_values": null,
     "is_disabled": false
   },
@@ -11691,7 +11709,7 @@
     "advantage_id": 688,
     "name": "Light Everlasting",
     "points_cost": 2,
-    "tooltip": "When fully maintained, applies Light Everlasting to nearby allies.",
+    "tooltip": "When fully maintained, applies Light Everlasting to nearby allies.  Light Everlasting heals the target for 56 Health Points every 1 sec over 10 sec.",
     "apply_tag": [
       "Light Everlasting"
     ],
@@ -11702,7 +11720,7 @@
     ],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": null,
+    "healing_values": "56",
     "control_values": null,
     "is_disabled": false
   },
@@ -11710,11 +11728,13 @@
     "advantage_id": 689,
     "name": "Mystical",
     "points_cost": 2,
-    "tooltip": "20% chance to apply and refresh Mystified on you. Mystified lasts 15 sec and reduces the cost of your Sorcery, Celestial, Darkness, and Infernal powers by 3%, stacking up to 3 times.",
+    "tooltip": "20% chance to apply and refresh Mystified on you.  Mystified reduces the cost of your Sorcery, Celestial, Darkness and Infernal powers by 3% for 15 sec. Stack up to 3 times.",
     "apply_tag": [
       "Mystified"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Mystified"
+    ],
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
@@ -11727,11 +11747,13 @@
     "advantage_id": 690,
     "name": "Mystical",
     "points_cost": 2,
-    "tooltip": "On a full maintain, applies and refreshes Mystified on you.",
+    "tooltip": "On a full maintain, applies and refreshes Mystified on you.  Mystified reduces the cost of your Sorcery, Celestial, Darkness and Infernal powers by 3% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
       "Mystified"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Mystified"
+    ],
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
@@ -11744,7 +11766,7 @@
     "advantage_id": 691,
     "name": "No Quarter",
     "points_cost": 2,
-    "tooltip": "Applies No Quarter to targets.",
+    "tooltip": "Applies No Quarter to targets. No Quarter reduces resistance to your Crushing Damage and Fire Damage by 15% for 15 sec.",
     "apply_tag": [
       "No Quarter"
     ],
@@ -11778,7 +11800,7 @@
     "advantage_id": 693,
     "name": "Reckless Endangerment",
     "points_cost": 2,
-    "tooltip": "10% chance on each hit to apply Reckless on you. If fully maintained and you have 3 stacks of Reckless, they are refreshed.",
+    "tooltip": "10% chance on each hit to apply Reckless on you. If fully maintained and you have 3 stacks of Reckless, they are refreshed. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times. ",
     "apply_tag": [
       "Reckless"
     ],
@@ -11797,7 +11819,7 @@
     "advantage_id": 694,
     "name": "Reckless Endangerment",
     "points_cost": 2,
-    "tooltip": "The final combo hit applies Reckless to you.",
+    "tooltip": "The final combo hit applies Reckless to you. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times. ",
     "apply_tag": [
       "Reckless"
     ],
@@ -11814,7 +11836,7 @@
     "advantage_id": 695,
     "name": "Reckless Endangerment",
     "points_cost": 2,
-    "tooltip": "Applies Reckless to you.",
+    "tooltip": "Applies Reckless to you. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times. ",
     "apply_tag": [
       "Reckless"
     ],
@@ -11848,7 +11870,7 @@
     "advantage_id": 697,
     "name": "Sudden Strike",
     "points_cost": 2,
-    "tooltip": "If you lunge from more than 50ft away your next single target Melee Critical has 15% more severity. Sudden Strike is a Chi Energy effect.",
+    "tooltip": "If you lunge from more than 50ft away, applies Sudden Strike for up to 10 sec, increasing the Critical Severity of your next critical hit by 15%. Expires once you get a critical hit.",
     "apply_tag": [
       "Sudden Strike"
     ],
@@ -11865,7 +11887,7 @@
     "advantage_id": 698,
     "name": "Charged Up",
     "points_cost": 2,
-    "tooltip": "If consumes any Negative Ions, it applies Charged Up to you and affected allies. Charged Up increases your Running Speed by 15%, your Jump Height by 2%, and your Flying Speed by 2%. This effect stacks up to 5 times and lasts 10 sec.",
+    "tooltip": "If consumes any Negative Ions, it applies Charged Up to you and affected allies. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
       "Charged Up"
     ],
@@ -11922,7 +11944,7 @@
     "advantage_id": 701,
     "name": "Superconductor",
     "points_cost": 2,
-    "tooltip": "When fully charged, applies Superconductor to the target.",
+    "tooltip": "When fully charged, applies Superconductor to the target. Superconductor reduces resistance to Electrical Damage by 18% for 15 sec.",
     "apply_tag": [
       "Superconductor"
     ],
@@ -11974,7 +11996,7 @@
     "advantage_id": 704,
     "name": "Hard Frost",
     "points_cost": 2,
-    "tooltip": "If fully maintained, Applies Hard Frost to targets.",
+    "tooltip": "If fully maintained, Applies Hard Frost to targets. Hard Frost reduces resistance to Cold Damage by 18% for 15 sec.",
     "apply_tag": [
       "Hard Frost"
     ],
@@ -12014,7 +12036,7 @@
     "advantage_id": 706,
     "name": "Particle Acceleration",
     "points_cost": 2,
-    "tooltip": "When fully maintained, applies Disintegrate.",
+    "tooltip": "When fully maintained, applies Disintegrate. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec.",
     "apply_tag": [
       "Disintegrate"
     ],

@@ -29,3 +29,16 @@ export function cleanMultilineTooltipText(
 
   return text || null;
 }
+
+export function splitTooltipTextLines(text: string | null | undefined) {
+  const normalizedText = cleanMultilineTooltipText(text);
+
+  if (!normalizedText) {
+    return [];
+  }
+
+  return normalizedText
+    .split(/\r?\n|(?:^|\s)\+\s*/u)
+    .map((line) => line.trim())
+    .filter(Boolean);
+}

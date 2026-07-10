@@ -11,6 +11,7 @@ const effectGroupAliases: Record<string, string[]> = {
     "Pyre Patch",
     "Fire Snake",
   ],
+  "bastion": ["Bastion", "Reckless"],
   "chi energy": [
     "Chi Flame",
     "Lithe",
@@ -95,6 +96,7 @@ const effectGroupAliases: Record<string, string[]> = {
     "Ego Leech",
     "Despondency",
   ],
+  "mend": ["Illuminated"],
   "paranormal damage": [
     "Ego",
     "Magic",

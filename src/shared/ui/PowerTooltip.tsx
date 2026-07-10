@@ -1,6 +1,7 @@
 import type { PowerTooltipData } from "@/shared/utils/powerTooltip";
 import { TooltipTags } from "@/shared/ui/TooltipTags";
 import type { TagSearchColumn } from "@/utils/powerTags";
+import { splitTooltipTextLines } from "@/shared/utils/tooltipText";
 
 type PowerTooltipProps = {
   advantageHighlightIds?: number[];
@@ -191,7 +192,13 @@ export function PowerTooltip({
                   ) : null}
                 </div>
                 <TooltipTags tags={advantage.tags} />
-                {advantage.tooltip ? <p>{advantage.tooltip}</p> : null}
+                {splitTooltipTextLines(advantage.tooltip).length > 0 ? (
+                  <div className="power-tooltip-advantages__text">
+                    {splitTooltipTextLines(advantage.tooltip).map((line, index) => (
+                      <span key={`${advantage.id}-${line}-${index}`}>{line}</span>
+                    ))}
+                  </div>
+                ) : null}
               </section>
             ))}
           </div>
