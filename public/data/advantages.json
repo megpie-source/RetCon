@@ -3,7 +3,7 @@
     "advantage_id": 1,
     "name": "Rank 2",
     "points_cost": 2,
-    "tooltip": "Increases the strength of the power by 20% and its energy building strength by ~10%.",
+    "tooltip": "Increases the strength of the power by 20%.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -18,7 +18,7 @@
     "advantage_id": 2,
     "name": "Rank 3",
     "points_cost": 2,
-    "tooltip": "Increases the strength of the power by 20% and its energy building strength by ~10%.",
+    "tooltip": "Increases the strength of the power by 20%.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -946,11 +946,11 @@
     "name": "Bold Entrance",
     "points_cost": 2,
     "tooltip": "Increases the effectiveness of Bastion, causing 50% of all pre-mitigation damage to be applied as shielding. Expires immediately if you deal damage with a non-Heavy Weapons ability.",
-    "apply_tag": [
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [
       "Reckless"
     ],
-    "refresh_tag": [],
-    "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -2568,8 +2568,8 @@
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
-    "healing_values": "Stun=2",
-    "control_values": null,
+    "healing_values": null,
+    "control_values": "Stun=2",
     "is_disabled": false
   },
   {
@@ -4271,7 +4271,7 @@
     "advantage_id": 256,
     "name": "Furious Rush",
     "points_cost": 2,
-    "tooltip": "Refreshes and applies 1 stack of Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "If you are not affected by Furious, applies 1 stack of Furious to you, otherwise, refreshes all stacks of Furious on you. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -4290,7 +4290,7 @@
     "advantage_id": 257,
     "name": "Furor Venenum",
     "points_cost": 2,
-    "tooltip": "20% chance to Infect your target, Stunning them for 2 sec. Chance is guaranteed if the target is Bleeding or Poisoned, and refreshes and applies 1 stack of Furious to you. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "20% chance to Infect your target, Stunning them for 2 sec. Chance is guaranteed if the target is Bleeding or Poisoned. Applies 1 stack of Furious to you, and refreshes existing stacks. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Infect",
       "Stun",
@@ -4496,7 +4496,7 @@
     "advantage_id": 269,
     "name": "Grasping Hand",
     "points_cost": 2,
-    "tooltip": "Roots targets instead of knocking them back.",
+    "tooltip": "Roots targets for 16 sec instead of knocking them back.",
     "apply_tag": [
       "Root"
     ],
@@ -4506,7 +4506,7 @@
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
-    "control_values": null,
+    "control_values": "Root=16",
     "is_disabled": false
   },
   {
@@ -4668,7 +4668,7 @@
     "points_cost": 3,
     "tooltip": "Shields you for an amount of damage scaling with the number of targets hit. Shield last up to 20 sec.",
     "apply_tag": [
-      "Shield"
+      "Direct Shield"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -4768,7 +4768,7 @@
     "advantage_id": 285,
     "name": "Here I Am",
     "points_cost": 2,
-    "tooltip": "Stuns targets within 10ft of your primary target if they aren't affected by a control effect. This effect can only occur once every 10 sec.",
+    "tooltip": "Stuns targets within 10ft of your primary target for 1 sec if they aren't affected by a control effect. This effect can only occur once every 10 sec",
     "apply_tag": [
       "Stun"
     ],
@@ -4778,7 +4778,7 @@
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
-    "control_values": null,
+    "control_values": "Stun=1",
     "is_disabled": false
   },
   {
@@ -4839,7 +4839,7 @@
     "advantage_id": 289,
     "name": "I Pay It Gladly",
     "points_cost": 2,
-    "tooltip": "If you kill a target, you gain 3 stacks of Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "If you kill a target, you gain 3 stacks of Furious. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -5784,7 +5784,7 @@
     "advantage_id": 344,
     "name": "Listen to Reason",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Fear. Refreshes all stacks of Furious. Fear reduces target's damage by 10% for 12 sec.",
+    "tooltip": "15% chance on each hit to apply Fear. Refreshes all stacks of Furious on you. + Fear reduces target's damage by 10% for 12 sec. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -6020,10 +6020,8 @@
     "advantage_id": 358,
     "name": "Matter - Energy Union",
     "points_cost": 2,
-    "tooltip": "Grants a damage absorption shield when activate.",
-    "apply_tag": [
-      "Shield"
-    ],
+    "tooltip": "For 15 sec, incoming damage will be substracted from your Energy instead of your Health Points. 0.5% Health Points convert into 1% Energy. This can only reroute a limited amount of damage, after which damage will be dealt as normal.",
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
@@ -6455,7 +6453,7 @@
     "advantage_id": 385,
     "name": "Night Hunt",
     "points_cost": 2,
-    "tooltip": "Applies Sudden Strike for up to 10 sec, increasing the Critical Severity of your next critical hit by 10%. Expires once you get a critical hit.",
+    "tooltip": "When fully charged, applies Sudden Strike to you for 10 sec, increasing the Critical Severity of your next critical hit by 20%. Expires once you land a critical hit.",
     "apply_tag": [
       "Sudden Strike"
     ],
@@ -6649,7 +6647,7 @@
     "advantage_id": 396,
     "name": "Null Value",
     "points_cost": 2,
-    "tooltip": "Stuns your main target and Knocks Down secondary targets.",
+    "tooltip": "Stuns your main target for 1.7 sec and Knocks Down secondary targets.",
     "apply_tag": [
       "Stun",
       "Knock Down"
@@ -6660,7 +6658,7 @@
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
-    "control_values": null,
+    "control_values": "Stun=1.7",
     "is_disabled": false
   },
   {
@@ -7888,12 +7886,12 @@
     "name": "Rejuvenating Injectors",
     "points_cost": 2,
     "tooltip": "While active, heals you for 581 Health Points whenever one of your powers comes off of cooldown.",
-    "apply_tag": [
-      "Passive Heal"
-    ],
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Passive Heal"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": "581",
@@ -8028,12 +8026,12 @@
     "name": "Resurgent Reiki",
     "points_cost": 2,
     "tooltip": "You gain additional ticks of healing whenever you Dodge an attack while active. This effect can only occur once every 0.5 sec.",
-    "apply_tag": [
-      "Passive Heal"
-    ],
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Passive Heal"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8060,12 +8058,12 @@
     "name": "Reverence",
     "points_cost": 2,
     "tooltip": "Adds a small AoE (15 foot radius, max of 5 targets) heal component.",
-    "apply_tag": [
-      "Team Heal"
-    ],
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Team Heal"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8094,11 +8092,11 @@
     "name": "Revitalizing Boost",
     "points_cost": 2,
     "tooltip": "If the shield absorbs the full amount of damage, it restores Energy to you. This amount scales with your Presence.",
-    "apply_tag": [
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [
       "Shield"
     ],
-    "refresh_tag": [],
-    "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -8701,7 +8699,7 @@
     "advantage_id": 514,
     "name": "Shield Dispersal",
     "points_cost": 2,
-    "tooltip": "Places up to 5 targets within 25ft of your primary target in Power Shields.",
+    "tooltip": "Places up to 5 targets within 25ft of your primary target in Power Shields. + Power Shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -9021,10 +9019,10 @@
     "apply_tag": [
       "Dependency"
     ],
-    "refresh_tag": [],
-    "synergy_tag": [
+    "refresh_tag": [
       "Dependency"
     ],
+    "synergy_tag": [],
     "filter_tag": [
       "Passive Heal"
     ],
@@ -9456,7 +9454,7 @@
     "advantage_id": 557,
     "name": "Sudden Strike",
     "points_cost": 2,
-    "tooltip": "Applies Sudden Strike for up to 10 sec, increasing the Critical Severity of your next critical hit by 10%. Expires once you get a critical hit.",
+    "tooltip": "Applies Sudden Strike for 10 sec, increasing the Critical Severity of your next critical hit by 7,5%. Expires once you land a critical hit.",
     "apply_tag": [
       "Sudden Strike"
     ],
@@ -10485,9 +10483,7 @@
     "synergy_tag": [
       "Poisons"
     ],
-    "filter_tag": [
-      "Poisons"
-    ],
+    "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -10583,7 +10579,7 @@
     "advantage_id": 623,
     "name": "Vortex Technique",
     "points_cost": 2,
-    "tooltip": "Foes are Knocked To you instead of Knocked Back. If fully maintained, also applies or refreshes Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Foes are Knocked To you instead of Knocked Back. If fully maintained, also applies 1 stack of Furious if you are unnafected by the buff, or refreshes existing stacks of Furious. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Knock To",
       "Furious"
@@ -10896,7 +10892,7 @@
     "advantage_id": 641,
     "name": "Entropy Blast",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Power Shield to your target.",
+    "tooltip": "15% chance on each hit to apply Power Shield to your target. + Power shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -10913,7 +10909,7 @@
     "advantage_id": 642,
     "name": "Gravitational Polarity",
     "points_cost": 2,
-    "tooltip": "On full charge, summon an Energy Field for 10 sec. Standing in the Static Field grants you and up to 10 nearby players 6.7 Energy every 1 sec, while depleting Energy from foes. Count as a Rune. You cannot have more than one rune out at a time.",
+    "tooltip": "On full charge, summon an Energy Field for 10 sec. Standing in the Energy Field grants you and up to 10 nearby players 6.7 Energy every 1 sec, while depleting Energy from foes. Count as a Rune. You cannot have more than one rune out at a time.",
     "apply_tag": [
       "Rune",
       "Static Field"
@@ -10931,12 +10927,15 @@
     "advantage_id": 643,
     "name": "Field Expulsion",
     "points_cost": 3,
-    "tooltip": "If you are affected by a direct Shield power, fully charging removes that effect and grants a damage absorbing shield to up to 5 allies within 30ft for 20 sec. This amount scales with the rank of your Protection Field power.",
+    "tooltip": "If you are affected by a Direct Shield power, fully charging removes that effect and grants a damage absorbing shield to up to 5 allies within 30ft for 20 sec. This amount scales with the rank of your Protection Field power.",
     "apply_tag": [
-      "Shield"
+      "Direct Shield"
     ],
     "refresh_tag": [],
-    "synergy_tag": [],
+    "synergy_tag": [
+      "Direct Shield",
+      "Protection Field"
+    ],
     "filter_tag": [
       "Field Inversion"
     ],
@@ -10973,7 +10972,9 @@
       "Shield"
     ],
     "refresh_tag": [],
-    "synergy_tag": [],
+    "synergy_tag": [
+      "Direct Shield"
+    ],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -11043,10 +11044,12 @@
     "points_cost": 2,
     "tooltip": "Fully charging applies a Shield to you for 10 sec, absorbing damage. This amount scales with the rank of your Protection Field power.",
     "apply_tag": [
-      "Shield"
+      "Direct Shield"
     ],
     "refresh_tag": [],
-    "synergy_tag": [],
+    "synergy_tag": [
+      "Protection Field"
+    ],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
@@ -11075,7 +11078,7 @@
     "advantage_id": 651,
     "name": "Entropy Field",
     "points_cost": 2,
-    "tooltip": "Places up to 5 targets within 15ft of your primary target in a Power Shield.",
+    "tooltip": "Places up to 5 targets within 15ft of your primary target in a Power Shield. + Power shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -11569,7 +11572,7 @@
     "advantage_id": 680,
     "name": "Entropy Field",
     "points_cost": 2,
-    "tooltip": "20% chance on each hit to apply Power Shield to targets. 100% chance if fully maintained.",
+    "tooltip": "20% chance on each hit to apply Power Shield to targets. 100% chance if fully maintained. + Power shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -11870,7 +11873,7 @@
     "advantage_id": 697,
     "name": "Sudden Strike",
     "points_cost": 2,
-    "tooltip": "If you lunge from more than 50ft away, applies Sudden Strike for up to 10 sec, increasing the Critical Severity of your next critical hit by 15%. Expires once you get a critical hit.",
+    "tooltip": "Applies Sudden Strike to you for 10 sec, increasing the Critical Severity of your next critical hit by 15%. Expires once you land a critical hit.",
     "apply_tag": [
       "Sudden Strike"
     ],
@@ -12013,11 +12016,11 @@
     "advantage_id": 705,
     "name": "Field Inversion",
     "points_cost": 2,
-    "tooltip": "If you are affected by a direct Shield effect, consumes the shield and deals additional 576 Crushing Damage around your primary target. If any affected targets are affected by a Power Shield effect, deals 494 Crushing Damage to nearby targets.",
+    "tooltip": "When fully charged, if you are affected by a Direct Shield effect, consumes the shield and deals additional 576 Crushing Damage around your primary target. If any affected targets are affected by a Power Shield effect, deals 494 Crushing Damage to nearby targets.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [
-      "Shield",
+      "Direct Shield",
       "Power Shield"
     ],
     "filter_tag": [
@@ -12106,7 +12109,7 @@
     "advantage_id": 710,
     "name": "Entropy Field",
     "points_cost": 2,
-    "tooltip": "Applies Power Shield to target.",
+    "tooltip": "Applies Power Shield to target. + Power shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],

@@ -32,7 +32,7 @@ const powerTypeRoleRules: Array<[string, string[]]> = [
   ["SELF_HEAL", []],
   ["SELF_HEAL_OVER_TIME", []],
   ["SELF_RESURRECTION", ["Revive / Self-Rez"]],
-  ["SHIELD", ["Shield"]],
+  ["SHIELD", []],
   ["SLOTTED_DEFENSIVE_PASSIVE", ["Slotted Passive"]],
   ["SLOTTED_HYBRID_PASSIVE", ["Slotted Passive"]],
   ["SLOTTED_OFFENSIVE_PASSIVE", ["Slotted Passive"]],
@@ -56,7 +56,7 @@ const crowdControlTags = new Set([
 const buffDebuffTags = new Set(["static field"]);
 const activeHealShieldTags = new Set(["active heal", "life drain", "team heal"]);
 const passiveHealShieldTags = new Set(["passive heal"]);
-const shieldTags = new Set(["shield"]);
+const shieldApplyTags = new Set(["direct shield", "shield", "shield special"]);
 const powerRoleOrder = [
   "Ranged Damage",
   "Melee Damage",
@@ -81,7 +81,7 @@ const powerRoleAdvantageHighlightQueries: Record<string, string[]> = {
   "Buff / Debuff": [...buffDebuffTags],
   "Crowd Control": [...crowdControlTags],
   "Passive Heal": [...passiveHealShieldTags],
-  Shield: [...shieldTags],
+  Shield: ["Direct Shield", "Shield", "Shield (special)"],
 };
 
 type PowerRoleContext = {
@@ -118,6 +118,19 @@ function hasPassiveHealShieldTag(tags: string[] | null | undefined) {
   return hasAnyNormalizedValue(tags, passiveHealShieldTags);
 }
 
+function getTagValues(value: string[] | string | null | undefined) {
+  if (!value) {
+    return [];
+  }
+
+  const values = Array.isArray(value) ? value : [value];
+
+  return values
+    .flatMap((tag) => String(tag).split(";"))
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+}
+
 function getAdvantageTags(
   power: Power,
   advantagesById: ReadonlyMap<number, Advantage> | null | undefined,
@@ -133,6 +146,21 @@ function getAdvantageTags(
   });
 }
 
+function getAdvantageApplyTags(
+  power: Power,
+  advantagesById: ReadonlyMap<number, Advantage> | null | undefined,
+) {
+  if (!advantagesById) {
+    return [];
+  }
+
+  return power.advantages.flatMap((advantageId) => {
+    const advantage = advantagesById.get(advantageId);
+
+    return advantage ? getTagValues(advantage.apply_tag) : [];
+  });
+}
+
 export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
   const roles = new Set<string>();
   const normalizedPowerType = getNormalizedPowerType(power);
@@ -145,7 +173,12 @@ export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
   }
 
   const powerTags = getSearchTags(power);
+  const powerApplyTags = getTagValues(power.apply_tag);
   const advantageTags = getAdvantageTags(power, context.advantagesById);
+  const advantageApplyTags = getAdvantageApplyTags(
+    power,
+    context.advantagesById,
+  );
 
   if (includePowerTags && hasAnyNormalizedValue(powerTags, crowdControlTags)) {
     roles.add("Crowd Control");
@@ -163,7 +196,7 @@ export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
     roles.add("Passive Heal");
   }
 
-  if (includePowerTags && hasAnyNormalizedValue(powerTags, shieldTags)) {
+  if (includePowerTags && hasAnyNormalizedValue(powerApplyTags, shieldApplyTags)) {
     roles.add("Shield");
   }
 
@@ -190,7 +223,7 @@ export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
 
   if (
     includeAdvantageTags &&
-    hasAnyNormalizedValue(advantageTags, shieldTags)
+    hasAnyNormalizedValue(advantageApplyTags, shieldApplyTags)
   ) {
     roles.add("Shield");
   }

@@ -1,6 +1,7 @@
 @import "./fonts.css";
 
 :root {
+  color-scheme: dark;
   font-family:
     "Inter 18pt", "Trebuchet MS", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
@@ -10,6 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  color-scheme: dark;
+  background: #050505;
 }
 
 * {

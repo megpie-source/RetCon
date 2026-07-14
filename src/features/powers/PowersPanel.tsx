@@ -1862,6 +1862,7 @@ export function PowersPanel({
   }
 
   function resetAdvancedFilters() {
+    setSearch("");
     setSelectedPowerRoleFilter("");
     setSelectedPowerSort("");
     setSelectedScalingStats([]);

@@ -109,6 +109,7 @@ type CollapsedWorkspacePanels = Record<WorkspacePanelId, boolean>;
 
 const collapsedPanelTrackWidth = "var(--collapsed-panel-track-width, 48px)";
 const ultraCompactViewportQuery = "(max-width: 1400px)";
+const collapsedWorkspacePanelsStorageKey = "retcon.workspacePanels.v1";
 const openPanelTracks = {
   build: "minmax(330px, 1fr)",
   character: "var(--character-column-width)",
@@ -116,9 +117,62 @@ const openPanelTracks = {
   powers: "minmax(var(--powers-column-min-width), 1.28fr)",
   specializations: "var(--specializations-column-width)",
 } satisfies Record<WorkspacePanelId, string>;
+const defaultCollapsedWorkspacePanels: CollapsedWorkspacePanels = {
+  build: false,
+  character: false,
+  gear: false,
+  powers: false,
+  specializations: false,
+};
+const workspacePanelIds = Object.keys(
+  defaultCollapsedWorkspacePanels,
+) as WorkspacePanelId[];
 
 function isUltraCompactViewport() {
   return window.matchMedia(ultraCompactViewportQuery).matches;
+}
+
+function isCollapsedWorkspacePanels(value: unknown): value is CollapsedWorkspacePanels {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  return workspacePanelIds.every(
+    (panelId) => typeof (value as Record<string, unknown>)[panelId] === "boolean",
+  );
+}
+
+function readCollapsedWorkspacePanels() {
+  try {
+    const storedValue = window.localStorage.getItem(
+      collapsedWorkspacePanelsStorageKey,
+    );
+
+    if (!storedValue) {
+      return defaultCollapsedWorkspacePanels;
+    }
+
+    const parsedValue: unknown = JSON.parse(storedValue);
+
+    return isCollapsedWorkspacePanels(parsedValue)
+      ? parsedValue
+      : defaultCollapsedWorkspacePanels;
+  } catch {
+    return defaultCollapsedWorkspacePanels;
+  }
+}
+
+function writeCollapsedWorkspacePanels(
+  collapsedWorkspacePanels: CollapsedWorkspacePanels,
+) {
+  try {
+    window.localStorage.setItem(
+      collapsedWorkspacePanelsStorageKey,
+      JSON.stringify(collapsedWorkspacePanels),
+    );
+  } catch {
+    // Ignore storage failures. The layout still works without persistence.
+  }
 }
 
 function CollapsibleWorkspacePanel({
@@ -342,13 +396,7 @@ function App() {
   const [aboutDialogOpen, setAboutDialogOpen] = useState(false);
   const [importBuildDialogOpen, setImportBuildDialogOpen] = useState(false);
   const [collapsedWorkspacePanels, setCollapsedWorkspacePanels] =
-    useState<CollapsedWorkspacePanels>({
-      build: false,
-      character: false,
-      gear: false,
-      powers: false,
-      specializations: false,
-    });
+    useState<CollapsedWorkspacePanels>(readCollapsedWorkspacePanels);
   const { gears, mods } = useGearData(showGearPlanner, true);
   const gearDataReady = !showGearPlanner || (gears.length > 0 && mods.length > 0);
   const damageModsByFramework = useMemo(
@@ -405,9 +453,13 @@ function App() {
         ...currentCollapsedPanels,
         [panelId]: !wasCollapsed,
       };
+      let finalCollapsedPanels: CollapsedWorkspacePanels;
 
       if (!wasCollapsed || !isUltraCompactViewport()) {
-        return nextCollapsedPanels;
+        finalCollapsedPanels = nextCollapsedPanels;
+        writeCollapsedWorkspacePanels(finalCollapsedPanels);
+
+        return finalCollapsedPanels;
       }
 
       const keepAllowedPanelsOpen = (
@@ -462,13 +514,19 @@ function App() {
       };
 
       if (panelId === "powers") {
-        return keepAllowedPanelsOpen({
+        finalCollapsedPanels = keepAllowedPanelsOpen({
           ...nextCollapsedPanels,
           build: false,
         });
+        writeCollapsedWorkspacePanels(finalCollapsedPanels);
+
+        return finalCollapsedPanels;
       }
 
-      return keepAllowedPanelsOpen(nextCollapsedPanels);
+      finalCollapsedPanels = keepAllowedPanelsOpen(nextCollapsedPanels);
+      writeCollapsedWorkspacePanels(finalCollapsedPanels);
+
+      return finalCollapsedPanels;
     });
   }, []);
 

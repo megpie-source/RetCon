@@ -2384,7 +2384,7 @@
     "gear_type": "Offense",
     "name": "Cosmic Presence",
     "gear_tooltip": null,
-    "gear_bonus": "If an ally is below 50% health, your direct heals heal for an additional 10% on that target. If an ally is below 10% health, your direct heals heal power is a Maintain, for an additional 100%. + If the instead causes one application of the power to heal for an additional 950%. No additional bonus healing from this effect can occur again for 10 sec.;Super_Stats=20",
+    "gear_bonus": "If an ally is below 50% health, your direct heals heal for an additional 10% on that target. + If an ally is below 10% health, and your direct heals heal for an additional 100%. If the power is a Maintain, instead causes one application of the power to heal for an additional 950%. No additional bonus healing from this effect can occur again for 10 sec.;Super_Stats=20",
     "set_tooltip": null,
     "set_bonus": "2=Super_Stats=10|3=All_Stats=10",
     "set_piece_bonus": "3=Defense=30;Threat=-10",
@@ -2410,7 +2410,7 @@
       }
     ],
     "bonus_text": [
-      "If an ally is below 50% health, your direct heals heal for an additional 10% on that target. If an ally is below 10% health, your direct heals heal power is a Maintain, for an additional 100%. + If the instead causes one application of the power to heal for an additional 950%. No additional bonus healing from this effect can occur again for 10 sec."
+      "If an ally is below 50% health, your direct heals heal for an additional 10% on that target. + If an ally is below 10% health, and your direct heals heal for an additional 100%. If the power is a Maintain, instead causes one application of the power to heal for an additional 950%. No additional bonus healing from this effect can occur again for 10 sec."
     ],
     "set_piece_bonuses": [
       {
@@ -3177,7 +3177,7 @@
     "gear_type": "Offense",
     "name": "Onslaught Gloves of the Slicer",
     "gear_tooltip": null,
-    "gear_bonus": "Bonus_Melee_Damage=5;Increases your Melee Damage for 1% for 10 sec if your target is affected by your Damage Resistance Debuff. This can occur once every 1 sec and stacks up to 5 times.;Defense=7.1",
+    "gear_bonus": "Bonus_Melee_Damage=5;Increases your Melee Damage by 1% for 10 sec if your target is affected by your Damage Resistance Debuff. This can occur once every 1 sec and stacks up to 5 times.;Defense=7.1",
     "set_tooltip": null,
     "set_bonus": "2=Super_Stats=10",
     "set_piece_bonus": "3=Offense=200",
@@ -3206,7 +3206,7 @@
       }
     ],
     "bonus_text": [
-      "Increases your Melee Damage for 1% for 10 sec if your target is affected by your Damage Resistance Debuff. This can occur once every 1 sec and stacks up to 5 times."
+      "Increases your Melee Damage by 1% for 10 sec if your target is affected by your Damage Resistance Debuff. This can occur once every 1 sec and stacks up to 5 times."
     ],
     "set_piece_bonuses": [
       {
@@ -4284,9 +4284,9 @@
     "gear_set": "Determination",
     "gear_slot": "Secondary",
     "gear_type": "Offense",
-    "name": "Agressive Belt of Determination",
+    "name": "Aggressive Belt of Determination",
     "gear_tooltip": null,
-    "gear_bonus": "Dealing direct damage increases your base damage by 1% for 10 sec. This effect can stack up to 5 times.;Threat=-10;Defense=6.5",
+    "gear_bonus": "Dealing direct damage increases your base damage by 1% for 10 sec. This effect Stacks up to 5 times.;Threat=-10;Defense=6.5",
     "set_tooltip": null,
     "set_bonus": "2=Super_Stats=10",
     "set_piece_bonus": "3=Offense=150",
@@ -4315,7 +4315,7 @@
       }
     ],
     "bonus_text": [
-      "Dealing direct damage increases your base damage by 1% for 10 sec. This effect can stack up to 5 times."
+      "Dealing direct damage increases your base damage by 1% for 10 sec. This effect Stacks up to 5 times."
     ],
     "set_piece_bonuses": [
       {
@@ -4355,7 +4355,7 @@
     "gear_type": "Offense",
     "name": "Supportive Belt of Determination",
     "gear_tooltip": null,
-    "gear_bonus": "Whenever you use a direct healing ability, increases your Healing output and your resistance to all damage by 4% for 10 sec. This effect can stack up to 5 times.;Threat=-10;Defense=6.5",
+    "gear_bonus": "Whenever you use a direct healing ability, increases your Healing output and your resistance to all damage by 4% for 10 sec. This effect Stacks up to 5 times.;Threat=-10;Defense=6.5",
     "set_tooltip": null,
     "set_bonus": "2=Super_Stats=10",
     "set_piece_bonus": "3=Max_HP=750",
@@ -4384,7 +4384,7 @@
       }
     ],
     "bonus_text": [
-      "Whenever you use a direct healing ability, increases your Healing output and your resistance to all damage by 4% for 10 sec. This effect can stack up to 5 times."
+      "Whenever you use a direct healing ability, increases your Healing output and your resistance to all damage by 4% for 10 sec. This effect Stacks up to 5 times."
     ],
     "set_piece_bonuses": [
       {
@@ -4424,7 +4424,7 @@
     "gear_type": "Offense",
     "name": "Protective Belt of Determination",
     "gear_tooltip": null,
-    "gear_bonus": "While blocking, you are healed for 250 Health every 2 sec.;Threat=10;Defense=6.5",
+    "gear_bonus": "While blocking, you are healed for 250 Health Points every 2 sec.;Threat=10;Defense=6.5",
     "set_tooltip": null,
     "set_bonus": "2=Super_Stats=10",
     "set_piece_bonus": "3=Max_HP=750",
@@ -4453,7 +4453,7 @@
       }
     ],
     "bonus_text": [
-      "While blocking, you are healed for 250 Health every 2 sec."
+      "While blocking, you are healed for 250 Health Points every 2 sec."
     ],
     "set_piece_bonuses": [
       {
