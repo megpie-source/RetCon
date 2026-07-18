@@ -189,7 +189,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + Deals 42 Electrical Damage every 0.5 sec to nearby target while blocking.",
     "apply_tag": [],
@@ -318,7 +318,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "Lunge to the target, dealing 117 Electrical Damage and Snaring them. + If used from more than 20ft away and the target isn't currently controlled, Stuns the target for 1.7 sec.",
     "apply_tag": [
@@ -449,7 +449,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 137 Electrical Damage every 0.5 sec to nearby targets. + Each hit has a 10% chance to Arc to a target within 25ft, dealing 73 Electrical Damage to that target. + 10% chance to apply Negative Ions to affected targets for 20 sec. + Knock Down targets affected by your Negative Ions. This completes a Circuit and consume your Negative Ions.",
     "apply_tag": [
@@ -580,7 +580,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Consumes all of your Negative Ions on targets, completing a Circuit. + Heals you and nearby allies for 756 HP for each Negative Ions consumed.",
     "apply_tag": [
@@ -627,7 +627,7 @@
     "range_tags": [
       "Targets non-destructible foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Paralyzes targets for 12 sec. + Applies Negative Ions to your primary target. + 25% chance to apply Negative Ions to secondary targets. + The electricity will Arc to foes within 25ft, dealing 236 Electrical Damage to them. + Must be fully charged.",
     "apply_tag": [
@@ -672,7 +672,7 @@
     "cooldown": 15,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 189 Electrical Damage to all targets and Roots them for 16 sec. + After this power expires, creates a Static Field for 10 sec. + Standing in the Static Field grants you and up to 10 nearby players 6.7 Energy every 1 sec, while depleting Energy from foes. + Counts as a Rune. You cannot have more than one out a a time.",
     "apply_tag": [
@@ -722,7 +722,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 152 Electrical Damage and applies Stormy Weather to targets for 16 sec. + When dealing direct Electrical Damage to targets affected by Stormy Weather, 50% chance to Arc to a target within 25ft, dealing 73 Electrical Damage to that target. This effect can occur once every 0.25 sec. + Additionally, has a 15% chance to apply Negative Ions to affected targets. This effect can occur once every 0.25 sec.",
     "apply_tag": [
@@ -768,7 +768,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 243 Electrical Damage every 1 sec to targets. + Each hit has a 25% chance to apply Negative Ions. + If fully maintained, foes are struck by an additional blast that deals 457 Electrical Damage to them and 228 Electrical Damage to other foes within 10ft of them. + If fully maintained, and your target is affected by Negative Ions, applies the Superconductor. Superconductor reduces resistance to Electrical Damage by 18% for 15 sec.",
     "apply_tag": [
@@ -816,7 +816,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 321-913 Electrical Damage to your primary target and 214-609 Electrical Damage to secondary targets. + When hitting a target affected by Negative Ions, consumes Negative Ions and Arcs to a target within 25ft, dealing 73 Electrical Damage to that target. + After 2 sec applies Negative Ions to the main target, and has 33-100% chance based on charge time to apply it to additional targets.",
     "apply_tag": [
@@ -862,7 +862,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Cylinder"
+      "10 feet Cylinder"
     ],
     "tooltip": "Deals 321-1370 Electrical Damage and has 34-100% chance to apply Negative Ions to affected targets for 20 sec. + 50% chance to Arc to a target within 25ft, dealing 73 Electrical Damage to that target. Hitting a target affected by Negative Ions will increase the chance to Arc to 75%. + Charging this power will cause you to be affected by an Electric Surge, preventing you from charging this power again for 8 sec. + When fully charged, hitting a target affected by Negative Ions will consume Negative Ions and will cause it to Arc to additional nearby targets.",
     "apply_tag": [
@@ -959,7 +959,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 213 Electrical Damage every 0.5 sec to all targets. + 15% chance to apply Negative Ions to the target. + When hitting a target affected by Negative Ions, has a 25% chance to Arc to a target within 25ft, dealing 73 Electrical Damage to that target.",
     "apply_tag": [
@@ -1006,7 +1006,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 167 Electrical Damage every 0.5 sec to all targets. + Deals additional 168 Electrical Damage to targets affected by your Negative Ions. This completes a Circuit and consumes your Negative Ions.",
     "apply_tag": [
@@ -1027,7 +1027,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Kaiju Lockbox, unlocked on summoning the sidekick"
+      "Kaiju Lockbox: unlocked on summoning Commander Zillargon"
     ],
     "icon_override": "Electricity_SunderingBreath",
     "is_disabled": false
@@ -1182,7 +1182,7 @@
     "cooldown": null,
     "range_tags": [
       "Targets non-destructible foe (10 max)",
-      "50 foot Sphere"
+      "50 feet Sphere"
     ],
     "tooltip": "Increases your Elemental Damage by 29/35/42%. + Grants an additional 3.5/4.2/5% Fire Damage for every target within 50ft affected by your Clinging Flames. This effect is called Fiery Light and stacks up to 10 times. + Grants 10/11/13% Elemental Damage Resistance and an additional 37/45/54% Fire Damage Resistance. + Restores 0.58% Energy when you take Fire Damage. + While in combat, deals 42/50/60 Fire Damage every 2 sec to foes within 25ft. + 20% chance when attacked to apply Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -1365,7 +1365,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 348-1484 Fire Damage to the target, and 129-550 Fire Damage to foes near the target. + 10-45% chance based on charge time to apply Clinging Flames to each target. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -1692,7 +1692,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 106 Fire Damage. + Expires all Clinging Flames on affected targets and heals up to 10 targets within 25ft for 485 Health Points for each one consumed. + Heals an additional 96 Health Points every 2 sec over 10 sec for every Clinging Flames consumed.",
     "apply_tag": [],
@@ -1740,7 +1740,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 214 Fire Damage every 0.5 sec to targeted foes. + 10% chance to apply Clinging Flames to each target. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -1785,7 +1785,7 @@
     "range_tags": [
       "Targets non-destructible foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 230 Fire Damage every 1 sec to targets. + 10% chance to apply Clinging Flames to the target. + After maintaining this power for 1 sec, it Incapacitates the target and refreshes a portion of the duration and durability of the Incapacitate every 1 sec you maintain it. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -1826,9 +1826,9 @@
     "tick_rate": null,
     "cooldown": 3,
     "range_tags": [
-      "Targets friend (5 max)except self",
+      "Targets friend (5 max) except self",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Heals targets for 194 Health Points. + Applies a stack of Fiery Escalation for 12 sec, which causes this power to heal for an additional 48 Health Points for each stack. Fiery Escalation can stack up to 4 times. + This power cannot be used on yourself.",
     "apply_tag": [
@@ -1875,7 +1875,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 236-839 Fire Damage to nearby foes. + 13-50% chance to apply Clinging Flames to the target. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes. + When fully charged creates a Pyre Patch on the target. The Pyre Patch lasts for 10 sec, dealing 61 Fire Damage every 1 sec.  You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have 10% to be affected by Clinging Flames. ",
     "apply_tag": [
@@ -2004,7 +2004,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects dead ally",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Revives a nearby ally, bringing them back to life with 33/66/100% Health. + Must be fully charged. + Taking damage will interrupt this power.",
     "apply_tag": [],
@@ -2045,8 +2045,8 @@
     "cooldown": 15,
     "range_tags": [
       "Targets foe (5 max)",
-      "50 foot lunge",
-      "15 foot Sphere"
+      "50 feet lunge",
+      "15 feet Sphere"
     ],
     "tooltip": "Lunges at the target, dealing 304 Fire Damage to targets within 15ft. + Knocks Back targets, depending on how far you lunge from. + 50% chance to apply Clinging Flames on affected targets. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -2176,7 +2176,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Applies Clinging Flames to your targets. + Creates a Pyre Patch on the target. + The Pyre Patch lasts for 16 sec, dealing 77 Fire Damage every 1 sec. You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -2439,7 +2439,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 155-456 Crushing Damage to nearby foes. + When charged at least half way, has a 50-100% chance to Knock Back affected targets. + If your target is immune to Knock effects, increases this power's base damage by up to 25% based on charge time.",
     "apply_tag": [
@@ -2595,7 +2595,7 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
-      "Affects non-destructible friends(20 max)",
+      "Affects non-destructible friends (20 max)",
       "100 feet"
     ],
     "tooltip": "Grants you and affected teammates a shield that absorbs 39/47/56 damage. + Increases Knock and Hold Resistance by 22/26/32%. + Directly shielding yourself or an ally increases this power's damage absorption and your Shield effectiveness by 4/5/6% for 12 sec. This can occur once every 2 sec and stacks up to 5 times.",
@@ -2885,7 +2885,7 @@
       "Targets non-destructible foe",
       "50 feet"
     ],
-    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec. + - Must be fully charged.",
+    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec. + - Must be fully charged.",
     "apply_tag": [
       "Paralyze",
       "Shield (special)",
@@ -2929,7 +2929,7 @@
     "tick_rate": 0.5,
     "cooldown": null,
     "range_tags": [
-      "Targets foe(5 max)",
+      "Targets foe (5 max)",
       "50 feet",
       "45 degree Cone"
     ],
@@ -3059,9 +3059,9 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
-    "tooltip": "Deals 258-733 Crushing Damage and Knocks affected targets towards your primary target. + 38-100% chance to place up to 5 in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec",
+    "tooltip": "Deals 258-733 Crushing Damage and Knocks affected targets towards your primary target. + 38-100% chance to place up to 5 in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec",
     "apply_tag": [
       "Knock To",
       "Power Shield"
@@ -3105,7 +3105,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "5 foot Cylinder"
+      "5 feet Cylinder"
     ],
     "tooltip": "Deals 322-1374 Crushing Damage to all targets and they are Knocked Back. + If your target is immune to Knock effects, increases this power's base damage by up to 20% based on charge time.",
     "apply_tag": [
@@ -3152,7 +3152,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 611 Crushing Damage and Knocks Back affected targets. + If your target is immune to Knock effects, increases this power's base damage by 20%. + If your target is trapped in a Shield or affected by Power Shield, deals an additional 184 Crushing Damage to up to 5 targets within 15ft of the shielded target.",
     "apply_tag": [
@@ -3201,7 +3201,7 @@
     "cooldown": 20,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 152 Crushing Damage every 0.5 sec and Repels targets away. + This amount increases the longer you maintain this power. + The damage on this power is doubled if the target is immune to Knock effects.",
     "apply_tag": [
@@ -3337,7 +3337,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 53-106 Cold Damage and 53-106 Crushing Damage every 0.5 sec. + Foes within 12ft are Repelled. + If fully maintained, affected foes are Knocked Back.",
     "apply_tag": [
@@ -3456,7 +3456,7 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
-      "Affect non-destructible foes (5 max)",
+      "Affects non-destructible foes (5 max)",
       "10 feet",
       "180 dgree Cone"
     ],
@@ -3625,7 +3625,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects non-destructible foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 258-917 Cold Damage to nearby foes. + 13-50% chance based on charge time to Down targets. + 13-50% chance to apply Chill. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
@@ -3793,7 +3793,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 68 Cold Damage and 68 Crushing Damage every 0.5 sec to foes in the target area and Snares each target, reducing their movement speed. + 10% chance to Knock Down any Disoriented targets. + The duration of the Whirlwind increases the longer the power is maintained, making it possible for the Whirlwind to continue after the maintain has stopped.",
     "apply_tag": [
@@ -3880,7 +3880,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "5 foot Cylinder"
+      "5 feet Cylinder"
     ],
     "tooltip": "Deals 182-776 Crushing Damage and 182-776  Cold Damage to all targets and they have a 25-100% chance to be Repelled. + Targets have a 50% chance to be Knocked Down. If they are Disoriented, they instead have a 100% chance to be Staggered and Knocked Back. + If your target is immune to Knock effects, increases this power's base damage by up to 30% based on charge time. + Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
@@ -4500,7 +4500,7 @@
     "range_tags": [
       "Affects foe (5 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 254 Cold Damage to all targets and they are Knocked Up, + Creates an Ice Column under the target. After 10 sec, the Ice Column explodes, dealing 380 Cold Damage to up to 5 targets within 10ft. + 10% chance every 1 sec to apply Chill to targets within 25ft. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
@@ -4548,7 +4548,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 230 Cold Damage every 1 sec to foes in the target area. + 10% chance every 1 sec to apply Chill.  Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times. + After 1 sec, reduces the Perception of affected targets by 500% while this power is maintained.",
     "apply_tag": [
@@ -4595,7 +4595,7 @@
     "range_tags": [
       "Affects foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 137 Cold Damage every 0.5 sec to foes. + 10% chance on each hit to apply Chill. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times. + If fully maintained, and your target is affected by Chill, applies Hard Frost. Hard Frost reduces resistance to Cold Damage by 18% for 15 sec.",
     "apply_tag": [
@@ -4724,7 +4724,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 214 Cold Damage every 0.5 sec and has a 10% chance to Knock Down affected targets. + 15% chance to apply Chill. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
@@ -4752,7 +4752,7 @@
     "powerset_id": "Energy_Projector",
     "framework_id": "Ice",
     "name": "Cold Shoulder",
-    "tier": 3,
+    "tier": 2,
     "power_type": "THREAT_WIPE",
     "advantages": [
       1,
@@ -4935,7 +4935,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 192 Cold Damage to nearby targets. + Knocks Up foes. + Applies Chill to affected targets. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times. + For each target hit, increases your resistance to Damage and Knock effects for 20 sec. + For each Henchman or Villain hit, you gain 14%. + For each Master Villain, Super Villain or Enforcer hit, you gain 21%. + For each Legendary or Cosmic hit, you gain 73%.",
     "apply_tag": [
@@ -4955,7 +4955,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Frozen"
+      "Collectors Store, Lockbox: Frozen"
     ],
     "icon_override": "EnergyProjector_FractalAegis",
     "is_disabled": false
@@ -4981,7 +4981,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "80 feet",
-      "40 foot Sphere"
+      "40 feet Sphere"
     ],
     "tooltip": "Deals 1137 Crushing Damage to foes within 20ft of your primary target. + Deals 568 Crushing Damage to foes who are further than 20ft and within 40ft. + Knocks Down affected targets. + Applies Overpower to affected targets. Overpower reduces resistance to all damage by 20% for 15 sec. + Must be fully charged.",
     "apply_tag": [
@@ -5000,7 +5000,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Ravenswood"
+      "Collectors Store, Lockbox: Ravenswood"
     ],
     "icon_override": "EnergyProjector_GravityDriver",
     "is_disabled": false
@@ -5026,7 +5026,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1135 Fire Damage and Knocks Down all targets. + Creates a Pyre Patch on your primary target. The Pyre Patch lasts for 16 sec, dealing 73 Fire Damage every 1 sec to foes within 20ft. You can only have one Pyre Patch active at a time. + Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. + 25% chance to apply Engulfing Flames to foes affected by Clinging Flames. Engulfing Flames reduces resistance to Fire Damage by 8% for 15 sec. Stacks up to 3 times. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -5048,7 +5048,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Blazing"
+      "Collectors Store, Lockbox: Blazing"
     ],
     "icon_override": "EnergyProjector_MeteorBlaze",
     "is_disabled": false
@@ -5074,7 +5074,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "100 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 609 damage to targets. The damage type of this power changes based on the last direct damage power you used. If no power was used within the last 10 sec, instead chooses a random damage type. + If your last ability used was a direct heal, this power instead heals allies within 25ft of your primary target for 1290 Health Points. + If a target is a Henchman, Villain or Enforcer, Confuses them for 10 sec, causing them to attack targets randomly. If the target is immune, instead deals an additional 20% damage. + Applies Overpower to affected foes. Overpower reduces resistance to all damage by 20% for 15 sec. ",
     "apply_tag": [
@@ -5131,7 +5131,7 @@
     "cooldown": 90,
     "range_tags": [
       "Affects friend player (10 max)",
-      "40 foot Sphere"
+      "40 feet Sphere"
     ],
     "tooltip": "Applies Break Free damage to any Holds, Roots, or Disables affecting you. + While maintaining this power, shields yourself for 1786 damage, and your allies for 857 damage. This shield takes into account the defenses of the affected ally. + Every 1 sec, or whenever an ally affected by the Shield is struck, your base damage is increased for 3.5/4.2/5% for 10 sec. This effect can stack up to 10 times and expires once you attack. + Whenever a shielded target takes damage, you receive Energy. + You become Immune to most forms of Control effects and yourself and affected allies gain resistance to all Knock effects while this power is maintained. - Activates a shared cooldown of 90 sec on all Active Offenses and Active Defenses.",
     "apply_tag": [
@@ -5170,7 +5170,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1269 Electrical Damage to all targets and deals an additional 420 Electrical Damage on each target affected by Negative Ions. + Knocks Down all targets. + Consumes all Negative Ions on affected targets. After 2 sec, applies Negative Ions on affected targets for 20 sec.",
     "apply_tag": [
@@ -5191,7 +5191,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Rave"
+      "Collectors Store, Lockbox: Rave"
     ],
     "icon_override": "EnergyProjector_StormStrike",
     "is_disabled": false
@@ -5215,7 +5215,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "40 foot Sphere"
+      "40 feet Sphere"
     ],
     "tooltip": "Deals 164 Crushing Damage And 164 Cold Damage every 0.5 sec to foes within 20ft. Deals 82 Crushing Damage to foes beyond 20ft. + Affected targets within 15ft can have one of the following effects occur: 15% chance to Repel targets 17ft. 15% chance to Knock Back targets 20ft. 15% chance to Knock Up targets 35ft. + Affected targets beyond 15ft are pulled towards you. + While maintaining this power you become Immune to most forms of Control effects and gain 200% resistance to all Knock effects. + While maintaining this power, grants you Flight and Flight Speed buff.",
     "apply_tag": [
@@ -5237,7 +5237,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Untamed"
+      "Collectors Store, Lockbox: Untamed"
     ],
     "icon_override": "EnergyProjector_Tornado",
     "is_disabled": false
@@ -5280,7 +5280,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Aquatic"
+      "Collectors Store, Lockbox: Aquatic"
     ],
     "icon_override": "EnergyProjector_Whirlpool",
     "is_disabled": false
@@ -5484,7 +5484,7 @@
     "range_tags": [
       "Targets foe",
       "100 feet",
-      "40 foot lunge"
+      "40 feet lunge"
     ],
     "tooltip": "You lunge away from the target. + Applies Evasive Maneuvers to you, increasing your Dodge chance for 6 sec.",
     "apply_tag": [
@@ -5690,7 +5690,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 91-324 Piercing Damage to the main target and 91-324 Sonic Damage to all targets based on charge time. + If not fully charged, Stuns affected targets for 1.7 sec. + If fully charged instead Paralyzes affected targets for 12 sec.",
     "apply_tag": [
@@ -5862,7 +5862,7 @@
     "range_tags": [
       "Targets foe (7 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 199 Piercing Damage every 1 sec to all targets and has a 50% chance to deal an additional 99 Piercing Damage up to twice per period.",
     "apply_tag": [],
@@ -5951,7 +5951,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 236-839 Fire Damage to all targets based on charge time. + 27-100% chance to Knock Up affected targets.",
     "apply_tag": [
@@ -6035,7 +6035,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Creates a Gas Cloud at the targets location which deals 109 Toxic Damage every 1 sec for 12 sec to foes within 15ft. + The Gas Cloud reduces the Perception of foes by 600%. + Places all Perception Debuff powers on a 15 sec cooldown.",
     "apply_tag": [
@@ -6472,7 +6472,7 @@
     "range_tags": [
       "Targets non-destructible foe (7 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Root all targets for 13 sec.",
     "apply_tag": [
@@ -6561,7 +6561,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "10 feet",
-      "2.5 foot Cylinder"
+      "2.5 feet Cylinder"
     ],
     "tooltip": "Deals 310 Slashing Damage every 0.5 sec to targets in front of you. + 10% chance to cause the target to Bleed. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -6799,7 +6799,7 @@
     "tick_rate": 0.5,
     "cooldown": null,
     "range_tags": [
-      "Targets foe (5 Max)",
+      "Targets foe (5 max)",
       "50 feet",
       "30 degree Cone"
     ],
@@ -7200,8 +7200,8 @@
     "tick_rate": null,
     "cooldown": 90,
     "range_tags": [
-      "Affects non-destructible foe (20 Max)",
-      "50 foot sphere"
+      "Affects non-destructible foe (20 max)",
+      "50 feet sphere"
     ],
     "tooltip": "Wipes your threat from the target and places you in Stealth for 4/5/6 sec + Shares a 30 sec cooldown with other Threat Wipe abilities.",
     "apply_tag": [
@@ -7447,7 +7447,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 249-744 Sonic Damage. + 17-50% chance to Disorient each target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -7792,9 +7792,9 @@
     "tick_rate": null,
     "cooldown": 20,
     "range_tags": [
-      "Targets foe (5 Max)",
+      "Targets foe (5 max)",
       "50 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 1374 Particle Damage and deals an additional 152 Particle Damage for each Radiation effect on the affected target. + Stuns targets for 1.7 sec. + Refreshes the durations of your Plasma Burn and Disintegrate effects.",
     "apply_tag": [
@@ -7883,7 +7883,7 @@
     "cooldown": 3,
     "range_tags": [
       "Affects dead ally",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Revives a nearby Hero, bringing them back from defeat with 50/75/100% of their Health.",
     "apply_tag": [],
@@ -8093,7 +8093,7 @@
     "range_tags": [
       "Targets foe (3 max)",
       "50 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 176-518 Piercing Damage. These damages are reduced based on number of targets hit. + Applies Armor Piercing to affected targets. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec.",
     "apply_tag": [
@@ -8615,7 +8615,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "40 foot lunge",
+      "40 feet lunge",
       "60 degree Cone"
     ],
     "tooltip": "You jump away from your target, dealing 407 Piercing Damage to targets in front of you when you land. + Knocks Down your primary target. + 25% chance to Knocks Down your secondary targets.",
@@ -8714,7 +8714,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 266 Crushing Damage to all targets + Knock Back all targets.",
     "apply_tag": [
@@ -8801,7 +8801,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 79 Piercing Damage every 1 sec for 12 sec to all targets. + Snares all targets for 12 sec.",
     "apply_tag": [
@@ -8849,7 +8849,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 99 Piercing Damage 2 times every 0.5 sec to all targets. + 10% chance on each hit to apply Armor Piercing to affected targets. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec. + When fully maintained has a 100% chance to apply Armor Piercing.",
     "apply_tag": [
@@ -8894,7 +8894,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 286 Fire Damage to all targets. + Applies Clinging Flames to your primary target. + 25% chance to apply Clinging Flames to your secondary targets. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -9019,7 +9019,7 @@
     "range_tags": [
       "Targets foe",
       "50 feet",
-      "40 foot lunge",
+      "40 feet lunge",
       "60 degree Cone"
     ],
     "tooltip": "Lunge away from your target, dealing 613 Piercing Damage to them. + Knock back your target.",
@@ -9067,7 +9067,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 772 Crushing Damage and 772 Fire Damage to your main target. + Deals 515 Crushing Damage and 515 Fire Damage to foes within 20ft of your target. + Knocks down all targets.",
     "apply_tag": [
@@ -9192,7 +9192,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "50 foot Sphere"
+      "50 feet Sphere"
     ],
     "tooltip": "Deals 137 Piercing Damage every 0.5 sec to all targets. + 10% chance to miss targets within 30ft of you, and a 25% chance to miss targets more than 30ft away from you.",
     "apply_tag": [],
@@ -9661,7 +9661,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 152 Particle Damage every 0.5 sec.",
     "apply_tag": [],
@@ -9739,7 +9739,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 152 Crushing Damage every 0.5 sec.",
     "apply_tag": [],
@@ -9817,7 +9817,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 184-724 Crushing Damage to targets. + 12-50% (based on charge time) chance to Knock Back targets.",
     "apply_tag": [
@@ -9935,9 +9935,9 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
-      "Targets foe(5 max)",
+      "Targets foe (5 max)",
       "50 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 375-1336 Particle Damage. + Knock Back your targets. + Applies Burn Through to affected targets. Burn Through reduces resistance to your Crushing Damage and Particle Damage by 15% for 15 sec.",
     "apply_tag": [
@@ -9982,7 +9982,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 152 Particle Damage every 0.5 sec.",
     "apply_tag": [],
@@ -10026,7 +10026,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 152 Crushing Damage every 0.5 sec.",
     "apply_tag": [],
@@ -10070,7 +10070,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 304 Crushing Damage every 1 sec.",
     "apply_tag": [],
@@ -10114,7 +10114,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "Deals 152 Particle Damage every 0.5 sec.",
     "apply_tag": [],
@@ -10195,7 +10195,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 372-889 Particle Damage to all targets and each target is Repelled. + If charged at least 50%, each target is Knocked Back.",
     "apply_tag": [
@@ -10240,7 +10240,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "After 4 sec deals 1283 Particle Damage to the primary target, and 641 Particle Damage to foes near the target. + In addition, each target has a 50% chance to be Knocked Back.",
     "apply_tag": [
@@ -10324,7 +10324,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "2 foot Cylinder"
+      "2 feet Cylinder"
     ],
     "tooltip": "After 4 sec deals 639 Crushing Damage and 639 Particle Damage to the primary target, and 320 Crushing Damage and 320 Particle Damage to foes near the target. + In addition, each target has a 50% chance to be Knocked Back.",
     "apply_tag": [
@@ -10637,7 +10637,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot"
+      "60 feet"
     ],
     "tooltip": "Lunges at the target, dealing 160 Particle Damage and Snaring them for 13 sec. + Roots your target for 13 sec if you Lunge from more than 20ft away.",
     "apply_tag": [
@@ -10683,7 +10683,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 301-641 Particle Damage to the target. + On full charge Knocks your targets down.",
     "apply_tag": [
@@ -10921,7 +10921,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "25 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 573 Particle Damage. + Targets affected by Plasma Burn have Disintegrate applied to them. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec. + Consumes your Plasma Burn stacks on the targets, dealing an additional 421 Particle Damage for each one consumed.",
     "apply_tag": [
@@ -11186,7 +11186,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "100 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 362 Piercing Damage and after 1 sec deals an additional 701 Fire Damage to all targets. + Knocks Down all targets. + After 1 sec Stuns all targets for 4.2 sec.",
     "apply_tag": [
@@ -11206,7 +11206,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Phantom"
+      "Collectors Store, Lockbox: Phantom"
     ],
     "icon_override": "Technology_ArrowAssault",
     "is_disabled": false
@@ -11231,7 +11231,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "50 foot Sphere"
+      "50 feet Sphere"
     ],
     "tooltip": "Deals 237 Piercing Damage every 0.3 sec to all targets within 30ft of you. + Deals 119 Piercing Damage to targets beyond 30ft. + Increases your Dodge and Avoidance while this power is maintained. This amount is doubled if you are affected by Furious. + You become Immune to most forms of Control effects and gain 200% resistance to all Knock effects while maintaining this power.",
     "apply_tag": [],
@@ -11249,7 +11249,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Spy"
+      "Collectors Store, Lockbox: Spy"
     ],
     "icon_override": "Technology_BulletBarrage",
     "is_disabled": false
@@ -11377,7 +11377,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Spider"
+      "Collectors Store, Lockbox: Spider"
     ],
     "icon_override": "Technology_MechanicalMonstrosity",
     "is_disabled": false
@@ -11401,7 +11401,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 1777 Particle Damage to all targets. + Knocks Down all targets. + The initial strike immediately causes foes to be affected by Plasma Burn. Additional stacks of Plasma Burn apply over 5 sec. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -11419,7 +11419,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Toybox"
+      "Collectors Store, Lockbox: Toybox"
     ],
     "icon_override": "Technology_Meltdown",
     "is_disabled": false
@@ -11463,7 +11463,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Western"
+      "Collectors Store, Lockbox: Western"
     ],
     "icon_override": "Technology_Showdown",
     "is_disabled": false
@@ -11661,7 +11661,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "You lunge at your target, dealing 196 Slashing Damage and your target is Snared. + Your target is Knocked Down if you lunged more than 20ft and your target is not currently affected by a control power.",
     "apply_tag": [
@@ -11748,7 +11748,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foes (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 14-173 Slashing Damage every 0.5 sec to all targets (damage scaling down over time). + Absorbs up to 280-3360 damage (absorption scaling up over time).",
     "apply_tag": [
@@ -11793,7 +11793,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 236 Slashing Damage every 0.5 sec to all targets.",
     "apply_tag": [],
@@ -12232,8 +12232,8 @@
     "cooldown": 15,
     "range_tags": [
       "Targets foe (5 max)",
-      "25 foot lunge",
-      "10 foot sphere"
+      "25 feet lunge",
+      "10 feet sphere"
     ],
     "tooltip": "Lunges and deals 271-769 Slashing Damage to affected targets. + If not fully charged, Stuns affected targets for 1.7 sec. If fully charged, affected targets are instead Paralyzed for 12 sec.",
     "apply_tag": [
@@ -12505,7 +12505,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot Lunge"
+      "60 feet Lunge"
     ],
     "tooltip": "Lunges at the target, dealing 196 Slashing Damage and Snares them. + Roots your target if you Lunge from more than 20ft away for 13 sec.",
     "apply_tag": [
@@ -12631,7 +12631,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 301-641 Slashing Damage to targets. + 50-100% chance to apply Bleed to targets who are currently not affected by any of your Bleeds. This chance increases with charge time. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -12721,7 +12721,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 14-173 Slashing Damage every 0.5 sec to all targets (damage scaling down over time). + Absorbs up to 280-3360 damage (absorption scaling up over time).",
     "apply_tag": [
@@ -12904,7 +12904,7 @@
     "cooldown": null,
     "range_tags": [
       "Targets foe",
-      "15 foot Lunge"
+      "15 feet Lunge"
     ],
     "tooltip": "Lunge to your target and deal 330 Slashing Damage every 0.5 sec. + This power will continue to do damage if the target remains within a 10ft range. + While maintained, the target is Rooted for 4.7 sec.",
     "apply_tag": [
@@ -13159,7 +13159,7 @@
     "cooldown": 10,
     "range_tags": [
       "Targets foe",
-      "20 foot lunge"
+      "20 feet lunge"
     ],
     "tooltip": "Deals 739 Crushing Damage. + Paralyzes the target for 12 sec.",
     "apply_tag": [
@@ -13339,7 +13339,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 360-769 Crushing Damage to all targets. + When fully charged, Stuns all targets for 1.7 sec.",
     "apply_tag": [
@@ -13479,7 +13479,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "25 feet",
-      "4 foot Cylinder"
+      "4 feet Cylinder"
     ],
     "tooltip": "Deals 269-1056 Crushing Damage. + When charged for more than 0.5 sec, your targets are Knocked Back. + If your target is immune to Knock effects, increases this power's base damage by up to 30% based on charge time.",
     "apply_tag": [
@@ -13525,7 +13525,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 152 Slashing Damage every 0.5 sec to nearby enemies. + 10% chance to Kock Back affected targets. + 10% chance to Snare affected targets, lowing their movement speed for 10 sec.",
     "apply_tag": [
@@ -13657,7 +13657,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 214 Crushing Damage to all targets. + Affected targets are Knocked Up.",
     "apply_tag": [
@@ -13740,7 +13740,7 @@
     "range_tags": [
       "Targets foe",
       "100 feet",
-      "40 foot Lunge"
+      "40 feet Lunge"
     ],
     "tooltip": "You lunge away from your target. + You gain 2/3/5 stacks of Charged Up. + Charged Up increases your Running Speed by 15%, and your Jump Height and Flying Speed by 3% for each stack. Lasts for 12 seconds and stacks up to 5 times.",
     "apply_tag": [
@@ -13970,7 +13970,7 @@
     "cooldown": 120,
     "range_tags": [
       "Affects non-object foe (10 max)",
-      "50 foot Sphere"
+      "50 feet Sphere"
     ],
     "tooltip": "Wipes your threat from the target and places you in Stealth for 4/5/6 sec + Shares a 30 sec cooldown with other Threat Wipe abilities.",
     "apply_tag": [
@@ -14013,7 +14013,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "Lunges at the target, dealing 146 Crushing Damage. + Snares them for 13 sec. + Stuns your target for 1.7 sec if you Lunge from more than 20ft away.",
     "apply_tag": [
@@ -14092,7 +14092,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "Lunges at the target, dealing 196 Crushing Damage. + Snares them for 13 sec. + Roots your target if you Lunge from more than 20ft away for 13 sec.",
     "apply_tag": [
@@ -14376,7 +14376,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "30 foot Sphere"
+      "30 feet Sphere"
     ],
     "tooltip": "Deals 137 Slashing Damage to all targets. + 50% chance to miss targets further than 15ft away.",
     "apply_tag": [],
@@ -14416,7 +14416,7 @@
     "range_tags": [
       "Affects foe (10 max)",
       "10 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 65 Slashing Damage to all targets. Hits 7 times. This damage increases for every stack of Focus on you. + Knocks Down targets. + Applies Shredded. Shredded reduces resistance to Slashing Damage by 18% for 15 sec.",
     "apply_tag": [
@@ -14437,7 +14437,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Secret Identity"
+      "Collectors Store, Lockbox: Secret Identity"
     ],
     "icon_override": "MartialArts_BladedFury",
     "is_disabled": false
@@ -14485,7 +14485,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Shaolin"
+      "Collectors Store, Lockbox: Shaolin"
     ],
     "icon_override": "MartialArts_DevastatingStrike",
     "is_disabled": false
@@ -14596,7 +14596,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "15 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 81 Slashing Damage to all targets. Hits 5 times. + The initial strike immediately causes foes to Bleed. Each additional strike also causes Bleed, but is delayed by 1 sec. + The damage this power deals is based on the number of stacks of Focus you have. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -14616,7 +14616,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Mayhem"
+      "Collectors Store, Lockbox: Mayhem"
     ],
     "icon_override": "MartialArts_VorpalBlade",
     "is_disabled": false
@@ -14641,8 +14641,8 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe (10 max)",
-      "30 foot Lunge",
-      "20 foot Sphere"
+      "30 feet Lunge",
+      "20 feet Sphere"
     ],
     "tooltip": "Lunges to your target and deals 319 Slashing Damage to your target and all nearby targets. Hits 3 times. + Knocks Down affected targets. + Applies Overpower. Overpower reduces resistance to all damage by 20% for 15 sec.",
     "apply_tag": [
@@ -14661,7 +14661,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox Buccaneer"
+      "Collectors Store, Lockbox: Buccaneer"
     ],
     "icon_override": "MartialArts_WhirlingDragonStrike",
     "is_disabled": false
@@ -14962,7 +14962,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 214 Ego Damage to targets. + Your chance to critically strike with this power is increased by 5% chance for each stack of Ego Leech you have. + 15% chance on each hit to grant you a stack of Ego Leech. Ego Leech reduces the cost of your Mentalist powers by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [],
@@ -15146,7 +15146,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [],
-    "icon_override": "Framework_Telekinesis",
+    "icon_override": "Telekinesis_Telekinesis",
     "is_disabled": false
   },
   {
@@ -15171,8 +15171,8 @@
     "cooldown": null,
     "range_tags": [
       "Targets foe (5 max)",
-      "50feet",
-      "15 foot Sphere"
+      "50 feet",
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 225-641 Ego Damage to targets. + 34-100% chance to Disorient each target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + 34-100% chance to apply Ego Leech to you for each target hit. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
@@ -15497,8 +15497,8 @@
     "cooldown": null,
     "range_tags": [
       "Targets foe (5 max)",
-      "100feet",
-      "10 foot Sphere"
+      "100 feet",
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 167 Ego Damage every 0.5 sec to targets. + Your chance to critically strike with this power is increased by 5% for each stack of Ego Leech you have. + You have a 20% chance on each hit to gain a stack of Ego Leech. + Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
@@ -15544,7 +15544,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 236-839 Ego Damage to nearby targets. + If charged less than a sec, Knocks Down affected targets. + If charged more than a sec, Knocks Back affected targets. + Charging this power for at least 1 sec applies the ld Surge buff, giving you +15% Ego Damage strength and +13 Ego for 15 sec. + Each target hit gives you a 30-100% chance to gain a stack of Ego Leech. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
@@ -15592,8 +15592,8 @@
     "cooldown": 10,
     "range_tags": [
       "Targets foe (5 max)",
-      "100feet",
-      "10 foot Sphere"
+      "100 feet",
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 214 Ego Damage. + Knocks Down your primary target. + Refreshes all of your stacks of Ego Leech.",
     "apply_tag": [
@@ -15734,7 +15734,7 @@
     "range_tags": [
       "Targets foe (7 max)",
       "100 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 762 Ego Damage to all targets within 25ft of your primary target. + This power consumes all stacks of Ego Leech, dealing an additional 152 Ego Damage for each stack consumed. + In addition, it grants you Ego Infusion for 2 sec for each stack consumed. Ego Infusion grants you a stack of Ego Leech every 2 sec. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
@@ -15876,7 +15876,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 236-839 Ego Damage to affected targets. + Stuns targets for 1.7 sec. + Each target hit gives you a stack of Ego Leech. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
@@ -16128,7 +16128,7 @@
     "range_tags": [
       "Targets non-destructible foe (7 max)",
       "50 feet",
-      "0-15 foot Sphere"
+      "0-15 feet Sphere"
     ],
     "tooltip": "Puts your foes to Sleep for 12 sec. + Any damage they take will awaken them, and when they awaken they are Disoriented. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + Charging this power increases the area of effect.",
     "apply_tag": [
@@ -16172,7 +16172,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects non-destructible foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 61 Ego Damage every 1 sec for 10 sec to all targets. + 10% chance on each hit to Disorient the target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + Damage dealt by this power doesn't break Sleep effects.",
     "apply_tag": [
@@ -16259,7 +16259,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 50 Ego Damage every 1 sec for 6 sec to affected targets. + When Mental Leech expires it applies Dependency to the target. Dependency heals an ally near the foe for 52 Health Points every 0.5 sec for 20 sec. Stacks up to 3 times.   + When this power expires, refreshes all of your stacks of Dependency.",
     "apply_tag": [
@@ -16308,7 +16308,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 58 Ego Damage every 1 sec for 6 sec to all targets. + When Shadow of Doubt expires it applies Regret to the target. Regret causes -8% all damage strength for 20 sec to affected targets. Stacks up to 3 times.",
     "apply_tag": [
@@ -16715,7 +16715,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects non-destructible foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 103-360 Ego Damage to nearby targets. + After maintaining this power for 1 sec, it Incapacitates the target and refreshes a portion of the duration and durability of the Incapacitate every 1 sec you maintain it.",
     "apply_tag": [
@@ -16759,7 +16759,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 65 Ego Damage every 1 sec for 16 sec to all targets. + If not fully charged, Stuns affected targets for 1.7 sec. + If fully charged instead Paralyzes affected targets for 12 sec.",
     "apply_tag": [
@@ -16925,7 +16925,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 401 Ego Damage to all targets every 1 sec. + Your chance to Critically Hit with your Telekinetic abilities is increased by 2.8% for each stack of Ego Leech you have.",
     "apply_tag": [],
@@ -16943,7 +16943,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Alien Invader"
+      "Collectors Store, Lockbox: Alien Invader"
     ],
     "icon_override": "Mentalist_EgoBladePandemonium",
     "is_disabled": false
@@ -17008,7 +17008,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "100 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 1286 Ego Damage to foes. + Knocks Down affected targets. + Applies Overpower. Overpower reduces resistance to all damage by 20% for 15 sec. + Gives you a stack of Ego Leech for every target you hit. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
@@ -17028,7 +17028,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Cybernetic"
+      "Collectors Store, Lockbox: Cybernetic"
     ],
     "icon_override": "Mentalist_MentalImpact",
     "is_disabled": false
@@ -17053,7 +17053,7 @@
     "cooldown": 60,
     "range_tags": [
       "Targets non-destructible foe (7 max)",
-      "50 foot Sphere"
+      "50 feet Sphere"
     ],
     "tooltip": "Creates a link between you and nearby foes. When you or any of these foes takes damage, you deal Ego Damage to foes in the area of effect, based on the initial damage dealt. This effect can only occur once every 0.5 sec.",
     "apply_tag": [],
@@ -17095,7 +17095,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "10 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 21-69 Crushing Damage and generates energy. + The first hit has a 15% chance to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -17236,7 +17236,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot Lunge"
+      "60 feet Lunge"
     ],
     "tooltip": "Lunges at the target, dealing 160 Crushing Damage and Snaring them for 13 sec. + Disorients your target if you Lunge from more than 20ft away. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -17414,7 +17414,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 354-845 Crushing Damage to targets. + 42-100% chance to apply Disorient to the target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -17461,7 +17461,7 @@
     "range_tags": [
       "Targets foes (5 max)",
       "50 feet",
-      "5 foot Cylinder"
+      "5 feet Cylinder"
     ],
     "tooltip": "Deals 154-365 Crushing Damage and 154-365 Fire Damage to targets. + 42-100% chance to Knock Up targets. + 42-100% chance to apply Reckless to you. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times.  + If your target is immune to Knock effects, increases this power's base damage by 15%.",
     "apply_tag": [
@@ -17511,7 +17511,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "15 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 169-360 Crushing Damage and 169-360 Fire Damage to targets. + Affected targets are Knocked Down. + 50-100% chance to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -17560,8 +17560,8 @@
     "cooldown": 15,
     "range_tags": [
       "Targets foe (5 max)",
-      "60 foot Lunge",
-      "15 foot Sphere"
+      "60 feet Lunge",
+      "15 feet Sphere"
     ],
     "tooltip": "Lunges at your primary target. Deals 182 Crushing Damage and 182 Fire Damage to all targets and Snares them. + Applies Reckless to you. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times. ",
     "apply_tag": [
@@ -17655,7 +17655,7 @@
     "cooldown": 3,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 176-423 Crushing Damage and 176-423 Fire Damage to foes. + Targets are Knocked Down. + Partially charging this power instead Knocks Up foes. + If your target is immune to Knock effects, Snares affected targets, reducing their movement speed by 100%. Additionally, increases this power's base damage by 15% when partially charged.",
     "apply_tag": [
@@ -17709,7 +17709,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "15 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 344-687 Crushing Damage to your selected target, and 230-458 Crushing Damage to additional foes in front of you. + 22-50% chance to cause the target to Bleed. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -17795,8 +17795,8 @@
     "cooldown": null,
     "range_tags": [
       "Targets foe (5 max)",
-      "100 foot",
-      "0-10 foot Sphere"
+      "100 feet",
+      "0-10 feet Sphere"
     ],
     "tooltip": "Deals 295-705 Crushing Damage. + 50-100% chance to Stagger your primary target. + Deals 74-176 Crushing Damage to foes within 0-5ft (based on charge time) of your primary target. + Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
@@ -17871,7 +17871,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "30 foot Sphere"
+      "30 feet Sphere"
     ],
     "tooltip": "Increases your Physical Damage by 29/35/42%. + Grants 9/11/13% Physical Damage Resistance and an additional 37/44/53% Crushing Damage Resistance. + Restores a small amount of Energy when you take Crushing Damage. + Foes within 10ft have their movement speed reduced by 30%, foes within 20ft by 20%, and foes within 30ft by 10%.",
     "apply_tag": [],
@@ -17916,7 +17916,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "Lunges at the target, dealing 236 Crushing Damage and Snaring them for 13 sec. + Staggers your target if you Lunge from more than 20ft away. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
@@ -17960,7 +17960,7 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
-      "Tagerts foe (5 max)",
+      "Targets foe (5 max)",
       "10 feet",
       "120 degree Cone"
     ],
@@ -18005,9 +18005,9 @@
     "tick_rate": null,
     "cooldown": 15,
     "range_tags": [
-      "Targets non-destructible foe (5 Max)",
+      "Targets non-destructible foe (5 max)",
       "50 feet",
-      "15 foot sphere"
+      "15 feet sphere"
     ],
     "tooltip": "Paralyzes all targets for 12 sec. + Staggers affected targets.  Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
@@ -18046,7 +18046,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "30 foot Sphere"
+      "30 feet Sphere"
     ],
     "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + Foes within 10-30ft of you have their movement speed reduced based on their distance from you.",
     "apply_tag": [],
@@ -18088,7 +18088,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 266-793 Crushing Damage to all targets. + The main target is Knocked Up and other nearby targets are Knocked Back away from the main target. + If fully charged, secondary targets are instead Knocked Up.",
     "apply_tag": [
@@ -18179,7 +18179,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10-25 foot Sphere"
+      "10-25 feet Sphere"
     ],
     "tooltip": "Deals 108-219 Crushing Damage (based on pulse) every 0.5 sec to nearby targets and reduces their movement speed.",
     "apply_tag": [],
@@ -18221,7 +18221,7 @@
     "cooldown": 15,
     "range_tags": [
       "Targets foe",
-      "25 too lunge"
+      "25 feet lunge"
     ],
     "tooltip": "Lunges at the target, dealing 641 Crushing Damage to the target, and to enemies within a 15ft cone behind the target. + The main target is Knocked Back and additional targets are Knocked Down. + 25% chance to Stagger targets. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times. + If fully charged, applies or refreshes Enrage.",
     "apply_tag": [
@@ -18318,7 +18318,7 @@
     "range_tags": [
       "Affects foe (5 max)",
       "50 feet",
-      "5 foot Cuminder"
+      "5 feet Cylinder"
     ],
     "tooltip": "Deals 236-672 Crushing Damage and your targets are Knocked Up. + Deals 10% more damage per stack of Stagger on each target. This consumes the stacks of Stagger on the targets.",
     "apply_tag": [
@@ -18599,7 +18599,7 @@
     "range_tags": [
       "Affects foe (5 max)",
       "10 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 301-641 Crushing Damage to all targets within 10ft and deal Sonic Damages to targets further away + 45-100% chance to Knock Down affected targets. + If fully charged, instead Knocks Up affected targets instead.",
     "apply_tag": [
@@ -18737,7 +18737,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 152 Crushing Damage every 0.5 sec to all targets. + 10% chance to Knock Back targets. + 10% chance to apply Disorient to your target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -18881,7 +18881,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "Lunges at the target, dealing 160 Crushing Damage. + Snares the target for 13 sec, reducing their movement speed by 100%. + Stuns your target if you Lunge from more than 20ft away for 1.7 sec.",
     "apply_tag": [
@@ -19015,7 +19015,7 @@
     "cooldown": 20,
     "range_tags": [
       "Affects non-destructible foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Disorients targets. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + Applies 1/2/3 stack of Reckless to you and nearby allies, also refreshes any existing stacks. Reckless gives 35% resistance to all Knock effects for 15 sec. Stacks up to 3 times. + When dealing direct damage Reckless applies Bastion, causing 10% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times.",
     "apply_tag": [
@@ -19147,7 +19147,7 @@
     "cooldown": 6,
     "range_tags": [
       "Affects friend (5 max)",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Affected targets are healed for 323 Health Points every 1 sec. + Does not heal you, but shields you instead, absorbing up to 988 damage. This effect reapplies every 1 sec. + The heal and shield on this power scales with your Strength instead of your Presence.",
     "apply_tag": [
@@ -19194,7 +19194,7 @@
     "cooldown": 6,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 284 Crushing Damage and Stuns all target for 1.7 sec.",
     "apply_tag": [
@@ -19286,7 +19286,7 @@
     "cooldown": 3,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 410-895 Crushing Damage to all targets. + If charged less than 90%, each target hit is Knocked up. + If charged at least 90%, each target is Knocked back instread. + If your target is immune to Knock effects, increases this power's base damage by 30%.",
     "apply_tag": [
@@ -19378,7 +19378,7 @@
     "range_tags": [
       "Affects foe (5 max)",
       "75 feet",
-      "10 foot Cylinder"
+      "10 feet Cylinder"
     ],
     "tooltip": "Deals 304 Crushing Damage and 304 Particle Damage to all foes in a line in front of you. + Knocks back targets within 15ft of you. Knocks Down targets within 50ft. Repels target further than 50ft. + 50% chance to apply Plasma Burn to your targets. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -19758,7 +19758,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Blockbuster"
+      "Collectors Store, Lockbox: Blockbuster"
     ],
     "icon_override": "Brick_CatastrophicPummeling",
     "is_disabled": false
@@ -19806,7 +19806,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Starhawk"
+      "Collectors Store, Lockbox: Starhawk"
     ],
     "icon_override": "Brick_CrushingRuin",
     "is_disabled": false
@@ -19852,7 +19852,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Brutal"
+      "Collectors Store, Lockbox: Brutal"
     ],
     "icon_override": "Brick_Earthquake",
     "is_disabled": false
@@ -19921,7 +19921,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects non-destructible foe (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 161 Sonic Damage every 0.5 sec. + Damage increases for every stack of Enrage on you. + When you stop maintaining this power, deals additional 424 Sonic Damage, Knocks Back affected targets and applies Disorient to foes. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + While maintaining this power you become Immune to most forms of Control effects and gain 200% resistance to all Knock effects.",
     "apply_tag": [
@@ -19942,7 +19942,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Rockbox"
+      "Collectors Store, Lockbox: Rockbox"
     ],
     "icon_override": "Brick_PowerChord",
     "is_disabled": false
@@ -19968,7 +19968,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 465 Crushing Damage to all targets. + This increases for every stack of Enrage on you. + Knocks Down targets. + Disorients targets. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -20186,7 +20186,7 @@
     "range_tags": [
       "Targets foe/friend (5 max)",
       "50 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "If you target foes: Places Illuminated on the target for 20 sec. + If you target friends: Heals them for 162 Health Points and places Illumination on them and up to 5 other allies within 15ft. + Illumination increases the direct healing the target receives by 3% for 20 sec. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
@@ -20346,7 +20346,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "8-15 foot Sphere"
+      "8-15 feet Sphere"
     ],
     "tooltip": "Deals 261-781 Dimensional Damage to affected targets. + Fully charging this power grants you a stack of Unforgiving, which reduces the charge time and Energy cost of this power by 10%, and stacks up to 3 times.",
     "apply_tag": [],
@@ -20389,7 +20389,7 @@
     "cooldown": 3,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 377 Dimensional Damage to nearby foes. + Drops a Healing Rune which heals nearby allies for 59 Health Points every 1 sec for 10 sec. + You cannot have more than one Rune out at a time.",
     "apply_tag": [
@@ -20473,7 +20473,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects dead ally",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Revives a nearby ally, bringing them back to life with 33/66/100% Health, based on rank.",
     "apply_tag": [],
@@ -20545,7 +20545,7 @@
     "tick_rate": null,
     "cooldown": 25,
     "range_tags": [
-      "Target foe/friend",
+      "Targets foe/friend",
       "100 feet"
     ],
     "tooltip": "If you target a foe: debuff your target's damage strength, and disable and prevent the use of Travel Powers. + If you target a friend : attempts to remove a Debuff from your target.",
@@ -20855,7 +20855,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Paralyzes targets for 12 sec. + Applies Fear to affected targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
@@ -21133,7 +21133,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot Lunge"
+      "60 feet Lunge"
     ],
     "tooltip": "Lunges to the target, dealing 160 Dimensional Damage and Snaring them for 13 sec. + If the target is further than 20ft away, they are also Stunned for 1.7 sec.",
     "apply_tag": [
@@ -21175,7 +21175,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects dead ally",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Revives a nearby ally, bringing them back to life with 33/66/100% Health, based on rank.",
     "apply_tag": [],
@@ -21255,7 +21255,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 68 Dimensional Damage every 1 sec for 16 sec to your targets. + Targets are Knocked down.",
     "apply_tag": [
@@ -21516,7 +21516,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Creates a Rift near your target that exists for twice as long as you maintain this power. + Foes within 15ft of it take 160 Dimensional Damage every 0.5 sec. + Foes within 20ft of it have their movement speed reduced by 100% and are pulled toward the Rift. + 10% chance on each hit to Fear targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
@@ -21600,7 +21600,7 @@
     "cooldown": 30,
     "range_tags": [
       "Affects foe (1 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "20% chance every 1 sec to apply Fear to targets within 25ft of you. Fear reduces target's damage by 10% for 12 sec. + 85% chance every 1 sec to throw an object to a target within 25ft of you. This object deals 245-1710 Dimensional Damage based on the Mass of the object and hits targets within 5ft of the primary target. Knocks down affected targets. + 15% chance every 1 sec to cause an object within 25ft to explode. This object deals 137-962 Dimensional Damage based on the Mass of the object to enemies within 25ft of it. + When an object explodes like this, applies Devoid to affected targets. Devoid reduces resistance to Dimensional Damage by 18% for 15 sec. + Knocks down affected targets.",
     "apply_tag": [
@@ -21648,7 +21648,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 199 Dimensional Damage every 0.5 sec to all targets. + 15% chance on each hit to Fear your target. Fear reduces target's damage by 10% for 12 sec. + If your target is affected by Fear, has a chance to Knock Down targets.",
     "apply_tag": [
@@ -21700,7 +21700,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 258-917 Dimensional Damage to targets. + Knocks back affected targets.",
     "apply_tag": [
@@ -22182,7 +22182,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 202 Magic Damage to nearby foes. + Creates a Healing Rune, healing up to 5 allies within 15ft for 59 Health Points every 1 sec for 10 sec. + You cannot have more than one Rune out at a time.",
     "apply_tag": [
@@ -22516,7 +22516,7 @@
       "Targets foe",
       "50 feet"
     ],
-    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage by 50%. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores +2.5% energy. Can occur once every 3 sec",
+    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage by 50%. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec",
     "apply_tag": [
       "Paralyze",
       "Shield (special)",
@@ -22666,8 +22666,8 @@
     "cooldown": "0-6",
     "range_tags": [
       "Targets self",
-      "Affect friend",
-      "50 foot Sphere"
+      "Affects friend",
+      "50 feet Sphere"
     ],
     "tooltip": "Summons a Circle of Radiant Glory at your location. + If you are defeated while standing in the Circle of Radiant Glory you are resurrected. When you are resurrected places all Resurrection powers on cooldown for 180 sec. + While a Circle of Radiant Glory exists, you may tap this power to move it to your current location. + When it moves, up to 5 targets in its old location and up to 5 targets in its new location are all healed for 270 Health Points. + This Circle will persist for up to 10 sec while you are not standing in it. + Only one Circle can be active at a time.",
     "apply_tag": [
@@ -22708,7 +22708,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects dead ally",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Revive. Revives a nearby ally, bringing them back to life with 33/66/100% Health, based on rank.",
     "apply_tag": [],
@@ -22750,7 +22750,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 245 Magic Damage every 1 sec. + If fully maintained, foes within 25ft of you are struck by a magical blast that deals an additional 458 Magic Damage to them and deals 230 Magic Damage to other foes within 10ft of them. + If fully maintained applies Jinxed to foes. Jinxed causes -10% all damage strength and -35% Run Speed for 8 sec to affected targets. When Jinxed expires targets are Knocked down.",
     "apply_tag": [
@@ -23081,7 +23081,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 184 Magic Damage every 0.5 sec to targets. + 20% chance to apply Illuminated on the target for 20 sec. + Illuminated : Anyone attacking the target is affected by Mend, healing them for 105 Health Points every 2 sec for 8 sec.",
     "apply_tag": [
@@ -23167,7 +23167,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 71 Magic Damage every 1 sec for 16 sec and applies Hexed to targets. Hexed reduces resistance to Magic Damage by 18% for 15 sec.",
     "apply_tag": [
@@ -23294,7 +23294,7 @@
     "range_tags": [
       "Targets friend (5 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Heals all targets for 178-485 Health Points.",
     "apply_tag": [],
@@ -23408,7 +23408,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1286 Magic Damage. + Applies Overpower. Overpower reduces resistance to all damage by 20% for 15 sec. + Applies Jinxed to foes. Jinxed causes -10% all damage strength and -35% Run Speed for 8 sec to affected targets. When Jinxed expires targets are Knocked down.",
     "apply_tag": [
@@ -23428,7 +23428,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Arcane"
+      "Collectors Store, Lockbox: Arcane"
     ],
     "icon_override": "Mystic_CrashingIncantation",
     "is_disabled": false
@@ -23471,7 +23471,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Villain"
+      "Collectors Store, Lockbox: Villain"
     ],
     "icon_override": "Mystic_EndbringersGrasp",
     "is_disabled": false
@@ -23536,7 +23536,7 @@
     "cooldown": 180,
     "range_tags": [
       "Affects non-destructible foe (10 max)",
-      "30 foot Sphere"
+      "30 feet Sphere"
     ],
     "tooltip": "Repels targets if they are within 15ft of you. After 1 sec Knocks targets upwards. + Heals or revives up to 10 allies for 17% Health Points. If they are affected by Illumination, instead heals them for 27% Health Points. + Creates a Transcended Rune at your location, which heals up to 10 nearby allies within 25ft for 59 Health Points every 1 sec for 10 sec. + If they are affected by Illumination, instead heals for 89 Health Points instead. + Fallen allies will be revived if standing in this Rune. This can occur once every 5 sec and can only revive 1 ally at a time. + Anyone revived by this ability cannot be revived again by it for 90 sec. + You cannot have more than one Rune out at a time.",
     "apply_tag": [
@@ -23558,7 +23558,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Scion"
+      "Collectors Store, Lockbox: Scion"
     ],
     "icon_override": "Mystic_Transcendence",
     "is_disabled": false
@@ -23671,7 +23671,7 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
-      "targets foe (5 max)",
+      "Targets foe (5 max)",
       "10 feet",
       "30-240 degree Cone"
     ],
@@ -23937,7 +23937,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 213-288 Slashing Damage. + 15/15/50% chance to apply Bleed. + Chance is doubled if you are Enraged. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -23981,7 +23981,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 144 Slashing Damage every 0.5 sec to all targets. + 10% chance to Knock Back targets. + 10% chance to apply Bleed to your target. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -24027,7 +24027,7 @@
     "cooldown": 3,
     "range_tags": [
       "Targets foe",
-      "60 foot lunge"
+      "60 feet lunge"
     ],
     "tooltip": "You lunge at your target, dealing 117 Slashing Damage and your target is Snared. + Your target is Knocked Down if you lunged more than 20ft and your target is not currently affected by a control power.",
     "apply_tag": [
@@ -24146,8 +24146,8 @@
     "tick_rate": null,
     "cooldown": 90,
     "range_tags": [
-      "Affect non-destructible foe (20 max)",
-      "50 foot Sphere"
+      "Affects non-destructible foe (20 max)",
+      "50 feet Sphere"
     ],
     "tooltip": "Wipes your threat from your target. + Placates targets, preventing them from attacking you. + Applies Fear to you. Fear reduces target's damage by 10% for 12 sec. + Places you in Stealth for 4/5/6 sec. + Sets your other threat wipe abilities on a 30 cooldown.",
     "apply_tag": [
@@ -24190,8 +24190,8 @@
     "tick_rate": null,
     "cooldown": 20,
     "range_tags": [
-      "Affect non-destructible foe (5 max)",
-      "25 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
     ],
     "tooltip": "Nearby foes become Feared. Fear reduces target's damage by 10% for 12 sec. + Applies 1/2/3 stack of Furious to you and nearby allies. Furious gives you +1.5% Critical Chance, this effect Stacks up to 3 times. + When taking damage Furious grants you Willpower, which gives you +300 Health Points over 3 sec. + Applies Moonlight Howl to you for 30 sec.",
     "apply_tag": [
@@ -24276,7 +24276,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects non-object foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Knocks Down nearby targets. + Drops a Healing Rune which heals nearby allies for 59 Health Points every 1 sec for 10 sec. + You cannot have more than one Rune out at a time.",
     "apply_tag": [
@@ -24326,7 +24326,7 @@
     "cooldown": 15,
     "range_tags": [
       "Targets foe",
-      "25 foot Lunge"
+      "25 feet Lunge"
     ],
     "tooltip": "Lunges at the target, dealing 641 Slashing Damage to the target and to enemies within a 15ft cone behind the target. Targets are Knocked Down. + 50% chance to apply Bleed to affected targets. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -24465,8 +24465,8 @@
     "cooldown": 15,
     "range_tags": [
       "Targets foe (5 max)",
-      "60 foot lunge",
-      "10 foot Sphere"
+      "60 feet lunge",
+      "10 feet Sphere"
     ],
     "tooltip": "Lunges at the target, dealing 1026 Slashing Damage to targets within 10ft.+ Knocks Up targets depending on how far you lunge from. If your target is immune to Knock effects, increases this power's base damage by 30%. + Applies Disorient to your primary target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -24487,7 +24487,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Rhinoplasty Lair"
+      "Rhinoplasty"
     ],
     "icon_override": "BestialSupernatural_BrutalCharge",
     "is_disabled": false
@@ -24784,7 +24784,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 257-766 Toxic Damage to affected targets. + Applies Deadly Poison to each target if they are not currently affected by it, otherwise, has a 10% chance to apply another stack of Deadly Poison. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -24952,7 +24952,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 144 Toxic Damage every 0.5 sec to all targets and each target has a 10% chance to Knock Back targets. + 10% chance to apply Deadly Poison to your target. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -25083,7 +25083,7 @@
     "tick_rate": 1,
     "cooldown": 10,
     "range_tags": [
-      "Target non-destructible foe",
+      "Targets non-destructible foe",
       "50 feet"
     ],
     "tooltip": "Deals 266 Toxic Damage and has a 15% chance to apply Deadly Poison to your target. Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times. + After maintaining this power for 1 sec, it Incapacitates the target and refreshes a portion of the duration and durability of the Incapacitate every 1 sec you maintain it.",
@@ -25134,7 +25134,7 @@
     "range_tags": [
       "Targets non-destructible foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 366 Toxic Damage to affected targets. The area effect of this power is increased by 10ft if you are affected by the Pestilence power. + Stuns targets for 1.7 sec. + If a target is affected by 5 or more Poisons, Paralyzes them instead for 12 sec.",
     "apply_tag": [
@@ -25178,7 +25178,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects dead ally",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Revive. Revives a nearby ally, bringing them back to life with 33/66/100% Health, based on rank.",
     "apply_tag": [],
@@ -25213,7 +25213,7 @@
     "tick_rate": null,
     "cooldown": 45,
     "range_tags": [
-      "Target non-destructible foe",
+      "Targets non-destructible foe",
       "100 feet"
     ],
     "tooltip": "Wipes your threat from the target and places you in Stealth for 4/5/6 sec + Shares a 30 sec cooldown with other Threat Wipe abilities.",
@@ -25255,7 +25255,7 @@
     "cooldown": null,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 105-198 Toxic Damage every 0.5 sec to nearby targets and has a 15% chance to apply Deadly Poison to your target. + Fully maintaining this power will double the number of stacks of Deadly Poison on affected targets. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -25298,7 +25298,7 @@
     "tick_rate": null,
     "cooldown": 10,
     "range_tags": [
-      "Target non-destructible foe",
+      "Targets non-destructible foe",
       "50 feet"
     ],
     "tooltip": "Paralyzes the target for 12 sec. + While the target remains Paralyzed, they suffer 42 Toxic Damage every 1 sec.",
@@ -25343,7 +25343,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 181 Toxic Damage. + Applies Debilitating Poison to your primary target. Debilitating Poison reduces resistance to Toxic Damage by 18% for 15 sec. + Applies Deadly Poison to your secondary targets. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -25463,8 +25463,8 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
-      "Affect foe (5 max)",
-      "10 foot Sphere"
+      "Affects foe (5 max)",
+      "10 feet Sphere"
     ],
     "tooltip": "Increases your Toxic and Slashing Damage by 15/18/22%. + Grants 9/11/13% Elemental Damage Resistance and an additional 37/44/53% Toxic Damage Resistance. + Foes within 10ft and foes you attack are affected by Pestilence, which deals up to 300/360/432 Toxic Damage every 2 sec. Damage increases as the target's Health decreases. + Reduces resistance to your Toxic Damage by 2% per stack of Deadly Poison and resistance to your Slashing Damage by 2% per stack of Bleed. + Reduces Healing received by affected targets by 100%. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -25658,7 +25658,7 @@
     "tick_rate": null,
     "cooldown": 10,
     "range_tags": [
-      "Target non-destructible foe",
+      "Targets non-destructible foe",
       "50 feet"
     ],
     "tooltip": "Paralyze the target for 12 sec.",
@@ -25719,7 +25719,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Goth & Glam"
+      "Lockbox: Goth & Glam, Collectors Store"
     ],
     "icon_override": "Mystic_CorrosivePit",
     "is_disabled": false
@@ -25765,7 +25765,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Punk"
+      "Lockbox: Punk, Collectors Store"
     ],
     "icon_override": "Mystic_FeralRage",
     "is_disabled": false
@@ -25802,7 +25802,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store (limited)"
+      "Questionite Store (limited)"
     ],
     "icon_override": "TravelPower_MysticFlight",
     "is_disabled": false
@@ -25839,7 +25839,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Arcane"
+      "Lockbox: Arcane, Collectors Store"
     ],
     "icon_override": "TravelPower_ArcaneFlight",
     "is_disabled": false
@@ -25876,7 +25876,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_BatFlight",
     "is_disabled": false
@@ -25950,7 +25950,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Lockbox: Aquatic, Collector Store"
+      "Lockbox: Aquatic, Collectors Store"
     ],
     "icon_override": "TravelPower_BubbleFlight",
     "is_disabled": false
@@ -26059,7 +26059,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Z store (limited)"
+      "Z Store (limited)"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -26096,7 +26096,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Z store (limited)"
+      "Z Store (limited)"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -26170,7 +26170,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Scion"
+      "Lockbox: Scion, Collectors Store"
     ],
     "icon_override": "TravelPower_HoverDisk",
     "is_disabled": false
@@ -26207,7 +26207,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_ElectroFlight",
     "is_disabled": false
@@ -26281,7 +26281,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -26428,7 +26428,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store, Lockbox: Frozen"
+      "Lockbox: Frozen, Questionite Store"
     ],
     "icon_override": "TravelPower_Hoverboard",
     "is_disabled": false
@@ -26683,7 +26683,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_MysticFlight",
     "is_disabled": false
@@ -26720,7 +26720,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store (limited)"
+      "Questionite Store (limited)"
     ],
     "icon_override": "TravelPower_OverseerFlight",
     "is_disabled": false
@@ -26901,7 +26901,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Z store (limited)"
+      "Z Store (limited)"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -27012,7 +27012,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Z store (limited)"
+      "Z Store (limited)"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -27086,7 +27086,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_ScarabFlight",
     "is_disabled": false
@@ -27158,7 +27158,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Z store (limited)"
+      "Z Store (limited)"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -27195,7 +27195,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_ShadowSkullFlight",
     "is_disabled": false
@@ -27269,7 +27269,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Shaolin"
+      "Lockbox: Shaolin, Collectors Store"
     ],
     "icon_override": "TravelPower_StoicFlight",
     "is_disabled": false
@@ -27306,7 +27306,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store (limited)"
+      "Questionite Store (limited)"
     ],
     "icon_override": "TravelPower_ElectroFlight",
     "is_disabled": false
@@ -27344,7 +27344,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox Buccaneer"
+      "Lockbox: Buccaneer, Collectors Store"
     ],
     "icon_override": "TravelPower_SurfSlide",
     "is_disabled": false
@@ -27418,7 +27418,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -27455,7 +27455,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -27531,7 +27531,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_FlagSpeed",
     "is_disabled": false
@@ -27569,7 +27569,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Toybox"
+      "Lockbox: Toybox, Collectors Store"
     ],
     "icon_override": "TravelPower_ColdSnapSpeed",
     "is_disabled": false
@@ -27683,7 +27683,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Rave"
+      "Lockbox: Rave, Collectors Store"
     ],
     "icon_override": "TravelPower_ElectricSpeed",
     "is_disabled": false
@@ -27758,7 +27758,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_FlagSpeed",
     "is_disabled": false
@@ -27796,7 +27796,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Toybox"
+      "Lockbox: Toybox, Collectors Store"
     ],
     "icon_override": "TravelPower_FrostSpeed",
     "is_disabled": false
@@ -27833,7 +27833,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_HyperBall",
     "is_disabled": false
@@ -27909,7 +27909,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Rave"
+      "Lockbox: Rave, Collectors Store"
     ],
     "icon_override": "TravelPower_LightningSpeed",
     "is_disabled": false
@@ -27983,7 +27983,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store"
+      "Collectors Store"
     ],
     "icon_override": "TravelPower_MachSpeed",
     "is_disabled": false
@@ -28058,7 +28058,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store (limited)"
+      "Questionite Store (limited)"
     ],
     "icon_override": "TravelPower_HyperBall",
     "is_disabled": false
@@ -28171,7 +28171,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_SnowballRoll",
     "is_disabled": false
@@ -28283,7 +28283,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Superspeed",
     "is_disabled": false
@@ -28321,7 +28321,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Superspeed",
     "is_disabled": false
@@ -28506,7 +28506,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Acrobatics",
     "is_disabled": false
@@ -28544,7 +28544,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -28658,7 +28658,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Scion"
+      "Lockbox: Scion, Collectors Store"
     ],
     "icon_override": "TravelPower_EnergySlide",
     "is_disabled": false
@@ -28734,7 +28734,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Acrobatics",
     "is_disabled": false
@@ -28772,7 +28772,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -29000,7 +29000,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Blazing"
+      "Lockbox: Blazing, Collectors Store"
     ],
     "icon_override": "TravelPower_ScorchingSlide",
     "is_disabled": false
@@ -29114,7 +29114,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -29152,7 +29152,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -29190,7 +29190,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -29228,7 +29228,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -29266,7 +29266,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Athletics",
     "is_disabled": false
@@ -29304,7 +29304,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Corrosive"
+      "Lockbox: Corrosive, Collectors Store"
     ],
     "icon_override": "TravelPower_Superjump",
     "is_disabled": false
@@ -29342,7 +29342,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Acrobatics",
     "is_disabled": false
@@ -29529,7 +29529,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_OozeTunneling",
     "is_disabled": false
@@ -29567,7 +29567,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_OozeTunneling",
     "is_disabled": false
@@ -29605,7 +29605,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_OozeTunneling",
     "is_disabled": false
@@ -29643,7 +29643,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Tunneling",
     "is_disabled": false
@@ -29681,7 +29681,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_ScarabTunneling",
     "is_disabled": false
@@ -29719,7 +29719,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Tunneling",
     "is_disabled": false
@@ -29795,7 +29795,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -29869,7 +29869,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -29907,7 +29907,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -29945,7 +29945,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -29983,7 +29983,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -30021,7 +30021,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -30097,7 +30097,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_Swinging",
     "is_disabled": false
@@ -30134,7 +30134,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Teleportation",
     "is_disabled": false
@@ -30243,7 +30243,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Punk"
+      "Lockbox: Punk, Collectors Store"
     ],
     "icon_override": "TravelPower_Teleportation",
     "is_disabled": false
@@ -30317,7 +30317,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Q store"
+      "Questionite Store"
     ],
     "icon_override": "TravelPower_FrostBite",
     "is_disabled": false
@@ -30391,7 +30391,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Alien Invader"
+      "Lockbox: Alien Invader, Collectors Store"
     ],
     "icon_override": "TravelPower_MindBlink",
     "is_disabled": false
@@ -30502,7 +30502,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "TravelPower_Teleportation",
     "is_disabled": false
@@ -30650,7 +30650,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Vigilante"
+      "Lockbox: Vigilante, Collectors Store"
     ],
     "icon_override": "TravelPower_Retrowave",
     "is_disabled": false
@@ -30757,7 +30757,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Cybernetic"
+      "Lockbox: Cybernetic, Collectors Store"
     ],
     "icon_override": "TravelPower_Upload",
     "is_disabled": false
@@ -30779,7 +30779,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "100 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1217 Electrical Damage to your primary target and 609 Electrical Damage to secondary targets. + Applies Negative Ions and Knocks Down affected targets. + Creates an Ionic Field on the main target for 12 sec, causing affected targets within 25ft to be 6.9% more vulnerable to Electrical Damage. This effect is considered to be an Ultimate Rune. + Places your Thunderstrike power on cooldown when used. + Activates a shared cooldown of 60 sec on all Ultimate powers.",
     "apply_tag": [
@@ -30801,7 +30801,7 @@
       19
     ],
     "source": [
-      "Collector Store, Lockbox: Kaiju"
+      "Lockbox: Kaiju, Collectors Store"
     ],
     "icon_override": "PVD_Thunderstrike_Ultimate",
     "is_disabled": false
@@ -30866,7 +30866,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 793 Fire Damage to your primary target and 528 Fire Damage to nearby foes. + Applies Clinging Flames to affected targets, dealing 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes. + Applies Unstable Accelerant to affected targets for 12 sec. + Unstable Accelerant reduces resistance to your Burning effects by 50%. Clinging Flames, Leaping Flames, Fire Snake, and Pyre Patches are considered Burning effects.+ Creates a Scorched Earth on the main target for 12 sec, causing affected targets within 25ft to take 10% increased Fire Damage. This effect is considered to be a Ultimate Rune. + Activates a shared cooldown of 60 sec on all Ultimate powers.",
     "apply_tag": [
@@ -30888,7 +30888,7 @@
       31
     ],
     "source": [
-      "Collector Store, Lockbox: Forces of Nature"
+      "Lockbox: Forces of Nature, Collectors Store"
     ],
     "icon_override": "PVD_Fireball_Ultimate",
     "is_disabled": false
@@ -30934,7 +30934,7 @@
       50
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_CauldronFire",
     "is_disabled": false
@@ -30955,8 +30955,8 @@
     "cooldown": 90,
     "range_tags": [
       "Targets foe (5 max)",
-      "50feet",
-      "0-20 foot Sphere"
+      "50 feet",
+      "0-20 feet Sphere"
     ],
     "tooltip": "Deals 178-507 Toxic Damage to foes. Deals an additional 89-254 Toxic Damage target is affected by your Fear effect. + 100% chance to apply Fear on affected targets. Fear reduces target's damage by 10% for 12 sec. + When fully charged creates a Pyre Patch on the main target for 10 sec, dealing 72 Fire Damage every 1 sec to foes within 15ft. This effect will only occur if you own the Fireball power. You can only have one Pyre Patch active at a time. + Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -30982,7 +30982,7 @@
       31
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_FlamingPumpkin",
     "is_disabled": false
@@ -31004,7 +31004,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "100 feet",
-      "10 foot Cylinder"
+      "10 feet Cylinder"
     ],
     "tooltip": "Deals 1004 Crushing Damage and Knocks Back affected targets 67ft. The base damage is increased by 20% if an affected target is immune to Knock effects. + If you are affected by a direct Shield effect, consumes the shield and deals an additional 352 Crushing Damage to up to 10 targets within 25ft of your primary target. + If a target is affected by a Shield effect, deals an additional 301 Crushing Damage to up to 10 targets within 25ft of the shielded target. + Making use of of the above effects is considered to be a Field Inversion effect. + Activates a shared cooldown of 60 sec on all Ultimate powers.",
     "apply_tag": [
@@ -31029,7 +31029,7 @@
       72
     ],
     "source": [
-      "Collector Store, Lockbox: Champions"
+      "Lockbox: Champions, Collectors Store"
     ],
     "icon_override": "PVD_ForceCascade_Ultimate",
     "is_disabled": false
@@ -31051,7 +31051,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "5 foot Cylinder"
+      "5 feet Cylinder"
     ],
     "tooltip": "Deals 1522 Particle Damage to all targets. + If you are affected by the Download buff, this power's base damage is increased by 20% and the Download buff is consumed. + Has a chance to Interrupt affected targets. If your target cannot be interrupted, applies Download to you instead.  Download reduces the cost of your Technology powers by 20% and increases the effectiveness of your energy gain powers by 2.5% for 12 sec. This effect will only occur if you own the Force Cascade power. + Applies Depleted to your primary target: Ends all active energy gain effects. Reduces all energy gain effectiveness by 100% for 8 sec. This amount scales with your Recovery. Removes -10 power, this amount scales with your Endurange. + When this power is successfully activated, consumes all of your energy and ends all of your active energy gain effects. For the next 8 sec, reduces all energy gain effectiveness on you by 200% If you are affected by a Self Energy Gain power, consumes that effect instead and places the power on cooldown. + If used without a Self Energy Gain effect active, this power goes on 8 sec cooldown. + Goes on a 120 sec cooldown if you do not own the Force Cascade power.",
     "apply_tag": [
@@ -31097,9 +31097,9 @@
     "tick_rate": 0.3,
     "cooldown": 90,
     "range_tags": [
-      "Targets non-desctructible foe (5 max)",
+      "Targets non-destructible foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 160 Cold Damage every 0.3 sec to foes. + Deals different type of damage depending on your Energy builder. Ice Shards = Cold Damage. Electric Bolt = Electrical Damage. Throw Fire = Fire Damage. Force Bolts and Wind Lash = Deals Crushing Damage. + While maintained, the power has a 50% chance of applying Chill, Clinging Flames, Negative Ions, Power Shield, Stagger per tick based on your Energy Builder. + Additionally when fully maintained, Knocks Up (Wind) affected targets or Knocks Down (Force) enemies based on your Energy Builder. + When fully maintained, creates a 25ft zone for 15 sec. Up to 10 enemies within the zone receive the Cryoclysm debuff, increasing all damage they take by 10/12/15% depending on the rank of the Avalanche power. This effect will only occur if you own the Avalanche power. + Goes on a 90 sec cooldown if you do not own the Avalanche power.",
     "apply_tag": [
@@ -31127,7 +31127,7 @@
       109
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Event Store, Recognition Store"
     ],
     "icon_override": "PVD_Cryoclysm",
     "is_disabled": false
@@ -31174,7 +31174,7 @@
       125
     ],
     "source": [
-      "Nighthawk Event"
+      "Nighthawk Event: Event Store, Recognition Store"
     ],
     "icon_override": "PVD_Stormpiercer",
     "is_disabled": false
@@ -31220,7 +31220,7 @@
       180
     ],
     "source": [
-      "Collector Store, Lockbox: Mecha"
+      "Lockbox: Mecha, Collectors Store"
     ],
     "icon_override": "PVD_OrbitalCannon_Ultimate",
     "is_disabled": false
@@ -31241,8 +31241,8 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe (10 max)",
-      "100 Feet",
-      "25 foot Sphere"
+      "100 feet",
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 687 Sonic Damage and Stuns targets for 0.96 sec. + Applies Deafening to affected targets. Deafening reduces resistance to Sonic Damage by 18% for 15 sec. + Creates a Sonic Distortion on the main target for 12 sec, causing affected targets within 25ft to be -4% more vulnerable to Sonic damage powers and Gadgeteering damaging powers. This effect is considered to be an Ultimate Rune. + Activates a shared cooldown of 60 sec on all Ultimate powers.",
     "apply_tag": [
@@ -31264,7 +31264,7 @@
       174
     ],
     "source": [
-      "Collector Store, Lockbox: Electro Swing"
+      "Lockbox: Electro Swing, Collectors Store"
     ],
     "icon_override": "PVD_SonicBoomGenerator_Ultimate",
     "is_disabled": false
@@ -31286,7 +31286,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 40-85 Piercing Damage to all targets. + Deals 74-158 Piercing Damage if only 1 target is affected. Hits 5 times. + 13-30% chance to Snare affected targets, reducing their movement speed by 100% for 5.6 sec.",
     "apply_tag": [
@@ -31306,7 +31306,7 @@
       177
     ],
     "source": [
-      "Nighthawk Event"
+      "Nighthawk event: Franklin Stone Alert"
     ],
     "icon_override": "PVD_BladeBarrage",
     "is_disabled": false
@@ -31348,7 +31348,7 @@
       161
     ],
     "source": [
-      "Nighthawk Event"
+      "Nighthawk event: Franklin Stone Alert"
     ],
     "icon_override": "PVD_BladeBomb",
     "is_disabled": false
@@ -31397,7 +31397,7 @@
       211
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Finkle Foundry Alert, Recognition Store"
     ],
     "icon_override": "PVD_FrostIceRifle",
     "is_disabled": false
@@ -31480,7 +31480,7 @@
       214
     ],
     "source": [
-      "Destroids Raise Again OM, Recognition Store"
+      "Destroids Rise Again OM, Recognition Store"
     ],
     "icon_override": "PVD_PulpFictionRayGun",
     "is_disabled": false
@@ -31546,7 +31546,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 79 Toxic Damage 2 times every 0.5 sec. + 5% chance every 0.5 sec to apply Deadly Poison to affected targets. Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times. + When fully maintained, spreads any of your Poisons on your primary target to up to 3 foes within 5ft. + Refreshes the duration of your Poisons on targets that these effects were spread to.",
     "apply_tag": [
@@ -31568,7 +31568,7 @@
       204
     ],
     "source": [
-      "Qular Simulation Alert (Anniversary Event)"
+      "Anniversary Event: Qularrr Simulation Alert"
     ],
     "icon_override": "PVD_QularToxicBarrage",
     "is_disabled": false
@@ -31611,7 +31611,7 @@
       211
     ],
     "source": [
-      "Qular Simulation Alert (Anniversary Event)"
+      "Anniversary Event: Qularrr Simulation Alert"
     ],
     "icon_override": "PVD_QularToxicRifle",
     "is_disabled": false
@@ -31655,7 +31655,7 @@
       200
     ],
     "source": [
-      "High Noon Event"
+      "High Noon Event: Mechanon"
     ],
     "icon_override": "PVD_RayTracer",
     "is_disabled": false
@@ -31677,7 +31677,7 @@
     "range_tags": [
       "Targets non-destructible foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 178 Ego Damage every 0.5 sec to foes within 5ft of the main target. Deals 62 Ego Damage to foes beyond 5ft. + Deals additional 62 Ego Damage to foes if they are Undead. + Foes within 20ft are pulled towards the main target. This effect only applies if you own the Submachinegun Burst power.",
     "apply_tag": [
@@ -31697,7 +31697,7 @@
       197
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_GhostHunterPhaseRifle",
     "is_disabled": false
@@ -31742,7 +31742,7 @@
       196
     ],
     "source": [
-      "Qular Simulation Alert (Anniversary Event)"
+      "Anniversary Event: Qularrr Simulation Alert"
     ],
     "icon_override": "PVD_VirulentShot",
     "is_disabled": false
@@ -31764,7 +31764,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "10 foot Cylinder"
+      "10 feet Cylinder"
     ],
     "tooltip": "Deals 1110 Particle Damage and Knocks Back affected targets. Base damage is increased by 20% if an affected target is immune to Knock effects. + Damage is further increased up to 20% based on how close a target is to you. + Affected targets have Burn Through applied to them. Burn Through reduces resistance to your Crushing Damage and Particle Damage by 15% for 15 sec. + If you only hit 1 target, applies Overpower in place of Burn Through. Overpower reduces resistance to all damage by 20% for 15 sec. + Activates a shared cooldown of 60 sec on all Ultimate powers.",
     "apply_tag": [
@@ -31788,7 +31788,7 @@
       230
     ],
     "source": [
-      "Collector Store, Lockbox: Mecha"
+      "Lockbox: Mecha, Collectors Store"
     ],
     "icon_override": "PVD_ChestBeam_Ultimate",
     "is_disabled": false
@@ -31831,7 +31831,7 @@
       253
     ],
     "source": [
-      "Collector Store, Lockbox: Scarlet Scarab"
+      "Lockbox: Scarlet Scarab, Collectors Store"
     ],
     "icon_override": "PVD_ParticleSmash_Ultimate",
     "is_disabled": false
@@ -31852,7 +31852,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 178-254 Slashing Damage (based on number of targets) every 0.5 sec. + Targets within 30ft are Knocked To you. + While maintaining this power, increases your chance to Dodge by 20%, and increases your Avoidance by 50%.",
     "apply_tag": [
@@ -31872,7 +31872,7 @@
       273
     ],
     "source": [
-      "Collector Store, Lockbox: Traveler"
+      "Lockbox: Traveler, Collectors Store"
     ],
     "icon_override": "PVD_SwordCyclone_Ultimate",
     "is_disabled": false
@@ -31915,7 +31915,7 @@
       267
     ],
     "source": [
-      "Forum Malvanum Event, Recognition Store"
+      "Forum Malvanum Alert, Recognition Store"
     ],
     "icon_override": "PVD_BurningBlades",
     "is_disabled": false
@@ -31936,7 +31936,7 @@
     "cooldown": 90,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 160 Dimensional Damage every 0.5 sec and has a 25% chance on each hit to apply Fear to affected targets. Fear reduces target's damage by 10% for 12 sec. + Heals you for 47 Health Points for every target hit that is affected by Fear. This counts as a Life Drain effect.",
     "apply_tag": [
@@ -31958,7 +31958,7 @@
       272
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Flying Dutchman, Recognition Store"
     ],
     "icon_override": "PVD_HauntedBlades",
     "is_disabled": false
@@ -31979,7 +31979,7 @@
     "cooldown": 90,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 186 Fire Damage every 0.5 sec and has a 25% chance on each hit to apply Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -31999,7 +31999,7 @@
       273
     ],
     "source": [
-      "Forum Malvanum Event, Recognition Store"
+      "Forum Malvanum Alert, Recognition Store"
     ],
     "icon_override": "PVD_HeatVortex",
     "is_disabled": false
@@ -32198,7 +32198,7 @@
     "cooldown": 90,
     "range_tags": [
       "Targets foe",
-      "25 foot lunge"
+      "25 feet lunge"
     ],
     "tooltip": "Lunges at the target and deals 275 Particle Damage every 0.5 sec. This power will continue to deal damage if the target stays within 10ft range. + While maintaining this power, Snares the target for 3.9 sec, reducing their movement speed by 100%. This effect will only occur if you own the Relentless Pursuit power. + Increases this power's base damage by 10% if you are affected by Download.",
     "apply_tag": [
@@ -32242,7 +32242,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "10 foot Cylinder"
+      "10 feet Cylinder"
     ],
     "tooltip": "Deals 353 Crushing Damage and 353 Dimensional Damage. Deals an additional 20% damage if your target is immune to Knock effects. + Knocks Back affected targets. + Applies Chi Flame to affected targets. Chi Flame deals 109 Dimensional Damage every 2 sec for 12 sec and reduces resistance to Chi Power focused attacks by 50%. + Applies Overpower to affected targets. Overpower reduces resistance to all damage by 20% for 15 sec.",
     "apply_tag": [
@@ -32267,7 +32267,7 @@
       311
     ],
     "source": [
-      "Collector Store, Lockbox: Dragon Spirit"
+      "Lockbox: Dragon Spirit, Collectors Store"
     ],
     "icon_override": "PVD_OpenPalmStrike_Ultimate",
     "is_disabled": false
@@ -32315,7 +32315,7 @@
       366
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_BlightTouch",
     "is_disabled": false
@@ -32337,7 +32337,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "10 feet",
-      "180 degree Cone/10 foot Sphere"
+      "180 degree Cone/10 feet Sphere"
     ],
     "tooltip": "Deals 118-189 Toxic Damage and has a 30/55/85% chance to apply Deadly Poison on your targets. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times. + Last hit refreshes your stacks of Deadly Poison.",
     "apply_tag": [
@@ -32359,7 +32359,7 @@
       342
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_ToxicBlades",
     "is_disabled": false
@@ -32400,7 +32400,7 @@
       355
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_VenomShock",
     "is_disabled": false
@@ -32421,7 +32421,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 258 Crushing Damage and 258 Fire Damage. Affected targets are Knocked Up. Base damage is increased by 30% if a target is immune to Knock effects. + Applies Aegis for 15 sec, granting +100% resistance to all damage to you and 72% resistance to up to 10 allies. This amount is doubled on targets affected by Reckless. + Applies Negative Ions to affected targets and creates a Pyre Patch for 16 sec, dealing 98 Fire Damage every 1 sec to foes within 25ft.  You can only have one Pyre Patch active at a time. Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes. + Foes standing in the Pyre Patch have a 85% chance to be Disoriented. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + Foes standing in the Pyre Patch have a 35% chance to be Stunned for 0.67 sec. This chance is guaranteed if the target is affected by Clinging Flames. + Places your Brimstone power on cooldown when used.",
     "apply_tag": [
@@ -32454,7 +32454,7 @@
       411
     ],
     "source": [
-      "Collector Store, Lockbox: Gladiator"
+      "Lockbox: Gladiator, Collectors Store"
     ],
     "icon_override": "PVD_Brimstone_Ultimate",
     "is_disabled": false
@@ -32501,7 +32501,7 @@
       411
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Clarence, Recognition Store"
     ],
     "icon_override": "PVD_BitterStorm",
     "is_disabled": false
@@ -32546,7 +32546,7 @@
       397
     ],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Therakiel Rampage"
     ],
     "icon_override": "PVD_BrilliantCleave",
     "is_disabled": false
@@ -32592,7 +32592,7 @@
       397
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Clarence, Recognition Store"
     ],
     "icon_override": "PVD_CallousCleaver",
     "is_disabled": false
@@ -32636,7 +32636,7 @@
       412
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Clarence, Recognition Store"
     ],
     "icon_override": "PVD_FrozenLance",
     "is_disabled": false
@@ -32683,7 +32683,7 @@
       401
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Clarence, Recognition Store"
     ],
     "icon_override": "PVD_GlacialRend",
     "is_disabled": false
@@ -32729,7 +32729,7 @@
       410
     ],
     "source": [
-      "(Formerly) Forum Malvanum Event, Recognition Store"
+      "(Formerly) Forum Malvanum Event: Event Store, Recognition Store"
     ],
     "icon_override": "PVD_Hellrend",
     "is_disabled": false
@@ -32751,7 +32751,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "15 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 200-426 Cold Damage and Knocks Down affected targets. + Deals additional 190 Cold Damage for each of your Chill stacks on a target, and an additional 30% total damage if you are affected by Cold Snap. Consumes any of your Chill stacks on affected targets. + When fully charged, Shatters any of your Ice Structures, dealing 126-547 Cold Damage, based on the rank and type of the Structure, to up to 5 foes within 15ft.",
     "apply_tag": [
@@ -32778,7 +32778,7 @@
       408
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Clarence, Recognition Store"
     ],
     "icon_override": "PVD_IceBreaker",
     "is_disabled": false
@@ -32800,7 +32800,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 888 Crushing Damage to your primary target and 592 Crushing Damage to nearby foes. If affected target is immune to Hold effects, deals an additional 30% base damage. + Applies 3 stacks of Stagger to affected targets.  Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times. + Paralyzes affected targets for 6.8 sec. If the target is immune to Holds, instead Knocks them Down.",
     "apply_tag": [
@@ -32824,7 +32824,7 @@
       422
     ],
     "source": [
-      "Collector Store, Lockbox: Forest Guardian"
+      "Lockbox: Forest Guardian, Collectors Store"
     ],
     "icon_override": "PVD_CaveIn_Ultimate",
     "is_disabled": false
@@ -32846,7 +32846,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "3 foot Cylinder"
+      "3 feet Cylinder"
     ],
     "tooltip": "Deals 196-418 Cold Damage to targets. + 45-100% chance to apply Chill to your primary target, and 22-50% chance against secondary targets. Chill reduces target movement speed by 60% for 16 sec and occasionally trapping them in an Ice Cage. Stacks up to 3 times. + When fully charged, has a 50% chance to apply Hard Frost to your primary target. Hard Frost reduces resistance to Cold Damage by 18% for 15 sec. This chance is doubled if you are affected by Cold Snap.",
     "apply_tag": [
@@ -32870,7 +32870,7 @@
       426
     ],
     "source": [
-      "Winter Event, Recognition Store"
+      "Winter Event: Finkle Foundry Alert, Recognition Store"
     ],
     "icon_override": "PVD_Icefall",
     "is_disabled": false
@@ -32891,8 +32891,8 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (10 max)",
-      "200 foot lunge",
-      "25 foot Sphere"
+      "200 feet lunge",
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 704 Crushing Damage and Knocks Up affected targets. Base Damage is increased by 30% if an affected target is immune to Knock effects. + Creates a Stomping Grounds at your location for 12 sec, causing affected targets within 15ft to be 3.3% more vulnerable to damage from abilities in the Brick Framework. This effect is considered to be an Ultimate Rune. + If used from 25ft or more above the ground, the following effects apply instead: + Lunge directly down from wherever you are. Deals 951 Crushing Damage and affected targets are Knocked Up.",
     "apply_tag": [
@@ -32915,7 +32915,7 @@
       447
     ],
     "source": [
-      "Collector Store, Lockbox: Valorous"
+      "Lockbox: Valorous, Collectors Store"
     ],
     "icon_override": "PVD_HavocStomp_Ultimate",
     "is_disabled": false
@@ -33028,7 +33028,7 @@
     "range_tags": [
       "Targets foe (10 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 408 Magic Damage and Knocks Down affected targets. + Creates an Enchanted Rune on the main target for 12 sec, causing affected targets within 25ft to be 10% more vulnerable to Magic Damage. This effect is considered to be an Ultimate Rune. + If you own multiple Circle powers, creates one at your location based on your current role. The circle summoned will inherit any advantages and ranks you have purchased, as well as having an extended 10 sec duration when initially summoned. + Circle of Arcane Power if you are in Hybrid Role. + Circle of Ebon Wrath if you are Ranged or Melee Role. + Circle of Primal Dominion if you are in Tank Role. + Circle of Radiant Glory if you are Support Role. + If you only own one Circle power, creates it at your location regardless of your role. + Places your Pillar of Poz power on cooldown when used.",
     "apply_tag": [
@@ -33049,7 +33049,7 @@
       533
     ],
     "source": [
-      "Collector Store, Lockbox: Champions"
+      "Lockbox: Champions, Collectors Store"
     ],
     "icon_override": "PVD_PillarOfPoz_Ultimate",
     "is_disabled": false
@@ -33070,7 +33070,7 @@
     "cooldown": "10-90",
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 295 Fire Damage and applies Unstable Accelerant to affected targets for 12 sec. + Unstable Accelerant reduces resistance to your Burning effects by 50%. Clinging Flames, Leaping Flames, Fire Snake, and Pyre Patches are considered Burning effects. + Creates a Pyre Patch at your location for 10 sec, dealing 98 Fire Damage every 2 sec to foes within 15ft.  You can only have one Pyre Patch active at a time. + Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -33093,7 +33093,7 @@
       560
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_FierySpirit",
     "is_disabled": false
@@ -33139,7 +33139,7 @@
       564
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_FireFangs",
     "is_disabled": false
@@ -33160,7 +33160,7 @@
     "cooldown": 90,
     "range_tags": [
       "Affects foe (5 max)",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 160-216 Fire Damage and has a 25/25/100% chance to apply Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes. + If a target is affected by Clinging Flames, expires that effect and heals you for 194 Health Points. If you are affected by Thermal Reverberation, no effect will be expired.",
     "apply_tag": [
@@ -33184,7 +33184,7 @@
       554
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_FlamingFrenzy",
     "is_disabled": false
@@ -33227,7 +33227,7 @@
       548
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_ScorchingClaw",
     "is_disabled": false
@@ -33270,7 +33270,7 @@
       568
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_SearingCarnage",
     "is_disabled": false
@@ -33292,7 +33292,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 146-575 Toxic Damage and applies Deadly Poison to all targets. Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times. + Deals Particle Damage instead if you have any of the following Energy Builders: Wrist Bolter/Power Bolts/Energy Blaster/Laser Edge. + Applies Debilitating Poison to all targets if you own Infernal Blast power. Debilitating Poison reduces resistance to Toxic Damage by 18% for 15 sec. + This power costs 30% of your Max Health to use. This cost is reduced to 26/23/20% depending on the rank of Infernal Blast. + WARNING : This can kill you. + When fully charged, the primary target is affected by Noxious Poison. Noxious Poison deals 55 Toxic Damage every 1 sec over 16 sec. + When fully charged creates a Healing Mist at the main target location for 10 sec, healing all allies within 25ft for 59 Health Points every 1 sec. This effect will only occur if you own the Infernal Blast power. + Healing Mist will Disorient targets in its area if you own the Infernal Blast power at Rank 3. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -33319,7 +33319,7 @@
       570
     ],
     "source": [
-      "Bloodmoon Event, Recognition Store"
+      "Bloodmoon Event: Takofane, Recognition Store"
     ],
     "icon_override": "PVD_TendrilOfAnguish",
     "is_disabled": false
@@ -33341,7 +33341,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1315 Dimensional Damage and summons 3 Abyss Tentacles to attack your foes for 30 sec, which can use the following abilities: + Strike/SIam: Deals 125 Dimensional Damage to target. + Thrash: Deals 250 Dimensional Damage to targets within 15ft and Knocks them down. + Abyssal Pit: Deals 121 Dimensional Damage every 2 sec to affected targets within 15ft.",
     "apply_tag": [
@@ -33359,7 +33359,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Flying Dutchman"
     ],
     "icon_override": "Device_AbyssalWave",
     "is_disabled": false
@@ -33393,7 +33393,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Amazing Grace, Store"
     ],
     "icon_override": "Device_Bloodmoon_AmazingGrace",
     "is_disabled": false
@@ -33415,7 +33415,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 341 Magic Damage every 1 sec to all targets. + 30% chance per tick to deal an additional 683 Magic Damage, up to twice each period.",
     "apply_tag": [],
@@ -33431,7 +33431,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Vigil, Store"
     ],
     "icon_override": "Device_ArcherMemory",
     "is_disabled": false
@@ -33453,7 +33453,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 411 Particle Damage to affected targets. + Applies Disintegrate to your primary target. Disintegrate reduces resistance to Particle Damage by 18% for 15 sec. + Applies Plasma Burn to secondary targets. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -33472,7 +33472,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Radion, , Store"
     ],
     "icon_override": "Device_AtomicStrike",
     "is_disabled": false
@@ -33494,7 +33494,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 877 Toxic Damage to targets. + The primary target is Stunned for 1.7 sec and secondary targets are Paralyzed for 12 sec. + Applies Debilitating Poison to your primary target, reducing their resistance to Toxic Damage by 18% for 15 sec. + Applies Deadly Poison to your secondary targets. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -33513,7 +33513,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Takofane, Store"
     ],
     "icon_override": "Device_Banish",
     "is_disabled": false
@@ -33554,7 +33554,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Amazing Grace, Store"
     ],
     "icon_override": "Device_BladeDance",
     "is_disabled": false
@@ -33574,8 +33574,8 @@
     "tick_rate": null,
     "cooldown": 60,
     "range_tags": [
-      "Affects non-destructible foe  (5 max)",
-      "15 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 713 Crushing Damage and Knocks Back targets 38ft. + After 3 sec Stuns all targets for 1 sec.",
     "apply_tag": [
@@ -33594,7 +33594,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Vanguard, Store"
     ],
     "icon_override": "Might_Thunderclap",
     "is_disabled": false
@@ -33634,7 +33634,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Eclipse, Store"
     ],
     "icon_override": "Device_BrokenWand",
     "is_disabled": false
@@ -33655,7 +33655,7 @@
     "cooldown": 30,
     "range_tags": [
       "Affects foe (5 max)",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 1058-2155 Crushing Damage to all targets. + Targets hit are Knocked towards you 24ft.",
     "apply_tag": [
@@ -33673,7 +33673,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Crusher, Store"
     ],
     "icon_override": "Device_Bloodmoon_CenterOfGravity",
     "is_disabled": false
@@ -33714,7 +33714,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Nimbus, Store"
     ],
     "icon_override": "Wind_Updraft",
     "is_disabled": false
@@ -33755,7 +33755,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Goblin, Store"
     ],
     "icon_override": "Fire_HeatWave",
     "is_disabled": false
@@ -33795,7 +33795,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Shadowboxer, Store"
     ],
     "icon_override": "Device_CowardsLament",
     "is_disabled": false
@@ -33837,7 +33837,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Vigil, Store"
     ],
     "icon_override": "Device_DarkWand",
     "is_disabled": false
@@ -33858,8 +33858,8 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe (3 max)",
-      "15 foot lunge",
-      "5 foot Sphere"
+      "15 feet lunge",
+      "5 feet Sphere"
     ],
     "tooltip": "Deals 822 Slashing Damage and your targets are Knocked Down. + Causes your primary target to start Bleeding. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -33878,7 +33878,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Tiger, Store"
     ],
     "icon_override": "FightingClaws_DragonsClaws",
     "is_disabled": false
@@ -33899,7 +33899,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Knocks and Repels foes away from you while toggled on. + At the end of this power's duration, deals 657 Magic Damage to targets around you. + This power can be toggled on and used alongside other powers.",
     "apply_tag": [
@@ -33918,7 +33918,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Vigil, Store"
     ],
     "icon_override": "Device_ErodedShard",
     "is_disabled": false
@@ -33940,7 +33940,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "10 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 652-1531 Crushing Damage. + Knocks Up your primary target 20ft and Knocks Down secondary targets. + Fully charging this power applies Demolish to your primary target. Demolish reduces resistance to Crushing Damage by 18% for 15 sec.",
     "apply_tag": [
@@ -33960,7 +33960,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Johnny Hercules, Store"
     ],
     "icon_override": "Device_FistOfDefiance",
     "is_disabled": false
@@ -34001,7 +34001,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Johnny Hercules, Store"
     ],
     "icon_override": "Device_Bloodmoon_FistOfCompliance",
     "is_disabled": false
@@ -34021,7 +34021,7 @@
     "tick_rate": null,
     "cooldown": 60,
     "range_tags": [
-      "Affects non-destructible foe  (5 max)",
+      "Affects non-destructible foe (5 max)",
       "15 feet Sphere"
     ],
     "tooltip": "Deals 982 Ego Damage and Knocks Up targets 24ft. Deals an addition 15% base damage against targets immune to Knock effects. + Applies Bastion, causing 25% of your direct damage pre-damage mitigation to be applied to you as a Shield for 10 sec. Stacks up to 10 times.",
@@ -34040,7 +34040,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Shadowboxer, Store"
     ],
     "icon_override": "Device_FocusedPower",
     "is_disabled": false
@@ -34082,7 +34082,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Flying Dutchman, Store"
     ],
     "icon_override": "Device_GhostlyWail",
     "is_disabled": false
@@ -34104,7 +34104,7 @@
     "range_tags": [
       "Targets foe",
       "100 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "This power must be fully charged to activate. + After 4.5 sec the Orbital Cannon deals 2367 Particle Damage to foes within 10ft. + Applies Plasma Burn to affected targets. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -34122,7 +34122,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Flechette, Store"
     ],
     "icon_override": "Device_Bloodmoon_HackedCannon",
     "is_disabled": false
@@ -34143,7 +34143,7 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe (5 max)",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 1402 Dimensional Damage and Knocks Up affected targets 25ft. + Applies Light Everlasting to allies within 20ft. Light Everlasting heals the target for 56 Health Points every 1 sec over 10 sec.",
     "apply_tag": [
@@ -34164,7 +34164,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Amazing Grace, Store"
     ],
     "icon_override": "Device_IlluminatingBurst",
     "is_disabled": false
@@ -34185,7 +34185,7 @@
     "cooldown": 180,
     "range_tags": [
       "Affects living player (5 max)",
-      "50 foot Sphere"
+      "50 feet Sphere"
     ],
     "tooltip": "Gives nearby players a shield that absorbs up to 3665 damage. This shield persists for up to 15 sec.",
     "apply_tag": [
@@ -34201,7 +34201,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Nimbus, Store"
     ],
     "icon_override": "Device_Bloodmoon_NimbusOfForce",
     "is_disabled": false
@@ -34221,8 +34221,8 @@
     "tick_rate": 2,
     "cooldown": 60,
     "range_tags": [
-      "Affects non-destructible foe(5 max)",
-      "10 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 205 Toxic Damage every 2 sec to nearby targets. + Snares targets caught in the cloud. + When toggled for the full duration, Stuns targets for 1 sec. + This power can be toggled on alongside other abilities.",
     "apply_tag": [
@@ -34241,7 +34241,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Goblin, Store"
     ],
     "icon_override": "Device_PestilentCloud",
     "is_disabled": false
@@ -34261,8 +34261,8 @@
     "tick_rate": 2,
     "cooldown": 120,
     "range_tags": [
-      "Target foe",
-      "50 foot"
+      "Targets foe",
+      "50 feet"
     ],
     "tooltip": "Creates a Portal of Darkness at the target's location for 20 sec, dealing 325 Toxic Damage every 2 sec to up to 5 foes within 25ft.+ This power cannot critically hit. + Applies Fear to affected targets. Fear reduces target's damage by 10% for 12 sec. + Once every 2 sec, revives up to 1 defeated foe as a Zombie for 30 sec, dealing up to 135 Crushing Damage every attack. You can have a maximum of 10 Zombies out at a time.",
     "apply_tag": [
@@ -34280,7 +34280,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Takofane, Store"
     ],
     "icon_override": "Device_PortalOfDarkness",
     "is_disabled": false
@@ -34301,7 +34301,7 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe that is not destructible",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 434 Particle Damage every 0.5 sec. + Applies Burn Through to affected targets. Burn Through reduces resistance to your Crushing Damage and Particle Damage by 15% for 15 sec.",
     "apply_tag": [
@@ -34319,7 +34319,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Radion, Store"
     ],
     "icon_override": "Device_Bloodmoon_RadionsRevenge",
     "is_disabled": false
@@ -34341,7 +34341,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Paralyzes all targets for 12 sec and heals you for +557 Health Points for every target hit. This counts as a Life Drain effect. + Applies Fear to affected targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
@@ -34360,7 +34360,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Eclipse, Store"
     ],
     "icon_override": "Device_Bloodmoon_Revenancy",
     "is_disabled": false
@@ -34396,7 +34396,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Firefight, Store"
     ],
     "icon_override": "Device_Bloodmoon_Firefight",
     "is_disabled": false
@@ -34437,7 +34437,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Vanguard, Store"
     ],
     "icon_override": "Device_SanguineStorm",
     "is_disabled": false
@@ -34459,7 +34459,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 307 Fire Damage every 0.5 sec to all targets. + Creates a Pyre Patch on the target.The Pyre Patch lasts for 10 sec, dealing 72 Fire Damage every 1 sec.  You can only have one Pyre Patch active at a time.  + Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames, causing 140 Fire Damage every 2 sec for 12 sec. Clinging Flames may leap to other foes near the target.",
     "apply_tag": [
@@ -34479,7 +34479,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Firefight, Store"
     ],
     "icon_override": "Fire_Conflagration",
     "is_disabled": false
@@ -34524,7 +34524,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Goblin, Store"
     ],
     "icon_override": "Device_Bloodmoon_SupernaturalPosession",
     "is_disabled": false
@@ -34546,7 +34546,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 263 Ego Damage every 0.5 sec and has a 25% chance on each hit to Disorient affected targets. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + After 0.5 sec, applies Stress to the primary target. Stress reduces resistance to Ego Damage by 8% for 15 sec. Stacks up to 3 times.",
     "apply_tag": [
@@ -34565,7 +34565,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Crusher, Store"
     ],
     "icon_override": "Device_TKDisarray",
     "is_disabled": false
@@ -34599,7 +34599,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Flechette, Store"
     ],
     "icon_override": "InfernalSupernatural_Epidemic",
     "is_disabled": false
@@ -34635,7 +34635,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Flying Dutchman"
     ],
     "icon_override": "Device_VaporsNetherRealm",
     "is_disabled": false
@@ -34675,7 +34675,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Tiger, Store"
     ],
     "icon_override": "Device_Bloodmoon_WillOfTiger",
     "is_disabled": false
@@ -34715,7 +34715,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Reward"
     ],
     "icon_override": "Device_ZombieBone",
     "is_disabled": false
@@ -34919,7 +34919,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (5 max)",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 690 Cold Damage every 1 sec. + 25% chance to apply Chill.  Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times.",
     "apply_tag": [
@@ -34999,7 +34999,7 @@
     "cooldown": 60,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 339-1286 Crushing Damage to targets. + When fully charged, Paralyzes targets for 14 sec.",
     "apply_tag": [
@@ -35038,7 +35038,7 @@
     "cooldown": 90,
     "range_tags": [
       "Affects foe (5 max)",
-      "5 foot Sphere"
+      "5 feet Sphere"
     ],
     "tooltip": "While toggled on, this device grants +30% Resistance to all damage. + Every 2 sec, deals 243 Particle Damage and has 25% chance to apply Plasma Burn to nearby foes. + Plasma Burn deals 36 Particle Damage every 1 sec for 16 sec and stacks up to 5 times. + This device can be used alongside other powers while the effects are active.",
     "apply_tag": [
@@ -35256,7 +35256,7 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe",
-      "50 Feet"
+      "50 feet"
     ],
     "tooltip": "Creates 2 level 40 Mind Worms, each lasting for 20 sec.",
     "apply_tag": [],
@@ -35364,8 +35364,8 @@
     "tick_rate": null,
     "cooldown": 60,
     "range_tags": [
-      "Affects non-destructible foe  (5 max)",
-      "25 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 812 Fire Damage to nearby targets. + Revives you with 50% Health and Energy. + Restores an additional 10% Health and Energy every 1 sec for 6 sec. + Cost 3 Gold Champion Recognition per use.",
     "apply_tag": [],
@@ -35438,7 +35438,7 @@
     "cooldown": 60,
     "range_tags": [
       "Targets foe",
-      "100 foot lunge"
+      "100 feet lunge"
     ],
     "tooltip": "Deals 912 Crushing Damage to the target. + 50% chance to Knock them Down. + Applies Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -35643,7 +35643,7 @@
     "range_tags": [
       "Targets foe",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 329 Cold Damage every 2 sec for 10 sec to foes within 15ft. + Affected targets lose 275 Perception. + Snares affected targets, reducing their movements by 100%.",
     "apply_tag": [
@@ -35723,7 +35723,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects friends (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Applies Inspiration to nearby allies, granting them +5% resistance to all damage, and +5% all damage strength, for 30 sec. + This effect cannot be stacked.",
     "apply_tag": [],
@@ -35799,7 +35799,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "20 foot sphere"
+      "20 feet sphere"
     ],
     "tooltip": "Deals 197 Slashing Damage to foes every 1 sec to foes in the target area. + 20% chance on each hit to apply Stagger to each target. Stagger reduces resistance to all damage by 2% and movement speed by 25% for 15 sec. Stacks up to 3 times. + 20% chance on each hit to apply Knock Down to affected targets. + The duration of this power is extended the longer you maintain this power.",
     "apply_tag": [
@@ -35839,7 +35839,7 @@
     "cooldown": 45,
     "range_tags": [
       "Affects foe (5 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 241 Electrical Damage every 0.5 sec to all targets. + When you first activate this power, Knocks Down targets. + 20% chance on each hit to apply Negative Ions to affected targets.",
     "apply_tag": [
@@ -36066,8 +36066,8 @@
     "tick_rate": 1,
     "cooldown": 120,
     "range_tags": [
-      "Affects non-destructible foe  (5 max)",
-      "10 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "10 feet Sphere"
     ],
     "tooltip": "Deals 61 Toxic Damage every 1 sec to nearby targets. + 10% chance on each hit to apply Deadly Poison to your targets. + This power can be toggled on alongside other abilities. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
@@ -36142,7 +36142,7 @@
     "cooldown": 20,
     "range_tags": [
       "Affects foe (5 max)",
-      "5 foot Sphere"
+      "5 feet Sphere"
     ],
     "tooltip": "Deals 2127 Electrical Damage and Knocks Back all affected targets.",
     "apply_tag": [
@@ -36502,7 +36502,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Telepathy_MindLock",
     "is_disabled": false
@@ -36540,7 +36540,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_AsclepialSerum",
     "is_disabled": false
@@ -36580,7 +36580,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_Cloak",
     "is_disabled": false
@@ -36619,7 +36619,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_ContainedRadiation",
     "is_disabled": false
@@ -36654,7 +36654,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_CupidArrow",
     "is_disabled": false
@@ -36690,7 +36690,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_DemonicFleshGraft",
     "is_disabled": false
@@ -36726,7 +36726,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_DrayshaGun",
     "is_disabled": false
@@ -36758,7 +36758,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_HumidityDome",
     "is_disabled": false
@@ -36780,7 +36780,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1464 Cold Damage to targets. + Affected targets are placed in an Ice Cage for up to 10 sec, Rooting them in place while the Structure is active. + Targets affected by your Ice Cage also suffer 73 Cold Damage every 1 sec. + Once the Ice Cage expires, deals 182 Cold Damage to up to 5 targets within 10ft. + Stuns affected targets for 1 sec.",
     "apply_tag": [
@@ -36802,7 +36802,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Munitions_FragGrenade",
     "is_disabled": false
@@ -36836,7 +36836,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_KhusorsDoom",
     "is_disabled": false
@@ -36872,7 +36872,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_NightmareGenerator",
     "is_disabled": false
@@ -36911,7 +36911,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Might_Hurl",
     "is_disabled": false
@@ -36933,7 +36933,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "80 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 877 Electrical Damage to targets. + Stuns your primary target for 2 sec + Snares your secondary targets for 16 sec.",
     "apply_tag": [
@@ -36952,7 +36952,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_PerpetratorDevice",
     "is_disabled": false
@@ -36988,7 +36988,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Telekinesis_TelekineticBurst",
     "is_disabled": false
@@ -37028,7 +37028,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Telekinesis_MentalDiscipline",
     "is_disabled": false
@@ -37065,7 +37065,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_RaggedProletariatArmband",
     "is_disabled": false
@@ -37106,7 +37106,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "PVD_ShadowShred",
     "is_disabled": false
@@ -37145,7 +37145,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_TeleiosaurusPheromone",
     "is_disabled": false
@@ -37182,7 +37182,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_TKForceFieldInducer",
     "is_disabled": false
@@ -37221,7 +37221,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_ThunderboltWand",
     "is_disabled": false
@@ -37241,8 +37241,8 @@
     "tick_rate": 1,
     "cooldown": null,
     "range_tags": [
-      "Affects non-destructible foe  (5 max)",
-      "15 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "15 feet Sphere"
     ],
     "tooltip": "Heals you for +161 Health Points every 1 sec. + You gain +100% resistance to all damage while you maintain this power. + Applies Fear your targets. Fear reduces target's damage by 10% for 12 sec.",
     "apply_tag": [
@@ -37260,7 +37260,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_VoidPossession",
     "is_disabled": false
@@ -37296,7 +37296,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Rhinoplasty Lair"
+      "Rhinoplasty"
     ],
     "icon_override": "Device_RatPotion",
     "is_disabled": false
@@ -37334,7 +37334,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Rhinoplasty Lair"
+      "Rhinoplasty"
     ],
     "icon_override": "Device_RhinoPotion",
     "is_disabled": false
@@ -37372,7 +37372,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Chimera OM"
+      "Burden of Beast OM"
     ],
     "icon_override": "Device_VulturePotion",
     "is_disabled": false
@@ -37410,7 +37410,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Winter Event"
+      "Winter Event: Finkle Foundry Alert"
     ],
     "icon_override": "Device_CozyFire",
     "is_disabled": false
@@ -37661,7 +37661,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Rock Exchange"
+      "Rock Store"
     ],
     "icon_override": "Device_AttackRock",
     "is_disabled": false
@@ -37701,7 +37701,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Ladyhawke Serial"
+      "Ladyhawke Serial: Reward"
     ],
     "icon_override": "Device_BleakEssence",
     "is_disabled": false
@@ -37741,7 +37741,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Foxbatcon Event"
+      "Foxbatcon Event: Store"
     ],
     "icon_override": "Device_Bricker",
     "is_disabled": false
@@ -37763,7 +37763,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Paralyzes the target for 14 sec. + Snares the target reducing their movement speed by 100% for up to 16 sec.",
     "apply_tag": [
@@ -37780,7 +37780,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Foxbatcon Event"
+      "Foxbatcon Event: Store"
     ],
     "icon_override": "Device_AprilBubblegumGun",
     "is_disabled": false
@@ -37814,7 +37814,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Black Fang Alert"
     ],
     "icon_override": "Device_DogsGang",
     "is_disabled": false
@@ -37848,7 +37848,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Vladic Dracul Alert"
     ],
     "icon_override": "Device_NewShadowsGang",
     "is_disabled": false
@@ -37882,7 +37882,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Baron Cimetiere Alert"
     ],
     "icon_override": "Device_SovereignSonsGang",
     "is_disabled": false
@@ -37916,7 +37916,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Valerian Scarlet Alert"
     ],
     "icon_override": "Device_TreyKingsGang",
     "is_disabled": false
@@ -37957,7 +37957,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Hi Pan Event"
+      "Hi-Pan Event: Reward"
     ],
     "icon_override": "Device_CelestialDragon",
     "is_disabled": false
@@ -37978,7 +37978,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects friends (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Applies Inspiration to nearby allies, granting them +5% resistance to all damage, and +5% all damage strength, for 30 sec. + This effect cannot be stacked. + Applies Moonlight Howl to you for 30 sec.",
     "apply_tag": [
@@ -38049,8 +38049,8 @@
     "tick_rate": null,
     "cooldown": 90,
     "range_tags": [
-      "Affects non-destructible foe(5 max)",
-      "25 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
     ],
     "tooltip": "Can be used while Held or Confused. + Deals 859 Magic Damage and Stuns affected targets for 2.4 sec. + Heals you for 174 Health Points for every target hit. This heal counts as a Life Drain effect. + Applies 2,679 Break Free damage to any Holds, Roots, or Disables affecting you. + Applies Bane to affected targets, which can cause the following effects: Bleeding, Chilled, Clinging Flames, Confuse, Deadly Poison, Debilitating Poison, Demolish, Dependency, Disintegrate, Disorient, Fear, Hexed, Plasma Burn, Stagger, Stress. + Places all Escape devices on a 90 sec cooldown.",
     "apply_tag": [
@@ -38071,7 +38071,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Baron Cimetiere Alert"
     ],
     "icon_override": "Device_CursedMagic",
     "is_disabled": false
@@ -38091,7 +38091,7 @@
     "tick_rate": null,
     "cooldown": 60,
     "range_tags": [
-      "Targets Self"
+      "Targets self"
     ],
     "tooltip": "Summons a Deamonic Avatar to attack your foes.",
     "apply_tag": [],
@@ -38145,7 +38145,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Destroyer's Factory Lair"
+      "Dr. Destroyer Robot Factory"
     ],
     "icon_override": "Device_Gauntlets",
     "is_disabled": false
@@ -38179,7 +38179,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store"
+      "Collectors Store"
     ],
     "icon_override": "Device_DrayshaSupercharge",
     "is_disabled": false
@@ -38199,10 +38199,9 @@
     "tick_rate": null,
     "cooldown": 60,
     "range_tags": [
-      "Targets foe",
-      "affects non-destructible foe( 5max)",
+      "Targets foe (5 max)",
       "100 feet",
-      "10 foot Cylinder"
+      "10 feet Cylinder"
     ],
     "tooltip": "Deals 469-1998 Electrical Damage to targets. + Has a 34-100% (based on charge time) chance to apply Negative Ions to target. + Has a 50% chance to arc to a target within 25ft, dealing 70-299 Electrical Damage. This chance increases to 75% if the target is affected by Negative Ions. + Fully charging this power will consume Negative Ions on targets, causing this power to arc to additional nearby targets, as well as applying Superconductor. Superconductor reduces resistance to Electrical Damage by 18% for 15 sec.",
     "apply_tag": [
@@ -38224,7 +38223,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Hi-Pan Event"
+      "Hi-Pan Alert"
     ],
     "icon_override": "Device_DragonStaff",
     "is_disabled": false
@@ -38260,7 +38259,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Qular Simulation Alert (Anniversary Event)"
+      "Anniversary Event: Qularrr Simulation Alert"
     ],
     "icon_override": "Device_QularMutagen",
     "is_disabled": false
@@ -38280,7 +38279,7 @@
     "tick_rate": null,
     "cooldown": 90,
     "range_tags": [
-      "Targets Self"
+      "Targets self"
     ],
     "tooltip": "Increases your base direct damage by 5% and your resistance to Knock and Crowd Control effects by 300% for 30 sec.",
     "apply_tag": [],
@@ -38315,7 +38314,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects friends (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Applies Inspiration to nearby allies, granting them +5% resistance to all damage, and +5% all damage strength, for 30 sec. + This effect cannot be stacked.",
     "apply_tag": [
@@ -38331,7 +38330,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Anniversary Event"
+      "Patriot Event: Store"
     ],
     "icon_override": "Device_Fireworks",
     "is_disabled": false
@@ -38455,7 +38454,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "High Noon Event"
+      "High Noon Event: ASCII Alert"
     ],
     "icon_override": "Munitions_Gunslinger",
     "is_disabled": false
@@ -38476,7 +38475,7 @@
     "cooldown": 10,
     "range_tags": [
       "Affects friends (10 max)",
-      "25 foot Sphere"
+      "25 feet Sphere"
     ],
     "tooltip": "Applies Inspiration to nearby allies, granting them +5% resistance to all damage, and +5% all damage strength, for 30 sec. + This effect cannot be stacked.",
     "apply_tag": [
@@ -38492,7 +38491,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Nightmare Invasion Event"
+      "Nightmare Invasion Event: Store"
     ],
     "icon_override": "Device_Inspire",
     "is_disabled": false
@@ -38512,9 +38511,9 @@
     "tick_rate": null,
     "cooldown": 45,
     "range_tags": [
-      "Targets non-destructible foe(5 max)",
+      "Targets non-destructible foe (5 max)",
       "100 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 219 Magic Damage every 0.5 sec. + 10% chance on each hit Disorient affected targets. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + If a target is a Henchman, Villain or Enforcer, has a 10% chance on each hit to Confuse them for 12 sec, causing them to attack targets at random. This chance is guaranteed when fully maintained.",
     "apply_tag": [
@@ -38553,8 +38552,8 @@
     "tick_rate": null,
     "cooldown": 90,
     "range_tags": [
-      "Affects non-destructible foe(5 max)",
-      "25 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
     ],
     "tooltip": "Can be used while Held or Confused. + Deals 982 Crushing Damage and Knocks Back affected targets 26ft. + Heals you for 174 Health Points for every target hit. This heal counts as a Life Drain effect. + Applies 2,679 Break Free damage to any Holds, Roots, or Disables affecting you. + Applies Moonlight Howl to you for 30 sec. + Places all Escape devices on a 90 sec cooldown.",
     "apply_tag": [
@@ -38575,7 +38574,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Black Fang Alert"
     ],
     "icon_override": "Device_LycanRoar",
     "is_disabled": false
@@ -38595,9 +38594,9 @@
     "tick_rate": null,
     "cooldown": 60,
     "range_tags": [
-      "Target foes (5 max)",
+      "Targets foes (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 482 Fire Damage and creates a Pyre Patch at your primary target for 10 sec, dealing 72 Fire Damage every 1 sec to foes within 15ft. You can only have one Pyre Patch active at a time. + Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -38639,7 +38638,7 @@
     "range_tags": [
       "Targets non-destructible foe",
       "50 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "If a target is a Henchman, Villain or Enforcer, Placates targets for 12 sec, preventing them from attacking you. + Disorients your primary target. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + If a target is a Henchman, Villain or Enforcer, Confuses them for 12 sec, causing them to attack targets randomly.",
     "apply_tag": [
@@ -38657,7 +38656,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "High Noon Event"
+      "ASCIING for Trouble OM"
     ],
     "icon_override": "Device_NanomachinesPheromones",
     "is_disabled": false
@@ -38679,7 +38678,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "100 feet",
-      "20 foot Sphere"
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 614 Crushing Damage and Knocks Up affected targets.",
     "apply_tag": [
@@ -38697,7 +38696,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Resistance Adventure Pack - Perk : Kill 50 Mega Destroids"
+      "Resistance Adventure Pack - Perk: Kill 50 Mega Destroids"
     ],
     "icon_override": "Device_MegaDestroid_Stomp",
     "is_disabled": false
@@ -38738,7 +38737,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Destroids Raise Again OM"
+      "Destroids Rise Again OM"
     ],
     "icon_override": "Device_PortableRoboticFactory",
     "is_disabled": false
@@ -38781,7 +38780,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Ladyhawke Serial"
+      "Ladyhawke Serial: Reward"
     ],
     "icon_override": "Device_MagicGauntlets",
     "is_disabled": false
@@ -38803,7 +38802,7 @@
     "range_tags": [
       "Targets foe",
       "50 feet",
-      "10 foot Sphere"
+      "10 feet Sphere"
     ],
     "tooltip": "After 3 sec, the Seismic Ping Pong Ball deals 1315 Crushing Damage to foes within 10ft. + Knocks Down all affected targets and Disorients them. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
     "apply_tag": [
@@ -38822,7 +38821,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Foxbatcon Event"
+      "Foxbatcon Event: : Reward"
     ],
     "icon_override": "Device_Seismic",
     "is_disabled": false
@@ -38842,8 +38841,8 @@
     "tick_rate": 1,
     "cooldown": 60,
     "range_tags": [
-      "Affects non-destructible foe  (5 max)",
-      "20 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "20 feet Sphere"
     ],
     "tooltip": "Deals 614 Toxic Damage every 1 sec and heals you +194 Health Points for every target hit. + While this power is maintained increases your resistance to damage by 20% for every target hit. Stacks up to 5 times. + 25% chance on each hit to Stun targets for 2 sec.",
     "apply_tag": [
@@ -38863,7 +38862,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Eidolon Of Destruction"
+      "Eidolon of Destruction"
     ],
     "icon_override": "Device_SyphonNightmare",
     "is_disabled": false
@@ -38936,7 +38935,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Therakiel Rampage"
     ],
     "icon_override": "Device_NephilimSwarm",
     "is_disabled": false
@@ -38970,7 +38969,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Forum Malvanum Event"
+      "Forum Malvanum Event: Sky Race"
     ],
     "icon_override": "Device_SwiftnessSerum",
     "is_disabled": false
@@ -39004,7 +39003,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Cybernetic"
+      "Lockbox: Cybernetic, Collectors Store"
     ],
     "icon_override": "Device_TargetLocked",
     "is_disabled": false
@@ -39167,7 +39166,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Foxbatcon Event"
+      "Foxbatcon Event: Store"
     ],
     "icon_override": "Device_Pins",
     "is_disabled": false
@@ -39204,7 +39203,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Rock Exchange"
+      "Rock Store"
     ],
     "icon_override": "Device_ThrowRock",
     "is_disabled": false
@@ -39226,7 +39225,7 @@
     "range_tags": [
       "Targets foe (5 max)",
       "50 feet",
-      "15 foot Sphere"
+      "15 feet Sphere"
     ],
     "tooltip": "Deals 1094 Fire Damage and Knocks Back affected targets 22ft. + If a target is immune to knock effects, Stuns them for a 2.4 sec.",
     "apply_tag": [
@@ -39245,7 +39244,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Winter Event"
+      "Winter Event: Finkle Foundry Alert"
     ],
     "icon_override": "Device_ToyBomb",
     "is_disabled": false
@@ -39265,8 +39264,8 @@
     "tick_rate": null,
     "cooldown": 90,
     "range_tags": [
-      "Affects non-destructible foe(5 max)",
-      "25 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
     ],
     "tooltip": "Can be used while Held or Confused. + Deals 1104 Toxic Damage to your primary target and heals you 234 Health Points for every target hit. This heal counts as a Life Drain effect. + Applies 2,679 Break Free damage to any Holds, Roots, or Disables affecting you. + If your primary target is a Henchman, Villain or Enforcer, attempts to Corrupt them for 10 sec, forcing them to fight for you. After Corrupted expires, Henchman have their health reduced by 50%, Villains have their health reduced by 25%, and Enforcers have their health reduced by 15%. After 2 sec, Confuses up to 5 Henchmen, Villain and Enforcer ranked foes within 25ft for 17 sec, causing them to attack targets randomly. + Places all Escape devices on a 90 sec cooldown.",
     "apply_tag": [
@@ -39287,7 +39286,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Therakiel Event"
+      "Therakiel Event: Vladic Dracul Alert"
     ],
     "icon_override": "Device_VampiricFeast",
     "is_disabled": false
@@ -39307,8 +39306,8 @@
     "tick_rate": null,
     "cooldown": 30,
     "range_tags": [
-      "Affects non-destructible foe(5 max)",
-      "25 foot Sphere"
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
     ],
     "tooltip": "Deals 1534 Dimensional Damage to all targets. + Knocks targets towards you. + Applies the Force Sheathe buff to you for 8 sec. Force Sheathe gives you +10% resistance to all damage and returns energy whenever you take damage. The amount of energy you get scales with your RECOVERY and how much damage you took.",
     "apply_tag": [
@@ -39328,7 +39327,7 @@
     ],
     "power_dependency": [],
     "source": [
-      "Andrith Ruins Lair"
+      "Andrith Ruins"
     ],
     "icon_override": "Device_VikorinsHeaddress",
     "is_disabled": false
@@ -39672,7 +39671,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Forum Malvanum Event"
+      "Forum Malvanum Alert"
     ],
     "icon_override": "Device_ToughResolve",
     "is_disabled": false
@@ -39829,7 +39828,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Reward"
     ],
     "icon_override": "Sidekick_Grymm",
     "is_disabled": false
@@ -39987,7 +39986,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Forum Malvanum Event"
+      "Forum Malvanum Event: Reward"
     ],
     "icon_override": "Sidekick_Brothers_In_Arms",
     "is_disabled": false
@@ -40026,7 +40025,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Nightmare Invasion Event"
+      "Nightmare Invasion Event: Reward"
     ],
     "icon_override": "Sidekick_Chaos_Imp",
     "is_disabled": false
@@ -40065,7 +40064,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Nightmare Invasion Event"
+      "Nightmare Invasion Event: Reward"
     ],
     "icon_override": "Sidekick_Chaos_Swarm",
     "is_disabled": false
@@ -40230,7 +40229,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Reward"
     ],
     "icon_override": "Sidekick_DavidAntares",
     "is_disabled": false
@@ -40311,7 +40310,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Reward"
     ],
     "icon_override": "Sidekick_Duratoc",
     "is_disabled": false
@@ -40429,7 +40428,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Reward"
     ],
     "icon_override": "Sidekick_EvilEye",
     "is_disabled": false
@@ -40512,7 +40511,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Foxbatcon Event"
+      "Foxbatcon Event: Reward"
     ],
     "icon_override": "Sidekick_Foxbat",
     "is_disabled": false
@@ -40553,7 +40552,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Bloodmoon Event"
+      "Bloodmoon Event: Reward"
     ],
     "icon_override": "Sidekick_Freddy",
     "is_disabled": false
@@ -40718,7 +40717,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Winter Event"
+      "Winter Event: Reward"
     ],
     "icon_override": "Sidekick_Holiday_Henchman",
     "is_disabled": false
@@ -40759,7 +40758,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Patriot Event"
+      "Patriot Event: Reward"
     ],
     "icon_override": "Sidekick_Indy_Kid",
     "is_disabled": false
@@ -40801,7 +40800,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Hi Pan Event"
+      "Hi-Pan Event: Reward"
     ],
     "icon_override": "Sidekick_Jade",
     "is_disabled": false
@@ -40922,7 +40921,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "High Noon Event"
+      "High Noon Event: Reward"
     ],
     "icon_override": "Sidekick_L1LDogg13",
     "is_disabled": false
@@ -41042,7 +41041,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "High Noon Event"
+      "High Noon Event: Reward"
     ],
     "icon_override": "Sidekick_Override",
     "is_disabled": false
@@ -41243,7 +41242,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Anniversary Event"
+      "Anniversary Event: Reward"
     ],
     "icon_override": "Sidekick_Qularr_Drone",
     "is_disabled": false
@@ -42013,7 +42012,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Anniversary Event"
+      "Anniversary Event: Reward"
     ],
     "icon_override": "Sidekick_Trooper_Bot",
     "is_disabled": false
@@ -42053,7 +42052,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Winter Event"
+      "Winter Event: Reward"
     ],
     "icon_override": "Sidekick_Tundra",
     "is_disabled": false
@@ -42212,7 +42211,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Rock Exchange"
+      "Rock Store"
     ],
     "icon_override": "Sidekick_Wibble",
     "is_disabled": false
@@ -42401,7 +42400,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Arcane"
+      "Collectors Store, Lockbox: Arcane"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -42435,7 +42434,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_Superspeed",
     "is_disabled": false
@@ -42469,7 +42468,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Toybox"
+      "Collectors Store, Lockbox: Toybox"
     ],
     "icon_override": "TravelPower_MachSpeed",
     "is_disabled": false
@@ -42503,7 +42502,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Nightmare Invasion Event"
+      "Nightmare Invasion Event: Colossus"
     ],
     "icon_override": "TravelPower_DarkFlight",
     "is_disabled": false
@@ -42571,7 +42570,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_Electric_Slide",
     "is_disabled": false
@@ -42605,7 +42604,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Rave"
+      "Collectors Store, Lockbox: Rave"
     ],
     "icon_override": "TravelPower_MachSpeed",
     "is_disabled": false
@@ -42673,7 +42672,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_HyperBall",
     "is_disabled": false
@@ -42707,7 +42706,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Toybox"
+      "Collectors Store, Lockbox: Toybox"
     ],
     "icon_override": "TravelPower_Superspeed",
     "is_disabled": false
@@ -42741,7 +42740,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Rave"
+      "Collectors Store, Lockbox: Rave"
     ],
     "icon_override": "TravelPower_Superspeed",
     "is_disabled": false
@@ -42775,7 +42774,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Alien Invader"
+      "Collectors Store, Lockbox: Alien Invader"
     ],
     "icon_override": "TravelPower_Teleportation",
     "is_disabled": false
@@ -42809,7 +42808,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_PrismSpeed",
     "is_disabled": false
@@ -42843,7 +42842,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Nightmare Invasion Event"
+      "Nightmare Invasion Event: Colossus"
     ],
     "icon_override": "Telekinesis_EgoSurge",
     "is_disabled": false
@@ -42877,7 +42876,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -42911,7 +42910,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -42945,7 +42944,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_SuperjumpRainbow",
     "is_disabled": false
@@ -42979,7 +42978,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_SuperspeedRainbox",
     "is_disabled": false
@@ -43013,7 +43012,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_EnergySlide",
     "is_disabled": false
@@ -43047,7 +43046,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_MachSpeed",
     "is_disabled": false
@@ -43081,7 +43080,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store"
+      "Collectors Store"
     ],
     "icon_override": "TravelPower_Hoverboard",
     "is_disabled": false
@@ -43115,7 +43114,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -43149,7 +43148,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Eidolon Of Destruction"
+      "Eidolon of Destruction"
     ],
     "icon_override": "TravelPower_Flight",
     "is_disabled": false
@@ -43183,7 +43182,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Collector Store, Lockbox: Cybernetic"
+      "Collectors Store, Lockbox: Cybernetic"
     ],
     "icon_override": "TravelPower_Teleportation",
     "is_disabled": false
@@ -43217,9 +43216,44 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "The Drifter"
+      "Drifter Store"
     ],
     "icon_override": "Device_Vesperine",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1048,
+    "powerset_id": "Device",
+    "framework_id": "Other",
+    "name": "Sparkle Fireworks",
+    "tier": null,
+    "power_type": "BUFF_TARGETS",
+    "advantages": [],
+    "activation_type": "CLICK",
+    "cost": null,
+    "activation_time": null,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 10,
+    "range_tags": [
+      "Affects friends (5 max)",
+      "25 feet Sphere"
+    ],
+    "tooltip": "Applies Energize which grants nearby allies +5% Maximum Energy for 30 sec. + This effect cannot be stacked.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Patriot Event: Store"
+    ],
+    "icon_override": "Device_Sparkle_Fireworks",
     "is_disabled": false
   }
 ]

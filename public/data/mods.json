@@ -3143,8 +3143,7 @@
       "Offense"
     ],
     "source": [
-      "Harmon Lab Alert",
-      "Forum Malvanum Alert"
+      "Harmon Lab Alert, Forum Malvanum Alert"
     ],
     "icon_override": "Mod_DUC",
     "is_disabled": false,
@@ -3173,7 +3172,9 @@
     "tag": [
       "Offense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Teleios Ascendant"
+    ],
     "icon_override": "Mod_Severity",
     "is_disabled": false,
     "mod_types": [
@@ -3203,7 +3204,9 @@
     "tag": [
       "Offense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Critical",
     "is_disabled": false,
     "mod_types": [
@@ -3233,7 +3236,9 @@
     "tag": [
       "Offense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Healing",
     "is_disabled": false,
     "mod_types": [
@@ -3263,7 +3268,9 @@
     "tag": [
       "Offense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Offense",
     "is_disabled": false,
     "mod_types": [
@@ -3293,7 +3300,9 @@
     "tag": [
       "Offense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Superstat",
     "is_disabled": false,
     "mod_types": [
@@ -3323,7 +3332,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, QWZ OMs"
+    ],
     "icon_override": "Mod_Confront",
     "is_disabled": false,
     "mod_types": [
@@ -3353,7 +3364,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Fire & Ice Rampage"
+    ],
     "icon_override": "Mod_Threat_Cold",
     "is_disabled": false,
     "mod_types": [
@@ -3383,7 +3396,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Fire & Ice Rampage"
+    ],
     "icon_override": "Mod_Threat_Fire",
     "is_disabled": false,
     "mod_types": [
@@ -3413,7 +3428,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Bloodmon Event: Takofane"
+    ],
     "icon_override": "Mod_Threat_Toxic",
     "is_disabled": false,
     "mod_types": [
@@ -3443,7 +3460,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Forum Malvanum Alert, Gravitar Rampage"
+    ],
     "icon_override": "Mod_Threat_Crushing",
     "is_disabled": false,
     "mod_types": [
@@ -3473,7 +3492,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, High Noon Event: Mechanon"
+    ],
     "icon_override": "Mod_Threat_Piercing",
     "is_disabled": false,
     "mod_types": [
@@ -3503,7 +3524,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Burden of Beastmen OM"
+    ],
     "icon_override": "Mod_Threat_Slashing",
     "is_disabled": false,
     "mod_types": [
@@ -3533,7 +3556,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Nightmare Invasion Event : Colossus"
+    ],
     "icon_override": "Mod_Threat_Dimensional",
     "is_disabled": false,
     "mod_types": [
@@ -3563,7 +3588,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, GRAB Alert"
+    ],
     "icon_override": "Mod_Threat_Ego",
     "is_disabled": false,
     "mod_types": [
@@ -3593,7 +3620,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Unknowable Rampage"
+    ],
     "icon_override": "Mod_Threat_Magic",
     "is_disabled": false,
     "mod_types": [
@@ -3623,7 +3652,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Jail Break OM"
+    ],
     "icon_override": "Mod_Threat_Particle",
     "is_disabled": false,
     "mod_types": [
@@ -3653,7 +3684,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Sky Command Rampage"
+    ],
     "icon_override": "Mod_Threat_Electrical",
     "is_disabled": false,
     "mod_types": [
@@ -3683,7 +3716,9 @@
     "tag": [
       "Threat Mod"
     ],
-    "source": [],
+    "source": [
+      "Questionite Store, Harmon Lab Alert"
+    ],
     "icon_override": "Mod_Threat_Sonic",
     "is_disabled": false,
     "mod_types": [
@@ -3713,7 +3748,9 @@
     "tag": [
       "Defense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Teleios Ascendant"
+    ],
     "icon_override": "Mod_Avoidance",
     "is_disabled": false,
     "mod_types": [
@@ -3743,7 +3780,9 @@
     "tag": [
       "Defense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Dodge",
     "is_disabled": false,
     "mod_types": [
@@ -3773,7 +3812,9 @@
     "tag": [
       "Defense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Therakiel's Temple"
+    ],
     "icon_override": "Mod_Regen",
     "is_disabled": false,
     "mod_types": [
@@ -3803,7 +3844,9 @@
     "tag": [
       "Defense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Health",
     "is_disabled": false,
     "mod_types": [
@@ -3833,7 +3876,9 @@
     "tag": [
       "Defense"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Defense",
     "is_disabled": false,
     "mod_types": [
@@ -3931,7 +3976,9 @@
     "tag": [
       "Utility"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_QE",
     "is_disabled": false,
     "mod_types": [
@@ -3965,7 +4012,9 @@
     "tag": [
       "Utility"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_CCStrength",
     "is_disabled": false,
     "mod_types": [
@@ -3995,7 +4044,9 @@
     "tag": [
       "Utility"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Cooldown",
     "is_disabled": false,
     "mod_types": [
@@ -4025,7 +4076,9 @@
     "tag": [
       "Utility"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_CostDiscount",
     "is_disabled": false,
     "mod_types": [
@@ -4055,7 +4108,9 @@
     "tag": [
       "Utility"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Energy",
     "is_disabled": false,
     "mod_types": [
@@ -4085,7 +4140,9 @@
     "tag": [
       "Utility"
     ],
-    "source": [],
+    "source": [
+      "Dr. Destroyer Robot Factory"
+    ],
     "icon_override": "Mod_SwiftWing",
     "is_disabled": false,
     "mod_types": [
@@ -4155,7 +4212,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Teleios Ascendant"
+    ],
     "icon_override": "Mod_Damage_Gadget",
     "is_disabled": false,
     "mod_types": [
@@ -4185,7 +4244,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Kigatilik"
+    ],
     "icon_override": "Mod_Damage_Ice",
     "is_disabled": false,
     "mod_types": [
@@ -4215,7 +4276,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Qwyjibo"
+    ],
     "icon_override": "Mod_Damage_Fire",
     "is_disabled": false,
     "mod_types": [
@@ -4235,7 +4298,7 @@
   {
     "mod_id": 126,
     "mod_type": "Utility",
-    "name": "Teleiosaurus Rage",
+    "name": "Teleiosaurus's Rage",
     "mod_bonus": "Damage_Bonus_Bestial",
     "rank_5": 6,
     "rank_7": 8,
@@ -4245,7 +4308,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Teleiosaurus"
+    ],
     "icon_override": "Mod_Damage_Bestial",
     "is_disabled": false,
     "mod_types": [
@@ -4275,7 +4340,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Supernatural",
     "is_disabled": false,
     "mod_types": [
@@ -4305,7 +4372,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Eidolon of Destruction"
+    ],
     "icon_override": "Mod_Damage_Darkness",
     "is_disabled": false,
     "mod_types": [
@@ -4335,7 +4404,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Might",
     "is_disabled": false,
     "mod_types": [
@@ -4365,7 +4436,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Bloodmon Event: Takofane"
+    ],
     "icon_override": "Mod_Damage_Sorcery",
     "is_disabled": false,
     "mod_types": [
@@ -4395,7 +4468,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_PowerArmor",
     "is_disabled": false,
     "mod_types": [
@@ -4425,7 +4500,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Cybermind Alert"
+    ],
     "icon_override": "Mod_Damage_LaserSword",
     "is_disabled": false,
     "mod_types": [
@@ -4455,7 +4532,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Telekinesis",
     "is_disabled": false,
     "mod_types": [
@@ -4485,7 +4564,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Red Snake Alert"
+    ],
     "icon_override": "Mod_Damage_Unarmed",
     "is_disabled": false,
     "mod_types": [
@@ -4515,7 +4596,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Red Banner foes"
+    ],
     "icon_override": "Mod_Damage_DualBlades",
     "is_disabled": false,
     "mod_types": [
@@ -4545,7 +4628,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Nighthawk event: Franklin Stone Alert"
+    ],
     "icon_override": "Mod_Damage_Claws",
     "is_disabled": false,
     "mod_types": [
@@ -4575,7 +4660,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Jack Fool"
+    ],
     "icon_override": "Mod_Damage_SingleBlade",
     "is_disabled": false,
     "mod_types": [
@@ -4605,7 +4692,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Wind",
     "is_disabled": false,
     "mod_types": [
@@ -4635,7 +4724,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Earth",
     "is_disabled": false,
     "mod_types": [
@@ -4665,7 +4756,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, ASCIING for Trouble OM, High Noon Event : Mechanon"
+    ],
     "icon_override": "Mod_Damage_Munitions",
     "is_disabled": false,
     "mod_types": [
@@ -4695,7 +4788,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Archery",
     "is_disabled": false,
     "mod_types": [
@@ -4720,12 +4815,14 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Electricity framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from  Telepathy framework by %rank_value% %. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store"
+    ],
     "icon_override": "Mod_Damage_Telepathy",
     "is_disabled": false,
     "mod_types": [
@@ -4750,12 +4847,14 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Telepathy framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Electricity framework by %rank_value% %. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Hi-Pan Alert"
+    ],
     "icon_override": "Mod_Damage_Electricity",
     "is_disabled": false,
     "mod_types": [
@@ -4785,7 +4884,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Gravitar Rampage"
+    ],
     "icon_override": "Mod_Damage_Force",
     "is_disabled": false,
     "mod_types": [
@@ -4815,7 +4916,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Therakiel's Temple"
+    ],
     "icon_override": "Mod_Damage_Celestial",
     "is_disabled": false,
     "mod_types": [
@@ -4845,7 +4948,9 @@
     "tag": [
       "Damage Mod"
     ],
-    "source": [],
+    "source": [
+      "Recognition Store, Forum Malvanum Alert"
+    ],
     "icon_override": "Mod_Damage_HeavyWeapons",
     "is_disabled": false,
     "mod_types": [
@@ -4858,6 +4963,46 @@
           "5": 6,
           "7": 8,
           "9": 10
+        }
+      }
+    ]
+  },
+  {
+    "mod_id": 147,
+    "mod_type": "Defense",
+    "name": "Tough Skin",
+    "mod_bonus": "Max_HP;Defense",
+    "rank_5": "370;11",
+    "rank_7": "414;13",
+    "rank_9": "517;15",
+    "tooltip": null,
+    "stackable": true,
+    "tag": [
+      "Defense"
+    ],
+    "source": [
+      "Questionite Store, Rhinoplasty"
+    ],
+    "icon_override": "Mod_Tough_Skin",
+    "is_disabled": false,
+    "mod_types": [
+      "Defense"
+    ],
+    "bonuses": [
+      {
+        "type": "Max_HP",
+        "values_by_rank": {
+          "5": 370,
+          "7": 414,
+          "9": 517
+        }
+      },
+      {
+        "type": "Defense",
+        "values_by_rank": {
+          "5": 11,
+          "7": 13,
+          "9": 15
         }
       }
     ]
