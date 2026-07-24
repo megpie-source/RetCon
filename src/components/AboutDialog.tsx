@@ -100,6 +100,9 @@ export function AboutDialog({ onClose }: AboutDialogProps) {
                 </a>{" "}
                 by BehemothKing
               </li>
+            </ul>
+            <p>Older community projects:</p>            
+            <ul>
               <li>
                 <a
                   href="https://vtwind.github.io/HeroBuilder/"
@@ -110,9 +113,6 @@ export function AboutDialog({ onClose }: AboutDialogProps) {
                 </a>{" "}
                 by Winds
               </li>
-            </ul>
-            <p>Older community projects:</p>            
-            <ul>
               <li>
                 <a
                   href="https://aesica.net/co/herocreator.htm"

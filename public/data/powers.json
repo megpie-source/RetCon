@@ -629,7 +629,7 @@
       "50 feet",
       "15 feet Sphere"
     ],
-    "tooltip": "Paralyzes targets for 12 sec. + Applies Negative Ions to your primary target. + 25% chance to apply Negative Ions to secondary targets. + The electricity will Arc to foes within 25ft, dealing 236 Electrical Damage to them. + Must be fully charged.",
+    "tooltip": "Paralyzes targets for 12 sec. + Applies Negative Ions to your primary target. + 25% chance to apply Negative Ions to secondary targets. + The electricity will Arc to foes within 25ft, dealing 236 Electrical Damage to them.",
     "apply_tag": [
       "Paralyze",
       "Negative Ions",
@@ -682,7 +682,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Electrical"
     ],
@@ -1451,7 +1453,7 @@
     "tick_rate": 1,
     "cooldown": 10,
     "range_tags": [
-      "Targets non-object foe",
+      "Targets non-destructible foe",
       "50 feet"
     ],
     "tooltip": "Deals 306 Fire Damage every 1 sec to your target. + 10% chance to apply Clinging Flames to the target. + After maintaining this power for 1 sec, it Incapacitates the target and refreshes a portion of the duration and durability of the Incapacitate every 1 sec you maintain it. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
@@ -1463,7 +1465,9 @@
       "Incapacitate"
     ],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Fire"
     ],
@@ -1779,8 +1783,8 @@
     "activation_type": "MAINTAIN",
     "cost": "37+19",
     "activation_time": 1,
-    "max_duration": null,
-    "tick_rate": 5,
+    "max_duration": 5,
+    "tick_rate": 1,
     "cooldown": 15,
     "range_tags": [
       "Targets non-destructible foe (5 max)",
@@ -1796,7 +1800,9 @@
       "Incapacitate"
     ],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": "230",
     "healing_values": null,
@@ -2885,7 +2891,7 @@
       "Targets non-destructible foe",
       "50 feet"
     ],
-    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec. + - Must be fully charged.",
+    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Paralyze",
       "Shield (special)",
@@ -5270,7 +5276,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Cold"
     ],
@@ -5449,7 +5457,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Piercing"
     ],
@@ -5699,7 +5709,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Piercing",
       "Sonic"
@@ -5743,7 +5755,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Piercing",
       "Electrical"
@@ -7168,7 +7182,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -8351,7 +8367,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -8395,7 +8413,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -8974,7 +8994,8 @@
     "tick_rate": null,
     "cooldown": 10,
     "range_tags": [
-      "Targets self"
+      "Targets self",
+      "15 feet Sphere"
     ],
     "tooltip": "You toss out a cluster of Mini Mines that deal 573 Crushing Damage to targets within 15ft. + The Mini Mines persist for 12 sec before self-destructing. + Foes caught in the blast are Knocked Down.",
     "apply_tag": [
@@ -9901,7 +9922,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -10564,7 +10587,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Particle"
     ],
@@ -11195,7 +11220,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Piercing",
       "Fire"
@@ -12101,7 +12128,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Slashing"
     ],
@@ -12147,7 +12176,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Slashing"
     ],
@@ -12685,7 +12716,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Slashing"
     ],
@@ -13121,7 +13154,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -14879,7 +14914,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Ego"
     ],
@@ -15381,9 +15418,13 @@
       "Ego Leech",
       "Incapacitate"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Incapacitate"
+    ],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Ego"
     ],
@@ -16721,9 +16762,13 @@
     "apply_tag": [
       "Incapacitate"
     ],
-    "refresh_tag": [],
+    "refresh_tag": [
+      "Incapacitate"
+    ],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Ego"
     ],
@@ -16768,7 +16813,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Ego"
     ],
@@ -17199,7 +17246,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -18561,7 +18610,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -19202,7 +19253,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -22025,7 +22078,7 @@
     "tick_rate": 1,
     "cooldown": 10,
     "range_tags": [
-      "Targets foe",
+      "Targets non-destructible foe",
       "50 feet"
     ],
     "tooltip": "Deals 275 Magic Damage. + After maintaining this power for 1 sec, it Incapacitates the target and refreshes a portion of the duration and durability of the Incapacitate every 1 sec you maintain it.",
@@ -22036,7 +22089,9 @@
       "Incapacitate"
     ],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Magic"
     ],
@@ -22295,7 +22350,7 @@
     "framework_id": "Sorcery",
     "name": "Sigils of Ebon Weakness",
     "tier": 1,
-    "power_type": "CROWD_CONTROL",
+    "power_type": "DEBUFF",
     "advantages": [
       1,
       2,
@@ -22516,7 +22571,7 @@
       "Targets foe",
       "50 feet"
     ],
-    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage by 50%. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec",
+    "tooltip": "Paralyzes the target for 12 sec. + Places the target in a shield, reducing all incoming damage by 50%. + If your target is immune to Hold effects, instead places them in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec",
     "apply_tag": [
       "Paralyze",
       "Shield (special)",
@@ -23899,7 +23954,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Slashing"
     ],
@@ -25095,7 +25152,9 @@
       "Incapacitate"
     ],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Toxic"
     ],
@@ -25145,7 +25204,9 @@
     "synergy_tag": [
       "Poisons"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Toxic"
     ],
@@ -32671,7 +32732,9 @@
     "synergy_tag": [
       "Hard Frost"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Cold"
     ],
@@ -32949,7 +33012,9 @@
       "Deafening",
       "Disorient"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Sonic"
     ],
@@ -33503,7 +33568,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Toxic"
     ],
@@ -34072,7 +34139,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Dimensional"
     ],
@@ -34499,7 +34568,7 @@
     "tick_rate": 1,
     "cooldown": 120,
     "range_tags": [
-      "Targets foe that is not destructible",
+      "Targets non-destructible foe",
       "50 feet"
     ],
     "tooltip": "Deals 382 Toxic Damage every 1 sec. + 25% chance on each hit to apply Deadly Poison to your target. + Heals up to 5 allies around you in a 15ft sphere for +324 Health Points every 1 sec for 9 sec. + After maintaining this power for 1 sec, it Incapacitates the target and refreshes a portion of the duration and durability of the Incapacitate every 1 sec you maintain it. + Deadly Poison deals 31 Toxic Damage every 1 sec for 16 sec and stacks up to 5 times.",
@@ -34513,7 +34582,8 @@
     "synergy_tag": [],
     "filter_tag": [
       "Active Heal",
-      "Team Heal"
+      "Team Heal",
+      "Crowd Control"
     ],
     "damage_type": [
       "Toxic"
@@ -35007,7 +35077,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Crushing"
     ],
@@ -35766,7 +35838,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Particle",
       "Crushing"
@@ -36228,7 +36302,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Slashing"
     ],
@@ -36454,7 +36530,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Ego"
     ],
@@ -36792,7 +36870,9 @@
     "synergy_tag": [
       "Ice Cage"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Cold"
     ],
@@ -37018,7 +37098,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Ego"
     ],
@@ -38060,7 +38142,8 @@
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [
-      "Life Drain"
+      "Life Drain",
+      "Crowd Control"
     ],
     "damage_type": [
       "Magic"
@@ -39032,7 +39115,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [
       "Electrical"
     ],

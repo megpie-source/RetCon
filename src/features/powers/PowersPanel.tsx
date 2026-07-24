@@ -551,18 +551,32 @@ function isDebugMode() {
 
 type SearchPrefix =
   | "activation"
+  | "adv"
+  | "apply"
   | "damage"
+  | "filter"
+  | "name"
   | "range"
-  | "scale"
+  | "refresh"
+  | "source"
+  | "stat"
+  | "synergy"
   | "tag"
   | "type";
 
 type ParsedPowerSearch = {
   activationQueries: string[];
+  advQueries: string[];
+  applyQueries: string[];
   damageQueries: string[];
+  filterQueries: string[];
+  nameQueries: string[];
   normalQuery: string;
   rangeQueries: string[];
-  scaleQueries: string[];
+  refreshQueries: string[];
+  sourceQueries: string[];
+  statQueries: string[];
+  synergyQueries: string[];
   tagQueries: string[];
   typeQueries: string[];
 };
@@ -571,15 +585,22 @@ function parsePowerSearch(search: string): ParsedPowerSearch {
   const trimmedSearch = search.trim();
   const parsedSearch: ParsedPowerSearch = {
     activationQueries: [],
+    advQueries: [],
+    applyQueries: [],
     damageQueries: [],
+    filterQueries: [],
+    nameQueries: [],
     normalQuery: "",
     rangeQueries: [],
-    scaleQueries: [],
+    refreshQueries: [],
+    sourceQueries: [],
+    statQueries: [],
+    synergyQueries: [],
     tagQueries: [],
     typeQueries: [],
   };
   const prefixRegex =
-    /\b(activation|damage|range|scale|tag|type)\s*:/giu;
+    /\b(activation|adv|apply|damage|filter|name|range|refresh|source|stat|synergy|tag|type)\s*:/giu;
   const matches = [...trimmedSearch.matchAll(prefixRegex)];
 
   if (matches.length === 0) {
@@ -611,8 +632,28 @@ function parsePowerSearch(search: string): ParsedPowerSearch {
       return;
     }
 
+    if (prefix === "adv") {
+      parsedSearch.advQueries.push(query);
+      return;
+    }
+
+    if (prefix === "apply") {
+      parsedSearch.applyQueries.push(query);
+      return;
+    }
+
     if (prefix === "damage") {
       parsedSearch.damageQueries.push(query);
+      return;
+    }
+
+    if (prefix === "filter") {
+      parsedSearch.filterQueries.push(query);
+      return;
+    }
+
+    if (prefix === "name") {
+      parsedSearch.nameQueries.push(query);
       return;
     }
 
@@ -621,8 +662,23 @@ function parsePowerSearch(search: string): ParsedPowerSearch {
       return;
     }
 
-    if (prefix === "scale") {
-      parsedSearch.scaleQueries.push(query);
+    if (prefix === "refresh") {
+      parsedSearch.refreshQueries.push(query);
+      return;
+    }
+
+    if (prefix === "source") {
+      parsedSearch.sourceQueries.push(query);
+      return;
+    }
+
+    if (prefix === "stat") {
+      parsedSearch.statQueries.push(query);
+      return;
+    }
+
+    if (prefix === "synergy") {
+      parsedSearch.synergyQueries.push(query);
       return;
     }
 
@@ -641,9 +697,16 @@ function hasParsedPowerSearch(parsedSearch: ParsedPowerSearch) {
   return (
     Boolean(parsedSearch.normalQuery) ||
     parsedSearch.activationQueries.some(Boolean) ||
+    parsedSearch.advQueries.some(Boolean) ||
+    parsedSearch.applyQueries.some(Boolean) ||
     parsedSearch.damageQueries.some(Boolean) ||
+    parsedSearch.filterQueries.some(Boolean) ||
+    parsedSearch.nameQueries.some(Boolean) ||
     parsedSearch.rangeQueries.some(Boolean) ||
-    parsedSearch.scaleQueries.some(Boolean) ||
+    parsedSearch.refreshQueries.some(Boolean) ||
+    parsedSearch.sourceQueries.some(Boolean) ||
+    parsedSearch.statQueries.some(Boolean) ||
+    parsedSearch.synergyQueries.some(Boolean) ||
     parsedSearch.tagQueries.some(Boolean) ||
     parsedSearch.typeQueries.some(Boolean)
   );
@@ -663,10 +726,20 @@ function mergeParsedPowerSearches(parsedSearches: ParsedPowerSearch[]) {
         ...mergedSearch.activationQueries,
         ...parsedSearch.activationQueries,
       ],
+      advQueries: [...mergedSearch.advQueries, ...parsedSearch.advQueries],
+      applyQueries: [
+        ...mergedSearch.applyQueries,
+        ...parsedSearch.applyQueries,
+      ],
       damageQueries: [
         ...mergedSearch.damageQueries,
         ...parsedSearch.damageQueries,
       ],
+      filterQueries: [
+        ...mergedSearch.filterQueries,
+        ...parsedSearch.filterQueries,
+      ],
+      nameQueries: [...mergedSearch.nameQueries, ...parsedSearch.nameQueries],
       normalQuery: [
         mergedSearch.normalQuery,
         parsedSearch.normalQuery,
@@ -677,19 +750,38 @@ function mergeParsedPowerSearches(parsedSearches: ParsedPowerSearch[]) {
         ...mergedSearch.rangeQueries,
         ...parsedSearch.rangeQueries,
       ],
-      scaleQueries: [
-        ...mergedSearch.scaleQueries,
-        ...parsedSearch.scaleQueries,
+      refreshQueries: [
+        ...mergedSearch.refreshQueries,
+        ...parsedSearch.refreshQueries,
+      ],
+      sourceQueries: [
+        ...mergedSearch.sourceQueries,
+        ...parsedSearch.sourceQueries,
+      ],
+      statQueries: [
+        ...mergedSearch.statQueries,
+        ...parsedSearch.statQueries,
+      ],
+      synergyQueries: [
+        ...mergedSearch.synergyQueries,
+        ...parsedSearch.synergyQueries,
       ],
       tagQueries: [...mergedSearch.tagQueries, ...parsedSearch.tagQueries],
       typeQueries: [...mergedSearch.typeQueries, ...parsedSearch.typeQueries],
     }),
     {
       activationQueries: [],
+      advQueries: [],
+      applyQueries: [],
       damageQueries: [],
+      filterQueries: [],
+      nameQueries: [],
       normalQuery: "",
       rangeQueries: [],
-      scaleQueries: [],
+      refreshQueries: [],
+      sourceQueries: [],
+      statQueries: [],
+      synergyQueries: [],
       tagQueries: [],
       typeQueries: [],
     },
@@ -773,15 +865,25 @@ export function PowersPanel({
     () => getControlTypesFromSearch(search),
     [search],
   );
-  const forceAdvancedPowerTooltip = searchInAdvantages;
+  const hasAdvantagePrefixSearch = parsedSearch.advQueries.some(Boolean);
+  const forceAdvancedPowerTooltip = searchInAdvantages || hasAdvantagePrefixSearch;
   const getHighlightQueries = (query: string) => {
     const effectGroupTags = getEffectGroupTags(query);
 
     return effectGroupTags.length > 0 ? effectGroupTags : [query];
   };
   const advantageHighlightQueries = [
+    ...parsedSearch.advQueries.flatMap(getHighlightQueries),
     ...(searchInAdvantages
       ? parsedSearch.tagQueries.flatMap(getHighlightQueries)
+      : []),
+    ...(searchInAdvantages
+      ? [
+          ...parsedSearch.applyQueries,
+          ...parsedSearch.filterQueries,
+          ...parsedSearch.refreshQueries,
+          ...parsedSearch.synergyQueries,
+        ].flatMap(getHighlightQueries)
       : []),
     ...(searchInAdvantages
       ? parsedSearchClauses.flatMap((searchClause) =>
@@ -1071,6 +1173,65 @@ export function PowersPanel({
       );
     }
 
+    function toSearchValues(value: string[] | string | number | null | undefined) {
+      if (value === null || value === undefined) {
+        return [];
+      }
+
+      return Array.isArray(value) ? value.map(String) : [String(value)];
+    }
+
+    function toTagValues(value: string[] | string | null | undefined) {
+      return toSearchValues(value)
+        .flatMap((tag) => tag.split(";"))
+        .map((tag) => tag.trim())
+        .filter(Boolean);
+    }
+
+    function getTagColumnValues(
+      source: Power | Advantage,
+      column: "apply" | "filter" | "refresh" | "synergy",
+    ) {
+      if (column === "apply") {
+        return toTagValues(source.apply_tag);
+      }
+
+      if (column === "refresh") {
+        return toTagValues(source.refresh_tag);
+      }
+
+      if (column === "synergy") {
+        return toTagValues(source.synergy_tag);
+      }
+
+      return toTagValues(source.filter_tag);
+    }
+
+    function matchesTextValuesSearch(
+      values: Array<string | number | null | undefined>,
+      query: string,
+    ) {
+      const normalizedQuery = normalizeStrictSearchText(query);
+
+      if (!normalizedQuery) {
+        return true;
+      }
+
+      return normalizeStrictSearchText(
+        values
+          .flatMap((value) => toSearchValues(value))
+          .join(" "),
+      ).includes(normalizedQuery);
+    }
+
+    function matchesNameSearch(power: Power, query: string) {
+      return matchesTextValuesSearch([power.name], query);
+    }
+
+    function matchesSourceSearch(power: Power, query: string) {
+      return matchesTextValuesSearch(toSearchValues(power.source), query);
+    }
+
     function matchesTagSearch(power: Power, query: string) {
       const normalizedTagSearch = normalizeStrictSearchText(query);
 
@@ -1103,6 +1264,79 @@ export function PowersPanel({
             : "",
         ).includes(
           normalizedTagSearch,
+        );
+      });
+    }
+
+    function matchesTagColumnSearch(
+      power: Power,
+      query: string,
+      column: "apply" | "filter" | "refresh" | "synergy",
+    ) {
+      const normalizedTagSearch = normalizeStrictSearchText(query);
+
+      if (!normalizedTagSearch) {
+        return true;
+      }
+
+      const powerTags = getTagColumnValues(power, column);
+      const matchesPowerTags =
+        searchInPowers &&
+        (normalizeStrictSearchText(powerTags.join(" ")).includes(
+          normalizedTagSearch,
+        ) ||
+          matchesEffectGroupSearch(powerTags, query));
+
+      if (matchesPowerTags) {
+        return true;
+      }
+
+      if (!searchInAdvantages) {
+        return false;
+      }
+
+      return power.advantages.some((advantageId) => {
+        const advantage = advantagesById.get(advantageId);
+
+        if (!advantage) {
+          return false;
+        }
+
+        const advantageTags = getTagColumnValues(advantage, column);
+
+        return (
+          normalizeStrictSearchText(advantageTags.join(" ")).includes(
+            normalizedTagSearch,
+          ) ||
+          matchesEffectGroupSearch(advantageTags, query)
+        );
+      });
+    }
+
+    function matchesAdvantagePrefixSearch(power: Power, query: string) {
+      const normalizedQuery = normalizeSearchText(query);
+
+      if (!normalizedQuery) {
+        return true;
+      }
+
+      return power.advantages.some((advantageId) => {
+        const advantage = advantagesById.get(advantageId);
+
+        if (!advantage) {
+          return false;
+        }
+
+        const advantageTags = getSearchTags(advantage);
+
+        return (
+          normalizeSearchText(advantage.name).includes(normalizedQuery) ||
+          matchesTagValuesSearch(advantageTags, normalizedQuery) ||
+          matchesEffectGroupSearch(
+            getAdvantageDamageTypes(advantage),
+            normalizedQuery,
+          ) ||
+          normalizeSearchText(advantage.tooltip).includes(normalizedQuery)
         );
       });
     }
@@ -1195,6 +1429,22 @@ export function PowersPanel({
       }
 
       if (
+        searchClause.advQueries.some(
+          (query) => query && !matchesAdvantagePrefixSearch(power, query),
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        searchClause.applyQueries.some(
+          (query) => query && !matchesTagColumnSearch(power, query, "apply"),
+        )
+      ) {
+        return false;
+      }
+
+      if (
         searchClause.damageQueries.some(
           (query) => query && !matchesDamageSearch(power, query),
         )
@@ -1211,8 +1461,48 @@ export function PowersPanel({
       }
 
       if (
-        searchClause.scaleQueries.some(
+        searchClause.filterQueries.some(
+          (query) => query && !matchesTagColumnSearch(power, query, "filter"),
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        searchClause.nameQueries.some(
+          (query) => query && !matchesNameSearch(power, query),
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        searchClause.statQueries.some(
           (query) => query && !matchesScalingStatSearch(power, query),
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        searchClause.refreshQueries.some(
+          (query) => query && !matchesTagColumnSearch(power, query, "refresh"),
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        searchClause.sourceQueries.some(
+          (query) => query && !matchesSourceSearch(power, query),
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        searchClause.synergyQueries.some(
+          (query) => query && !matchesTagColumnSearch(power, query, "synergy"),
         )
       ) {
         return false;
@@ -2210,12 +2500,12 @@ export function PowersPanel({
           </div>
 
           <label className="search-filter-panel__field search-filter-panel__field--type">
-            <span className="search-filter-panel__label">Power type</span>
+            <span className="search-filter-panel__label">Function</span>
             <select
               value={selectedPowerRoleFilter}
               onChange={(event) => setSelectedPowerRoleFilter(event.target.value)}
             >
-              <option value="">Any type</option>
+              <option value="">Any function</option>
               {powerRoleFilterOptions.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.label}
@@ -2531,7 +2821,7 @@ export function PowersPanel({
                             ? "power-choice power-choice--selected"
                             : "power-choice"
                         }
-                        disabled={!canAdd}
+                        disabled={!canAdd && !selected}
                         key={power.power_id}
                         onClick={() =>
                           onAddPower(

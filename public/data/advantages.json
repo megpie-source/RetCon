@@ -161,7 +161,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -197,7 +199,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -537,7 +541,9 @@
     "synergy_tag": [
       "Negative Ions"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -1377,7 +1383,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -1729,7 +1737,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -2275,7 +2285,9 @@
     "synergy_tag": [
       "Ego Leech"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -3075,7 +3087,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -3177,7 +3191,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -4126,7 +4142,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -4143,7 +4161,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -4502,7 +4522,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -4800,7 +4822,7 @@
     "advantage_id": 287,
     "name": "Horrifying Shadows",
     "points_cost": 2,
-    "tooltip": "When fully maintained, briefly all affected targets for 2 sec.",
+    "tooltip": "When fully maintained, Stuns all affected targets for 2 sec.",
     "apply_tag": [
       "Stun"
     ],
@@ -5197,7 +5219,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -5233,7 +5257,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -5335,7 +5361,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -5930,7 +5958,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -7093,7 +7123,9 @@
       "Bleed",
       "Deadly Poison"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -7827,7 +7859,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8014,7 +8048,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8254,7 +8290,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8271,7 +8309,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8339,7 +8379,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8812,7 +8854,9 @@
     "synergy_tag": [
       "Stagger"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8983,7 +9027,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -9988,7 +10034,9 @@
     "synergy_tag": [
       "Jinxed"
     ],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -10239,7 +10287,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -10654,7 +10704,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -11153,7 +11205,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -11988,7 +12042,9 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,

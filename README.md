@@ -38,10 +38,10 @@ Special thanks to Aesica for the colossal work accomplished on HeroCreator, and 
 Please, visit and support the following community projects:
 
 - [PowerHouse](https://woof-wolf.github.io/powerhouse/index.html) by BehemothKing
-- [Winds Hero Builder](https://vtwind.github.io/HeroBuilder/) by Winds
 
 Older community projects:
 
+- [Winds Hero Builder](https://vtwind.github.io/HeroBuilder/) by Winds
 - [HeroCreator](https://aesica.net/co/herocreator.htm) by Aesica
 - [PowerHouse](http://powerhouse.nullware.com/) by Kyle W. T. Sherman
 - championBuilder by Moritz Hartmeier, later maintained by Roxstar

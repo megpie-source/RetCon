@@ -45,14 +45,7 @@ const powerTypeRoleRules: Array<[string, string[]]> = [
 ];
 
 const powerTypeRoleMap = new Map(powerTypeRoleRules);
-const crowdControlTags = new Set([
-  "confuse",
-  "incapacitate",
-  "paralyze",
-  "root",
-  "sleep",
-  "stun",
-]);
+const crowdControlFilterTags = new Set(["crowd control"]);
 const buffDebuffTags = new Set(["static field"]);
 const activeHealShieldTags = new Set(["active heal", "life drain", "team heal"]);
 const passiveHealShieldTags = new Set(["passive heal"]);
@@ -79,7 +72,7 @@ const powerRoleOrder = [
 const powerRoleAdvantageHighlightQueries: Record<string, string[]> = {
   "Active Heal": [...activeHealShieldTags],
   "Buff / Debuff": [...buffDebuffTags],
-  "Crowd Control": [...crowdControlTags],
+  "Crowd Control": ["Crowd Control"],
   "Passive Heal": [...passiveHealShieldTags],
   Shield: ["Direct Shield", "Shield", "Shield (special)"],
 };
@@ -172,7 +165,6 @@ export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
     powerTypeRoleMap.get(normalizedPowerType)?.forEach((role) => roles.add(role));
   }
 
-  const powerTags = getSearchTags(power);
   const powerApplyTags = getTagValues(power.apply_tag);
   const advantageTags = getAdvantageTags(power, context.advantagesById);
   const advantageApplyTags = getAdvantageApplyTags(
@@ -180,7 +172,12 @@ export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
     context.advantagesById,
   );
 
-  if (includePowerTags && hasAnyNormalizedValue(powerTags, crowdControlTags)) {
+  const powerTags = getSearchTags(power);
+
+  if (
+    includePowerTags &&
+    hasAnyNormalizedValue(powerTags, crowdControlFilterTags)
+  ) {
     roles.add("Crowd Control");
   }
 
@@ -219,6 +216,13 @@ export function getPowerRoles(power: Power, context: PowerRoleContext = {}) {
     hasPassiveHealShieldTag(advantageTags)
   ) {
     roles.add("Passive Heal");
+  }
+
+  if (
+    includeAdvantageTags &&
+    hasAnyNormalizedValue(advantageTags, crowdControlFilterTags)
+  ) {
+    roles.add("Crowd Control");
   }
 
   if (

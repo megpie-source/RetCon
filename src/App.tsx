@@ -866,6 +866,8 @@ function App() {
       null;
 
     if (existingSlot && selectedPowerTargetBuildSlot === null) {
+      removePower(existingSlot.slot);
+      setBuildCheckPowerFilter(null);
       return;
     }
 
@@ -930,6 +932,7 @@ function App() {
       null;
 
     if (existingSlot && selectedTravelPowerTargetBuildSlot === null) {
+      clearTravelPowerSlot(existingSlot.slot);
       return;
     }
 
@@ -956,6 +959,8 @@ function App() {
       ) ?? null;
 
     if (existingSlot && selectedPowerVariantTargetBuildSlot === null) {
+      clearPowerVariantSlot(existingSlot.slot);
+      setBuildCheckPowerFilter(null);
       return;
     }
 
@@ -982,6 +987,7 @@ function App() {
       null;
 
     if (existingSlot && selectedDeviceTargetBuildSlot === null) {
+      clearDeviceSlot(existingSlot.slot);
       return;
     }
 

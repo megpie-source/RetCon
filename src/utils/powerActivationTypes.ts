@@ -7,6 +7,7 @@ export const powerActivationTypeOptions = [
   "Combo",
   "Maintain",
   "Toggle",
+  "Passive",
 ] as const;
 
 export type PowerActivationTypeFilter =
