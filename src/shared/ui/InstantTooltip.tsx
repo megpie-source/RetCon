@@ -408,10 +408,13 @@ export function InstantTooltip() {
 
   const advantages =
     tooltip.content.kind === "power" ? tooltip.content.data.advantages ?? [] : [];
+  const hasPowerAdvantagePanel =
+    tooltip.content.kind === "power" &&
+    (advantages.length > 0 || tooltip.content.data.hasHiddenRankAdvantages);
   const shouldShowAdvancedPowerTooltip =
     showAdvancedPowerTooltip || tooltip.forceAdvancedPowerTooltip;
   const hasAdvantagePanel =
-    shouldShowAdvancedPowerTooltip && advantages.length > 0;
+    shouldShowAdvancedPowerTooltip && hasPowerAdvantagePanel;
 
   return (
     <div

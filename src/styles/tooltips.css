@@ -460,6 +460,12 @@
   text-transform: uppercase;
 }
 
+.power-tooltip-advantages__empty {
+  color: #8f9dbd;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .power-tooltip-advantages__list {
   display: grid;
   gap: 8px;

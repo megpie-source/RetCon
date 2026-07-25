@@ -2485,13 +2485,17 @@ export function PowersPanel({
   }
 
   function canPinPowerTooltip(power: Power) {
-    return (
-      (getPowerTooltipData(
-        power,
-        advantagesById,
-        powersById,
-        damageModsByFramework,
-      )?.advantages.length ?? 0) > 0
+    const tooltipData = getPowerTooltipData(
+      power,
+      advantagesById,
+      powersById,
+      damageModsByFramework,
+    );
+
+    return Boolean(
+      tooltipData &&
+        (tooltipData.advantages.length > 0 ||
+          tooltipData.hasHiddenRankAdvantages),
     );
   }
 

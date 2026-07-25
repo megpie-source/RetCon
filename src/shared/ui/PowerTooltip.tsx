@@ -25,6 +25,8 @@ export function PowerTooltip({
     .join(" - ");
   const headerMeta = [tooltip.framework, tooltip.tier].filter(Boolean).join(" - ");
   const advantages = tooltip.advantages ?? [];
+  const hasAdvantagePanel =
+    advantages.length > 0 || tooltip.hasHiddenRankAdvantages;
   const damageMods = tooltip.damageMods ?? [];
   const parentPowers = tooltip.parentPowers ?? [];
   const sources = tooltip.sources ?? [];
@@ -167,43 +169,53 @@ export function PowerTooltip({
           ]}
         />
 
-        {!showAdvantages && advantages.length > 0 ? (
+        {!showAdvantages && hasAdvantagePanel ? (
           <div className="power-tooltip__hint">
             {advantageHintText}
           </div>
         ) : null}
       </div>
 
-      {showAdvantages && advantages.length > 0 ? (
+      {showAdvantages && hasAdvantagePanel ? (
         <aside className="power-tooltip-advantages">
           <strong className="power-tooltip-advantages__title">Advantages</strong>
-          <div className="power-tooltip-advantages__list">
-            {advantages.map((advantage) => (
-              <section
-                className={
-                  isAdvantageHighlighted(advantage)
-                    ? "power-tooltip-advantages__item power-tooltip-advantages__item--highlighted"
-                    : "power-tooltip-advantages__item"
-                }
-                key={advantage.id}
-              >
-                <div className="power-tooltip-advantages__header">
-                  <strong>{advantage.name}</strong>
-                  {advantage.pointsCost !== null ? (
-                    <span>{advantage.pointsCost} pt</span>
-                  ) : null}
-                </div>
-                <TooltipTags tags={advantage.tags} />
-                {splitTooltipTextLines(advantage.tooltip).length > 0 ? (
-                  <div className="power-tooltip-advantages__text">
-                    {splitTooltipTextLines(advantage.tooltip).map((line, index) => (
-                      <span key={`${advantage.id}-${line}-${index}`}>{line}</span>
-                    ))}
+          {advantages.length > 0 ? (
+            <div className="power-tooltip-advantages__list">
+              {advantages.map((advantage) => (
+                <section
+                  className={
+                    isAdvantageHighlighted(advantage)
+                      ? "power-tooltip-advantages__item power-tooltip-advantages__item--highlighted"
+                      : "power-tooltip-advantages__item"
+                  }
+                  key={advantage.id}
+                >
+                  <div className="power-tooltip-advantages__header">
+                    <strong>{advantage.name}</strong>
+                    {advantage.pointsCost !== null ? (
+                      <span>{advantage.pointsCost} pt</span>
+                    ) : null}
                   </div>
-                ) : null}
-              </section>
-            ))}
-          </div>
+                  <TooltipTags tags={advantage.tags} />
+                  {splitTooltipTextLines(advantage.tooltip).length > 0 ? (
+                    <div className="power-tooltip-advantages__text">
+                      {splitTooltipTextLines(advantage.tooltip).map(
+                        (line, index) => (
+                          <span key={`${advantage.id}-${line}-${index}`}>
+                            {line}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                  ) : null}
+                </section>
+              ))}
+            </div>
+          ) : (
+            <span className="power-tooltip-advantages__empty">
+              No special advantages.
+            </span>
+          )}
         </aside>
       ) : null}
     </div>

@@ -39,6 +39,7 @@ export type PowerTooltipData = {
   parentPowers: string[];
   sources: string[];
   advantages: AdvantageTooltipData[];
+  hasHiddenRankAdvantages: boolean;
   fallbackText: string | null;
 };
 
@@ -142,14 +143,23 @@ function getAdvantageTooltipData(
   advantagesById: ReadonlyMap<number, Advantage> | null | undefined,
 ) {
   if (!advantagesById) {
-    return [];
+    return {
+      advantages: [],
+      hasHiddenRankAdvantages: false,
+    };
   }
 
-  return power.advantages
+  const isRankAdvantage = (advantage: Advantage) =>
+    advantage.name === "Rank 2" || advantage.name === "Rank 3";
+  const powerAdvantages = power.advantages
     .map((advantageId) => advantagesById.get(advantageId))
-    .filter((advantage): advantage is Advantage => Boolean(advantage))
-    .filter((advantage) => advantage.name !== "Rank 2" && advantage.name !== "Rank 3")
-    .map((advantage) => ({
+    .filter((advantage): advantage is Advantage => Boolean(advantage));
+  const visibleAdvantages = powerAdvantages.filter(
+    (advantage) => !isRankAdvantage(advantage),
+  );
+
+  return {
+    advantages: visibleAdvantages.map((advantage) => ({
       id: advantage.advantage_id,
       name: advantage.name,
       pointsCost: advantage.points_cost,
@@ -164,7 +174,10 @@ function getAdvantageTooltipData(
       damageTypes: getAdvantageDamageTypes(advantage),
       refreshTags: getSearchTags(advantage, ["refresh"]),
       synergyTags: getSearchTags(advantage, ["synergy"]),
-    }));
+    })),
+    hasHiddenRankAdvantages:
+      visibleAdvantages.length === 0 && powerAdvantages.some(isRankAdvantage),
+  };
 }
 
 function splitSentences(text: string) {
@@ -294,6 +307,7 @@ export function getPowerTooltipData(
     damageModsByFramework,
   );
   const sources = splitSourceValues(power.source);
+  const advantageTooltipData = getAdvantageTooltipData(power, advantagesById);
 
   return {
     title: formatTitle(power),
@@ -308,7 +322,8 @@ export function getPowerTooltipData(
     damageMods,
     parentPowers,
     sources,
-    advantages: getAdvantageTooltipData(power, advantagesById),
+    advantages: advantageTooltipData.advantages,
+    hasHiddenRankAdvantages: advantageTooltipData.hasHiddenRankAdvantages,
     fallbackText: tooltipText || null,
   };
 }
