@@ -5,11 +5,14 @@ import {
   useState,
   type CSSProperties,
   type MouseEvent,
+  type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from "react";
+import { createPortal } from "react-dom";
 import type { Advantage } from "@/types/advantages";
 import type { BuildSlot } from "@/types/builds";
 import type { Power } from "@/types/powers";
+import { PowerTooltip } from "@/shared/ui/PowerTooltip";
 import {
   registerLazyTooltipProvider,
   unregisterLazyTooltipProvider,
@@ -20,7 +23,10 @@ import {
   getPowerType,
 } from "@/shared/utils/powerTypes";
 import { getPowerTooltipText } from "@/shared/utils/powerText";
-import { getPowerTooltipData } from "@/shared/utils/powerTooltip";
+import {
+  getPowerTooltipData,
+  type PowerTooltipData,
+} from "@/shared/utils/powerTooltip";
 import { getEffectGroupTags } from "@/utils/effectGroups";
 import { getFrameworkGlossaryTooltipAttribute } from "@/utils/frameworkGlossary";
 import {
@@ -156,6 +162,179 @@ const scalingStatFilterOptions = [
   "REC",
   "END",
 ];
+const maxPinnedPowerTooltips = 2;
+const pinnedPowerTooltipMargin = 12;
+const pinnedPowerTooltipFallbackWidth = 430;
+const pinnedPowerTooltipFallbackHeight = 280;
+
+type PinnedPowerTooltip = {
+  powerId: number;
+  x: number;
+  y: number;
+  zIndex: number;
+};
+
+type PinnedPowerTooltipWindowProps = {
+  tooltip: PowerTooltipData;
+  x: number;
+  y: number;
+  zIndex: number;
+  onClose: () => void;
+  onFocus: () => void;
+  onMove: (x: number, y: number) => void;
+};
+
+function clampPinnedPowerTooltipPosition(
+  x: number,
+  y: number,
+  element?: HTMLElement | null,
+) {
+  const width =
+    element?.getBoundingClientRect().width ?? pinnedPowerTooltipFallbackWidth;
+  const height =
+    element?.getBoundingClientRect().height ?? pinnedPowerTooltipFallbackHeight;
+  const maxX = Math.max(
+    pinnedPowerTooltipMargin,
+    window.innerWidth - width - pinnedPowerTooltipMargin,
+  );
+  const maxY = Math.max(
+    pinnedPowerTooltipMargin,
+    window.innerHeight - height - pinnedPowerTooltipMargin,
+  );
+
+  return {
+    x: Math.min(Math.max(x, pinnedPowerTooltipMargin), maxX),
+    y: Math.min(Math.max(y, pinnedPowerTooltipMargin), maxY),
+  };
+}
+
+function getPinnedPowerTooltipStartPosition(
+  event: MouseEvent<HTMLButtonElement>,
+) {
+  const activeTooltip = document.querySelector<HTMLElement>(".instant-tooltip");
+  const activeTooltipRect = activeTooltip?.getBoundingClientRect();
+
+  return clampPinnedPowerTooltipPosition(
+    activeTooltipRect?.left ?? event.clientX + 14,
+    activeTooltipRect?.top ?? event.clientY + 14,
+    activeTooltip,
+  );
+}
+
+function PinnedPowerTooltipWindow({
+  tooltip,
+  x,
+  y,
+  zIndex,
+  onClose,
+  onFocus,
+  onMove,
+}: PinnedPowerTooltipWindowProps) {
+  const windowRef = useRef<HTMLDivElement | null>(null);
+  const dragStateRef = useRef<{
+    offsetX: number;
+    offsetY: number;
+    pointerId: number;
+    x: number;
+    y: number;
+  } | null>(null);
+
+  useEffect(() => {
+    const tooltipWindow = windowRef.current;
+
+    if (!tooltipWindow || dragStateRef.current) {
+      return;
+    }
+
+    tooltipWindow.style.left = `${x}px`;
+    tooltipWindow.style.top = `${y}px`;
+  }, [x, y]);
+
+  function handlePointerDown(event: ReactPointerEvent<HTMLDivElement>) {
+    if (event.button !== 0) {
+      return;
+    }
+
+    const rect = windowRef.current?.getBoundingClientRect();
+
+    dragStateRef.current = {
+      offsetX: event.clientX - (rect?.left ?? x),
+      offsetY: event.clientY - (rect?.top ?? y),
+      pointerId: event.pointerId,
+      x: rect?.left ?? x,
+      y: rect?.top ?? y,
+    };
+
+    onFocus();
+    event.currentTarget.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  }
+
+  function handlePointerMove(event: ReactPointerEvent<HTMLDivElement>) {
+    const dragState = dragStateRef.current;
+
+    if (!dragState || dragState.pointerId !== event.pointerId) {
+      return;
+    }
+
+    const nextPosition = clampPinnedPowerTooltipPosition(
+      event.clientX - dragState.offsetX,
+      event.clientY - dragState.offsetY,
+      windowRef.current,
+    );
+
+    dragState.x = nextPosition.x;
+    dragState.y = nextPosition.y;
+
+    if (windowRef.current) {
+      windowRef.current.style.left = `${nextPosition.x}px`;
+      windowRef.current.style.top = `${nextPosition.y}px`;
+    }
+  }
+
+  function stopDragging(event: ReactPointerEvent<HTMLDivElement>) {
+    const dragState = dragStateRef.current;
+
+    if (dragState?.pointerId === event.pointerId) {
+      dragStateRef.current = null;
+      onMove(dragState.x, dragState.y);
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  }
+
+  return (
+    <div
+      className="pinned-power-tooltip"
+      data-no-instant-tooltip
+      ref={windowRef}
+      style={{ left: x, top: y, zIndex }}
+    >
+      <div
+        className="pinned-power-tooltip__header"
+        onPointerCancel={stopDragging}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={stopDragging}
+      >
+        <strong>{tooltip.title}</strong>
+        <span>Drag to move</span>
+        <button
+          aria-label={`Close ${tooltip.title} pinned tooltip`}
+          className="dialog-close pinned-power-tooltip__close"
+          type="button"
+          onClick={onClose}
+          onPointerDown={(event) => event.stopPropagation()}
+        >
+          X
+        </button>
+      </div>
+
+      <div className="pinned-power-tooltip__body">
+        <PowerTooltip showAdvantages={false} tooltip={tooltip} />
+      </div>
+    </div>
+  );
+}
 
 type PowerSortOption =
   | ""
@@ -839,6 +1018,9 @@ export function PowersPanel({
   const [searchInAdvantages, setSearchInAdvantages] = useState(false);
   const [showAcquiredPowersOnly, setShowAcquiredPowersOnly] = useState(false);
   const [closedSections, setClosedSections] = useState<string[]>([]);
+  const [pinnedPowerTooltips, setPinnedPowerTooltips] = useState<
+    PinnedPowerTooltip[]
+  >([]);
   const [
     handledEnergyBuilderPanelRequestVersion,
     setHandledEnergyBuilderPanelRequestVersion,
@@ -853,6 +1035,7 @@ export function PowersPanel({
   const frameworkStripRef = useRef<HTMLDivElement | null>(null);
   const damageTypeMenuRef = useRef<HTMLDivElement | null>(null);
   const scalingStatMenuRef = useRef<HTMLDivElement | null>(null);
+  const pinnedPowerTooltipZIndexRef = useRef(60);
   const parsedSearchClauses = useMemo(
     () => parsePowerSearchClauses(search),
     [search],
@@ -2151,6 +2334,115 @@ export function PowersPanel({
     });
   }
 
+  function getSelectedPowerDisplayFrameworkId(power: Power) {
+    return getPowerDisplayFrameworkId(
+      power,
+      selectedFrameworks?.find(
+        (frameworkId) =>
+          !isUtilityFrameworkFilter(frameworkId) &&
+          isPowerVisibleInSelectedFrameworks(power, [frameworkId]),
+      ) ?? null,
+    );
+  }
+
+  function bringPinnedPowerTooltipToFront(powerId: number) {
+    pinnedPowerTooltipZIndexRef.current += 1;
+    const zIndex = pinnedPowerTooltipZIndexRef.current;
+
+    setPinnedPowerTooltips((currentTooltips) =>
+      currentTooltips.map((tooltip) =>
+        tooltip.powerId === powerId ? { ...tooltip, zIndex } : tooltip,
+      ),
+    );
+  }
+
+  function canPinPowerTooltip(power: Power) {
+    return (
+      (getPowerTooltipData(
+        power,
+        advantagesById,
+        powersById,
+        damageModsByFramework,
+      )?.advantages.length ?? 0) > 0
+    );
+  }
+
+  function suppressCurrentPowerTooltipUntilPointerLeave(
+    element: HTMLButtonElement,
+  ) {
+    const activeTooltip = document.querySelector<HTMLElement>(".instant-tooltip");
+    activeTooltip?.setAttribute("data-pinned-suppressed", "true");
+
+    element.addEventListener(
+      "pointerleave",
+      () => activeTooltip?.removeAttribute("data-pinned-suppressed"),
+      { once: true },
+    );
+  }
+
+  function pinPowerTooltip(power: Power, event: MouseEvent<HTMLButtonElement>) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const position = getPinnedPowerTooltipStartPosition(event);
+    suppressCurrentPowerTooltipUntilPointerLeave(event.currentTarget);
+    pinnedPowerTooltipZIndexRef.current += 1;
+    const zIndex = pinnedPowerTooltipZIndexRef.current;
+
+    setPinnedPowerTooltips((currentTooltips) => {
+      const existingTooltip = currentTooltips.find(
+        (tooltip) => tooltip.powerId === power.power_id,
+      );
+
+      if (existingTooltip) {
+        return currentTooltips.map((tooltip) =>
+          tooltip.powerId === power.power_id
+            ? { ...tooltip, x: position.x, y: position.y, zIndex }
+            : tooltip,
+        );
+      }
+
+      return [
+        ...currentTooltips.slice(-(maxPinnedPowerTooltips - 1)),
+        {
+          powerId: power.power_id,
+          x: position.x,
+          y: position.y,
+          zIndex,
+        },
+      ];
+    });
+  }
+
+  function movePinnedPowerTooltip(powerId: number, x: number, y: number) {
+    setPinnedPowerTooltips((currentTooltips) =>
+      currentTooltips.map((tooltip) =>
+        tooltip.powerId === powerId ? { ...tooltip, x, y } : tooltip,
+      ),
+    );
+  }
+
+  function closePinnedPowerTooltip(powerId: number) {
+    setPinnedPowerTooltips((currentTooltips) =>
+      currentTooltips.filter((tooltip) => tooltip.powerId !== powerId),
+    );
+  }
+
+  function handlePowerChoiceClick(
+    power: Power,
+    event: MouseEvent<HTMLButtonElement>,
+  ) {
+    if (event.ctrlKey || event.metaKey) {
+      if (canPinPowerTooltip(power)) {
+        pinPowerTooltip(power, event);
+      }
+
+      return;
+    }
+
+    onAddPower(power, getSelectedPowerDisplayFrameworkId(power));
+  }
+
   function resetAdvancedFilters() {
     setSearch("");
     setSelectedPowerRoleFilter("");
@@ -2346,16 +2638,50 @@ export function PowersPanel({
     });
   }
 
+  const pinnedPowerTooltipWindows =
+    typeof document === "undefined"
+      ? null
+      : createPortal(
+          pinnedPowerTooltips.map((pinnedTooltip) => {
+            const power = powersById.get(pinnedTooltip.powerId);
+            const tooltipData = getPowerTooltipData(
+              power,
+              advantagesById,
+              powersById,
+              damageModsByFramework,
+            );
+
+            if (!power || !tooltipData) {
+              return null;
+            }
+
+            return (
+              <PinnedPowerTooltipWindow
+                key={pinnedTooltip.powerId}
+                tooltip={tooltipData}
+                x={pinnedTooltip.x}
+                y={pinnedTooltip.y}
+                zIndex={pinnedTooltip.zIndex}
+                onClose={() => closePinnedPowerTooltip(power.power_id)}
+                onFocus={() => bringPinnedPowerTooltipToFront(power.power_id)}
+                onMove={(x, y) => movePinnedPowerTooltip(power.power_id, x, y)}
+              />
+            );
+          }),
+          document.body,
+        );
+
   return (
-    <section
-      className="panel powers-panel"
-      ref={powersPanelRef}
-      style={
-        {
-          "--power-grid-columns": powerGridColumns,
-        } as CSSProperties
-      }
-    >
+    <>
+      <section
+        className="panel powers-panel"
+        ref={powersPanelRef}
+        style={
+          {
+            "--power-grid-columns": powerGridColumns,
+          } as CSSProperties
+        }
+      >
       <h2>
         <button
           className="panel-title-button"
@@ -2823,21 +3149,7 @@ export function PowersPanel({
                         }
                         disabled={!canAdd && !selected}
                         key={power.power_id}
-                        onClick={() =>
-                          onAddPower(
-                            power,
-                            getPowerDisplayFrameworkId(
-                              power,
-                              selectedFrameworks?.find(
-                                (frameworkId) =>
-                                  !isUtilityFrameworkFilter(frameworkId) &&
-                                  isPowerVisibleInSelectedFrameworks(power, [
-                                    frameworkId,
-                                  ]),
-                              ) ?? null,
-                            ),
-                          )
-                        }
+                        onClick={(event) => handlePowerChoiceClick(power, event)}
                       >
                         <SpriteIcon name={getPowerIconName(power)} size={34} />
                         <span
@@ -2876,6 +3188,9 @@ export function PowersPanel({
           );
         })}
       </div>
-    </section>
+      </section>
+
+      {pinnedPowerTooltipWindows}
+    </>
   );
 }

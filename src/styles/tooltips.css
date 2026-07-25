@@ -23,6 +23,79 @@
   max-width: min(830px, calc(100vw - 34px));
 }
 
+.instant-tooltip[data-pinned-suppressed="true"] {
+  display: none;
+}
+
+.pinned-power-tooltip {
+  position: fixed;
+  width: min(430px, calc(100vw - 24px));
+  overflow: hidden;
+  border: 1px solid #4c6ca7;
+  border-radius: 4px;
+  color: #dfe8ff;
+  background:
+    linear-gradient(180deg, rgba(24, 28, 38, 0.99), rgba(9, 11, 17, 0.99)),
+    #111;
+  box-shadow:
+    inset 0 0 0 1px rgba(129, 164, 255, 0.12),
+    0 14px 36px rgba(0, 0, 0, 0.66);
+  font-size: 13px;
+  line-height: 1.35;
+  will-change: left, top;
+}
+
+.pinned-power-tooltip__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content max-content;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px 7px 10px;
+  border-bottom: 1px solid rgba(150, 174, 224, 0.18);
+  background:
+    linear-gradient(180deg, rgba(24, 36, 68, 0.92), rgba(13, 17, 28, 0.94)),
+    rgba(12, 15, 22, 0.96);
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+}
+
+.pinned-power-tooltip__header strong {
+  overflow: hidden;
+  color: #f2f5ff;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pinned-power-tooltip__header span {
+  color: #7f8cab;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.pinned-power-tooltip__close {
+  width: 24px;
+  min-height: 22px;
+  height: 22px;
+  font-size: 12px;
+}
+
+.pinned-power-tooltip__body {
+  max-height: min(620px, calc(100vh - 82px));
+  overflow: auto;
+  padding: 8px 10px;
+}
+
+.pinned-power-tooltip .power-tooltip {
+  min-width: 0;
+  max-width: none;
+}
+
+.pinned-power-tooltip .power-tooltip__hint {
+  display: none;
+}
+
 .power-tooltip-shell {
   display: flex;
   align-items: flex-start;

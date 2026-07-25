@@ -167,7 +167,7 @@ export function PowerTooltip({
 
         {!showAdvantages && advantages.length > 0 ? (
           <div className="power-tooltip__hint">
-            Hold Shift to see advantages, and use mouse wheel to scroll
+            Hold Shift to see advantages, and use mouse wheel to scroll. Use Ctrl-click to pin that tooltip.
           </div>
         ) : null}
       </div>
