@@ -1,11 +1,13 @@
 import {
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
   type CSSProperties,
   type MouseEvent,
   type PointerEvent as ReactPointerEvent,
+  type WheelEvent as ReactWheelEvent,
   type ReactNode,
 } from "react";
 import { createPortal } from "react-dom";
@@ -168,6 +170,7 @@ const pinnedPowerTooltipFallbackWidth = 430;
 const pinnedPowerTooltipFallbackHeight = 280;
 
 type PinnedPowerTooltip = {
+  locked: boolean;
   powerId: number;
   x: number;
   y: number;
@@ -175,14 +178,44 @@ type PinnedPowerTooltip = {
 };
 
 type PinnedPowerTooltipWindowProps = {
+  advantageHighlightIds: number[];
+  advantageHighlightQueries: string[];
+  advantageHighlightTagColumns: TagSearchColumn[];
+  showAdvantages: boolean;
   tooltip: PowerTooltipData;
+  isLocked: boolean;
   x: number;
   y: number;
   zIndex: number;
   onClose: () => void;
   onFocus: () => void;
+  onToggleLock: () => void;
   onMove: (x: number, y: number) => void;
 };
+
+function keepPinnedPowerTooltipsWithinLimit(
+  tooltips: PinnedPowerTooltip[],
+) {
+  if (tooltips.length < maxPinnedPowerTooltips) {
+    return tooltips;
+  }
+
+  const hasLockedTooltip = tooltips.some((tooltip) => tooltip.locked);
+
+  if (!hasLockedTooltip) {
+    return tooltips.slice(-(maxPinnedPowerTooltips - 1));
+  }
+
+  const oldestUnlockedTooltip = tooltips.find((tooltip) => !tooltip.locked);
+
+  if (!oldestUnlockedTooltip) {
+    return tooltips.slice(-(maxPinnedPowerTooltips - 1));
+  }
+
+  return tooltips.filter(
+    (tooltip) => tooltip.powerId !== oldestUnlockedTooltip.powerId,
+  );
+}
 
 function clampPinnedPowerTooltipPosition(
   x: number,
@@ -222,15 +255,22 @@ function getPinnedPowerTooltipStartPosition(
 }
 
 function PinnedPowerTooltipWindow({
+  advantageHighlightIds,
+  advantageHighlightQueries,
+  advantageHighlightTagColumns,
+  showAdvantages,
   tooltip,
+  isLocked,
   x,
   y,
   zIndex,
   onClose,
   onFocus,
+  onToggleLock,
   onMove,
 }: PinnedPowerTooltipWindowProps) {
   const windowRef = useRef<HTMLDivElement | null>(null);
+  const onMoveRef = useRef(onMove);
   const dragStateRef = useRef<{
     offsetX: number;
     offsetY: number;
@@ -240,15 +280,25 @@ function PinnedPowerTooltipWindow({
   } | null>(null);
 
   useEffect(() => {
+    onMoveRef.current = onMove;
+  }, [onMove]);
+
+  useLayoutEffect(() => {
     const tooltipWindow = windowRef.current;
 
     if (!tooltipWindow || dragStateRef.current) {
       return;
     }
 
-    tooltipWindow.style.left = `${x}px`;
-    tooltipWindow.style.top = `${y}px`;
-  }, [x, y]);
+    const nextPosition = clampPinnedPowerTooltipPosition(x, y, tooltipWindow);
+
+    tooltipWindow.style.left = `${nextPosition.x}px`;
+    tooltipWindow.style.top = `${nextPosition.y}px`;
+
+    if (nextPosition.x !== x || nextPosition.y !== y) {
+      onMoveRef.current(nextPosition.x, nextPosition.y);
+    }
+  }, [showAdvantages, x, y]);
 
   function handlePointerDown(event: ReactPointerEvent<HTMLDivElement>) {
     if (event.button !== 0) {
@@ -302,10 +352,32 @@ function PinnedPowerTooltipWindow({
     }
   }
 
+  function handleWheel(event: ReactWheelEvent<HTMLDivElement>) {
+    if (!showAdvantages) {
+      return;
+    }
+
+    const advantagesPanel =
+      windowRef.current?.querySelector<HTMLElement>(".power-tooltip-advantages");
+
+    if (!advantagesPanel) {
+      return;
+    }
+
+    advantagesPanel.scrollTop += event.deltaY;
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
   return (
     <div
-      className="pinned-power-tooltip"
+      className={
+        showAdvantages
+          ? "pinned-power-tooltip pinned-power-tooltip--with-advantages"
+          : "pinned-power-tooltip"
+      }
       data-no-instant-tooltip
+      onWheel={handleWheel}
       ref={windowRef}
       style={{ left: x, top: y, zIndex }}
     >
@@ -316,8 +388,27 @@ function PinnedPowerTooltipWindow({
         onPointerMove={handlePointerMove}
         onPointerUp={stopDragging}
       >
-        <strong>{tooltip.title}</strong>
-        <span>Drag to move</span>
+        <button
+          aria-label={
+            isLocked
+              ? `Unlock ${tooltip.title} pinned tooltip`
+              : `Lock ${tooltip.title} pinned tooltip`
+          }
+          aria-pressed={isLocked}
+          data-allow-instant-tooltip
+          data-text-tooltip="Lock tooltip content"
+          className={
+            isLocked
+              ? "dialog-close pinned-power-tooltip__lock pinned-power-tooltip__lock--active"
+              : "dialog-close pinned-power-tooltip__lock"
+          }
+          type="button"
+          onClick={onToggleLock}
+          onPointerDown={(event) => event.stopPropagation()}
+        >
+          {isLocked ? "\u{1F512}" : "\u{1F513}"}
+        </button>
+
         <button
           aria-label={`Close ${tooltip.title} pinned tooltip`}
           className="dialog-close pinned-power-tooltip__close"
@@ -330,7 +421,14 @@ function PinnedPowerTooltipWindow({
       </div>
 
       <div className="pinned-power-tooltip__body">
-        <PowerTooltip showAdvantages={false} tooltip={tooltip} />
+        <PowerTooltip
+          advantageHighlightIds={advantageHighlightIds}
+          advantageHighlightQueries={advantageHighlightQueries}
+          advantageHighlightTagColumns={advantageHighlightTagColumns}
+          advantageHintText="Hold Shift to see advantages."
+          showAdvantages={showAdvantages}
+          tooltip={tooltip}
+        />
       </div>
     </div>
   );
@@ -1017,6 +1115,8 @@ export function PowersPanel({
   const [searchInPowers, setSearchInPowers] = useState(true);
   const [searchInAdvantages, setSearchInAdvantages] = useState(false);
   const [showAcquiredPowersOnly, setShowAcquiredPowersOnly] = useState(false);
+  const [showPinnedPowerTooltipAdvantages, setShowPinnedPowerTooltipAdvantages] =
+    useState(false);
   const [closedSections, setClosedSections] = useState<string[]>([]);
   const [pinnedPowerTooltips, setPinnedPowerTooltips] = useState<
     PinnedPowerTooltip[]
@@ -1131,6 +1231,34 @@ export function PowersPanel({
       );
     };
   }, [advantagesById, damageModsByFramework, powers, powersById]);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Shift") {
+        setShowPinnedPowerTooltipAdvantages(true);
+      }
+    }
+
+    function handleKeyUp(event: KeyboardEvent) {
+      if (event.key === "Shift") {
+        setShowPinnedPowerTooltipAdvantages(false);
+      }
+    }
+
+    function handleWindowBlur() {
+      setShowPinnedPowerTooltipAdvantages(false);
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
+    window.addEventListener("blur", handleWindowBlur);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("blur", handleWindowBlur);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isDamageTypeMenuOpen && !isScalingStatMenuOpen) {
@@ -2402,9 +2530,13 @@ export function PowersPanel({
         );
       }
 
+      const keptTooltips =
+        keepPinnedPowerTooltipsWithinLimit(currentTooltips);
+
       return [
-        ...currentTooltips.slice(-(maxPinnedPowerTooltips - 1)),
+        ...keptTooltips,
         {
+          locked: false,
           powerId: power.power_id,
           x: position.x,
           y: position.y,
@@ -2425,6 +2557,16 @@ export function PowersPanel({
   function closePinnedPowerTooltip(powerId: number) {
     setPinnedPowerTooltips((currentTooltips) =>
       currentTooltips.filter((tooltip) => tooltip.powerId !== powerId),
+    );
+  }
+
+  function togglePinnedPowerTooltipLock(powerId: number) {
+    setPinnedPowerTooltips((currentTooltips) =>
+      currentTooltips.map((tooltip) =>
+        tooltip.powerId === powerId
+          ? { ...tooltip, locked: !tooltip.locked }
+          : { ...tooltip, locked: false },
+      ),
     );
   }
 
@@ -2655,8 +2797,16 @@ export function PowersPanel({
               return null;
             }
 
+            const highlightedAdvantageIds =
+              getValueFilterAdvantageHighlightIds(power);
+
             return (
               <PinnedPowerTooltipWindow
+                advantageHighlightIds={highlightedAdvantageIds}
+                advantageHighlightQueries={advantageHighlightQueries}
+                advantageHighlightTagColumns={selectedTagSearchColumns}
+                showAdvantages={showPinnedPowerTooltipAdvantages}
+                isLocked={pinnedTooltip.locked}
                 key={pinnedTooltip.powerId}
                 tooltip={tooltipData}
                 x={pinnedTooltip.x}
@@ -2664,6 +2814,9 @@ export function PowersPanel({
                 zIndex={pinnedTooltip.zIndex}
                 onClose={() => closePinnedPowerTooltip(power.power_id)}
                 onFocus={() => bringPinnedPowerTooltipToFront(power.power_id)}
+                onToggleLock={() =>
+                  togglePinnedPowerTooltipLock(power.power_id)
+                }
                 onMove={(x, y) => movePinnedPowerTooltip(power.power_id, x, y)}
               />
             );
@@ -3137,15 +3290,26 @@ export function PowersPanel({
                   {section.powers.map((power) => {
                     const canAdd = canAddPower(power);
                     const selected = selectedPowerIds.has(power.power_id);
+                    const hasSelectedParentPower =
+                      isPowerVariantDevice(power) &&
+                      (power.power_dependency ?? []).some((powerId) =>
+                        selectedPowerIds.has(powerId),
+                      );
                     const highlightedAdvantageIds =
                       getValueFilterAdvantageHighlightIds(power);
 
                     return (
                       <button
                         className={
-                          selected
-                            ? "power-choice power-choice--selected"
-                            : "power-choice"
+                          [
+                            "power-choice",
+                            selected ? "power-choice--selected" : "",
+                            hasSelectedParentPower
+                              ? "power-choice--compatible-variant"
+                              : "",
+                          ]
+                            .filter(Boolean)
+                            .join(" ")
                         }
                         disabled={!canAdd && !selected}
                         key={power.power_id}

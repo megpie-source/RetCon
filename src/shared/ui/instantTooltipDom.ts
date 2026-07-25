@@ -41,7 +41,10 @@ export function getTooltipElement(target: EventTarget | null) {
     return null;
   }
 
-  if (target.closest("[data-no-instant-tooltip]")) {
+  if (
+    target.closest("[data-no-instant-tooltip]") &&
+    !target.closest("[data-allow-instant-tooltip]")
+  ) {
     return null;
   }
 

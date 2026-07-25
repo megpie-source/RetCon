@@ -7,6 +7,7 @@ type PowerTooltipProps = {
   advantageHighlightIds?: number[];
   advantageHighlightQueries?: string[];
   advantageHighlightTagColumns?: TagSearchColumn[];
+  advantageHintText?: string;
   tooltip: PowerTooltipData;
   showAdvantages?: boolean;
 };
@@ -15,6 +16,7 @@ export function PowerTooltip({
   advantageHighlightIds = [],
   advantageHighlightQueries = [],
   advantageHighlightTagColumns = [],
+  advantageHintText = "Hold Shift to see advantages. Ctrl-click to pin tooltip.",
   tooltip,
   showAdvantages = false,
 }: PowerTooltipProps) {
@@ -167,7 +169,7 @@ export function PowerTooltip({
 
         {!showAdvantages && advantages.length > 0 ? (
           <div className="power-tooltip__hint">
-            Hold Shift to see advantages, and use mouse wheel to scroll. Use Ctrl-click to pin that tooltip.
+            {advantageHintText}
           </div>
         ) : null}
       </div>

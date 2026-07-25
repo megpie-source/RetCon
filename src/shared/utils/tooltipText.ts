@@ -38,7 +38,7 @@ export function splitTooltipTextLines(text: string | null | undefined) {
   }
 
   return normalizedText
-    .split(/\r?\n|(?:^|\s)\+\s*/u)
+    .split(/\r?\n|(?:^|\s)\+\s+/u)
     .map((line) => line.trim())
     .filter(Boolean);
 }

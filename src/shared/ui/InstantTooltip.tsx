@@ -132,6 +132,11 @@ export function InstantTooltip() {
         return;
       }
 
+      const renderAboveFloatingContent = Boolean(
+        element.closest("[data-allow-instant-tooltip]") &&
+          element.closest("[data-no-instant-tooltip]"),
+      );
+
       if (activeElementRef.current !== element) {
         releaseTooltipElement(activeElementRef.current);
       }
@@ -151,6 +156,7 @@ export function InstantTooltip() {
         left: x,
         top: y,
         positioned: false,
+        renderAboveFloatingContent,
       });
 
       disconnectMutationObserver();
@@ -173,6 +179,7 @@ export function InstantTooltip() {
                 content: nextContent,
                 forceAdvancedPowerTooltip:
                   shouldForceAdvancedPowerTooltip(element),
+                renderAboveFloatingContent,
               }
             : currentTooltip,
         );
@@ -206,7 +213,8 @@ export function InstantTooltip() {
 
       if (
         event.target instanceof Element &&
-        event.target.closest("[data-no-instant-tooltip]")
+        event.target.closest("[data-no-instant-tooltip]") &&
+        !event.target.closest("[data-allow-instant-tooltip]")
       ) {
         hideTooltip();
         return;
@@ -409,8 +417,12 @@ export function InstantTooltip() {
     <div
       className={
         hasAdvantagePanel
-          ? "instant-tooltip instant-tooltip--with-advantages"
-          : "instant-tooltip"
+          ? tooltip.renderAboveFloatingContent
+            ? "instant-tooltip instant-tooltip--with-advantages instant-tooltip--above-floating"
+            : "instant-tooltip instant-tooltip--with-advantages"
+          : tooltip.renderAboveFloatingContent
+            ? "instant-tooltip instant-tooltip--above-floating"
+            : "instant-tooltip"
       }
       ref={tooltipRef}
       role="tooltip"

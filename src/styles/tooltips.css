@@ -1,6 +1,6 @@
 .instant-tooltip {
   position: fixed;
-  z-index: 40;
+  z-index: 1000;
   max-width: min(430px, calc(100vw - 34px));
   overflow: auto;
   padding: 8px 10px;
@@ -23,13 +23,17 @@
   max-width: min(830px, calc(100vw - 34px));
 }
 
+.instant-tooltip--above-floating {
+  z-index: 1000;
+}
+
 .instant-tooltip[data-pinned-suppressed="true"] {
   display: none;
 }
 
 .pinned-power-tooltip {
   position: fixed;
-  width: min(430px, calc(100vw - 24px));
+  max-width: min(430px, calc(100vw - 34px));
   overflow: hidden;
   border: 1px solid #4c6ca7;
   border-radius: 4px;
@@ -45,10 +49,14 @@
   will-change: left, top;
 }
 
+.pinned-power-tooltip--with-advantages {
+  max-width: min(830px, calc(100vw - 34px));
+}
+
 .pinned-power-tooltip__header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) max-content max-content;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   padding: 7px 8px 7px 10px;
   border-bottom: 1px solid rgba(150, 174, 224, 0.18);
@@ -60,24 +68,44 @@
   touch-action: none;
 }
 
-.pinned-power-tooltip__header strong {
-  overflow: hidden;
-  color: #f2f5ff;
-  font-size: 13px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.pinned-power-tooltip__lock {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  min-height: 22px;
+  height: 22px;
+  border-color: transparent;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #94b2ff;
+  font-size: 12px;
 }
 
-.pinned-power-tooltip__header span {
-  color: #7f8cab;
-  font-size: 10px;
-  font-style: italic;
+.pinned-power-tooltip__lock:focus {
+  outline: none;
+}
+
+.pinned-power-tooltip__lock:hover,
+.pinned-power-tooltip__lock:focus-visible,
+.pinned-power-tooltip__lock:not(:disabled):active,
+.pinned-power-tooltip__lock--active {
+  border-color: transparent;
+  color: #f4f7ff;
+  background: transparent;
+  box-shadow: none;
+}
+
+.pinned-power-tooltip__lock:not(:disabled):active {
+  transform: none;
 }
 
 .pinned-power-tooltip__close {
   width: 24px;
   min-height: 22px;
   height: 22px;
+  padding: 0;
   font-size: 12px;
 }
 
@@ -85,15 +113,6 @@
   max-height: min(620px, calc(100vh - 82px));
   overflow: auto;
   padding: 8px 10px;
-}
-
-.pinned-power-tooltip .power-tooltip {
-  min-width: 0;
-  max-width: none;
-}
-
-.pinned-power-tooltip .power-tooltip__hint {
-  display: none;
 }
 
 .power-tooltip-shell {

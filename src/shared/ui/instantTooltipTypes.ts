@@ -50,4 +50,5 @@ export type TooltipState = {
   left: number;
   top: number;
   positioned: boolean;
+  renderAboveFloatingContent: boolean;
 };

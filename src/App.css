@@ -125,6 +125,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.app-shell button:focus {
+  outline: none;
+}
+
 .top-tabs {
   margin-left: auto;
   gap: 7px;
@@ -2565,6 +2569,22 @@ h3 {
     rgba(12, 15, 22, 0.86);
 }
 
+.power-choice--compatible-variant:not(.power-choice--selected) {
+  border-color: rgba(86, 184, 70, 0.28);
+  background:
+    linear-gradient(180deg, rgba(28, 66, 20, 0.16), rgba(13, 28, 8, 0.26)),
+    rgba(12, 15, 22, 0.7);
+  box-shadow: inset 0 0 0 1px rgba(96, 204, 76, 0.045);
+}
+
+.power-choice--compatible-variant:not(.power-choice--selected):hover,
+.power-choice--compatible-variant:not(.power-choice--selected):focus-visible {
+  border-color: rgba(101, 214, 82, 0.5);
+  background:
+    linear-gradient(180deg, rgba(32, 78, 23, 0.26), rgba(15, 36, 9, 0.4)),
+    rgba(12, 15, 22, 0.74);
+}
+
 .power-choice:disabled {
   opacity: 0.42;
 }
@@ -2598,6 +2618,11 @@ h3 {
 .power-selection-framework-strip .framework-button {
   width: 28px;
   height: 32px;
+}
+
+.power-selection-framework-strip .sprite-icon {
+  width: calc(100% - 2px) !important;
+  height: calc(100% - 2px) !important;
 }
 
 .power-selection-list {
