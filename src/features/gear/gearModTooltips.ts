@@ -108,14 +108,14 @@ function getPrimaryRankValue(mod: GearMod, rank: GearModRank) {
     .find((value) => value !== null && value !== undefined && value !== "");
 }
 
-function formatRankValueTokenFallback(mod: GearMod) {
+function formatRankValueTokenFallback(mod: GearMod, suffix = "") {
   return modRanks
     .map((rank) => {
       const value = getPrimaryRankValue(mod, rank);
 
       return value === undefined || value === null || value === ""
         ? null
-        : `R${rank}: ${value}`;
+        : `R${rank}: ${value}${suffix}`;
     })
     .filter((line): line is string => Boolean(line))
     .join(" / ");
@@ -130,12 +130,13 @@ function applyRankValueToken(
     return value;
   }
 
-  const replacement =
-    rank === null
-      ? formatRankValueTokenFallback(mod)
-      : String(getPrimaryRankValue(mod, rank) ?? "");
+  return value.replace(/%rank_value%(\s*%)?/giu, (_match, percentSuffix) => {
+    const suffix = percentSuffix ? "%" : "";
 
-  return value.replace(/%rank_value%/giu, replacement);
+    return rank === null
+      ? formatRankValueTokenFallback(mod, suffix)
+      : `${getPrimaryRankValue(mod, rank) ?? ""}${suffix}`;
+  });
 }
 
 function hasRankValueToken(value: string | null | undefined) {

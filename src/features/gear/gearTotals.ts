@@ -53,6 +53,15 @@ function isDamageBonusTotal(type: string) {
   );
 }
 
+function isArmorPenetrationTotal(type: string) {
+  const normalizedType = normalizeTotalType(type);
+
+  return (
+    normalizedType === "armor_penetration" ||
+    normalizedType.startsWith("armor_penetration_")
+  );
+}
+
 function isThreatTotal(type: string) {
   const normalizedType = normalizeTotalType(type);
 
@@ -118,6 +127,10 @@ function getTotalSortBucket(type: string) {
     return 40;
   }
 
+  if (isArmorPenetrationTotal(type)) {
+    return 45;
+  }
+
   if (isThreatTotal(type)) {
     return 50;
   }
@@ -157,6 +170,12 @@ function getDamageBonusSortRank(type: string) {
   }
 
   return 10;
+}
+
+function getArmorPenetrationSortRank(type: string) {
+  const normalizedType = normalizeTotalType(type);
+
+  return normalizedType === "armor_penetration" ? 0 : 10;
 }
 
 function getThreatSortRank(type: string) {
@@ -361,6 +380,19 @@ export function getGearTotals(
 
       if (damageSortDifference !== 0) {
         return damageSortDifference;
+      }
+    }
+
+    if (
+      isArmorPenetrationTotal(typeA) &&
+      isArmorPenetrationTotal(typeB)
+    ) {
+      const armorPenetrationSortDifference =
+        getArmorPenetrationSortRank(typeA) -
+        getArmorPenetrationSortRank(typeB);
+
+      if (armorPenetrationSortDifference !== 0) {
+        return armorPenetrationSortDifference;
       }
     }
 

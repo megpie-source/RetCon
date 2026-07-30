@@ -28,6 +28,7 @@ const statNameToCode = new Map<string, string>([
 ]);
 
 const percentageBonusTypes = new Set([
+  "armor_penetration",
   "bonus_damage",
   "bonus_heal",
   "bonus_healing",
@@ -44,6 +45,7 @@ const percentageBonusTypes = new Set([
 ]);
 
 const bonusTypeLabels = new Map<string, string>([
+  ["armor_penetration", "Armor Penetration"],
   ["bonus_damage", "Damage Bonus"],
   ["bonus_heal", "Healing Bonus"],
   ["bonus_healing", "Healing Bonus"],
@@ -63,6 +65,10 @@ const bonusTypeLabels = new Map<string, string>([
 function formatBonusTypePart(value: string) {
   if (value.toLowerCase() === "celesial") {
     return "Celestial";
+  }
+
+  if (value.toLowerCase() === "munition") {
+    return "Munitions";
   }
 
   return value
@@ -162,6 +168,10 @@ export function formatBonusType(value: string) {
     return `${formatBonusTypePart(normalizedValue.slice("Damage_Bonus_".length))} Damage Bonus`;
   }
 
+  if (normalizedType.startsWith("armor_penetration_")) {
+    return `${formatBonusTypePart(normalizedValue.slice("Armor_Penetration_".length))} Armor Penetration`;
+  }
+
   if (normalizedType.startsWith("threat_")) {
     return `${formatBonusTypePart(normalizedValue.slice("Threat_".length))} Threat`;
   }
@@ -210,6 +220,7 @@ function isPercentageBonusType(type: string | undefined) {
   return (
     percentageBonusTypes.has(normalizedType) ||
     normalizedType.startsWith("bonus_") && normalizedType.endsWith("_damage") ||
+    normalizedType.startsWith("armor_penetration_") ||
     normalizedType.startsWith("damage_bonus_") ||
     normalizedType.startsWith("threat_")
   );

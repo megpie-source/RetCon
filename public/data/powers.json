@@ -36432,8 +36432,8 @@
   {
     "power_id": 850,
     "powerset_id": "Device",
-    "framework_id": "Questionite_Store",
-    "name": "Reprogrammed Cowboy Robot",
+    "framework_id": "Other",
+    "name": "Cowboy Robot Prospector",
     "tier": null,
     "power_type": "UNCONTROLED_PET",
     "advantages": [],
@@ -36446,12 +36446,13 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "Creates a Reprogrammed Cowboy Robot. This summon will stick around for up to 300 sec. + Detoggling this device will cause this summon to vanish and the device to go on cooldown. This device will also go on cooldown if the Reprogrammed Cowboy Robot is defeated.",
+    "tooltip": "Creates a Reprogrammed Prospector. This summon will stick around for up to 300 sec. + Detoggling this device will cause this summon to vanish and the device to go on cooldown. This device will also go on cooldown if the Reprogrammed Prospector is defeated.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [
+      "Sonic",
       "Piercing"
     ],
     "damage_values": null,
@@ -36460,7 +36461,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "Questionite Store"
+      "High Noon Event: ASCII Alert"
     ],
     "icon_override": "Device_ReprogrammedRobot",
     "is_disabled": false
@@ -41207,7 +41208,7 @@
     "source": [
       "Lockbox: Phantom, Collectors Store"
     ],
-    "icon_override": "Sidekick_PhantomArcher",
+    "icon_override": "Sidekick_Phantom_Archer",
     "is_disabled": false
   },
   {
@@ -42178,7 +42179,7 @@
     "source": [
       "Lockbox: Vigilante, Collectors Store"
     ],
-    "icon_override": "Sidekick_TwilightBolt",
+    "icon_override": "Sidekick_TwillightBolt",
     "is_disabled": false
   },
   {
@@ -43339,6 +43340,123 @@
       "Patriot Event: Store"
     ],
     "icon_override": "Device_Sparkle_Fireworks",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1049,
+    "powerset_id": "Device",
+    "framework_id": "Sidekick",
+    "name": "Gunslinger",
+    "tier": null,
+    "power_type": "CONTROLLABLE_PET",
+    "advantages": [],
+    "activation_type": "CLICK",
+    "cost": null,
+    "activation_time": 1,
+    "max_duration": 900,
+    "tick_rate": null,
+    "cooldown": 300,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Role: Ranged DPS + Damage type: Piercing + Special effects: Fear, Armor Piercing, Snare + You may only have one Sidekick active at one time. + This item cannot be used in PVP. + This item is not affected by cooldown reduction.",
+    "apply_tag": [
+      "Fear",
+      "Armor Piercing",
+      "Snare"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "High Noon Event: Reward"
+    ],
+    "icon_override": "Sidekick_Gunslinger",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1050,
+    "powerset_id": "Device",
+    "framework_id": "Other",
+    "name": "Cowboy Robot Sassy Saloon Lassy",
+    "tier": null,
+    "power_type": "UNCONTROLED_PET",
+    "advantages": [],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 1,
+    "max_duration": 300,
+    "tick_rate": null,
+    "cooldown": 300,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Creates a Reprogrammed Sassy Saloon Lassy. This summon will stick around for up to 300 sec. + Detoggling this device will cause this summon to vanish and the device to go on cooldown. This device will also go on cooldown if the Cowboy Robot Sassy Saloon Lassy is defeated.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "High Noon Event : ASCII Alert"
+    ],
+    "icon_override": "Device_Robot_Lassy",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1051,
+    "powerset_id": "Device",
+    "framework_id": "Sidekick",
+    "name": "R.O.D.",
+    "tier": null,
+    "power_type": "CONTROLLABLE_PET",
+    "advantages": [],
+    "activation_type": "CLICK",
+    "cost": null,
+    "activation_time": 1,
+    "max_duration": 900,
+    "tick_rate": null,
+    "cooldown": 300,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Role: RDPS + Damage type: Particle + Special effects: Plasma Burn, Snare, Stun, Disintegrate + You may only have one Sidekick active at one time. + This item cannot be used in PVP. + This item is not affected by cooldown reduction.",
+    "apply_tag": [
+      "Plasma Burn",
+      "Snare",
+      "Stun",
+      "Disintegrate"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Particle"
+    ],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "High Noon Event: Reward"
+    ],
+    "icon_override": "Sidekick_ROD",
     "is_disabled": false
   }
 ]

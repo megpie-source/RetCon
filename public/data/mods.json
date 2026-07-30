@@ -3137,7 +3137,7 @@
     "rank_5": null,
     "rank_7": null,
     "rank_9": 15,
-    "tooltip": "Ignore 15% of your target's resistance. This effect cannot reduce a target resistance below 0%. + The effect of this mod cannot stack.",
+    "tooltip": "Armor Reduction Modification. The effect of this mod cannot be stacked with itself or other armor reducing Modifications. + Your direct damage powers ignore up to -15% of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
     "stackable": false,
     "tag": [
       "Offense"
@@ -5002,6 +5002,37 @@
         "values_by_rank": {
           "5": 11,
           "7": 13,
+          "9": 15
+        }
+      }
+    ]
+  },
+  {
+    "mod_id": 148,
+    "mod_type": "Offense",
+    "name": "Armor Piercing Round",
+    "mod_bonus": "Armor_Penetration_Munition",
+    "rank_5": null,
+    "rank_7": 5,
+    "rank_9": 15,
+    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Munitions powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to - %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
+    "stackable": false,
+    "tag": [
+      "Offense"
+    ],
+    "source": [
+      "High Noon Event : ASCII Alert"
+    ],
+    "icon_override": "Mod_Armor_Piercing_Round",
+    "is_disabled": false,
+    "mod_types": [
+      "Offense"
+    ],
+    "bonuses": [
+      {
+        "type": "Armor_Penetration_Munition",
+        "values_by_rank": {
+          "7": 5,
           "9": 15
         }
       }
