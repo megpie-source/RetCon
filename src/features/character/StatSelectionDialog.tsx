@@ -2,6 +2,7 @@ import type { SuperStat } from "@/types/character";
 import { getStatIconName } from "@/shared/utils/icons";
 import { AnchoredSelectionDialog, type DialogAnchor } from "@/shared/ui";
 import { SpriteIcon } from "@/shared/ui/SpriteIcon";
+import { getStatTooltipAttribute } from "./statTooltips";
 
 type StatSelectionDialogProps = {
   anchor: DialogAnchor;
@@ -11,15 +12,6 @@ type StatSelectionDialogProps = {
   onSelectStat: (slotIndex: number, statId: number) => void;
   onClose: () => void;
 };
-
-function getStatTooltipAttribute(stat: SuperStat) {
-  return JSON.stringify({
-    info: stat.info,
-    forms: stat.forms ?? [],
-    primaryEUs: stat.primaryEUs ?? [],
-    secondaryEUs: stat.secondaryEUs ?? [],
-  });
-}
 
 export function StatSelectionDialog({
   anchor,

@@ -1,5 +1,8 @@
 import type { GearItem } from "@/types/gear";
-import { cleanMultilineTooltipText } from "@/shared/utils/tooltipText";
+import {
+  cleanMultilineTooltipText,
+  replaceTooltipBulletMarkersWithLineBreaks,
+} from "@/shared/utils/tooltipText";
 import {
   formatBonusSegment,
   getGearBonusValue,
@@ -8,9 +11,8 @@ import { getDisplayedSetBonusTiers } from "./gearSetBonuses";
 
 function cleanGearTooltipText(value: string | null | undefined) {
   return (
-    cleanMultilineTooltipText(value)
-      ?.replace(/\s+\+\s+/gu, "\n")
-      .trim() ?? null
+    replaceTooltipBulletMarkersWithLineBreaks(cleanMultilineTooltipText(value))
+      ?.trim() ?? null
   );
 }
 

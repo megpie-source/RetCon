@@ -4,6 +4,8 @@ import {
   cleanMultilineTooltipText,
   cleanTooltipText,
   formatTooltipLabel,
+  hasTooltipBulletMarkers,
+  splitTooltipTextLines,
 } from "./tooltipText";
 import { getNormalizedPowerType, getPowerType } from "./powerTypes";
 import { getAdvantageDamageTypes } from "@/utils/powerDamageTypes";
@@ -198,11 +200,8 @@ function splitEffects(text: string) {
     return [];
   }
 
-  if (/(?:^|\s)[+-]\s+/.test(normalizedText)) {
-    return normalizedText
-      .split(/(?:^|\s)(?=[+-]\s+)/)
-      .map((effect) => effect.replace(/^[+-]\s*/, "").trim())
-      .filter(Boolean);
+  if (hasTooltipBulletMarkers(normalizedText)) {
+    return splitTooltipTextLines(normalizedText);
   }
 
   return splitSentences(normalizedText);

@@ -749,7 +749,9 @@ h3 {
 }
 
 .stat-token {
+  position: relative;
   display: grid;
+  width: 100%;
   min-height: 74px;
   grid-template-rows: 36px 16px 12px;
   align-items: center;
@@ -764,6 +766,21 @@ h3 {
   text-align: center;
 }
 
+.stat-token-tooltip-shell {
+  display: block;
+  min-width: 0;
+}
+
+.stat-token__level {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  min-width: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+}
+
 .stat-token:hover,
 .stat-token:focus-visible {
   border-color: #557ed1;
@@ -774,6 +791,7 @@ h3 {
 .stat-token:disabled {
   cursor: default;
   opacity: 0.72;
+  pointer-events: none;
 }
 
 .stat-token--locked:hover,
@@ -1515,6 +1533,7 @@ h3 {
   gap: 3px;
   border: 1px solid transparent;
   border-radius: 3px;
+  padding: 0;
   color: #c4ccd9;
   background: transparent;
   font-size: 14px;
@@ -1567,6 +1586,25 @@ h3 {
   font-weight: 500;
 }
 
+.character-panel .inline-choice-button {
+  grid-template-columns: 14px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 12px;
+  padding: 0;
+}
+
+.inline-choice-button__content {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.innate-talent-level-label {
+  align-self: center;
+  font-weight: 400;
+  text-align: center;
+}
+
 .talent-slot-list {
   display: grid;
   gap: 0;
@@ -1575,16 +1613,31 @@ h3 {
 
 .talent-slot-button {
   display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  width: 100%;
   min-height: 42px;
-  align-content: center;
-  gap: 2px;
+  align-items: center;
+  column-gap: 12px;
   border: 1px solid transparent;
   border-radius: 3px;
+  padding: 0;
   color: #c4ccd9;
   background: transparent;
   font-size: 14px;
   font-weight: 700;
   text-align: left;
+}
+
+.talent-level-label {
+  align-self: center;
+  font-weight: 400;
+  text-align: center;
+}
+
+.talent-slot-button__content {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
 }
 
 .talent-slot-button:hover,

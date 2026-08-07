@@ -2620,13 +2620,13 @@
     "advantage_id": 157,
     "name": "Devouring Darkness",
     "points_cost": 2,
-    "tooltip": "Instead of applying Fear, this ability applies Bane to targets.",
-    "apply_tag": [
-      "Bane"
-    ],
+    "tooltip": "Cause the damage your Shadows deal to heal you for 20% of the damage they deal. + This heal is considered a Life Drain effect",
+    "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
-    "filter_tag": [],
+    "filter_tag": [
+      "Life Drain"
+    ],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
@@ -8741,7 +8741,7 @@
     "advantage_id": 514,
     "name": "Shield Dispersal",
     "points_cost": 2,
-    "tooltip": "Places up to 5 targets within 25ft of your primary target in Power Shields. + Power Shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec.",
+    "tooltip": "Places up to 5 targets within 25ft of your primary target in Power Shields. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -10944,7 +10944,7 @@
     "advantage_id": 641,
     "name": "Entropy Blast",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Power Shield to your target. + Power shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec.",
+    "tooltip": "15% chance on each hit to apply Power Shield to your target. + Power shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -11055,11 +11055,10 @@
     "advantage_id": 647,
     "name": "Field Inversion",
     "points_cost": 2,
-    "tooltip": "When fully charged, if your primary target is affected by a Power Shield, deals additional 270 Crushing Damage to nearby targets.",
+    "tooltip": "When fully charged, if your primary target is affected by Power Shield, deals additional 270 Crushing Damage to nearby targets.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [
-      "Shield",
       "Power Shield"
     ],
     "filter_tag": [
@@ -11130,7 +11129,7 @@
     "advantage_id": 651,
     "name": "Entropy Field",
     "points_cost": 2,
-    "tooltip": "Places up to 5 targets within 15ft of your primary target in a Power Shield. + Power shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec.",
+    "tooltip": "Places up to 5 targets within 15ft of your primary target in a Power Shield. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -11626,7 +11625,7 @@
     "advantage_id": 680,
     "name": "Entropy Field",
     "points_cost": 2,
-    "tooltip": "20% chance on each hit to apply Power Shield to targets. 100% chance if fully maintained. + Power shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec.",
+    "tooltip": "20% chance on each hit to apply Power Shield to targets. 100% chance if fully maintained. + Power shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],
@@ -12165,7 +12164,7 @@
     "advantage_id": 710,
     "name": "Entropy Field",
     "points_cost": 2,
-    "tooltip": "Applies Power Shield to target. + Power shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec.",
+    "tooltip": "Applies Power Shield to target. + Power shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec.",
     "apply_tag": [
       "Power Shield"
     ],

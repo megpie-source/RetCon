@@ -183,10 +183,6 @@ export function AppHeader({
             Check Build
           </button>
 
-          <button className="utility-button" type="button" onClick={onRandomize}>
-            Randomize
-          </button>
-
           <button
             className="utility-button"
             title="Recover your Aesica and BalakKnightfang builds.
@@ -195,6 +191,10 @@ export function AppHeader({
             onClick={onImportBuild}
           >
             Import Build
+          </button>
+
+          <button className="utility-button" type="button" onClick={onRandomize}>
+            Randomize
           </button>
 
           <details ref={resetMenuRef} className="reset-menu">

@@ -3327,7 +3327,7 @@
     "rank_5": 15,
     "rank_7": 24,
     "rank_9": 35,
-    "tooltip": "%rank_value% % of your attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3359,7 +3359,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Cold type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Cold type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3391,7 +3391,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Fire type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Fire type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3423,7 +3423,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Toxic type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Toxic type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3455,7 +3455,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Crushing type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Crushing type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3487,7 +3487,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Piercing type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Piercing type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3519,7 +3519,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Slashing type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Slashing type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3551,7 +3551,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Dimensional type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Dimensional type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3583,7 +3583,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Ego type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Ego type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3615,7 +3615,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Magic type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Magic type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3647,7 +3647,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Particle type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Particle type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3679,7 +3679,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Electrical type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Electrical type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -3711,7 +3711,7 @@
     "rank_5": 18,
     "rank_7": 29,
     "rank_9": 42,
-    "tooltip": "%rank_value% % of your Sonic type attack damage pre-damage mitigation is converted into addition Threat",
+    "tooltip": "%rank_value%% of your Sonic type attack damage pre-damage mitigation is converted into addition Threat",
     "stackable": true,
     "tag": [
       "Threat Mod"
@@ -4207,7 +4207,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Gadgeteering framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Gadgeteering framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4239,7 +4239,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Ice framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Ice framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4271,7 +4271,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Fireframework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Fireframework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4303,7 +4303,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Bestialframework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Bestialframework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4335,7 +4335,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Supernatural framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Supernatural framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4367,7 +4367,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Darkness framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Darkness framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4399,7 +4399,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Might framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Might framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4431,7 +4431,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Sorcery framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Sorcery framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4463,7 +4463,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Power Armor framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Power Armor framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4495,7 +4495,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Laser Sword framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Laser Sword framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4527,7 +4527,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Telekinesis framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Telekinesis framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4559,7 +4559,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Unarmed framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Unarmed framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4591,7 +4591,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Dual Blades framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Dual Blades framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4623,7 +4623,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Fighting Claws framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Fighting Claws framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4655,7 +4655,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Single Blade framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Single Blade framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4687,7 +4687,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Wind framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Wind framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4719,7 +4719,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Earth framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Earth framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4751,7 +4751,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Munitions framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Munitions framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4783,7 +4783,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Archery framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Archery framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4815,7 +4815,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from  Telepathy framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from  Telepathy framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4847,7 +4847,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Electricity framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Electricity framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4879,7 +4879,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Force framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Force framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4911,7 +4911,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Celestial framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Celestial framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -4943,7 +4943,7 @@
     "rank_5": 6,
     "rank_7": 8,
     "rank_9": 10,
-    "tooltip": "Increases power's damage from Heavy Weapons framework by %rank_value% %. + The effect of this mod cannot stack.",
+    "tooltip": "Increases power's damage from Heavy Weapons framework by %rank_value%%. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Damage Mod"
@@ -5031,6 +5031,37 @@
     "bonuses": [
       {
         "type": "Armor_Penetration_Munition",
+        "values_by_rank": {
+          "7": 5,
+          "9": 15
+        }
+      }
+    ]
+  },
+  {
+    "mod_id": 149,
+    "mod_type": "Offense",
+    "name": "Overwhelming Pressure",
+    "mod_bonus": "Armor_Penetration_Force",
+    "rank_5": null,
+    "rank_7": 5,
+    "rank_9": 15,
+    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Force powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to - %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
+    "stackable": false,
+    "tag": [
+      "Offense"
+    ],
+    "source": [
+      "Gravitar Rampage"
+    ],
+    "icon_override": "Mod_Overwhelming_Pressure",
+    "is_disabled": true,
+    "mod_types": [
+      "Offense"
+    ],
+    "bonuses": [
+      {
+        "type": "Armor_Penetration_Force",
         "values_by_rank": {
           "7": 5,
           "9": 15

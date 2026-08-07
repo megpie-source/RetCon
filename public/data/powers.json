@@ -3067,7 +3067,7 @@
       "50 feet",
       "25 feet Sphere"
     ],
-    "tooltip": "Deals 258-733 Crushing Damage and Knocks affected targets towards your primary target. + 38-100% chance to place up to 5 in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores2.5% energy. Can occur once every 3 sec",
+    "tooltip": "Deals 258-733 Crushing Damage and Knocks affected targets towards your primary target. + 38-100% chance to place up to 5 in a Power Shield for 10 sec. + Power Shield does not absorb any damage, but striking it restores 2.5% energy. Can occur once every 3 sec",
     "apply_tag": [
       "Knock To",
       "Power Shield"
@@ -7049,7 +7049,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "Gives you a stacking buff that increases your healing and shielding, as well as your melee and ranged damage to a lesser degree. + You gain a stack each time one of your Technology powers is fully charge, maintained or comes off cooldown. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
+    "tooltip": "Gives you a stacking buff that increases your healing and shielding, as well as your melee and ranged damage to a lesser degree. + You gain a stack each time one of your Technology powers is fully charged, maintained or comes off cooldown. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
     "apply_tag": [
       "Medical Expertise"
     ],
@@ -7092,7 +7092,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "Gives you a stacking buff that increases your ranged damage, as well as your melee damage to a lesser degree. + You gain a stack each time one of your Technology powers is fully charge, maintained or comes off cooldown. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
+    "tooltip": "Gives you a stacking buff that increases your ranged damage, as well as your melee damage to a lesser degree. + You gain a stack each time one of your Technology powers is fully charged, maintained or comes off cooldown. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
     "apply_tag": [
       "Expertise"
     ],
@@ -14815,7 +14815,7 @@
       "10 feet",
       "180 degree Cone"
     ],
-    "tooltip": "Deals 149-239 Ego Damage to the targets. + Your chance to critically strike with this power increases by 5 (based on combo hit) chance to gain a stack of Ego Leech, or 100% chance on each hit if affected by Ego Infusion. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
+    "tooltip": "Deals 149-239 Ego Damage to the targets. + Your chance to critically strike with this power increases by 5% for each stacks of Ego Leech on you. + 25/25/50% (based on combo hit) chance to gain a stack of Ego Leech, or 100% chance on each hit if affected by Ego Infusion. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
       "Ego Leech"
     ],
@@ -14862,7 +14862,7 @@
       "Targets foe",
       "100 feet"
     ],
-    "tooltip": "Deals 93-307 Ego Damage to the target. + Your chance to critically strike with this power increases by 5 (based on combo hit) chance to gain a stack of Ego Leech, or 100% chance on each hit if affected by Ego Infusion. + Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
+    "tooltip": "Deals 93-307 Ego Damage to the target.  + Your chance to critically strike with this power increases by 5% for each stacks of Ego Leech on you. + 25/25/50% (based on combo hit) chance to gain a stack of Ego Leech, or 100% chance on each hit if affected by Ego Infusion. Ego Leech decreases the cost of your Mentalist abilities by 5% for 15 sec. Stacks up to 5 times.",
     "apply_tag": [
       "Ego Leech"
     ],
@@ -15081,7 +15081,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "Gives you a stacking buff that increases your melee damage, as well as your ranged damage to a lesser degree. + You gain a stack each time you apply, refresh, or consume a Mental State. + Mental State effects include Ego Leech, Stress, Dependency, Despondency, and Fear. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
+    "tooltip": "Gives you a stacking buff that increases your Melee Damage, as well as your ranged damage to a lesser degree. + You gain a stack each time you apply, refresh, or consume a Mental State. + Mental State effects include Ego Leech, Stress, Dependency, Despondency, and Fear. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
     "apply_tag": [
       "Focus"
     ],
@@ -15122,7 +15122,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "Gives you a stacking buff that increases your ranged Damage, as well as your melee damage to a lesser degree. + You gain a stack each time you apply, refresh, or consume a Mental State. + Mental State effects include Ego Leech, Stress, Dependency, Despondency, and Fear. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
+    "tooltip": "Gives you a stacking buff that increases your Ranged Damage, as well as your melee damage to a lesser degree. + You gain a stack each time you apply, refresh, or consume a Mental State. + Mental State effects include Ego Leech, Stress, Dependency, Despondency, and Fear. + Each time you gain a stack, existing stacks are refreshed and you gain energy. + Stacks up to 8 times, lasts 20 sec, and can only gain 1 stack every 4 sec. - Increases energy costs by 10%.",
     "apply_tag": [
       "Precision"
     ],
@@ -43413,7 +43413,7 @@
     "scaling_stats": [],
     "power_dependency": [],
     "source": [
-      "High Noon Event : ASCII Alert"
+      "High Noon Event: ASCII Alert"
     ],
     "icon_override": "Device_Robot_Lassy",
     "is_disabled": false
@@ -43458,5 +43458,160 @@
     ],
     "icon_override": "Sidekick_ROD",
     "is_disabled": false
+  },
+  {
+    "power_id": 1052,
+    "powerset_id": "Device",
+    "framework_id": "Other",
+    "name": "Scattershot Salvo",
+    "tier": null,
+    "power_type": "RANGED_AOE_DAMAGE",
+    "advantages": [],
+    "activation_type": "CLICK",
+    "cost": null,
+    "activation_time": 1,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 90,
+    "range_tags": [
+      "Affects non-destructible foe (5 max)",
+      "25 feet Sphere"
+    ],
+    "tooltip": "Can be used while Held or Confused. + Deals 831 Piercing Damage and Knock Down affected targets. + Heals you for 157 Health Points for every target hit. This heal counts as a Life Drain effect. + Applies 2,679 Break Free damage to any Holds, Roots, or Disables affecting you. + Applies 3 stacks of Furious to you for 12 sec. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Places all Escape devices on a 90 sec cooldown.",
+    "apply_tag": [
+      "Knock Down",
+      "Furious"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "831",
+    "healing_values": "157",
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "High Noon Event: ASCII Alert"
+    ],
+    "icon_override": "Munitions_LeadTempest",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1053,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Heavy Fire",
+    "tier": 1,
+    "power_type": "RANGED_DAMAGE",
+    "advantages": [],
+    "activation_type": "MAINTAIN",
+    "cost": null,
+    "activation_time": 0.5,
+    "max_duration": 5,
+    "tick_rate": 0.5,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe (5 max)",
+      "100 feet",
+      "60 degree Cone"
+    ],
+    "tooltip": "Deals 144 Piercing Damage every 0.5 sec to all targets. + Repels targets within 20ft of you every hit. Foes further away have a 10% chance to be Snared for 13 sec, reducing their movement speed by 100%.",
+    "apply_tag": [
+      "Repel",
+      "Snare"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "144",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_HeavyFire",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1054,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Suppression Fire",
+    "tier": 1,
+    "power_type": "RANGED_AOE_DAMAGE",
+    "advantages": [],
+    "activation_type": "MAINTAIN",
+    "cost": null,
+    "activation_time": 0.5,
+    "max_duration": 5,
+    "tick_rate": 0.5,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe (5 max)",
+      "100 feet",
+      "60 degree Cone"
+    ],
+    "tooltip": "Deals 144 Piercing Damage every 0.5 sec to all targets. + Repels targets within 20ft of you every hit. Foes further away have a 10% chance to be Snared for 13 sec, reducing their movement speed by 100%.",
+    "apply_tag": [
+      "Repel",
+      "Snare"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "144",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_SuppresionFire",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1055,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Gatling Arms",
+    "tier": 3,
+    "power_type": null,
+    "advantages": [],
+    "activation_type": "MAINTAIN",
+    "cost": null,
+    "activation_time": 0.5,
+    "max_duration": 5,
+    "tick_rate": 0.5,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe",
+      "100 feet"
+    ],
+    "tooltip": "Deals 240 Piercing Damage every 0.5 sec. + Has 10% chance every hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Places all Escape devices on a 90 sec cooldown.",
+    "apply_tag": [
+      "Furious"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "240",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_GatlingArms",
+    "is_disabled": true
   }
 ]

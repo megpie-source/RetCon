@@ -30,6 +30,16 @@ export function cleanMultilineTooltipText(
   return text || null;
 }
 
+export function hasTooltipBulletMarkers(text: string | null | undefined) {
+  return /(?:^|\s)\+\s+/u.test(text ?? "");
+}
+
+export function replaceTooltipBulletMarkersWithLineBreaks(
+  text: string | null | undefined,
+) {
+  return text?.replace(/(?:^|\s)\+\s+/gu, "\n") ?? null;
+}
+
 export function splitTooltipTextLines(text: string | null | undefined) {
   const normalizedText = cleanMultilineTooltipText(text);
 

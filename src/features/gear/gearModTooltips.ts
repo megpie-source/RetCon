@@ -1,5 +1,8 @@
 import type { GearBonus, GearMod, GearModRank } from "@/types/gear";
-import { cleanMultilineTooltipText } from "@/shared/utils/tooltipText";
+import {
+  cleanMultilineTooltipText,
+  replaceTooltipBulletMarkersWithLineBreaks,
+} from "@/shared/utils/tooltipText";
 import {
   formatBonusSegment,
   formatSignedBonusValue,
@@ -180,9 +183,9 @@ function cleanModTooltipText(
   rank: GearModRank | null = null,
 ) {
   return (
-    applyRankValueToken(cleanMultilineTooltipText(value), mod, rank)
-      ?.replace(/\s+\+\s+/gu, "\n")
-      .trim() ?? null
+    replaceTooltipBulletMarkersWithLineBreaks(
+      applyRankValueToken(cleanMultilineTooltipText(value), mod, rank),
+    )?.trim() ?? null
   );
 }
 

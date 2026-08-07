@@ -15,6 +15,7 @@ import {
 } from "@/utils/innateTalents";
 import { getTalentStatEntries } from "@/utils/talents";
 import { SpriteIcon } from "@/shared/ui/SpriteIcon";
+import { getStatTooltipAttribute } from "./statTooltips";
 
 type CharacterPanelProps = {
   superStats: (SuperStat | null)[];
@@ -35,6 +36,9 @@ type CharacterPanelProps = {
   onToggleCollapse: () => void;
   highlightedDeviceTargetSlot: number | null;
 };
+
+const talentAcquisitionLevels = [6, 9, 12, 15, 18, 21];
+const superStatAcquisitionLevels = [6, 10, 15];
 
 export function CharacterPanel({
   superStats,
@@ -76,38 +80,60 @@ export function CharacterPanel({
           <h3>Superstats</h3>
           <div className="stat-grid">
             {superStats.map((stat, index) => {
+              const selectedStat = stat && stat.id > 0 ? stat : null;
               const role = index === 0 ? "Primary" : `Secondary ${index}`;
-              const label = stat
-                ? stat.name.slice(0, 3).toUpperCase()
+              const unlockLevel = superStatAcquisitionLevels[index] ?? "-";
+              const label = selectedStat
+                ? selectedStat.name.slice(0, 3).toUpperCase()
                 : index === 0
                   ? "PRI"
                   : `S${index}`;
 
               return (
-                <button
-                  className={
-                    superStatsLocked
-                      ? "stat-token stat-token--locked"
-                      : "stat-token"
+                <span
+                  className="stat-token-tooltip-shell"
+                  key={`${role}-${selectedStat?.id ?? "empty"}`}
+                  data-text-tooltip={
+                    selectedStat ? undefined : `Unlock at level ${unlockLevel}`
                   }
-                  disabled={superStatsLocked}
-                  key={`${role}-${stat?.id ?? "empty"}`}
-                  title={stat ? `${stat.name} (${role})` : role}
-                  type="button"
-                  onClick={(event: MouseEvent<HTMLButtonElement>) =>
-                    onSelectSuperStatSlot(index, {
-                      x: event.clientX,
-                      y: event.clientY,
-                    })
+                  data-stat-tooltip={
+                    selectedStat
+                      ? getStatTooltipAttribute(selectedStat)
+                      : undefined
                   }
                 >
-                  <SpriteIcon
-                    name={stat ? getStatIconName(stat.name) : "Any_Generic"}
-                    size={34}
-                  />
-                  <span className="stat-token__name">{label}</span>
-                  <small>{index === 0 ? "Primary" : "Secondary"}</small>
-                </button>
+                  <button
+                    className={
+                      superStatsLocked
+                        ? "stat-token stat-token--locked"
+                        : "stat-token"
+                    }
+                    disabled={superStatsLocked}
+                    type="button"
+                    onClick={(event: MouseEvent<HTMLButtonElement>) =>
+                      onSelectSuperStatSlot(index, {
+                        x: event.clientX,
+                        y: event.clientY,
+                      })
+                    }
+                  >
+                    <span className="level-label stat-token__level">
+                      {superStatAcquisitionLevels[index] ?? "-"}
+                    </span>
+                    <SpriteIcon
+                      name={
+                        selectedStat
+                          ? getStatIconName(selectedStat.name)
+                          : "Any_Generic"
+                      }
+                      size={34}
+                    />
+                    <span className="stat-token__name">
+                      {selectedStat ? label : "Select"}
+                    </span>
+                    <small>{index === 0 ? "Primary" : "Secondary"}</small>
+                  </button>
+                </span>
               );
             })}
           </div>
@@ -122,6 +148,7 @@ export function CharacterPanel({
                 : "inline-choice-button inline-choice-button--empty"
             }
             disabled={innateTalentLocked}
+            title="Unlock at level 1"
             type="button"
             onClick={(event: MouseEvent<HTMLButtonElement>) =>
               onSelectInnateTalent({
@@ -130,32 +157,35 @@ export function CharacterPanel({
               })
             }
           >
-            <span className="inline-choice-button__name">
-              {innateTalent?.name ?? "Select innate talent"}
+            <span className="level-label innate-talent-level-label">1</span>
+            <span className="inline-choice-button__content">
+              <span className="inline-choice-button__name">
+                {innateTalent?.name ?? "Select innate talent"}
+              </span>
+              {innateTalent ? (
+                <small
+                  className={[
+                    "inline-choice-button__details",
+                    hasDenseInnateTalentStats
+                      ? "inline-choice-button__details--dense"
+                      : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  {innateTalentStats.map((stat, index) => (
+                    <span key={stat.key}>
+                      {index > 0 ? ", " : ""}
+                      {stat.matchesSelectedStat ? (
+                        <strong>{`${stat.label}: ${stat.value}`}</strong>
+                      ) : (
+                        `${stat.label}: ${stat.value}`
+                      )}
+                    </span>
+                  ))}
+                </small>
+              ) : null}
             </span>
-            {innateTalent ? (
-              <small
-                className={[
-                  "inline-choice-button__details",
-                  hasDenseInnateTalentStats
-                    ? "inline-choice-button__details--dense"
-                    : "",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                {innateTalentStats.map((stat, index) => (
-                  <span key={stat.key}>
-                    {index > 0 ? ", " : ""}
-                    {stat.matchesSelectedStat ? (
-                      <strong>{`${stat.label}: ${stat.value}`}</strong>
-                    ) : (
-                      `${stat.label}: ${stat.value}`
-                    )}
-                  </span>
-                ))}
-              </small>
-            ) : null}
           </button>
         </section>
 
@@ -185,6 +215,7 @@ export function CharacterPanel({
               const talentStats = talent
                 ? getTalentStatEntries(talent, selectedStatKeys)
                 : [];
+              const unlockLevel = talentAcquisitionLevels[index] ?? "-";
               const hasDenseTalentStats = talent?.name === "Jack of All Trades";
 
               return (
@@ -195,6 +226,7 @@ export function CharacterPanel({
                       : "talent-slot-button talent-slot-button--empty"
                   }
                   key={`${index}-${talent?.id ?? "empty"}`}
+                  title={`Unlock at level ${unlockLevel}`}
                   type="button"
                   onClick={(event: MouseEvent<HTMLButtonElement>) =>
                     onSelectTalentSlot(index, {
@@ -203,32 +235,37 @@ export function CharacterPanel({
                     })
                   }
                 >
-                  <span className="talent-slot-button__name">
-                    {talent?.name ?? `Talent ${index + 1}`}
+                  <span className="level-label talent-level-label">
+                    {talentAcquisitionLevels[index] ?? "-"}
                   </span>
-                  {talent ? (
-                    <small
-                      className={[
-                        "talent-slot-button__details",
-                        hasDenseTalentStats
-                          ? "talent-slot-button__details--dense"
-                          : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                    >
-                      {talentStats.map((stat, statIndex) => (
-                        <span key={stat.key}>
-                          {statIndex > 0 ? ", " : ""}
-                          {stat.matchesSelectedStat ? (
-                            <strong>{`${stat.label}: ${stat.value}`}</strong>
-                          ) : (
-                            `${stat.label}: ${stat.value}`
-                          )}
-                        </span>
-                      ))}
-                    </small>
-                  ) : null}
+                  <span className="talent-slot-button__content">
+                    <span className="talent-slot-button__name">
+                      {talent?.name ?? `Talent ${index + 1}`}
+                    </span>
+                    {talent ? (
+                      <small
+                        className={[
+                          "talent-slot-button__details",
+                          hasDenseTalentStats
+                            ? "talent-slot-button__details--dense"
+                            : "",
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                      >
+                        {talentStats.map((stat, statIndex) => (
+                          <span key={stat.key}>
+                            {statIndex > 0 ? ", " : ""}
+                            {stat.matchesSelectedStat ? (
+                              <strong>{`${stat.label}: ${stat.value}`}</strong>
+                            ) : (
+                              `${stat.label}: ${stat.value}`
+                            )}
+                          </span>
+                        ))}
+                      </small>
+                    ) : null}
+                  </span>
                 </button>
               );
             })}
