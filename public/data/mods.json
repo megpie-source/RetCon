@@ -5046,7 +5046,7 @@
     "rank_5": null,
     "rank_7": 5,
     "rank_9": 15,
-    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Force powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
+    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Force powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Force powers ignore up to %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
     "stackable": false,
     "tag": [
       "Offense"
