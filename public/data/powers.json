@@ -21837,7 +21837,7 @@
       "Targets foe",
       "50 feet"
     ],
-    "tooltip": "Deals 24-49 Magic Damage and generates energy. + The initial hit is slightly has a 15% chance to Root the target for 13 sec.",
+    "tooltip": "Deals 24-49 Magic Damage and generates energy. + The initial hit has 15% chance to Root the target for 13 sec.",
     "apply_tag": [
       "Root"
     ],
@@ -43508,9 +43508,9 @@
     "power_type": "RANGED_DAMAGE",
     "advantages": [],
     "activation_type": "MAINTAIN",
-    "cost": null,
+    "cost": "20+13",
     "activation_time": 0.5,
-    "max_duration": 5,
+    "max_duration": 6,
     "tick_rate": 0.5,
     "cooldown": null,
     "range_tags": [
@@ -43547,7 +43547,7 @@
     "power_type": "RANGED_AOE_DAMAGE",
     "advantages": [],
     "activation_type": "MAINTAIN",
-    "cost": null,
+    "cost": "21+15",
     "activation_time": 0.5,
     "max_duration": 5,
     "tick_rate": 0.5,
@@ -43583,12 +43583,12 @@
     "framework_id": "Munitions",
     "name": "Gatling Arms",
     "tier": 3,
-    "power_type": null,
+    "power_type": "RANGED_DAMAGE",
     "advantages": [],
     "activation_type": "MAINTAIN",
-    "cost": null,
+    "cost": "26+19",
     "activation_time": 0.5,
-    "max_duration": 5,
+    "max_duration": 4,
     "tick_rate": 0.5,
     "cooldown": null,
     "range_tags": [
@@ -43613,5 +43613,146 @@
     "source": [],
     "icon_override": "Munitions_GatlingArms",
     "is_disabled": true
+  },
+  {
+    "power_id": 1056,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Wrist Blaster",
+    "tier": 1,
+    "power_type": "RANGED_DAMAGE",
+    "advantages": [],
+    "activation_type": "CHARGE",
+    "cost": "18-32",
+    "activation_time": 0.67,
+    "max_duration": 0.83,
+    "tick_rate": null,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe",
+      "100 feet"
+    ],
+    "tooltip": "Deals 176-459 Piercing Damage based on charge time. + Has 45-100% chance to Knocks Back targets within 20ft of you. Foes further away have 45-100% chance to be Knocked Down.",
+    "apply_tag": [
+      "Knock Back",
+      "Knock Down"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "459",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_WristBlaster",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1057,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Steady Fire",
+    "tier": -1,
+    "power_type": "RANGED_DAMAGE",
+    "advantages": [],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 0.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe",
+      "50 feet"
+    ],
+    "tooltip": "Deals 75 Piercing Damage and generates Energy with the initial hit. + Deals 53 Piercing Damage and generates less Energy with each subsequent hit.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "75",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_SteadyFire",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1058,
+    "powerset_id": "Device",
+    "framework_id": "Travel_Power",
+    "name": "Hover Disk",
+    "tier": null,
+    "power_type": "TRAVEL_POWER",
+    "advantages": [],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 1.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 1,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Grants +30 Flight Speed while active. Outside of combat, you build up speed over time. After 4 sec, you gain +26 Flight Speed. After 10 sec, you gain an additional +26 Flight Speed. While active, you suffer a -12% penalty to Power Cost Discount and your Energy Building strength is reduced by 15%.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Sky Command Rampage"
+    ],
+    "icon_override": "TravelPower_HoverDisk",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1059,
+    "powerset_id": "Device",
+    "framework_id": "Travel_Power",
+    "name": "Ice Slide",
+    "tier": null,
+    "power_type": "TRAVEL_POWER",
+    "advantages": [],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 1.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 1,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Grants +30 Flight Speed while active. Outside of combat, you build up speed over time. After 4 sec, you gain +26 Flight Speed. After 10 sec, you gain an additional +26 Flight Speed. While active, you suffer a -12% penalty to Power Cost Discount and your Energy Building strength is reduced by 15%.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Fire & Ice Rampage"
+    ],
+    "icon_override": "TravelPower_IceSlide",
+    "is_disabled": false
   }
 ]

@@ -3105,7 +3105,7 @@
     "rank_5": 276,
     "rank_7": 414,
     "rank_9": 552,
-    "tooltip": "Dealing damage with a Melee or a Ranged ability has a chance to increase your Offense by +%rank_value% for 10 sec. This effect cannot be stacked. + The base chance to trigger this effect is 5%, but is modified by your power's charge and activation time. + The effect of this mod cannot stack.",
+    "tooltip": "Dealing damage with a Melee or a Ranged ability has a chance to increase your Offense by %rank_value% for 10 sec. This effect cannot be stacked. + The base chance to trigger this effect is 5%, but is modified by your power's charge and activation time. + The effect of this mod cannot stack.",
     "stackable": false,
     "tag": [
       "Offense"
@@ -3807,7 +3807,7 @@
     "rank_5": 126,
     "rank_7": 158,
     "rank_9": 190,
-    "tooltip": "While in Combat, heals you for +%rank_value% every 3 secs. + This can be stacked.",
+    "tooltip": "While in Combat, heals you for %rank_value% Health Points every 3 secs. + This can be stacked.",
     "stackable": true,
     "tag": [
       "Defense"
@@ -4135,13 +4135,13 @@
     "rank_5": 3.2,
     "rank_7": 5.9,
     "rank_9": 13,
-    "tooltip": "Increases your Flight travel  power speed while out of combat, and to a lesser amount while in combat.",
-    "stackable": false,
+    "tooltip": "Increases your Flight travel power speed while out of combat, and to a lesser amount while in combat.",
+    "stackable": true,
     "tag": [
       "Utility"
     ],
     "source": [
-      "Dr. Destroyer Robot Factory"
+      "Dr. Destroyer Robot Factory, Sky Command Rampage"
     ],
     "icon_override": "Mod_SwiftWing",
     "is_disabled": false,
@@ -5015,13 +5015,13 @@
     "rank_5": null,
     "rank_7": 5,
     "rank_9": 15,
-    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Munitions powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to - %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
+    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Munitions powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
     "stackable": false,
     "tag": [
       "Offense"
     ],
     "source": [
-      "High Noon Event : ASCII Alert"
+      "ASCIING for Trouble OM, High Noon Event : ASCII Alert"
     ],
     "icon_override": "Mod_Armor_Piercing_Round",
     "is_disabled": false,
@@ -5046,7 +5046,7 @@
     "rank_5": null,
     "rank_7": 5,
     "rank_9": 15,
-    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Force powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to - %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
+    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Force powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Munitions powers ignore up to %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
     "stackable": false,
     "tag": [
       "Offense"
@@ -5055,7 +5055,7 @@
       "Gravitar Rampage"
     ],
     "icon_override": "Mod_Overwhelming_Pressure",
-    "is_disabled": true,
+    "is_disabled": false,
     "mod_types": [
       "Offense"
     ],
