@@ -2577,12 +2577,19 @@ export function PowersPanel({
   function handlePowerChoiceClick(
     power: Power,
     event: MouseEvent<HTMLButtonElement>,
+    canAdd: boolean,
+    selected: boolean,
   ) {
     if (event.ctrlKey || event.metaKey) {
       if (canPinPowerTooltip(power)) {
         pinPowerTooltip(power, event);
       }
 
+      return;
+    }
+
+    if (!canAdd && !selected) {
+      event.preventDefault();
       return;
     }
 
@@ -3308,6 +3315,7 @@ export function PowersPanel({
                           [
                             "power-choice",
                             selected ? "power-choice--selected" : "",
+                            !canAdd && !selected ? "power-choice--disabled" : "",
                             hasSelectedParentPower
                               ? "power-choice--compatible-variant"
                               : "",
@@ -3315,9 +3323,11 @@ export function PowersPanel({
                             .filter(Boolean)
                             .join(" ")
                         }
-                        disabled={!canAdd && !selected}
+                        aria-disabled={!canAdd && !selected}
                         key={power.power_id}
-                        onClick={(event) => handlePowerChoiceClick(power, event)}
+                        onClick={(event) =>
+                          handlePowerChoiceClick(power, event, canAdd, selected)
+                        }
                       >
                         <SpriteIcon name={getPowerIconName(power)} size={34} />
                         <span

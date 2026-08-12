@@ -1705,21 +1705,6 @@ function App() {
     setGearModsDialogAnchor(anchor);
   }
 
-  function openCurrentGearRankDialog(
-    slotId: string,
-    modSlotIndex: number,
-    anchor: DialogAnchor,
-  ) {
-    closeCamsMenu();
-    closeGearDialog();
-    closeGearModsDialog();
-    closeGearFillModsDialog();
-    setGearLibraryDialogOpen(false);
-    setActiveGearRankSlotId(slotId);
-    setActiveGearRankSlotIndex(modSlotIndex);
-    setGearRankDialogAnchor(anchor);
-  }
-
   function openCurrentTravelPowerDialog(
     slotNumber: number,
     anchor: DialogAnchor,
@@ -2091,7 +2076,6 @@ function App() {
               onOpenGearLibrary={openGearLibraryDialog}
               onToggleCollapse={() => toggleWorkspacePanel("gear")}
               onSelectGearMod={openCurrentGearModsDialog}
-              onSelectGearModRank={openCurrentGearRankDialog}
               onSelectGearSlot={openCurrentGearDialog}
             />
           </CollapsibleWorkspacePanel>

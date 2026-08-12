@@ -1,7 +1,7 @@
 .app-shell {
   --character-column-width: clamp(210px, 13.37vw, 250px);
   --specializations-column-width: clamp(230px, 16.667vw, 330px);
-  --gear-column-width: minmax(240px, clamp(250px, 15vw, 400px));
+  --gear-column-width: minmax(240px, clamp(250px, 15vw, 340px));
   --powers-column-min-width: 560px;
   --workspace-column-gap: 6px;
   --choice-border: #263653;
@@ -2638,7 +2638,8 @@ h3 {
     rgba(12, 15, 22, 0.74);
 }
 
-.power-choice:disabled {
+.power-choice:disabled,
+.power-choice--disabled {
   opacity: 0.42;
 }
 
@@ -3035,23 +3036,25 @@ h3 {
 }
 
 .gear-build-entry .build-entry__summary {
-  min-height: var(--gear-build-slot-min-height, 58px);
+  min-height: 0;
   grid-template-columns: minmax(0, 1fr);
-  align-content: center;
+  align-content: start;
   gap: 0;
+  padding: 3px;
+  cursor: pointer;
 }
 
 .gear-build-entry .build-entry__power-main {
-  grid-template-columns: var(--gear-build-icon-slot-width, 48px) minmax(0, 1fr);
+  grid-template-columns: var(--gear-build-icon-slot-width, 36px) minmax(0, 1fr);
   align-items: start;
-  gap: 8px;
+  gap: 6px;
 }
 
 .gear-build-entry__gear-icon-slot {
   display: grid;
-  width: var(--gear-build-icon-slot-width, 48px);
-  height: var(--gear-build-icon-slot-height, 64px);
-  align-items: start;
+  width: var(--gear-build-icon-slot-width, 36px);
+  height: var(--gear-build-icon-slot-height, 46px);
+  align-items: center;
   justify-content: center;
   padding: 1px;
   border: 1px solid #273656;
@@ -3061,20 +3064,19 @@ h3 {
 }
 
 .gear-build-entry__gear-icon {
-  align-self: start;
-  width: var(--gear-build-icon-width, 44px) !important;
-  height: var(--gear-build-icon-height, 60px) !important;
+  align-self: center;
+  width: var(--gear-build-icon-width, 32px) !important;
+  height: var(--gear-build-icon-height, 42px) !important;
   min-height: 0;
   object-fit: contain;
-  object-position: top center;
+  object-position: center;
 }
 
 .gear-build-entry__content {
   display: grid;
   min-width: 0;
-  grid-template-rows: minmax(18px, auto) auto;
   align-items: start;
-  gap: 5px;
+  gap: 2px;
 }
 
 .gear-build-entry__summary--offense {
@@ -3103,10 +3105,15 @@ h3 {
   align-items: start;
   justify-content: stretch;
   padding-left: 0;
+  gap: 2px 4px;
+}
+
+.gear-build-entry .gear-mod-button-list:empty {
+  display: none;
 }
 
 .gear-build-entry .gear-mod-button-list--primary {
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 }
 
 .gear-build-entry .gear-mod-button-list--secondary {
@@ -3118,12 +3125,12 @@ h3 {
   width: 100%;
   min-width: 0;
   max-width: none;
-  height: var(--gear-build-mod-button-height, 40px);
-  grid-template-columns: var(--gear-build-mod-button-width, 30px) minmax(0, 1fr);
+  min-height: var(--gear-build-mod-button-height, 32px);
+  grid-template-columns: var(--gear-build-mod-button-width, 24px) minmax(0, 1fr);
   align-items: center;
   justify-content: stretch;
   justify-items: stretch;
-  gap: 3px;
+  gap: 2px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -3133,34 +3140,34 @@ h3 {
 
 .gear-build-entry .gear-mod-button {
   display: grid;
-  width: var(--gear-build-mod-button-width, 30px);
-  min-width: var(--gear-build-mod-button-width, 30px);
-  max-width: var(--gear-build-mod-button-width, 30px);
-  height: var(--gear-build-mod-button-height, 40px);
+  width: var(--gear-build-mod-button-width, 24px);
+  min-width: var(--gear-build-mod-button-width, 24px);
+  max-width: var(--gear-build-mod-button-width, 24px);
+  height: var(--gear-build-mod-button-height, 32px);
   align-items: center;
   justify-content: center;
-  padding: 1px;
+  padding: 0;
   outline: 1px solid #273656;
   outline-offset: -1px;
 }
 
 @media (max-width: 1800px) {
   .gear-build-entry {
-    --gear-build-slot-min-height: 52px;
-    --gear-build-icon-slot-width: 42px;
-    --gear-build-icon-slot-height: 56px;
-    --gear-build-icon-width: 38px;
-    --gear-build-icon-height: 52px;
-    --gear-build-mod-button-width: 26px;
-    --gear-build-mod-button-height: 35px;
+    --gear-build-slot-min-height: 106px;
+    --gear-build-icon-slot-width: 34px;
+    --gear-build-icon-slot-height: 44px;
+    --gear-build-icon-width: 30px;
+    --gear-build-icon-height: 40px;
+    --gear-build-mod-button-width: 24px;
+    --gear-build-mod-button-height: 32px;
   }
 
   .gear-build-entry .build-entry__power-main {
-    gap: 6px;
+    gap: 5px;
   }
 
   .gear-build-entry__content {
-    gap: 4px;
+    gap: 0;
   }
 }
 
@@ -3209,7 +3216,7 @@ h3 {
   min-width: 0;
   max-width: 100%;
   justify-self: stretch;
-  padding: 0 2px 0 0;
+  padding: 0 1px 0 0;
   border: 1px solid transparent;
   border-radius: 3px;
   background: transparent;
@@ -3219,10 +3226,10 @@ h3 {
 
 .gear-mod-button__label-button:hover,
 .gear-mod-button__label-button:focus-visible {
-  border-color: rgba(85, 126, 209, 0.72);
+  border-color: transparent;
   color: #eef3ff;
   outline: none;
-  background: rgba(43, 68, 126, 0.22);
+  background: transparent;
 }
 
 .gear-mod-button__label-button--pending-rank {
@@ -3231,6 +3238,11 @@ h3 {
 
 .gear-mod-button--empty .gear-mod-button__label {
   color: #7c879e;
+}
+
+.gear-mod-button--empty .gear-mod-button__label-button:hover,
+.gear-mod-button--empty .gear-mod-button__label-button:focus-visible {
+  color: #eef3ff;
 }
 
 .gear-totals-section {
@@ -3520,8 +3532,13 @@ h3 {
 .gear-build-entry .build-entry__name-button {
   display: -webkit-box;
   width: 100%;
+  min-height: 32px;
   min-width: 0;
+  margin-inline: 0;
   overflow: hidden;
+  padding: 0 2px 0 0;
+  line-height: 1.14;
+  text-overflow: ellipsis;
   white-space: normal;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -3531,8 +3548,14 @@ h3 {
   color: #5f6980;
 }
 
+.gear-build-entry .build-entry__summary--empty {
+  min-height: 0;
+  align-content: center;
+  padding-block: 1px;
+}
+
 .gear-build-entry .build-entry__summary--empty .gear-build-entry__content {
-  min-height: 64px;
+  min-height: 0;
   grid-template-rows: 1fr;
   align-items: center;
 }
@@ -3542,6 +3565,16 @@ h3 {
   margin-inline: 0;
   padding-inline: 5px;
   text-align: center;
+}
+
+.gear-build-entry__empty-label {
+  pointer-events: none;
+}
+
+.gear-build-entry .build-entry__summary--empty .build-entry__name-button:hover,
+.gear-build-entry .build-entry__summary--empty .build-entry__name-button:focus-visible {
+  color: inherit;
+  outline: none;
 }
 
 .gear-build-entry .build-entry__summary.gear-build-entry__summary--offense {

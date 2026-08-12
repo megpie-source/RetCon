@@ -20,11 +20,6 @@ type GearPanelProps = {
     modSlotIndex: number,
     anchor: DialogAnchor,
   ) => void;
-  onSelectGearModRank: (
-    slotId: string,
-    modSlotIndex: number,
-    anchor: DialogAnchor,
-  ) => void;
   onSelectGearSlot: (slotId: string, anchor: DialogAnchor) => void;
   onOpenFillMods: (anchor: DialogAnchor) => void;
   onOpenGearLibrary: () => void;
@@ -82,7 +77,7 @@ function getModSlotLabel(slotType: string, mode: "compact" | "full") {
     },
     Enhancement: {
       compact: "Enh.",
-      full: "Enhenc.",
+      full: "Enhanc.",
     },
     Offense: {
       compact: "Off.",
@@ -214,7 +209,6 @@ export function GearPanel({
   selectedSuperStats,
   onToggleCollapse,
   onSelectGearMod,
-  onSelectGearModRank,
   onSelectGearSlot,
   onOpenFillMods,
   onOpenGearLibrary,
@@ -236,13 +230,18 @@ export function GearPanel({
     );
   }
 
-  function renderSectionToggle(sectionKey: string, label: string) {
+  function renderSectionToggle(
+    sectionKey: string,
+    label: string,
+    tooltip?: string,
+  ) {
     const isClosed = closedSections.includes(sectionKey);
 
     return (
       <button
         aria-expanded={!isClosed}
         className="power-tier__toggle"
+        data-text-tooltip={tooltip}
         type="button"
         onClick={() => toggleSection(sectionKey)}
       >
@@ -302,7 +301,11 @@ export function GearPanel({
                 {section.slots.map((gearSlot) => {
                   return (
                     <div
-                      className="build-entry gear-build-entry"
+                      className={[
+                        "build-entry",
+                        "gear-build-entry",
+                        `gear-build-entry--${gearSlot.gearSlot.toLowerCase()}`,
+                      ].join(" ")}
                       key={gearSlot.id}
                     >
                       <div
@@ -329,24 +332,31 @@ export function GearPanel({
                             />
                           </div>
                           <div className="gear-build-entry__content">
-                            <button
-                              className="build-entry__name-button"
-                              data-text-tooltip={getGearTooltipText(
-                                gearSlot.gear,
-                              )}
-                              type="button"
-                              onClick={(event) => {
-                                event.stopPropagation();
-                                openGearSlot(event, gearSlot, onSelectGearSlot);
-                              }}
-                            >
-                              <GearName
-                                name={
-                                  gearSlot.gear?.name ??
-                                  `Empty ${gearSlot.gearType.toLowerCase()} gear`
-                                }
-                              />
-                            </button>
+                            {gearSlot.gear ? (
+                              <button
+                                className="build-entry__name-button"
+                                data-text-tooltip={getGearTooltipText(
+                                  gearSlot.gear,
+                                )}
+                                type="button"
+                                onClick={(event) => {
+                                  event.stopPropagation();
+                                  openGearSlot(
+                                    event,
+                                    gearSlot,
+                                    onSelectGearSlot,
+                                  );
+                                }}
+                              >
+                                <GearName name={gearSlot.gear.name} />
+                              </button>
+                            ) : (
+                              <span className="build-entry__name-button gear-build-entry__empty-label">
+                                <GearName
+                                  name={`Empty ${gearSlot.gearType.toLowerCase()} gear`}
+                                />
+                              </span>
+                            )}
                             <div
                               className={[
                                 "gear-mod-button-list",
@@ -386,7 +396,6 @@ export function GearPanel({
                                     >
                                       <button
                                         className="gear-mod-button"
-                                        data-text-tooltip={modSlotTooltip}
                                         type="button"
                                         onClick={(event) => {
                                           event.stopPropagation();
@@ -405,8 +414,8 @@ export function GearPanel({
                                           name={getSelectedModIconName(
                                             selectedMod,
                                           )}
-                                          width={28}
-                                          height={38}
+                                          width={24}
+                                          height={32}
                                         />
                                       </button>
                                       {selectedMod ? (
@@ -424,7 +433,7 @@ export function GearPanel({
                                           type="button"
                                           onClick={(event) => {
                                             event.stopPropagation();
-                                            onSelectGearModRank(
+                                            onSelectGearMod(
                                               gearSlot.id,
                                               modSlotIndex,
                                               {
@@ -479,7 +488,11 @@ export function GearPanel({
         ))}
 
         <section className="power-tier build-section gear-section gear-totals-section">
-          {renderSectionToggle("totals", "Totals")}
+          {renderSectionToggle(
+            "totals",
+            "Totals",
+            "Totals only include selected gear, mods, and listed derived values. They do not represent your full in-game character sheet.",
+          )}
 
           {!closedSections.includes("totals") ? (
             totals.length > 0 ? (
