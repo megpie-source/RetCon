@@ -58,6 +58,13 @@ function formatModSlotTitle(slotTypes: string[]) {
     .join(" / ");
 }
 
+function formatModSlotTooltipTitle(slotTypes: string[]) {
+  return slotTypes
+    .filter((slotType) => slotType !== "Multicore")
+    .map((slotType) => getModSlotTooltipLabel(slotType))
+    .join(" / ");
+}
+
 function formatCompactModSlotTitle(slotTypes: string[]) {
   return slotTypes
     .filter((slotType) => slotType !== "Multicore")
@@ -90,6 +97,14 @@ function getModSlotLabel(slotType: string, mode: "compact" | "full") {
   };
 
   return labels[slotType]?.[mode] ?? slotType;
+}
+
+function getModSlotTooltipLabel(slotType: string) {
+  if (slotType === "Enhancement") {
+    return "Enhancement";
+  }
+
+  return getModSlotLabel(slotType, "full");
 }
 
 function formatSelectedModLabel(
@@ -376,7 +391,7 @@ export function GearPanel({
                                         selectedMod.mod,
                                         selectedMod.rank,
                                       )
-                                    : `${formatModSlotTitle(slotTypes)} mod slot`;
+                                    : `${formatModSlotTooltipTitle(slotTypes)} mod slot`;
 
                                   return (
                                     <div
