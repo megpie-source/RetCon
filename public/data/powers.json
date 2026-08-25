@@ -4769,7 +4769,7 @@
     "activation_time": 1,
     "max_duration": null,
     "tick_rate": null,
-    "cooldown": null,
+    "cooldown": 45,
     "range_tags": [
       "Targets non-object foe",
       "100 feet"
@@ -5269,7 +5269,7 @@
       "Targets foe",
       "100 feet"
     ],
-    "tooltip": "Creates a Whirpool at the target. + Whirpool deals 186 Cold Damage every 1 sec for 16 sec to targets within 25ft. Hits up to 10 targets. + Pulls targets towards the whirlpool. + Apply Chill to targets. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times. + Targets that get within loft of the whirlpool's center are Rooted for 19 sec.",
+    "tooltip": "Creates a Whirpool at the target. + Whirpool deals 186 Cold Damage every 1 sec for 16 sec to targets within 25ft. Hits up to 10 targets. + Pulls targets towards the whirlpool. + Apply Chill to targets. Chill reduces the target's movement speed by 42% for 16 sec and occasionally traps targets in an Ice Cage. Stacks up to 3 times. + Targets that get within 10ft of the whirlpool's center are Rooted for 19 sec.",
     "apply_tag": [
       "Chill",
       "Root"
@@ -8788,7 +8788,7 @@
     "damage_type": [
       "Piercing"
     ],
-    "damage_values": "1856",
+    "damage_values": "929",
     "healing_values": null,
     "control_values": null,
     "scaling_stats": [],
@@ -8871,7 +8871,7 @@
       "100 feet",
       "3 feet Cylinder"
     ],
-    "tooltip": "Deals 99 Piercing Damage 2 times every 0.5 sec to all targets. + 10% chance on each hit to apply Armor Piercing to affected targets. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec. + When fully maintained has a 100% chance to apply Armor Piercing.",
+    "tooltip": "Deals 198 Piercing Damage every 0.5 sec to all targets. + 10% chance on each hit to apply Armor Piercing to affected targets. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec. + When fully maintained has a 100% chance to apply Armor Piercing.",
     "apply_tag": [
       "Armor Piercing"
     ],
@@ -8881,7 +8881,7 @@
     "damage_type": [
       "Piercing"
     ],
-    "damage_values": "99",
+    "damage_values": "198",
     "healing_values": null,
     "control_values": null,
     "scaling_stats": [],
@@ -11948,7 +11948,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + For up to 4 sec after you begin blocking, if you are attacked from more than loft away, you will return a portion of one incoming attack to the attacker. If you are attacked within 10ft, you will return a portion of one incoming attack to up to 5 targets within 10ft. This effect can only be activated once every 5 sec.",
+    "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + For up to 4 sec after you begin blocking, if you are attacked from more than 10ft away, you will return a portion of one incoming attack to the attacker. If you are attacked within 10ft, you will return a portion of one incoming attack to up to 5 targets within 10ft. This effect can only be activated once every 5 sec.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -36885,7 +36885,7 @@
     "source": [
       "Drifter Store"
     ],
-    "icon_override": "Munitions_FragGrenade",
+    "icon_override": "Device_IceGrenade",
     "is_disabled": false
   },
   {
@@ -43506,7 +43506,13 @@
     "name": "Heavy Fire",
     "tier": 1,
     "power_type": "RANGED_DAMAGE",
-    "advantages": [],
+    "advantages": [
+      1,
+      2,
+      712,
+      27,
+      713
+    ],
     "activation_type": "MAINTAIN",
     "cost": "20+13",
     "activation_time": 0.5,
@@ -43545,7 +43551,13 @@
     "name": "Suppression Fire",
     "tier": 1,
     "power_type": "RANGED_AOE_DAMAGE",
-    "advantages": [],
+    "advantages": [
+      1,
+      2,
+      625,
+      713,
+      344
+    ],
     "activation_type": "MAINTAIN",
     "cost": "21+15",
     "activation_time": 0.5,
@@ -43584,7 +43596,11 @@
     "name": "Gatling Arms",
     "tier": 3,
     "power_type": "RANGED_DAMAGE",
-    "advantages": [],
+    "advantages": [
+      1,
+      2,
+      718
+    ],
     "activation_type": "MAINTAIN",
     "cost": "26+19",
     "activation_time": 0.5,
@@ -43621,18 +43637,22 @@
     "name": "Wrist Blaster",
     "tier": 1,
     "power_type": "RANGED_DAMAGE",
-    "advantages": [],
+    "advantages": [
+      1,
+      2,
+      714
+    ],
     "activation_type": "CHARGE",
-    "cost": "18-32",
+    "cost": "25-49",
     "activation_time": 0.67,
-    "max_duration": 0.83,
+    "max_duration": 1.33,
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [
       "Targets foe",
       "100 feet"
     ],
-    "tooltip": "Deals 176-459 Piercing Damage based on charge time. + Has 45-100% chance to Knocks Back targets within 20ft of you. Foes further away have 45-100% chance to be Knocked Down.",
+    "tooltip": "Deals 292-696 Piercing Damage based on charge time. + Has 56-100% chance to Knocks Back targets within 20ft of you. Foes further away have 56-100% chance to be Knocked Down.",
     "apply_tag": [
       "Knock Back",
       "Knock Down"
@@ -43643,7 +43663,7 @@
     "damage_type": [
       "Piercing"
     ],
-    "damage_values": "459",
+    "damage_values": "696",
     "healing_values": null,
     "control_values": null,
     "scaling_stats": [],
@@ -43659,7 +43679,11 @@
     "name": "Steady Fire",
     "tier": -1,
     "power_type": "RANGED_DAMAGE",
-    "advantages": [],
+    "advantages": [
+      1,
+      2,
+      711
+    ],
     "activation_type": "TOGGLE",
     "cost": null,
     "activation_time": 0.5,
@@ -43753,6 +43777,322 @@
       "Fire & Ice Rampage"
     ],
     "icon_override": "TravelPower_IceSlide",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1060,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Backhand Strike",
+    "tier": 1,
+    "power_type": "MELEE_DAMAGE",
+    "advantages": [
+      1,
+      2,
+      281,
+      547
+    ],
+    "activation_type": "CLICK",
+    "cost": 18,
+    "activation_time": 0.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe",
+      "10 feet"
+    ],
+    "tooltip": "Deals 193 Crushing Damage. + Stuns your target for 1.7 sec.",
+    "apply_tag": [
+      "Stun"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [
+      "Crowd Control"
+    ],
+    "damage_type": [
+      "Crushing"
+    ],
+    "damage_values": "193",
+    "healing_values": null,
+    "control_values": "Stun=1.7",
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_BackhandStrike",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1061,
+    "powerset_id": "Device",
+    "framework_id": "Travel_Power",
+    "name": "Rocket Jump",
+    "tier": null,
+    "power_type": "TRAVEL_POWER",
+    "advantages": [],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 1.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 1,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Grants +45 Jump Speed and +90 Jump Height while active. Outside of combat, you build up speed and height over time. After 4 sec you gain +34 Jump Speed and +51 Jump Height and after another 10 sec you gain an additional +34 Jump Speed and +51 Jump Height. While active, you receive a -6.2% Power Cost Discount and your Energy Building strength is reduced by 15%.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Destroid Rise Again OM"
+    ],
+    "icon_override": "TravelPower_RocketJump",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1062,
+    "powerset_id": "Travel_Power",
+    "framework_id": "Flight",
+    "name": "Shadow Fire Flight",
+    "tier": null,
+    "power_type": "TRAVEL_POWER",
+    "advantages": [
+      8,
+      9
+    ],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 1.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 1,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Grants +20 Flight Speed while active. Outside of combat, you build up speed over time. After 4 sec, you gain +17 Flight Speed. After 10 sec, you gain an additional +17 Flight Speed. While active, you suffer a -12% penalty to Power Cost Discount and your Energy Building strength is reduced by 15%.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Z Store"
+    ],
+    "icon_override": "TravelPower_ShadowFireFlight",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1063,
+    "powerset_id": "Travel_Power",
+    "framework_id": "Flight",
+    "name": "Radiant Fire Flight",
+    "tier": null,
+    "power_type": "TRAVEL_POWER",
+    "advantages": [
+      8,
+      9
+    ],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 1.5,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 1,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Grants +20 Flight Speed while active. Outside of combat, you build up speed over time. After 4 sec, you gain +17 Flight Speed. After 10 sec, you gain an additional +17 Flight Speed. While active, you suffer a -12% penalty to Power Cost Discount and your Energy Building strength is reduced by 15%.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Z Store"
+    ],
+    "icon_override": "TravelPower_RadiantFireFlight",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1064,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Return fire",
+    "tier": 1,
+    "power_type": "BLOCK",
+    "advantages": [
+      1,
+      2,
+      716
+    ],
+    "activation_type": "BLOCK",
+    "cost": null,
+    "activation_time": 1,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": null,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + For up to 4 sec after you begin blocking, if you are attacked from more than 10ft away, you will return a portion of one incoming attack to the attacker as Piercing damage. If you are attacked within 10ft, you will return a smaller portion of one incoming attack to up to 5 targets within 10ft and Knock them back. + This effect has a cooldown of 5 sec and cannot be triggered again until you release and reapply this block.",
+    "apply_tag": [
+      "Knock Back"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_ReturnFire",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1065,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Detonation Round",
+    "tier": 2,
+    "power_type": "RANGED_AOE_DAMAGE",
+    "advantages": [
+      1,
+      2,
+      717,
+      400
+    ],
+    "activation_type": "CHARGE",
+    "cost": "78-96",
+    "activation_time": 0.67,
+    "max_duration": 1.5,
+    "tick_rate": null,
+    "cooldown": 15,
+    "range_tags": [
+      "Targets foe (5 max)",
+      "100 feet",
+      "15 feet Sphere"
+    ],
+    "tooltip": "Deals 193-411 Piercing Damage and deals an additional 42 Piercing Damage every 1 sec for 16 sec to all targets. + When partially charged, Interrupts your primary target and has a 50% chance to affect other affected targets. + When fully charged, instead Knocks Up affected targets.",
+    "apply_tag": [
+      "Interupts",
+      "Knock Up"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [
+      "DoT"
+    ],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "411",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_WristBlaster",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1066,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Combat Drones",
+    "tier": 2,
+    "power_type": "CONTROLLABLE_PET",
+    "advantages": [
+      1,
+      2
+    ],
+    "activation_type": "FULL_CHARGE",
+    "cost": 35,
+    "activation_time": 0.87,
+    "max_duration": 2,
+    "tick_rate": null,
+    "cooldown": null,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "Summons 2 Combat Drones. The Support Drones have 2 modes, Support Mode and Offense Mode. + In their default Support Mode, they will use a Healing Beam on friendly targets, healing them for 22 Health Points every 0.5 sec. + In Offense Mode, they use Gatling Gun to attack your foes, dealing 17 Piercing Damage every 0.5 sec. + New skills are acquired upon ranking this power on pets.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [
+      "Passive Heal"
+    ],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "17",
+    "healing_values": "22",
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_CombatDrones",
+    "is_disabled": true
+  },
+  {
+    "power_id": 1067,
+    "powerset_id": "Device",
+    "framework_id": "Other",
+    "name": "Teleiosaurus Pheromones Compound",
+    "tier": null,
+    "power_type": "UNCONTROLED_PET",
+    "advantages": [],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": null,
+    "max_duration": null,
+    "tick_rate": null,
+    "cooldown": 30,
+    "range_tags": [
+      "Targets self"
+    ],
+    "tooltip": "25% chance every 10 sec to summon a Hatchling, twice, lasting 30 sec. + 25% chance every 10 sec to summon a Reeker, lasting 60 sec. + Hatchling powers: + Bite: 448 Slashing Damage + Spit: 332 Toxic Damage + Lunge: 560 Slashing Damage + Radiation Breath: 1600 Particle Damage (30 sec recharge) + Reeker powers: + Bite: 448 Slashing Damage + Spit: 332 Toxic Damage + Blast: 1600 Toxic Damage (30 sec recharge) + Radiation Breath: 1600 Particle Damage (30 sec recharge) + Foot Stomp: 1600 Crushing Damage in a 15ft sphere (30 sec recharge) + Radiation Storm: 400 Particle Damage every 0.5 sec in a 15ft sphere (30 sec recharge)",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Crushing",
+      "Toxic",
+      "Slashing",
+      "Particle"
+    ],
+    "damage_values": "1600",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [
+      "Teleiosaurus Rampage"
+    ],
+    "icon_override": "Device_TeleiosaurusPheromone",
     "is_disabled": false
   }
 ]

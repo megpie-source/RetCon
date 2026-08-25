@@ -871,8 +871,13 @@ function App() {
       return;
     }
 
+    const existingEnergyBuilderSlot =
+      power.tier === -1
+        ? buildSlots.find((slot) => slot.power?.tier === -1) ?? null
+        : null;
     const targetSlot =
       selectedPowerTargetBuildSlot ??
+      existingEnergyBuilderSlot ??
       getFirstValidPowerSlot(power, buildSlots);
 
     if (!targetSlot) {
@@ -1946,7 +1951,10 @@ function App() {
                           )
                         : restrictedPowerIds?.has(power.power_id) ?? false
                       : isFreeform
-                        ? getFirstValidPowerSlot(power, buildSlots) !== null
+                        ? power.tier === -1 &&
+                          buildSlots.some((slot) => slot.power?.tier === -1)
+                          ? true
+                          : getFirstValidPowerSlot(power, buildSlots) !== null
                         : false
             }
             frameworkGroups={frameworkGroups}

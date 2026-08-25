@@ -6366,17 +6366,17 @@
     "advantage_id": 377,
     "name": "Mouth of Madness",
     "points_cost": 2,
-    "tooltip": "Has a chance to not consume the Shredded effect.",
-    "apply_tag": [],
-    "refresh_tag": [],
-    "synergy_tag": [
-      "Shredded"
+    "tooltip": "Has 46-100% chance (based on charge time) to Stun your target for 2 sec.",
+    "apply_tag": [
+      "Stun"
     ],
+    "refresh_tag": [],
+    "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,
     "healing_values": null,
-    "control_values": null,
+    "control_values": "Stun=2",
     "is_disabled": false
   },
   {
@@ -9328,7 +9328,7 @@
     "advantage_id": 547,
     "name": "Stop Right There!",
     "points_cost": 2,
-    "tooltip": "No longer Stuns. Instead, Interrupts the target.",
+    "tooltip": "No longer applies Stun. Instead, this power now Interrupts the target. This effect does not affect higher ranked targets. + If a target is Interrupted, they cannot be Interrupted again for 8 sec.",
     "apply_tag": [
       "Interrupt"
     ],
@@ -10666,7 +10666,7 @@
     "advantage_id": 625,
     "name": "Wall of Bullets",
     "points_cost": 3,
-    "tooltip": "Grants a damage absorption shield that scales up over time. Lasts as long as you maintain.",
+    "tooltip": "Absorbs up to 336-2688 damage, scaling up over time. Last as long as you maintain the power.",
     "apply_tag": [
       "Shield"
     ],
@@ -10979,7 +10979,7 @@
     "advantage_id": 643,
     "name": "Field Expulsion",
     "points_cost": 3,
-    "tooltip": "If you are affected by a Direct Shield power, fully charging removes that effect and grants a damage absorbing shield to up to 5 allies within 30ft for 20 sec. This amount scales with the rank of your Protection Field power.",
+    "tooltip": "If you are affected by a Direct Shield power, removes that effect and grants a damage absorbing shield to up to 5 allies within 30ft for 20 sec. This amount scales with the rank of your Protection Field power.",
     "apply_tag": [
       "Direct Shield"
     ],
@@ -12170,6 +12170,140 @@
     ],
     "refresh_tag": [],
     "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 711,
+    "name": "Paint the Target",
+    "points_cost": 2,
+    "tooltip": "Increases your chance to Critically Hit by 3% and your Critical Severity by 3% for 15 sec. This effect stacks up to 5 times and expires",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 712,
+    "name": "I Am Bullet Proof!",
+    "points_cost": 2,
+    "tooltip": "Absorbs up to 336-2688 damage, scaling up over time. Last as long as you maintain the power.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 713,
+    "name": "Aggression",
+    "points_cost": 3,
+    "tooltip": "Has 10% chance every hit to cause targets to start Bleeding. + If you target is not affected by your Bleed, and is within 10ft of you, this chance is guaranteed. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
+    "apply_tag": [
+      "Bleed"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 714,
+    "name": "Frail Armor",
+    "points_cost": 2,
+    "tooltip": "When fully charged, applies Frail Armor. Frail Armor reduces resistance to Piercing Damage by 18% for 15 sec.",
+    "apply_tag": [
+      "Frail Armor"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 715,
+    "name": "Seeing Red",
+    "points_cost": 2,
+    "tooltip": "Gives this power a scaling chance to apply a stack of Furious to you. Chance is guaranteed when fully charged. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "apply_tag": [
+      "Furious"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 716,
+    "name": "Covering Fire",
+    "points_cost": 3,
+    "tooltip": "After using a ranged attack, you gain +4.4% Dodge Chance, +15 Avoidance and 33% resistance to Knock effects for 2 sec. Reduces your damage by 10% while active.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 717,
+    "name": "Devastation",
+    "points_cost": 2,
+    "tooltip": "If your primary target is affected by Frail Armor, has a 20% chance to spread the effect to up to 5 targets within 15ft on the initial hit. This chance is guaranteed if targets are affected by Fear. + Additionally, refreshes the duration of Frail Armor on affected targets once every every 8 sec for 16 sec.",
+    "apply_tag": [
+      "Frail Armor"
+    ],
+    "refresh_tag": [
+      "Frail Armor"
+    ],
+    "synergy_tag": [
+      "Fear"
+    ],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 718,
+    "name": "Opportunistic",
+    "points_cost": 2,
+    "tooltip": "Increases this power's base damage by 30% if your target is affected by Frail Armor.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [
+      "Frail Armor"
+    ],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,

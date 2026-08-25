@@ -5068,5 +5068,36 @@
         }
       }
     ]
+  },
+  {
+    "mod_id": 150,
+    "mod_type": "Offense",
+    "name": "Sharpened Claws",
+    "mod_bonus": "Armor_Penetration_Force",
+    "rank_5": null,
+    "rank_7": 5,
+    "rank_9": 15,
+    "tooltip": "Armor Reduction Modifcation. This core causes your direct damage Supernatural Bestial powers to ignore a portion of an enemy's defenses. The effect of this mod cannot be stacked. + Your direct damage Supernatural Bestial  powers ignore up to %rank_value% % of your target's resistance. This effect cannot reduce a target's resistance below 0%.",
+    "stackable": false,
+    "tag": [
+      "Offense"
+    ],
+    "source": [
+      "Teleiosaurus Rampage"
+    ],
+    "icon_override": "Mod_Sharpened_Claws",
+    "is_disabled": false,
+    "mod_types": [
+      "Offense"
+    ],
+    "bonuses": [
+      {
+        "type": "Armor_Penetration_Force",
+        "values_by_rank": {
+          "7": 5,
+          "9": 15
+        }
+      }
+    ]
   }
 ]
