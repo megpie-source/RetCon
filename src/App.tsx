@@ -845,7 +845,11 @@ function App() {
     toggleTravelPowerAdvantage,
   });
 
-  function addPower(power: Power, displayFrameworkId?: string | null) {
+  function addPower(
+    power: Power,
+    displayFrameworkId?: string | null,
+    bypassSlotRules = false,
+  ) {
     if (isStandardDevice(power)) {
       addDevice(power);
       return;
@@ -875,10 +879,16 @@ function App() {
       power.tier === -1
         ? buildSlots.find((slot) => slot.power?.tier === -1) ?? null
         : null;
+    const selectedTargetIsEnergyBuilder =
+      selectedPowerTargetBuildSlot?.power?.tier === -1;
     const targetSlot =
-      selectedPowerTargetBuildSlot ??
-      existingEnergyBuilderSlot ??
-      getFirstValidPowerSlot(power, buildSlots);
+      power.tier === -1
+        ? selectedTargetIsEnergyBuilder
+          ? selectedPowerTargetBuildSlot
+          : existingEnergyBuilderSlot ??
+            selectedPowerTargetBuildSlot ??
+            getFirstValidPowerSlot(power, buildSlots)
+        : selectedPowerTargetBuildSlot ?? getFirstValidPowerSlot(power, buildSlots);
 
     if (!targetSlot) {
       return;
@@ -903,7 +913,14 @@ function App() {
       return;
     }
 
-    if (!canPlacePowerInSlot(power, targetSlot, buildSlots)) {
+    const isReplacingEnergyBuilder =
+      power.tier === -1 && targetSlot.power?.tier === -1;
+
+    if (
+      !bypassSlotRules &&
+      !isReplacingEnergyBuilder &&
+      !canPlacePowerInSlot(power, targetSlot, buildSlots)
+    ) {
       return;
     }
 
@@ -1305,11 +1322,23 @@ function App() {
     slotNumber: number,
     power: Power,
     displayFrameworkId: string | null,
+    bypassSlotRules = false,
   ) {
     const targetSlot =
       buildSlots.find((slot) => slot.slot === slotNumber) ?? null;
 
-    if (!targetSlot || !canPlacePowerInSlot(power, targetSlot, buildSlots)) {
+    if (!targetSlot) {
+      return;
+    }
+
+    const isReplacingEnergyBuilder =
+      power.tier === -1 && targetSlot.power?.tier === -1;
+
+    if (
+      !bypassSlotRules &&
+      !isReplacingEnergyBuilder &&
+      !canPlacePowerInSlot(power, targetSlot, buildSlots)
+    ) {
       return;
     }
 
@@ -1942,7 +1971,10 @@ function App() {
                         !travelPowerSlots.some(
                           (slot) => slot.power?.power_id === power.power_id,
                         ))
-                    : selectedPowerTargetBuildSlot
+                    : power.tier === -1 &&
+                        buildSlots.some((slot) => slot.power?.tier === -1)
+                      ? true
+                      : selectedPowerTargetBuildSlot
                       ? isFreeform
                         ? canPlacePowerInSlot(
                             power,
@@ -1951,10 +1983,7 @@ function App() {
                           )
                         : restrictedPowerIds?.has(power.power_id) ?? false
                       : isFreeform
-                        ? power.tier === -1 &&
-                          buildSlots.some((slot) => slot.power?.tier === -1)
-                          ? true
-                          : getFirstValidPowerSlot(power, buildSlots) !== null
+                        ? getFirstValidPowerSlot(power, buildSlots) !== null
                         : false
             }
             frameworkGroups={frameworkGroups}
@@ -2033,6 +2062,9 @@ function App() {
             onSelectPowerVariantName={openCurrentPowerVariantDialog}
             onSelectAdvantageSlot={openCurrentAdvantageDialog}
             onSelectPowerSlot={openPowerDialog}
+            onClearPowerSlot={clearPowerSlot}
+            onClearTravelPowerSlot={clearTravelPowerSlot}
+            onClearPowerVariantSlot={clearPowerVariantSlot}
             onToggleCollapse={() => toggleWorkspacePanel("build")}
             highlightedPowerTargetSlot={
               selectedPowerTargetBuildSlot?.slot ?? null
@@ -2132,7 +2164,9 @@ function App() {
           initialFrameworkId={lastPowerDialogFrameworkId}
           powers={combatPowers}
           canSelectPower={(power) =>
-            canPlacePowerInSlot(power, activeBuildSlot, buildSlots)
+            power.tier === -1 && activeBuildSlot.power?.tier === -1
+              ? true
+              : canPlacePowerInSlot(power, activeBuildSlot, buildSlots)
           }
           onClearPower={clearPowerSlot}
           onClose={closePowerDialog}

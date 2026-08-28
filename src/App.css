@@ -2738,8 +2738,15 @@ h3 {
   font-weight: 700;
 }
 
-.power-selection-choice:disabled {
+.power-selection-choice:disabled,
+.power-selection-choice--disabled {
   opacity: 0.4;
+}
+
+.power-selection-choice--disabled:hover,
+.power-selection-choice--disabled:focus-visible {
+  border-color: transparent;
+  background: rgba(12, 15, 22, 0.62);
 }
 
 .power-selection-choice__label {

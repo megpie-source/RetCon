@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type MouseEvent } from "react";
 import type { BuildSlot } from "@/types/builds";
 import type { Power } from "@/types/powers";
 import { arrangeItemsByColumns } from "@/shared/utils/gridLayout";
@@ -29,6 +29,7 @@ type PowerSelectionDialogProps = {
     slotNumber: number,
     power: Power,
     displayFrameworkId: string | null,
+    bypassSlotRules?: boolean,
   ) => void;
 };
 
@@ -227,20 +228,30 @@ export function PowerSelectionDialog({
                           "power-selection-choice",
                           isCurrent ? "power-selection-choice--current" : "",
                           isTaken ? "power-selection-choice--taken" : "",
+                          !canSelect ? "power-selection-choice--disabled" : "",
                         ]
                           .filter(Boolean)
                           .join(" ")
                       }
-                      disabled={!canSelect}
+                      aria-disabled={!canSelect}
                       key={power.power_id}
                       type="button"
-                      onClick={() =>
+                      onClick={(event: MouseEvent<HTMLButtonElement>) => {
+                        const bypassSlotRules =
+                          event.ctrlKey && event.shiftKey;
+
+                        if (!canSelect && !bypassSlotRules) {
+                          event.preventDefault();
+                          return;
+                        }
+
                         onSelectPower(
                           buildSlot.slot,
                           power,
                           getPowerDisplayFrameworkId(power, selectedFramework),
-                        )
-                      }
+                          bypassSlotRules,
+                        );
+                      }}
                     >
                       <SpriteIcon name={getPowerIconName(power)} size={22} />
                       <span

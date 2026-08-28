@@ -42,6 +42,9 @@ type BuildPanelProps = {
   onSelectPowerVariantName: (slotNumber: number, anchor: DialogAnchor) => void;
   onSelectAdvantageSlot: (slotNumber: number, anchor: DialogAnchor) => void;
   onSelectPowerSlot: (slotNumber: number, anchor: DialogAnchor) => void;
+  onClearPowerSlot: (slotNumber: number) => void;
+  onClearTravelPowerSlot: (slotNumber: number) => void;
+  onClearPowerVariantSlot: (slotNumber: number) => void;
   onToggleCollapse: () => void;
   highlightedPowerTargetSlot: number | null;
   highlightedTravelPowerTargetSlot: number | null;
@@ -123,6 +126,9 @@ export function BuildPanel({
   onSelectPowerVariantName,
   onSelectAdvantageSlot,
   onSelectPowerSlot,
+  onClearPowerSlot,
+  onClearTravelPowerSlot,
+  onClearPowerVariantSlot,
   onToggleCollapse,
   highlightedPowerTargetSlot,
   highlightedTravelPowerTargetSlot,
@@ -139,6 +145,18 @@ export function BuildPanel({
   const [closedSections, setClosedSections] = useState<string[]>([]);
   const bodyRef = useRef<HTMLDivElement | null>(null);
   const slotElementsRef = useRef(new Map<number, HTMLDivElement>());
+
+  function isClearSlotClick(event: MouseEvent) {
+    const isAltGraphClick =
+      event.getModifierState("AltGraph") || (event.altKey && event.ctrlKey);
+
+    return (
+      (event.altKey || isAltGraphClick) &&
+      !event.metaKey &&
+      !event.shiftKey &&
+      (isAltGraphClick || !event.ctrlKey)
+    );
+  }
 
   function toggleSection(sectionKey: string) {
     setClosedSections((currentClosedSections) =>
@@ -283,8 +301,14 @@ export function BuildPanel({
                           .filter(Boolean)
                           .join(" ")
                       }
-                      onClick={() => {
+                      onClick={(event: MouseEvent<HTMLDivElement>) => {
                         if (!isPowerLocked) {
+                          if (slot.power && isClearSlotClick(event)) {
+                            event.preventDefault();
+                            onClearPowerSlot(slot.slot);
+                            return;
+                          }
+
                           onSelectBuildSlot(slot.slot);
                         }
                       }}
@@ -313,6 +337,12 @@ export function BuildPanel({
                             event.stopPropagation();
 
                             if (isPowerLocked) {
+                              return;
+                            }
+
+                            if (slot.power && isClearSlotClick(event)) {
+                              event.preventDefault();
+                              onClearPowerSlot(slot.slot);
                               return;
                             }
 
@@ -379,7 +409,15 @@ export function BuildPanel({
                       ]
                         .filter(Boolean)
                         .join(" ")}
-                      onClick={() => onSelectTravelPowerSlot(slot.slot)}
+                      onClick={(event: MouseEvent<HTMLDivElement>) => {
+                        if (slot.power && isClearSlotClick(event)) {
+                          event.preventDefault();
+                          onClearTravelPowerSlot(slot.slot);
+                          return;
+                        }
+
+                        onSelectTravelPowerSlot(slot.slot);
+                      }}
                     >
                       <div className="build-entry__power-main">
                         <span className="level-label">{slot.level}</span>
@@ -401,6 +439,12 @@ export function BuildPanel({
                           type="button"
                           onClick={(event: MouseEvent<HTMLButtonElement>) => {
                             event.stopPropagation();
+                            if (slot.power && isClearSlotClick(event)) {
+                              event.preventDefault();
+                              onClearTravelPowerSlot(slot.slot);
+                              return;
+                            }
+
                             onSelectTravelPowerName(slot.slot, {
                               x: event.clientX,
                               y: event.clientY,
@@ -476,7 +520,15 @@ export function BuildPanel({
                       ]
                         .filter(Boolean)
                         .join(" ")}
-                      onClick={() => onSelectPowerVariantSlot(slot.slot)}
+                      onClick={(event: MouseEvent<HTMLDivElement>) => {
+                        if (slot.power && isClearSlotClick(event)) {
+                          event.preventDefault();
+                          onClearPowerVariantSlot(slot.slot);
+                          return;
+                        }
+
+                        onSelectPowerVariantSlot(slot.slot);
+                      }}
                     >
                       <div className="build-entry__power-main">
                         <span className="level-label">-</span>
@@ -500,6 +552,12 @@ export function BuildPanel({
                           type="button"
                           onClick={(event: MouseEvent<HTMLButtonElement>) => {
                             event.stopPropagation();
+                            if (slot.power && isClearSlotClick(event)) {
+                              event.preventDefault();
+                              onClearPowerVariantSlot(slot.slot);
+                              return;
+                            }
+
                             onSelectPowerVariantName(slot.slot, {
                               x: event.clientX,
                               y: event.clientY,

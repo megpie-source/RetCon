@@ -175,26 +175,7 @@ export function canPlacePowerInSlot(
     return false;
   }
 
-  const currentInvalidSlotNumbers = new Set(
-    currentBuildSlots
-      .filter(
-        (slot) =>
-          slot.power !== null &&
-          !canSelectPower(slot.power, currentBuildSlots, slot.slot),
-      )
-      .map((slot) => slot.slot),
-  );
-  const nextInvalidSlotNumbers = previewSlots
-    .filter(
-      (slot) =>
-        slot.power !== null &&
-        !canSelectPower(slot.power, previewSlots, slot.slot),
-    )
-    .map((slot) => slot.slot);
-
-  return nextInvalidSlotNumbers.every((slotNumber) =>
-    currentInvalidSlotNumbers.has(slotNumber),
-  );
+  return true;
 }
 
 export function getFirstValidPowerSlot(

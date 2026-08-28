@@ -116,7 +116,11 @@ type PowersPanelProps = {
   restrictedPowerSectionLabel: string | null;
   canAddPower: (power: Power) => boolean;
   onSelectFramework: (frameworkId: string | null, additive: boolean) => void;
-  onAddPower: (power: Power, displayFrameworkId: string | null) => void;
+  onAddPower: (
+    power: Power,
+    displayFrameworkId: string | null,
+    bypassSlotRules?: boolean,
+  ) => void;
   onToggleCollapse: () => void;
 };
 
@@ -2580,6 +2584,14 @@ export function PowersPanel({
     canAdd: boolean,
     selected: boolean,
   ) {
+    const bypassSlotRules = event.ctrlKey && event.shiftKey;
+
+    if (bypassSlotRules) {
+      event.preventDefault();
+      onAddPower(power, getSelectedPowerDisplayFrameworkId(power), true);
+      return;
+    }
+
     if (event.ctrlKey || event.metaKey) {
       if (canPinPowerTooltip(power)) {
         pinPowerTooltip(power, event);
