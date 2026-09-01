@@ -3866,6 +3866,22 @@ h3 {
   font-size: 12px;
 }
 
+.archetype-selection-details__source {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  margin-top: 2px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(242, 215, 123, 0.28);
+  color: #c8d1e4;
+  font-size: 12px;
+}
+
+.archetype-selection-details__source strong {
+  flex: 0 0 auto;
+  color: #f2d77b;
+}
+
 .archetype-power-selection-dialog {
   width: min(360px, calc(100vw - 44px));
 }

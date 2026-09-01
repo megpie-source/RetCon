@@ -8109,7 +8109,7 @@
   {
     "advantage_id": 478,
     "name": "Reverse Polarity",
-    "points_cost": 2,
+    "points_cost": 1,
     "tooltip": "Knocks targets Toward you instead of Knock Back.",
     "apply_tag": [
       "Knock To"
@@ -12195,7 +12195,7 @@
   {
     "advantage_id": 712,
     "name": "I Am Bullet Proof!",
-    "points_cost": 2,
+    "points_cost": 3,
     "tooltip": "Absorbs up to 336-2688 damage, scaling up over time. Last as long as you maintain the power.",
     "apply_tag": [],
     "refresh_tag": [],
@@ -12304,6 +12304,89 @@
     "synergy_tag": [
       "Frail Armor"
     ],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 719,
+    "name": "Explosive Round",
+    "points_cost": 1,
+    "tooltip": "Knocks Up affected targets.",
+    "apply_tag": [
+      "Knock Up"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 720,
+    "name": "Armor Piercing",
+    "points_cost": 2,
+    "tooltip": "When this power is fully cnarged, applies Armor Piercing to your target. Armor Piercing reduces resistance to your Crushing Damage and Piercing Damage by 15% for 15 sec.",
+    "apply_tag": [
+      "Armor Piercing"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 721,
+    "name": "High Velocity Round",
+    "points_cost": 2,
+    "tooltip": "Has a chance (based on charge time) to Knock Back your target. Chance is guaranteed when fully charged.",
+    "apply_tag": [
+      "Knock Back"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 722,
+    "name": "More Bullets",
+    "points_cost": 2,
+    "tooltip": "Turns this power into a cylinder, and can hit up to 3 targets.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [],
+    "damage_values": null,
+    "healing_values": null,
+    "control_values": null,
+    "is_disabled": false
+  },
+  {
+    "advantage_id": 723,
+    "name": "Blast Radius",
+    "points_cost": 2,
+    "tooltip": "Knock Back affected targets.",
+    "apply_tag": [
+      "Knock Back"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [],
     "damage_values": null,

@@ -1146,6 +1146,36 @@
         "rec": 5,
         "end": 8
       }
+    },
+    {
+      "id": 65,
+      "name": "The Renegade",
+      "overrideTip": "This is the innate characteristic for The Renegade.",
+      "stats": {
+        "str": 5,
+        "dex": 10,
+        "con": 5,
+        "int": 5,
+        "ego": 10,
+        "pre": 5,
+        "rec": 10,
+        "end": 8
+      }
+    },
+    {
+      "id": 66,
+      "name": "The Vanguard",
+      "overrideTip": "This is the innate characteristic for The Vanguard.",
+      "stats": {
+        "str": 5,
+        "dex": 5,
+        "con": 10,
+        "int": 5,
+        "ego": 10,
+        "pre": 5,
+        "rec": 10,
+        "end": 8
+      }
     }
   ],
   "talents": [

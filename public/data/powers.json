@@ -7971,17 +7971,18 @@
       1,
       2,
       88,
+      719,
       3
     ],
     "activation_type": "CLICK",
-    "cost": 126,
+    "cost": 138,
     "activation_time": 1.67,
     "max_duration": null,
     "tick_rate": 20,
     "cooldown": null,
     "range_tags": [
       "Targets foe",
-      "50 feet"
+      "100 feet"
     ],
     "tooltip": "Deals 203 Fire Damage to up to 5 targets within 15ft for the first hit, 305 Fire Damage for the sec hit and 508 Fire Damage for the last hit. + Leaves behind a Pyre Patch on the target for 10 sec, dealing 61 Fire Damage every 1 sec to up to 5 targets within 15ft.  You can only have one Pyre Patch active at a time. + Foes standing in the Pyre Patch have a 10% chance to be affected by Clinging Flames. + Clinging Flames deals 140 Fire Damage every 2 sec for 12 sec and may leap to nearby foes.",
     "apply_tag": [
@@ -8159,7 +8160,7 @@
       "50 feet",
       "30 degree Cone"
     ],
-    "tooltip": "Deals 137 Piercing Damage every 0.5 sec to all targets. + 10% chance on each hit to apply Furious to you. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Deals 137 Piercing Damage every 0.5 sec to all targets. + 10% chance on each hit to apply Furious to you. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -8546,7 +8547,7 @@
       "50 feet",
       "30 degree Cone"
     ],
-    "tooltip": "Deals 137 Piercing Damage every 0.5 sec to all targets. + 10% chance on each hit to apply Furious to you. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Deals 137 Piercing Damage every 0.5 sec to all targets. + 10% chance on each hit to apply Furious to you. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -8956,7 +8957,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "Grants a 42/50/60% increase to all damage. + Reduced your power costs by 25/30/35% + Applies Break Free damage to any Holds, Roots, or Disables affecting you. + Applies 1/2/3 stacks of Furious to you and maintains them while this power is active. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Can be used while Held or Confused. + Activates a shared cooldown of 90 sec with other Active Offense powers.",
+    "tooltip": "Grants a 42/50/60% increase to all damage. + Reduced your power costs by 25/30/35% + Applies Break Free damage to any Holds, Roots, or Disables affecting you. + Applies 1/2/3 stacks of Furious to you and maintains them while this power is active. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Can be used while Held or Confused. + Activates a shared cooldown of 90 sec with other Active Offense powers.",
     "apply_tag": [
       "Furious"
     ],
@@ -9300,7 +9301,7 @@
       "Targets foe",
       "50 feet"
     ],
-    "tooltip": "Deals 248 Piercing Damage every 0.5 sec. + 15% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage, Furious grants you Willpower, healing you for 300 health over 3 sec.",
+    "tooltip": "Deals 248 Piercing Damage every 0.5 sec. + 15% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage, Furious grants you Willpower, healing you for 300 health over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -12075,7 +12076,7 @@
       "10 feet",
       "60-220 degree Cone"
     ],
-    "tooltip": "Deals 213-503 Slashing Damage. + First hit Knocks Down your primary target and has a 20% chance to Knock Down other targets. + Last hit applies Furious to you. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Deals 213-503 Slashing Damage. + First hit Knocks Down your primary target and has a 20% chance to Knock Down other targets. + Last hit applies Furious to you. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Knock Down",
       "Furious"
@@ -16387,7 +16388,7 @@
     "tick_rate": null,
     "cooldown": null,
     "range_tags": [],
-    "tooltip": "Whenever you Hold a target, or attack a Held, Confused or Disoriented target, you gain 16 energy every 3 sec for 6 sec. + The energy gained scales with your Presence, and to a lesser degree, your Recovery. + This effect does not stack, but can be refreshed.",
+    "tooltip": "Whenever you Hold a target, or attack a Held, Confused or Disoriented target with a Telepathy power, you gain 16 energy every 3 sec for 6 sec. + The energy gained scales with your Presence, and to a lesser degree, your Recovery. + This effect does not stack, but can be refreshed.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [
@@ -31771,7 +31772,7 @@
     "tier": null,
     "power_type": "RANGED_AOE_DAMAGE",
     "advantages": [],
-    "activation_type": "CHARGE",
+    "activation_type": "BLAST",
     "cost": "30-50",
     "activation_time": 0.67,
     "max_duration": 0.83,
@@ -43477,7 +43478,7 @@
       "Affects non-destructible foe (5 max)",
       "25 feet Sphere"
     ],
-    "tooltip": "Can be used while Held or Confused. + Deals 831 Piercing Damage and Knock Down affected targets. + Heals you for 157 Health Points for every target hit. This heal counts as a Life Drain effect. + Applies 2,679 Break Free damage to any Holds, Roots, or Disables affecting you. + Applies 3 stacks of Furious to you for 12 sec. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Places all Escape devices on a 90 sec cooldown.",
+    "tooltip": "Can be used while Held or Confused. + Deals 831 Piercing Damage and Knock Down affected targets. + Heals you for 157 Health Points for every target hit. This heal counts as a Life Drain effect. + Applies 2,679 Break Free damage to any Holds, Roots, or Disables affecting you. + Applies 3 stacks of Furious to you for 12 sec. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Places all Escape devices on a 90 sec cooldown.",
     "apply_tag": [
       "Knock Down",
       "Furious"
@@ -43511,7 +43512,10 @@
       2,
       712,
       27,
-      713
+      713,
+      3,
+      7,
+      5
     ],
     "activation_type": "MAINTAIN",
     "cost": "20+13",
@@ -43542,7 +43546,7 @@
     "power_dependency": [],
     "source": [],
     "icon_override": "Munitions_HeavyFire",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1054,
@@ -43556,7 +43560,10 @@
       2,
       625,
       713,
-      344
+      344,
+      3,
+      7,
+      5
     ],
     "activation_type": "MAINTAIN",
     "cost": "21+15",
@@ -43585,9 +43592,11 @@
     "control_values": null,
     "scaling_stats": [],
     "power_dependency": [],
-    "source": [],
-    "icon_override": "Munitions_SuppresionFire",
-    "is_disabled": true
+    "source": [
+      "Z Store : Renegade AT"
+    ],
+    "icon_override": "Munitions_SuppressionFire",
+    "is_disabled": false
   },
   {
     "power_id": 1055,
@@ -43599,7 +43608,9 @@
     "advantages": [
       1,
       2,
-      718
+      718,
+      3,
+      5
     ],
     "activation_type": "MAINTAIN",
     "cost": "26+19",
@@ -43611,7 +43622,7 @@
       "Targets foe",
       "100 feet"
     ],
-    "tooltip": "Deals 240 Piercing Damage every 0.5 sec. + Has 10% chance every hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. + Places all Escape devices on a 90 sec cooldown.",
+    "tooltip": "Deals 240 Piercing Damage every 0.5 sec. + Has 10% chance every hit to apply Furious. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -43626,9 +43637,11 @@
     "control_values": null,
     "scaling_stats": [],
     "power_dependency": [],
-    "source": [],
+    "source": [
+      "Z Store : Renegade AT"
+    ],
     "icon_override": "Munitions_GatlingArms",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1056,
@@ -43640,7 +43653,11 @@
     "advantages": [
       1,
       2,
-      714
+      714,
+      715,
+      3,
+      7,
+      5
     ],
     "activation_type": "CHARGE",
     "cost": "25-49",
@@ -43668,9 +43685,11 @@
     "control_values": null,
     "scaling_stats": [],
     "power_dependency": [],
-    "source": [],
+    "source": [
+      "Z Store : Renegade AT"
+    ],
     "icon_override": "Munitions_WristBlaster",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1057,
@@ -43709,7 +43728,7 @@
     "power_dependency": [],
     "source": [],
     "icon_override": "Munitions_SteadyFire",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1058,
@@ -43790,7 +43809,9 @@
       1,
       2,
       281,
-      547
+      547,
+      3,
+      5
     ],
     "activation_type": "CLICK",
     "cost": 18,
@@ -43821,7 +43842,7 @@
     "power_dependency": [],
     "source": [],
     "icon_override": "Munitions_BackhandStrike",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1061,
@@ -43952,7 +43973,7 @@
     "range_tags": [
       "Targets self"
     ],
-    "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + For up to 4 sec after you begin blocking, if you are attacked from more than 10ft away, you will return a portion of one incoming attack to the attacker as Piercing damage. If you are attacked within 10ft, you will return a smaller portion of one incoming attack to up to 5 targets within 10ft and Knock them back. + This effect has a cooldown of 5 sec and cannot be triggered again until you release and reapply this block.",
+    "tooltip": "While blocking, grants 250/300/360% resistance to all damage. + Increases your resistance to Holds and Knocks, and reduces your movement speed. + Gives you energy when struck by an attack while blocking. This amount scales with your Recovery and the amount of damage you take. + For up to 4 sec after you begin blocking, if you are attacked from more than 10ft away, you will return a portion of one incoming attack to the attacker as Piercing damage. If you are attacked within 10ft, you will return a smaller portion of one incoming attack to up to 5 targets within 10ft and Knock them Back. + This effect has a cooldown of 5 sec and cannot be triggered again until you release and reapply this block.",
     "apply_tag": [
       "Knock Back"
     ],
@@ -43967,9 +43988,11 @@
     "control_values": null,
     "scaling_stats": [],
     "power_dependency": [],
-    "source": [],
+    "source": [
+      "Z Store : Renegade AT"
+    ],
     "icon_override": "Munitions_ReturnFire",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1065,
@@ -43982,7 +44005,9 @@
       1,
       2,
       717,
-      400
+      400,
+      3,
+      5
     ],
     "activation_type": "CHARGE",
     "cost": "78-96",
@@ -43997,7 +44022,7 @@
     ],
     "tooltip": "Deals 193-411 Piercing Damage and deals an additional 42 Piercing Damage every 1 sec for 16 sec to all targets. + When partially charged, Interrupts your primary target and has a 50% chance to affect other affected targets. + When fully charged, instead Knocks Up affected targets.",
     "apply_tag": [
-      "Interupts",
+      "Interrupt",
       "Knock Up"
     ],
     "refresh_tag": [],
@@ -44013,9 +44038,11 @@
     "control_values": null,
     "scaling_stats": [],
     "power_dependency": [],
-    "source": [],
-    "icon_override": "Munitions_WristBlaster",
-    "is_disabled": true
+    "source": [
+      "Z Store : Renegade AT"
+    ],
+    "icon_override": "Munitions_DetonationRound",
+    "is_disabled": false
   },
   {
     "power_id": 1066,
@@ -44054,7 +44081,7 @@
     "power_dependency": [],
     "source": [],
     "icon_override": "Munitions_CombatDrones",
-    "is_disabled": true
+    "is_disabled": false
   },
   {
     "power_id": 1067,
@@ -44093,6 +44120,135 @@
       "Teleiosaurus Rampage"
     ],
     "icon_override": "Device_TeleiosaurusPheromone",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1068,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Rolling Fire",
+    "tier": -1,
+    "power_type": "ENERGY_BUILDER",
+    "advantages": [
+      1,
+      2,
+      722,
+      3
+    ],
+    "activation_type": "TOGGLE",
+    "cost": null,
+    "activation_time": 0.5,
+    "max_duration": 4,
+    "tick_rate": 0.5,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe",
+      "50 feet"
+    ],
+    "tooltip": "Deals 75 Piercing Damage on initial hit, then 53 on each subsequent hit to the target, and generates energy.",
+    "apply_tag": [],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "75",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_RollingFire",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1069,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Heavy Burst",
+    "tier": 0,
+    "power_type": "RANGED_DAMAGE",
+    "advantages": [
+      1,
+      2,
+      720,
+      721,
+      3,
+      7,
+      5
+    ],
+    "activation_type": "CHARGE",
+    "cost": "29-51",
+    "activation_time": 0.67,
+    "max_duration": 1.33,
+    "tick_rate": null,
+    "cooldown": null,
+    "range_tags": [
+      "Targets foe",
+      "100 feet"
+    ],
+    "tooltip": "Deals 292-752 Piercing Damage based on charge time, and has a 45-100% chance to apply a stack of Furious to you. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec. ",
+    "apply_tag": [
+      "Furious"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Piercing"
+    ],
+    "damage_values": "752",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_HeavyBurst",
+    "is_disabled": false
+  },
+  {
+    "power_id": 1070,
+    "powerset_id": "Technology",
+    "framework_id": "Munitions",
+    "name": "Tactical Strike",
+    "tier": 3,
+    "power_type": "RANGED_DAMAGE",
+    "advantages": [
+      1,
+      2,
+      723,
+      544,
+      5
+    ],
+    "activation_type": "FULL_CHARGE",
+    "cost": 79,
+    "activation_time": 0.67,
+    "max_duration": 0.83,
+    "tick_rate": null,
+    "cooldown": 15,
+    "range_tags": [
+      "Targets foe",
+      "100 feet"
+    ],
+    "tooltip": "After 2.5 sec, deals 1643 Crushing Damage to foes within 15ft. Knocks affected targets, and applies Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
+    "apply_tag": [
+      "Knock Back",
+      "Disorient"
+    ],
+    "refresh_tag": [],
+    "synergy_tag": [],
+    "filter_tag": [],
+    "damage_type": [
+      "Crushing"
+    ],
+    "damage_values": "1643",
+    "healing_values": null,
+    "control_values": null,
+    "scaling_stats": [],
+    "power_dependency": [],
+    "source": [],
+    "icon_override": "Munitions_TacticalStrike",
     "is_disabled": false
   }
 ]

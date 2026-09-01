@@ -59,7 +59,7 @@
     },
     {
       "id": 2,
-      "info": "Subscription/LTS or C-Store Purchase"
+      "info": "LTS"
     },
     {
       "id": 3,
@@ -71,11 +71,11 @@
     },
     {
       "id": 5,
-      "info": "Forum Malvanum"
+      "info": "Forum Malvanum Event"
     },
     {
       "id": 6,
-      "info": "Nightmare Invasion"
+      "info": "Nightmare Invasion Event"
     },
     {
       "id": 7,
@@ -83,7 +83,7 @@
     },
     {
       "id": 8,
-      "info": "Foxbatcon"
+      "info": "Foxbatcon Event"
     },
     {
       "id": 9,
@@ -91,11 +91,19 @@
     },
     {
       "id": 10,
-      "info": "High Noon at Snake Gulch"
+      "info": "High Noon Event"
     },
     {
       "id": 11,
       "info": "Patriot Event"
+    },
+    {
+      "id": 12,
+      "info": "Anniversary Event"
+    },
+    {
+      "id": 13,
+      "info": "Z Store"
     }
   ],
   "archetypes": [
@@ -115,7 +123,10 @@
     {
       "id": 1,
       "name": "Freeform",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 1,
       "superStatList": [],
       "icon": "Archetype_Freeform",
@@ -175,7 +186,10 @@
     {
       "id": 3,
       "name": "The Tempest",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 5,
       "superStatList": [
         8,
@@ -266,7 +280,10 @@
     {
       "id": 5,
       "name": "The Scourge",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 5,
       "superStatList": [
         7,
@@ -307,10 +324,7 @@
     {
       "id": 6,
       "name": "The Icicle",
-      "unlockType": [
-        2,
-        4
-      ],
+      "unlockType": 1,
       "group": 5,
       "superStatList": [
         2,
@@ -353,6 +367,7 @@
       "name": "The Squall",
       "unlockType": [
         2,
+        13,
         11
       ],
       "group": 5,
@@ -495,7 +510,11 @@
     {
       "id": 10,
       "name": "The Mountain",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        12
+      ],
       "group": 3,
       "superStatList": [
         3,
@@ -539,7 +558,10 @@
     {
       "id": 11,
       "name": "The Master",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 3,
       "superStatList": [
         3,
@@ -586,7 +608,10 @@
     {
       "id": 12,
       "name": "The Invincible",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 3,
       "superStatList": [
         4,
@@ -689,7 +714,11 @@
     {
       "id": 14,
       "name": "The Disciple",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        8
+      ],
       "group": 4,
       "superStatList": [
         5,
@@ -838,6 +867,7 @@
       "name": "The Devastator",
       "unlockType": [
         2,
+        13,
         5
       ],
       "group": 4,
@@ -889,7 +919,11 @@
     {
       "id": 18,
       "name": "The Fist",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        12
+      ],
       "group": 4,
       "superStatList": [
         2,
@@ -941,6 +975,7 @@
       "name": "The Void",
       "unlockType": [
         2,
+        13,
         6
       ],
       "group": 2,
@@ -1048,7 +1083,10 @@
     {
       "id": 21,
       "name": "The Impulse",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 2,
       "superStatList": [
         8,
@@ -1095,7 +1133,11 @@
     {
       "id": 22,
       "name": "The Specialist",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        12
+      ],
       "group": 2,
       "superStatList": [
         2,
@@ -1151,7 +1193,10 @@
     {
       "id": 23,
       "name": "The Savage",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 2,
       "superStatList": [
         1,
@@ -1200,6 +1245,7 @@
       "name": "The Night Avenger",
       "unlockType": [
         2,
+        13,
         7
       ],
       "group": 2,
@@ -1333,10 +1379,7 @@
     {
       "id": 27,
       "name": "The Inventor",
-      "unlockType": [
-        2,
-        8
-      ],
+      "unlockType": 1,
       "group": 6,
       "superStatList": [
         4,
@@ -1477,7 +1520,10 @@
     {
       "id": 30,
       "name": "The Rockstar",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 3,
       "superStatList": [
         1,
@@ -1530,7 +1576,10 @@
     {
       "id": 31,
       "name": "The Predator",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 4,
       "superStatList": [
         2,
@@ -1577,7 +1626,10 @@
     {
       "id": 32,
       "name": "The Penitent",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 4,
       "superStatList": [
         1,
@@ -1639,7 +1691,10 @@
     {
       "id": 33,
       "name": "The Hexslinger",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 5,
       "superStatList": [
         4,
@@ -1689,7 +1744,10 @@
     {
       "id": 34,
       "name": "The Witch",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 6,
       "superStatList": [
         6,
@@ -1745,7 +1803,10 @@
     {
       "id": 35,
       "name": "The Cybernetic Warrior",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 4,
       "superStatList": [
         4,
@@ -1794,6 +1855,7 @@
       "name": "The Gunslinger",
       "unlockType": [
         2,
+        13,
         10
       ],
       "group": 5,
@@ -1848,7 +1910,11 @@
     {
       "id": 37,
       "name": "The Psychokinetic",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        12
+      ],
       "group": 5,
       "superStatList": [
         5,
@@ -1898,7 +1964,11 @@
     {
       "id": 38,
       "name": "The Blazing",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        12
+      ],
       "group": 6,
       "superStatList": [
         6,
@@ -1998,7 +2068,11 @@
     {
       "id": 40,
       "name": "The Samurai",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13,
+        12
+      ],
       "group": 3,
       "superStatList": [
         3,
@@ -2042,7 +2116,10 @@
     {
       "id": 41,
       "name": "The Midnight",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 5,
       "superStatList": [
         2,
@@ -2086,7 +2163,10 @@
     {
       "id": 42,
       "name": "The Wrecker",
-      "unlockType": 2,
+      "unlockType": [
+        2,
+        13
+      ],
       "group": 4,
       "superStatList": [
         1,
@@ -2171,7 +2251,7 @@
     {
       "id": 44,
       "name": "The Fissile",
-      "unlockType": 2,
+      "unlockType": 1,
       "group": 5,
       "superStatList": [
         4,
@@ -2207,10 +2287,92 @@
         15,
         19
       ],
-      "overview": null,
-      "concepts": null,
-      "extra": null,
+      "overview": "Your arsenal of energetic and technological abilities affords you the means to disrupt, fry and irradiate foes, wearing down even the strongest opponents beneath your nuclear judgment.",
+      "concepts": "Living Energy, Post-Apocalyptic Survivor, 3-Letter-Agency Cleanup Crew, Radioactive Android, Hideous Mutation",
+      "extra": "You have ranged attacks that cause your enemies to become afflicted with Plasma Burn, dealing additional Particle Damage over time and strengthening your other powers. While you are resilient to Damage over Time effects, you can't take a lot of direct damage, so be sure to hit your targets hard enough to take them down or recruit a tough ally who can take the damage for you.",
       "innateTalent": 63
+    },
+    {
+      "id": 45,
+      "name": "The Renegade",
+      "unlockType": 13,
+      "group": 5,
+      "superStatList": [
+        2,
+        7,
+        5
+      ],
+      "icon": "Archetype_Renegade",
+      "innateTalent": 65,
+      "powerList": [
+        1057,
+        1056,
+        1054,
+        228,
+        192,
+        [
+          1066,
+          207
+        ],
+        1064,
+        204,
+        195,
+        [
+          210,
+          206
+        ],
+        1065,
+        184
+      ],
+      "specializationTreeList": [
+        2,
+        19,
+        11
+      ],
+      "overview": "Your wrist-mounted arsenal keeps heavy firepower close at hand. Whether unleashing rapid volleys, explosive ordnance, or precision shots, you overwhelm your enemies with a relentless barrage of firepower.",
+      "concepts": "Combat Cyborg, Ex-Special Forces, Bounty Hunter, Cyber-Soldier, Hired Mercenary",
+      "extra": "Your wrist-mounted weapons put a powerful arsenal right at your fingertips. Rapid bursts, explosive shots, and concentrated fire let you tear through enemies from range, but your offensive focus leaves you less prepared to withstand prolonged attacks."
+    },
+    {
+      "id": 46,
+      "name": "The Vanguard",
+      "unlockType": 12,
+      "group": 3,
+      "superStatList": [
+        5,
+        7,
+        3
+      ],
+      "icon": "Archetype_Vanguard",
+      "innateTalent": 66,
+      "powerList": [
+        1068,
+        1069,
+        1053,
+        224,
+        258,
+        [
+          1066,
+          207
+        ],
+        222,
+        204,
+        192,
+        235,
+        [
+          1070,
+          236
+        ],
+        260
+      ],
+      "specializationTreeList": [
+        5,
+        9,
+        15
+      ],
+      "overview": "You carry the kind of weapon most heroes would need a vehicle to move. With a roaring minigun in your hands and enough resilience to stay planted under enemy fire, you turn every battlefield into a storm of bullets.",
+      "concepts": "Armored Shock Trooper, Giant Robot, Super-Soldier, Walking Tank, One-Man Fireteam",
+      "extra": "Your strength lies in your ability to take punishment while keeping pressure on your enemies. You can draw enemy attention, withstand heavy attacks, and return steady damage from range, making you a formidable presence on the battlefield."
     }
   ]
 }

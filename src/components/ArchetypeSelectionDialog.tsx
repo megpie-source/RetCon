@@ -21,11 +21,15 @@ function getUnlockText(
   archetype: Archetype,
   unlocks: ArchetypeUnlock[],
 ) {
-  const unlockType = Array.isArray(archetype.unlockType)
-    ? archetype.unlockType[0]
-    : archetype.unlockType;
+  const unlockTypes = Array.isArray(archetype.unlockType)
+    ? archetype.unlockType
+    : [archetype.unlockType];
 
-  return unlocks.find((unlock) => unlock.id === unlockType)?.info ?? null;
+  const unlockLabels = unlockTypes
+    .map((unlockType) => unlocks.find((unlock) => unlock.id === unlockType)?.info)
+    .filter(Boolean);
+
+  return unlockLabels.length > 0 ? unlockLabels.join(", ") : null;
 }
 
 const archetypeGroupSortOrder = new Map<number, number>([
@@ -126,11 +130,7 @@ export function ArchetypeSelectionDialog({
               <SpriteIcon name={focusedArchetype.icon} size={36} />
               <div>
                 <strong>{focusedArchetype.name}</strong>
-                <small>
-                  {[focusedGroup?.name, focusedUnlockText]
-                    .filter(Boolean)
-                    .join(" / ")}
-                </small>
+                <small>{focusedGroup?.name ?? ""}</small>
               </div>
             </div>
 
@@ -150,6 +150,13 @@ export function ArchetypeSelectionDialog({
                 <h3>Playstyle</h3>
                 <p>{focusedArchetype.extra}</p>
               </section>
+            ) : null}
+
+            {focusedUnlockText ? (
+              <div className="archetype-selection-details__source">
+                <strong>Source:</strong>
+                <span>{focusedUnlockText}</span>
+              </div>
             ) : null}
           </aside>
         ) : null}
