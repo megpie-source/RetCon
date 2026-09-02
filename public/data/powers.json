@@ -36671,7 +36671,7 @@
     "framework_id": "Drifter",
     "name": "Contained Radiation",
     "tier": null,
-    "power_type": "MELEE_AOE_DAMAGE",
+    "power_type": "RANGED_DAMAGE",
     "advantages": [],
     "activation_type": "CLICK",
     "cost": null,
