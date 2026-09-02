@@ -3612,7 +3612,7 @@
     "advantage_id": 215,
     "name": "Fear Sense",
     "points_cost": 2,
-    "tooltip": "Each hit has a 25% chance to apply Furious. 100% chance on last hit. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Each hit has a 25% chance to apply Furious. 100% chance on last hit. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -4291,7 +4291,7 @@
     "advantage_id": 256,
     "name": "Furious Rush",
     "points_cost": 2,
-    "tooltip": "If you are not affected by Furious, applies 1 stack of Furious to you, otherwise, refreshes all stacks of Furious on you. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "If you are not affected by Furious, applies 1 stack of Furious to you, otherwise, refreshes all stacks of Furious on you. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -4310,7 +4310,7 @@
     "advantage_id": 257,
     "name": "Furor Venenum",
     "points_cost": 2,
-    "tooltip": "20% chance to Infect your target, Stunning them for 2 sec. Chance is guaranteed if the target is Bleeding or Poisoned. Applies 1 stack of Furious to you, and refreshes existing stacks. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "20% chance to Infect your target, Stunning them for 2 sec. Chance is guaranteed if the target is Bleeding or Poisoned. Applies 1 stack of Furious to you, and refreshes existing stacks. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Infect",
       "Stun",
@@ -4861,7 +4861,7 @@
     "advantage_id": 289,
     "name": "I Pay It Gladly",
     "points_cost": 2,
-    "tooltip": "If you kill a target, you gain 3 stacks of Furious. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "If you kill a target, you gain 3 stacks of Furious. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -5812,7 +5812,7 @@
     "advantage_id": 344,
     "name": "Listen to Reason",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Fear. Refreshes all stacks of Furious on you. + Fear reduces target's damage by 10% for 12 sec. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "15% chance on each hit to apply Fear. Refreshes all stacks of Furious on you. + Fear reduces target's damage by 10% for 12 sec. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Fear"
     ],
@@ -6065,7 +6065,7 @@
     "advantage_id": 359,
     "name": "Maybe I'm Just Better",
     "points_cost": 2,
-    "tooltip": "10% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "10% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -7029,7 +7029,7 @@
     "advantage_id": 416,
     "name": "Peerless Predation",
     "points_cost": 2,
-    "tooltip": "15% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "15% chance on each hit to apply Furious. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -7099,7 +7099,7 @@
     "advantage_id": 420,
     "name": "Phalanx Defense System",
     "points_cost": 3,
-    "tooltip": "When you use a Power Armor Slot (Chest, Hand, or Shoulder) attack, it will activate the Laser Knight shield for 2 sec, increasing your resistance to damage by 10% and your resistance to Knock effects by 10%. Reduces your damage by 10%.",
+    "tooltip": "When you use a ranged attack, it will activate the Laser Knight shield for 2 sec, increasing your resistance to damage by 10% and your resistance to Knock effects by 10%. Reduces your damage by 10%.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -7820,7 +7820,7 @@
     "advantage_id": 461,
     "name": "Red Hot Fury",
     "points_cost": 2,
-    "tooltip": "Applies 3 stacks of Furious to you. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Applies 3 stacks of Furious to you. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -9004,9 +9004,10 @@
     "advantage_id": 529,
     "name": "Sonic Suppression Enhancer",
     "points_cost": 2,
-    "tooltip": "Double the chance to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec.",
+    "tooltip": "Double the chance to apply Disorient. Disorient reduces the target's damage by 10% and movement speed by 50% for 12 sec. + Fully charging this power applies Deafening to your primary target. Deafening reduces resistance to Sonic Damage by 18% for 15 sec.",
     "apply_tag": [
-      "Disorient"
+      "Disorient",
+      "Deafening"
     ],
     "refresh_tag": [],
     "synergy_tag": [],
@@ -9693,7 +9694,7 @@
     "advantage_id": 568,
     "name": "Taking Names",
     "points_cost": 2,
-    "tooltip": "Refreshes existing stacks of Furious on you or applies 1 stack if not affected by Furious. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Refreshes existing stacks of Furious on you or applies 1 stack if not affected by Furious. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -10629,7 +10630,7 @@
     "advantage_id": 623,
     "name": "Vortex Technique",
     "points_cost": 2,
-    "tooltip": "Foes are Knocked To you instead of Knocked Back. If fully maintained, also applies 1 stack of Furious if you are unnafected by the buff, or refreshes existing stacks of Furious. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Foes are Knocked To you instead of Knocked Back. If fully maintained, also applies 1 stack of Furious if you are unnafected by the buff, or refreshes existing stacks of Furious. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Knock To",
       "Furious"
@@ -10808,7 +10809,7 @@
     "advantage_id": 633,
     "name": "Wild Slashes",
     "points_cost": 2,
-    "tooltip": "25% chance on each hit to apply Furious. 100% chance on the last hit. Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "25% chance on each hit to apply Furious. 100% chance on the last hit. Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -12210,7 +12211,7 @@
   {
     "advantage_id": 713,
     "name": "Aggression",
-    "points_cost": 3,
+    "points_cost": 2,
     "tooltip": "Has 10% chance every hit to cause targets to start Bleeding. + If you target is not affected by your Bleed, and is within 10ft of you, this chance is guaranteed. + Bleed deals 36 Slashing Damage every 1 sec for 16 sec and stacks up to 5 times.",
     "apply_tag": [
       "Bleed"
@@ -12245,7 +12246,7 @@
     "advantage_id": 715,
     "name": "Seeing Red",
     "points_cost": 2,
-    "tooltip": "Gives this power a scaling chance to apply a stack of Furious to you. Chance is guaranteed when fully charged. + Furious gives you +1.5% Critical Chance for 12 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
+    "tooltip": "Gives this power a scaling chance to apply a stack of Furious to you. Chance is guaranteed when fully charged. + Furious gives you +1.5% Critical Chance for 15 sec. This effect stacks up to 3 times. + When taking damage Furious grants you Willpower which gives you +300 Health Points over 3 sec.",
     "apply_tag": [
       "Furious"
     ],
@@ -12314,7 +12315,7 @@
   {
     "advantage_id": 719,
     "name": "Explosive Round",
-    "points_cost": 1,
+    "points_cost": 2,
     "tooltip": "Knocks Up affected targets.",
     "apply_tag": [
       "Knock Up"
@@ -12380,7 +12381,7 @@
   {
     "advantage_id": 723,
     "name": "Blast Radius",
-    "points_cost": 2,
+    "points_cost": 1,
     "tooltip": "Knock Back affected targets.",
     "apply_tag": [
       "Knock Back"
