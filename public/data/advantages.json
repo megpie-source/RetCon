@@ -367,9 +367,9 @@
     "synergy_tag": [],
     "filter_tag": [],
     "damage_type": [
-      "95"
+      "Particle"
     ],
-    "damage_values": null,
+    "damage_values": "95",
     "healing_values": null,
     "control_values": null,
     "is_disabled": false
