@@ -43659,7 +43659,7 @@
       7,
       5
     ],
-    "activation_type": "CHARGE",
+    "activation_type": "BLAST",
     "cost": "25-49",
     "activation_time": 0.67,
     "max_duration": 1.33,
@@ -44178,7 +44178,7 @@
       7,
       5
     ],
-    "activation_type": "CHARGE",
+    "activation_type": "BLAST",
     "cost": "29-51",
     "activation_time": 0.67,
     "max_duration": 1.33,
