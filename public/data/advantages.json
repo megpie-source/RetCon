@@ -1607,7 +1607,7 @@
     "advantage_id": 97,
     "name": "Close the Gap",
     "points_cost": 2,
-    "tooltip": "Deals increased base damage if you are closer to your target. This bonus caps out at 30% in melee range.",
+    "tooltip": "Deals increased base damage if you are closer to your target. This bonus caps out at 35% in melee range.",
     "apply_tag": [],
     "refresh_tag": [],
     "synergy_tag": [],
